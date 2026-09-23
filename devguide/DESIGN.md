@@ -12,6 +12,40 @@ Recorda is an **implementation direction**, not a new scientific component along
 
 The name evokes a scribe whose role is to observe and faithfully record what happens without deciding what the science means.
 
+## MOLI integration requirements
+
+Recorda is independently useful for standalone scientific reproducibility, but it is also the recording/provenance substrate used by MOLI.
+
+Developers changing Recorda's context model, profiles, routing, operation identity, event emission, lifecycle, integrity, replay, or persistence behavior **must also read the MOLI-side integration specification**:
+
+**MOLI — Recorda Provenance Integration:**  
+https://github.com/uibcdf/moli/blob/main/devguide/RECORDA.md
+
+That document defines what MOLI requires from Recorda for:
+
+- ProjectContext propagation;
+- ownership-aware routing;
+- EventLedger and ProjectRecord integration;
+- ExecutionPlan / Run correlation;
+- scoped ProjectRecord views;
+- semantic consumption provenance;
+- Nextia ProjectGraph mutation recording;
+- human/agent attribution and approvals;
+- strict versus buffered recording;
+- Audit / Trace / Replay;
+- Scientific Communication provenance.
+
+The two documents have different authority:
+
+    recorda/devguide/DESIGN.md
+        general / standalone Recorda design
+
+    moli/devguide/RECORDA.md
+        MOLI integration requirements for Recorda
+
+Recorda should remain usable without MOLI. MOLI-specific requirements should enrich/configure the common recording substrate rather than force standalone scientific libraries to depend on MOLI.
+
+
 ## Purpose
 
 MOLI requires distributed components to preserve enough structured provenance for ProjectRecord, EventLedger, Audit, Trace, Replay, ProjectRelease, and Scientific Communication.
