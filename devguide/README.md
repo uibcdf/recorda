@@ -7,7 +7,8 @@ This directory is the entry point for developers and agents working on Recorda. 
 ## Read first
 
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
-2. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the smallest implementation path currently justified by the design.
+2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
+3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.
 
 ## MOLI integration contract
 
@@ -23,6 +24,9 @@ The responsibilities are intentionally separated:
     recorda/devguide/DESIGN.md
         general / standalone Recorda design
 
+    recorda/devguide/FIRST_SLICE.md
+        first standalone experiment
+
     recorda/devguide/NEXT_STEPS.md
         current implementation sequence
 
@@ -35,4 +39,4 @@ Recorda must remain usable without MOLI. MOLI enriches the common recording subs
 
 Do not implement the complete design at once.
 
-The first implementation should be driven by a minimal real scientific integration and should preserve room to revise the API and internal representation as evidence accumulates.
+The first implementation should be driven by a real operation from a library outside MOLI, with explicit caller-owned capture. It should preserve room to revise the API and internal representation as evidence accumulates.

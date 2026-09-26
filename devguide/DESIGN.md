@@ -45,6 +45,8 @@ The two documents have different authority:
 
 Recorda should remain usable without MOLI. MOLI-specific requirements should enrich/configure the common recording substrate rather than force standalone scientific libraries to depend on MOLI.
 
+This includes libraries outside the MOLI ecosystem. An unmodified third-party library can participate when its caller marks a meaningful operation boundary and supplies safe references. Opening a session alone cannot observe uninstrumented calls; the record must distinguish captured operations from known gaps. Existing component-owned scientific records remain authoritative and may be linked rather than copied. The first standalone experiment is specified in [`FIRST_SLICE.md`](FIRST_SLICE.md).
+
 
 ## Purpose
 
@@ -145,7 +147,7 @@ Conceptually:
 
     import recorda
 
-    recorda.start("tim_analysis")
+    recorda.start("protein_analysis")
 
     system = molsysmt.convert(...)
     pockets = topomt.detect_pockets(system)
@@ -606,6 +608,8 @@ Manual scientific actions, external processes, notebooks, or operations that can
 
 The final syntax is open. Decorators are an important convenience mechanism, not the only provenance mechanism.
 
+For an unmodified third-party library, the caller should be able to wrap a semantic call explicitly without patching the library. For a library that opts in, its own decorator or hook can write the same operation shape. Neither path permits Recorda to claim that unrelated calls inside an active session were captured. The first prototype must expose coverage and omissions.
+
 ## Instrument semantic boundaries, not every function
 
 Recorda should not decorate every private helper.
@@ -791,6 +795,8 @@ A recorded operation may capture/reference:
 
 The component remains responsible for creating the authoritative domain object. Recorda records its provenance and routing relationships.
 
+If a component already maintains its own scientific execution record, that record can remain authoritative. Recorda may correlate to it by stable owner-qualified reference; integration must be evaluated for each component before adding hooks or adapters. Duplicate recording must not make one scientific action appear to be two independent actions.
+
 ## Project context propagation
 
 Recorda should understand the currently active MOLI project scope without requiring every scientific API to add project-specific arguments.
@@ -851,7 +857,7 @@ Conceptually:
 
     component = TopoMT
     profile = scientific_analysis
-    project = TcTIM
+    project = ExampleProteinProject
     campaign = C3
     work scope = E7
 
@@ -1145,7 +1151,7 @@ A future component such as a quantum-chemistry package should be able to partici
 
 MOLI should not need intimate knowledge of the component's internal storage implementation.
 
-## Minimal first experiment
+## Minimal first MOLI integration experiment
 
 Do not implement all Recorda capabilities before testing the design.
 
@@ -1167,7 +1173,7 @@ The experiment should test whether Recorda can capture:
 - ProjectRecord linkage;
 - secret redaction.
 
-Then use the TcTIM Phase 1 notebook to expose missing semantics.
+Then use a controlled scientific notebook to expose missing semantics. This MOLI integration experiment follows the standalone third-party experiment in [`FIRST_SLICE.md`](FIRST_SLICE.md).
 
 A similar later experiment in TopoMT should test scientific-analysis capture, nested MolSysSuite execution, Results/Artifacts, and Run correlation.
 
@@ -1257,7 +1263,7 @@ Prefer the separation:
 
 For example, avoid coupling a reusable TopoMT function to a specific project path such as:
 
-    @recorda.record(destination="TcTIM/C3/E7")
+    @recorda.record(destination="example_project/C3/E7")
 
 The same instrumented function should be reusable in another project without modification.
 
@@ -1381,7 +1387,7 @@ Recorda should not become:
 
 ## Open implementation questions
 
-Before freezing an API/package, Phase 1 pilots should help determine:
+Before freezing an API/package, standalone and later platform experiments should help determine:
 
 - package/repository boundary: lightweight independent `recorda`, MOLI-embedded infrastructure, `moli-recorda`, or another distribution;
 - standalone recording schema and persistence backend;

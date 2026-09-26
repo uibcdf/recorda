@@ -1,200 +1,71 @@
 # Recorda — Next Steps
 
-## Status
+## Status and scope
 
-Recorda is currently **DESIGN-STAGE**.
+Recorda is currently **DESIGN-STAGE**. The first implementation experiment is specified in [`FIRST_SLICE.md`](FIRST_SLICE.md) and tracked in [Recorda #1](https://github.com/uibcdf/recorda/issues/1).
 
-The architecture is intentionally richer than the implementation we should build first. The next task is to discover the smallest correct recording substrate through real scientific use.
+The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the smallest correct standalone recording substrate, learn from a library outside MOLI, and only then add platform integration.
 
 ## Do not do yet
 
 Do **not** begin by:
 
-- implementing the complete architecture in `DESIGN.md`;
-- freezing the public API;
-- creating the complete recording-profile catalog;
-- building a large persistence/storage framework;
+- implementing the complete architecture in `DESIGN.md` or freezing the public API;
+- creating the complete recording-profile catalog or a large storage framework;
+- promising automatic capture of uninstrumented library calls from `start()` alone;
 - implementing full replay/export/import machinery;
 - implementing MOLI-specific routing before standalone recording works;
 - instrumenting every helper function in a scientific package;
-- adding infrastructure merely because it may be useful later.
+- requiring an existing component to replace its own records with Recorda records.
 
-Implementation should follow evidence from real semantic operations.
+## First experiment — standalone with an external library
 
-## First prototype — minimal Recorda core
+Use a deterministic scientific operation from a library outside MOLI. Do not modify that library's source. The caller owns an explicit semantic boundary around the operation. A session must make the declared call inspectable without implying that unwrapped calls were captured.
 
-Build only enough to test the fundamental recording model.
+Build only:
 
-### RecordingSession
+1. one RecordingSession lifecycle and a local durable ScientificRecord;
+2. one explicit operation boundary usable around unmodified library code;
+3. one opt-in decorator or equivalent hook sharing the same operation model;
+4. operation identity, implementation identity, start/terminal status, safe input/output references, failure, parent/correlation identity where needed, and visible omissions;
+5. incremental persistence of a started operation so interruption leaves a detectable incomplete record;
+6. inactive instrumentation with normal library behavior and negligible practical overhead.
 
-Support the conceptual lifecycle behind:
+Keep exact API, file format, serializer protocol, and packaging details provisional. Recorda should never blindly serialize credentials or large runtime objects. A recorded reference does not itself guarantee retained bytes or replay.
 
-    recorda.start("analysis")
-    ...
-    record = recorda.stop()
+The acceptance cases in [`FIRST_SLICE.md`](FIRST_SLICE.md) cover success, exception, interruption, inactive behavior, nesting, redaction, native-record coexistence, and coverage gaps. Inspect the record with Recorda alone; no MOLI dependency or project context.
 
-A context-manager interface may share the same underlying session model, but it need not be the first user-facing feature if that slows the prototype.
+## Second experiment — Sabueso semantic boundaries
 
-### Dormant instrumentation
+Use the same standalone substrate on exactly enough real functionality to test two patterns:
 
-An instrumented function must behave normally when no RecordingSession is active.
+- one knowledge-retrieval boundary, including source/query, retrieval time, implementation/version, safe response identity or snapshot reference, produced Sabueso object reference, and failure;
+- one entity-resolution boundary, including input entity/query, decision or ambiguity status, produced object/reference, and operation lineage.
 
-The inactive path should not materially change scientific behavior and should have negligible practical overhead.
+Sabueso owns Knowledge semantics. Recorda records the declared operation and its provenance. Use a controlled scientific workflow to ask whether the record is useful to a scientist, whether missing dependencies and failures are visible, and whether instrumentation is low-friction.
 
-### One instrumentation mechanism
+## Later — MolSysSuite and MOLI
 
-Prototype one decorator or equivalent semantic-boundary hook, conceptually:
+Before adding Recorda to any MolSysSuite component, inspect that component's existing records and identify a concrete missing provenance link. Component-owned records and Results remain authoritative. Decide case by case whether a Recorda hook, a reference to a native record, or another adapter adds value. Do not impose a suite-wide recording pattern from this prototype.
 
-    @recorda.record(...)
-    def scientific_operation(...):
-        ...
+After standalone records prove useful, test a small cross-component computational workflow for operation correlation and native-record references. Separately, test MOLI ProjectContext, EventLedger routing, and composed ProjectRecord linkage. Nextia ProjectGraph mutations and scientific meaning remain owned by Nextia.
 
-Do not freeze the final decorator signature yet.
+## Only after evidence
 
-### Minimal operation record
+Then evaluate, in an order informed by the experiments:
 
-Capture enough to establish:
-
-- operation identity;
-- component/package/module/function identity;
-- package/version and, where practical, code/Git identity;
-- start/end/lifecycle status;
-- bound input arguments using safe serialization/reference rules;
-- outputs/references;
-- exception/failure state;
-- parent/correlation identity where already needed.
-
-Secrets and unsuitable large runtime objects must not be blindly serialized.
-
-### Minimal local ScientificRecord
-
-Persist or expose a local record sufficient to inspect:
-
-- recorded operations;
-- chronological order;
-- inputs/outputs;
-- dependencies/lineage that can already be inferred;
-- versions;
-- failures and incomplete sessions.
-
-Do not implement the full final storage architecture yet.
-
-## First scientific integration — Sabueso
-
-Use Sabueso as the first proving ground.
-
-Instrument exactly enough real functionality to test two different semantic patterns:
-
-### Knowledge retrieval
-
-Choose one real external-knowledge retrieval boundary.
-
-Test whether Recorda can capture/reference:
-
-- source/service;
-- query/request;
-- retrieval time;
-- implementation/version;
-- response identity/hash or snapshot reference where appropriate;
-- produced authoritative Sabueso objects;
-- failure state;
-- safe handling of credentials/secrets.
-
-### Entity resolution
-
-Choose one real entity-resolution boundary.
-
-Test:
-
-- component/function identity;
-- input entity/query;
-- relevant dependencies;
-- produced resolution object/reference;
-- ambiguity/failure state;
-- operation lineage.
-
-Recorda records the operation; Sabueso remains owner of Knowledge semantics.
-
-## Validate through the TcTIM Phase-1 pilot
-
-Use a real TcTIM Phase-1 notebook to determine whether the minimal Recorda record is useful to a scientist.
-
-Questions to answer include:
-
-- Can we see exactly what Sabueso did?
-- Can we identify the inputs and versions?
-- Can we follow meaningful dependencies?
-- Are failures visible?
-- Is the notebook no longer the only provenance record?
-- Is the instrumentation low-friction?
-- Are we capturing too much or too little?
-- Which design concepts in `DESIGN.md` become necessary in practice?
-
-Missing requirements discovered here should refine the design before broad implementation.
-
-## Second scientific integration — TopoMT / MolSysSuite
-
-After the Sabueso prototype is useful, test a computational-analysis path in TopoMT.
-
-This should exercise different pressure:
-
-- scientific-analysis recording;
-- molecular-system inputs by stable reference/content identity;
-- parameters;
-- Results and Artifacts;
-- nested MolSysSuite operations;
-- parent/child operation identity;
-- cross-component lineage;
-- Run/correlation concepts where justified;
-- failures/retries.
-
-A useful target is a small MolSysMT → TopoMT workflow whose standalone ScientificRecord can reconstruct the computational lineage.
-
-## Only after evidence from the first integrations
-
-Then evaluate, in approximately this order:
-
-1. stabilize the minimal operation/record schema;
-2. refine RecordingSession lifecycle and crash recovery;
-3. stabilize serializer/reference and redaction contracts;
-4. define the smallest useful semantic profile catalog;
-5. choose persistence/backend boundaries;
-6. add integrity/verification;
-7. add export;
-8. add computational replay;
-9. test standalone-record import/reference into MOLI;
-10. implement MOLI ProjectContext/routing/EventLedger/ProjectRecord integration;
-11. test Nextia ProjectGraph mutation recording;
-12. evaluate distributed/HPC buffering and strict versus best-effort policies.
-
-This ordering is guidance, not a frozen release roadmap. Evidence may justify reordering.
+1. stabilizing the minimal operation/record schema and public API;
+2. lifecycle recovery and reliable persistence policy;
+3. serializer/reference and redaction contracts;
+4. a small semantic-profile catalog and persistence/backend boundary;
+5. integrity/verification, export, and computational replay;
+6. standalone-record import/reference into MOLI;
+7. project routing, cross-process context, and distributed/HPC buffering.
 
 ## Packaging and repository infrastructure
 
-Do not let packaging work drive the scientific design.
-
-Before the first distributable release, Recorda will need normal project infrastructure such as:
-
-- license;
-- `pyproject.toml`;
-- tests;
-- CI;
-- supported Python policy;
-- versioning/release policy;
-- documentation;
-- PyPI/conda-forge planning as appropriate.
-
-Those should be introduced under the applicable engineering/governance policies when implementation begins, not guessed during the design-only stage.
+Do not let packaging drive scientific design. Before the first distributable release, add a license, `pyproject.toml`, tests, CI, supported Python policy, versioning/release policy, and documentation under the applicable engineering/governance policies.
 
 ## Gate for broad implementation
 
-Do not broaden Recorda substantially until the first real integrations demonstrate that:
-
-- standalone recording is scientifically useful;
-- inactive instrumentation is unobtrusive;
-- operation identity and lineage are adequate;
-- ownership boundaries remain clean;
-- Recorda does not require MOLI for standalone use;
-- MOLI can plausibly enrich the same substrate rather than needing a second provenance system.
-
-The goal of the first implementation is **learning**, not feature completeness.
+Do not broaden Recorda substantially until the experiments show that standalone recording is useful beyond MOLI, uninstrumented coverage is represented honestly, inactive instrumentation is unobtrusive, failures and interrupted work are visible, and component-owned records remain authoritative. MOLI should be able to enrich the same substrate later without requiring a second, incompatible provenance model.
