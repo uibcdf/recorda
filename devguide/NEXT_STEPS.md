@@ -2,7 +2,7 @@
 
 ## Status and scope
 
-Recorda is currently **DESIGN-STAGE**. The first implementation experiment is specified in [`FIRST_SLICE.md`](FIRST_SLICE.md) and tracked in [Recorda #1](https://github.com/uibcdf/recorda/issues/1).
+Recorda has an **EXPERIMENTAL STANDALONE PROTOTYPE**. The first implementation experiment is specified in [`FIRST_SLICE.md`](FIRST_SLICE.md) and tracked in [Recorda #1](https://github.com/uibcdf/recorda/issues/1).
 
 The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the smallest correct standalone recording substrate, learn from a library outside MOLI, and only then add platform integration.
 
@@ -18,9 +18,17 @@ Do **not** begin by:
 - instrumenting every helper function in a scientific package;
 - requiring an existing component to replace its own records with Recorda records.
 
-## First experiment — standalone with an external library
+## First experiment — controlled standalone laboratory
 
-Use a deterministic scientific operation from a library outside MOLI. Do not modify that library's source. The caller owns an explicit semantic boundary around the operation. A session must make the declared call inspectable without implying that unwrapped calls were captured.
+Use deterministic dummy operations from `uibcdf/recorda-lab`. Keep that library independent
+of Recorda; explicit and decorated boundaries belong to its experimental consumers.
+A session makes declared calls inspectable without implying unwrapped calls were captured.
+The recommended library usage is start once, call decorated semantic functions normally,
+and stop recording. Optional context managers share that lifecycle. The activation
+experiment additionally exercises session-local native-reference adapters and semantic
+profile labels, without implementing the broader profile/policy catalog.
+PyUnitWizard is not modified or instrumented. A real external library follows the laboratory
+to establish practical utility before Sabueso or platform integration.
 
 Build only:
 
@@ -35,7 +43,25 @@ Keep exact API, file format, serializer protocol, and packaging details provisio
 
 The acceptance cases in [`FIRST_SLICE.md`](FIRST_SLICE.md) cover success, exception, interruption, inactive behavior, nesting, redaction, native-record coexistence, and coverage gaps. Inspect the record with Recorda alone; no MOLI dependency or project context.
 
-## Second experiment — Sabueso semantic boundaries
+The laboratory now retains usage notebooks, real IPykernel cell/fault acceptance
+and repeated direct/inactive/active timing measurements, tracked by
+`uibcdf/recorda-lab#3` and `uibcdf/recorda-lab#2`. Local evidence is scoped to the
+tested kernel/client and storage. Active synchronous recording costs milliseconds
+per declared call in the dummy experiment; reference hashing adds input-dependent
+work. This reinforces semantic boundary selection before real-library validation.
+Do not infer a universal negligible-overhead guarantee or browser support.
+
+## Real external-library experiment — controlled SciPy fitting
+
+`uibcdf/recorda-lab#4` exercises unmodified SciPy parameter estimation through a
+caller-local decorated alias. Native/dormant/active fits agree with an independent
+least-squares oracle. An actual failed attempt/retry remains visible, with referenced
+model/input/solver/native-result files. A notebook simulates usage; a Recorda/stdlib
+inspector checks trial receipts. This qualifies that scenario, not arbitrary SciPy
+outputs or general research workflows. See `evidence/scipy_local.json` and the
+laboratory's `devguide/SCIPY_TRIAL.md`. No core runtime dependency is added.
+
+## Next experiment — Sabueso semantic boundaries
 
 Use the same standalone substrate on exactly enough real functionality to test two patterns:
 
@@ -64,7 +90,10 @@ Then evaluate, in an order informed by the experiments:
 
 ## Packaging and repository infrastructure
 
-Do not let packaging drive scientific design. Before the first distributable release, add a license, `pyproject.toml`, tests, CI, supported Python policy, versioning/release policy, and documentation under the applicable engineering/governance policies.
+Do not let packaging drive scientific design. License, `pyproject.toml`, tests, CI
+configuration and Python policy are present. Before a distributable release, finish
+versioning/release policy, Conda packaging and the distribution/OS reviews with
+executed evidence under the applicable engineering/governance policies.
 
 ## Gate for broad implementation
 

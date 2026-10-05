@@ -1,6 +1,6 @@
 # Recorda Development Guide
 
-Recorda is currently in the **design stage**.
+Recorda has an **experimental standalone prototype**; its public API and schema remain provisional.
 
 This directory is the entry point for developers and agents working on Recorda. Do not infer a frozen public API or implementation architecture from illustrative examples.
 
@@ -9,6 +9,10 @@ This directory is the entry point for developers and agents working on Recorda. 
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
 3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.
+4. [`ENGINEERING_REVIEW.md`](ENGINEERING_REVIEW.md) — MOLI engineering applicability and remaining qualification.
+5. [`reporting_protocol.md`](reporting_protocol.md) — owning issues, report queues and archive.
+6. [`PYTHON_SUPPORT.md`](PYTHON_SUPPORT.md) — Python 3.11–3.14 and the tracked MOLI transition.
+7. [`ACTIVATION.md`](ACTIVATION.md) — recommended start/stop, context ownership and native adapters.
 
 ## MOLI integration contract
 
@@ -39,4 +43,7 @@ Recorda must remain usable without MOLI. MOLI enriches the common recording subs
 
 Do not implement the complete design at once.
 
-The first implementation should be driven by a real operation from a library outside MOLI, with explicit caller-owned capture. It should preserve room to revise the API and internal representation as evidence accumulates.
+The first implementation uses deterministic dummy operations in `uibcdf/recorda-lab`,
+with explicit caller-owned capture and an opt-in consumer example. A real external
+library follows to evaluate practical scientific utility. Do not instrument PyUnitWizard
+or adopt routine quantity-conversion recording as a production boundary.

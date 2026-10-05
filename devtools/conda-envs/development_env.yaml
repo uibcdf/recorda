@@ -1,0 +1,13 @@
+name: recorda-dev
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python=3.14
+  - pip
+  - setuptools>=77
+  - wheel
+  - pytest
+  - ruff=0.16.5
+  - pip:
+      - pytest-receptor==1.1.0

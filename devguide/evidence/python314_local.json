@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-05",
+  "scope": "local unreleased prototype; Linux only; no hosted CI or public OS claim",
+  "interpreter": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+  "python": "3.14.7",
+  "working_environment": "molsyssuite@uibcdf_3.14",
+  "shell_default_observed": "molsyssuite@uibcdf_3.13 (explicit interpreter used)",
+  "source_tests": {
+    "passed": 25,
+    "python": "3.14.7"
+  },
+  "installed_tests": {
+    "passed": 25,
+    "working_directory": "/tmp",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/recorda-tools:/tmp/recorda-python314/installed PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python -m pytest -p pytest_receptor.plugin -p no:cacheprovider --receptor=llm -o pythonpath='' /home/diego/repos@uibcdf/recorda/tests /tmp/recorda-python314/lab/tests"
+  },
+  "tools": {
+    "pytest": "9.1.1",
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5",
+    "setuptools": "84.0.0",
+    "build": "1.6.1"
+  },
+  "runtime_dependencies": {
+    "recorda": [],
+    "recorda-lab": []
+  },
+  "requires_python": {
+    "recorda": "<3.15,>=3.11",
+    "recorda-lab": "<3.15,>=3.11"
+  },
+  "wheel_sha256": {
+    "recorda-0.0.0-py3-none-any.whl": "cf880cede595e564d876bd96387bcabdc49b1f19b0615df54dbeab677bda6f01",
+    "recorda_lab-0.0.0-py3-none-any.whl": "0cf8249608c863a166a3143dc3923614c653608d89265b6f8f4df5aab7339d50"
+  },
+  "source_sha256": {
+    "recorda": {
+      "src/recorda/__init__.py": "125348852c3c8083d0142c086cffbac020b92ffdb8cb6fc4725319f8ba42b2ee",
+      "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "src/recorda/capture.py": "a354a43b6a8d5bba9ae7a568b624b7c90665fcc347ae8aa7dcf3a2e4c3bd1686",
+      "src/recorda/reader.py": "7ce1d4bebb2f7e54367c5d18a794b1bf0b06185bdee8ad62c326935f14212859",
+      "src/recorda/runtime.py": "32a9ce4c23e78c0e9a478801089d0bb21757b0f185b63547f4a088cb2a546acf",
+      "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+      "pyproject.toml": "a23aaba802b8761e170088f904911bafed6dacf11d68f77b27a738227ac3dca8",
+      ".github/workflows/tests.yml": "ec367ea48efbc50bbfceb8c4bd36c9d1341d7ca9586af53984d21f6afc76b038"
+    },
+    "recorda-lab": {
+      "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+      "tests/test_dummy.py": "1e42000c0c8f9d31c2be83727482d384a51e016fb3d5b66470b6d87c9025a12c",
+      "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
+      "pyproject.toml": "3caccfd6ca18cfdb7db317981678bf3d25050af2c0f950b6fd2acf65415b0ea0",
+      ".github/workflows/tests.yml": "73ebc325562417ea6cf31639e5356524c1051195b30487e03412a4baad8d94c3",
+      "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66"
+    }
+  },
+  "artifacts": "/tmp/recorda-python314/artifacts",
+  "acceptance_sha256": "64dddc62d035f111d4daa28ebbf2040b7af4ec8a2321b7a2b31c6c91b3d7faa0",
+  "scenarios": {
+    "success": "succeeded",
+    "failure": "failed",
+    "interruption": "incomplete",
+    "nested": "succeeded",
+    "omissions": "succeeded"
+  },
+  "tracking": [
+    "uibcdf/recorda#4",
+    "uibcdf/moli#50",
+    "uibcdf/recorda-lab#1"
+  ],
+  "default_review_deadline": "2026-11-05 or first public release, whichever is earlier"
+}

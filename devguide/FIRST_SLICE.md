@@ -1,6 +1,37 @@
 # Recorda: first standalone slice
 
-**Status:** design proposal for the first implementation experiment, tracked in [Recorda #1](https://github.com/uibcdf/recorda/issues/1). It narrows, but does not replace, [`DESIGN.md`](DESIGN.md).
+**Status:** experimental implementation and controlled laboratory, tracked in [Recorda #1](https://github.com/uibcdf/recorda/issues/1). It narrows, but does not replace, [`DESIGN.md`](DESIGN.md).
+
+## Initial laboratory — 2026-10-05
+
+The first mechanism experiment uses `uibcdf/recorda-lab`: an independent dummy package,
+small deterministic operations, native result identity and reproducible failure/interruption
+scenarios. Explicit capture belongs to the consumer; a separate opt-in example checks
+decorator behavior. The dummy implementation contains no Recorda hooks.
+
+PyUnitWizard was considered as a temporary laboratory and set aside. It is not modified
+or instrumented. Recording every unit conversion would add noise without establishing
+scientifically consequential provenance. The laboratory proves recording mechanics;
+a real library outside MOLI remains a subsequent scientific-usability experiment.
+
+The current prototype implements manual start/stop and optional context-managed
+activation over one session lifecycle, explicit operations, an opt-in decorator,
+session-local reference adapters and incremental local JSONL persistence.
+Replay, routing and broad profile catalogs remain later experiments.
+
+## Recommended activation for instrumented libraries
+
+Activate once with `recorda.start(name, path=...)`, call decorated functions normally,
+then use `recorda.stop()` or the returned handle's `stop()` in the activating context.
+The library keeps its function bodies and return values. Session-local adapters capture
+references for known domain objects. `profile=` records a semantic label only.
+The optional `with recorda.session(...)` and explicit operation interfaces share the
+same journal model; neither is required inside an instrumented library function.
+
+The controlled `recorda-lab/experiments/run_activation.py` demonstrates this usage.
+Read [`ACTIVATION.md`](ACTIVATION.md) for repeated-start, context ownership, running
+operation and incomplete-session behavior. An unclosed recording remains incomplete;
+normal process exit does not silently certify successful session closure.
 
 ## What this slice must prove
 
@@ -52,7 +83,8 @@ MOLI adds project scope, authorization, EventLedger routing, and composed Projec
 
 ## Evidence required before broadening
 
-Use a deterministic operation from a library outside MOLI, with an unmodified source, and a small opt-in instrumented example. Inspect the stored record after each case:
+Use a deterministic dummy operation with an unmodified implementation, and a small
+opt-in instrumented consumer example. Inspect the stored record after each case:
 
 1. successful call with safe input and output references;
 2. target exception, preserving the exception for the caller and recording failure;
@@ -62,4 +94,7 @@ Use a deterministic operation from a library outside MOLI, with an unmodified so
 6. a native provenance/result reference linked without copying or changing the native record;
 7. a clear statement of instrumented coverage and known gaps.
 
-Only then apply the same substrate to a Sabueso retrieval and an entity-resolution boundary. Evaluate component-owned MolSysSuite records before any MolSysSuite integration. Test MOLI routing after standalone records prove useful. Stabilize public API, schema, storage, and replay claims from the evidence, not from this sketch.
+After laboratory acceptance, evaluate a real third-party operation and then a Sabueso
+retrieval and entity-resolution boundary. Evaluate component-owned MolSysSuite records
+before integration. Test MOLI routing after standalone records prove useful. Stabilize
+API, schema, storage and replay claims from evidence, not from this sketch.

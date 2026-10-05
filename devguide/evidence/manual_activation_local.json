@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-05",
+  "scope": "local unreleased activation experiment; Linux; no hosted CI/public release claim",
+  "source_tests": {
+    "python": "3.14.7",
+    "passed": 43
+  },
+  "installed_tests": [
+    {
+      "minor": "3.11",
+      "python": "3.11.16",
+      "interpreter": "/home/diego/Myopt/miniconda3/envs/ackredit-py311/bin/python",
+      "pytest": "9.1.1",
+      "pytest_receptor": "1.1.0",
+      "recorda": "0.0.0",
+      "lab": "0.0.0",
+      "passed": 43,
+      "exit_code": 0,
+      "working_directory": "/tmp",
+      "plugin_path": "/tmp/recorda-tools",
+      "packages_path": "/tmp/recorda-activation/installed"
+    },
+    {
+      "minor": "3.12",
+      "python": "3.12.12",
+      "interpreter": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.12/bin/python",
+      "pytest": "9.0.2",
+      "pytest_receptor": "1.1.0",
+      "recorda": "0.0.0",
+      "lab": "0.0.0",
+      "passed": 43,
+      "exit_code": 0,
+      "working_directory": "/tmp",
+      "plugin_path": "/tmp/recorda-tools",
+      "packages_path": "/tmp/recorda-activation/installed"
+    },
+    {
+      "minor": "3.13",
+      "python": "3.13.14",
+      "interpreter": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.13/bin/python",
+      "pytest": "9.1.1",
+      "pytest_receptor": "1.1.0",
+      "recorda": "0.0.0",
+      "lab": "0.0.0",
+      "passed": 43,
+      "exit_code": 0,
+      "working_directory": "/tmp",
+      "plugin_path": "/tmp/recorda-tools",
+      "packages_path": "/tmp/recorda-activation/installed"
+    },
+    {
+      "minor": "3.14",
+      "python": "3.14.7",
+      "interpreter": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+      "pytest": "9.1.1",
+      "pytest_receptor": "1.1.0",
+      "recorda": "0.0.0",
+      "lab": "0.0.0",
+      "passed": 43,
+      "exit_code": 0,
+      "working_directory": "/tmp",
+      "plugin_path": "/tmp/recorda-tools",
+      "packages_path": "/tmp/recorda-activation/installed"
+    }
+  ],
+  "tracking": [
+    "uibcdf/recorda#1",
+    "uibcdf/recorda-lab#1"
+  ],
+  "features": [
+    "manual start/stop and owning session handle",
+    "shared optional context-manager lifecycle",
+    "context ownership and refusal to stop running operations",
+    "session-local exact-type reference adapters",
+    "semantic profile labels (no policy engine)"
+  ],
+  "command_template": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/tmp/recorda-tools:/tmp/recorda-activation/installed PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 <interpreter> -m pytest -p pytest_receptor.plugin -p no:cacheprovider --receptor=llm -o pythonpath='' /home/diego/repos@uibcdf/recorda/tests /tmp/recorda-activation/lab/tests",
+  "wheel_sha256": {
+    "recorda-0.0.0-py3-none-any.whl": "a9cf0b48a973211834882d573c405be2b3a74feecd2454622cea2860724f46e7",
+    "recorda_lab-0.0.0-py3-none-any.whl": "e899ad636cba258fffe58a8edd79cc2000229be46ac505011b8a5e3c166aa147"
+  },
+  "source_sha256": {
+    "recorda": {
+      "src/recorda/__init__.py": "b9cfe9880b311bcb98a9036477ace88998b4809eb977f27d009d8c3ed59c7b4c",
+      "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "src/recorda/capture.py": "51b2c98a77657d09c0cfe96caca6c531daacee2dfcea9added0ba99438be37a2",
+      "src/recorda/reader.py": "a774a9a124e27edcd19158c7eae936f33cb15a13c8604515bafbe63306a72c2f",
+      "src/recorda/runtime.py": "a1430fc137f6b5896a96f04e386308c2577129f37bc35681e384eabd9ec01330",
+      "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+      "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64"
+    },
+    "recorda-lab": {
+      "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+      "tests/test_activation_experiment.py": "b2eacd47146b04f821358379de0cf3751ff8595233894063e0d518acdcf0320f",
+      "tests/test_dummy.py": "1e42000c0c8f9d31c2be83727482d384a51e016fb3d5b66470b6d87c9025a12c",
+      "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
+      "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
+      "experiments/run_activation.py": "afabfc0dff27fd313bf21b6e597678cbdefbfd65c77558cc845887f6929c2811",
+      "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66"
+    }
+  },
+  "dummy_unchanged_sha256": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+  "artifacts": "/tmp/recorda-activation/artifacts",
+  "artifact_sha256": {
+    "acceptance.json": "6dec8995d61085d8708fdaf6cc65d95db3a695cbc65c5ecccd28467d24fb33fa",
+    "empty-samples.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "failure.jsonl": "ba9852cb3c7b05867593d602fa042f9f8f4701c7c8902ddb2b87b215bb69b791",
+    "interruption.jsonl": "55c3ce3eea5f7103e00ece1e5609ee4e919462ef543f81a88f23264aa0d0cb65",
+    "native-result.json": "46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+    "nested.jsonl": "aa136072b4d50d4658a03abee79579a9ea8d09b3857f461cc2302bc59a35310e",
+    "omissions.jsonl": "da9cf8dabdbbab862d9ab9a660581230028699119036c71dcc801ddcb1923f88",
+    "samples.json": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+    "success.jsonl": "a45ad4dc5503e26cb5e7f83ca2d818ad077b70fd420de78297fe4055449503df"
+  },
+  "scenarios": {
+    "success": "succeeded",
+    "failure": "failed",
+    "interruption": "incomplete",
+    "nested": "succeeded",
+    "omissions": "succeeded"
+  },
+  "independent_inspection": "interrupted record inspected with Recorda alone; dummy not imported"
+}

@@ -1,0 +1,321 @@
+{
+  "date": "2026-10-05",
+  "scope": "local Linux installed standalone runtimes plus current experiment sources; controlled SciPy case only",
+  "tracking": [
+    "uibcdf/recorda-lab#4",
+    "uibcdf/recorda-lab#1",
+    "uibcdf/recorda#1"
+  ],
+  "environment": {
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "tools": {
+      "pytest": "9.1.1",
+      "ruff": "0.16.5",
+      "numpy": "2.4.6",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "ipykernel": "7.3.0",
+      "jupyter_client": "8.10.0",
+      "nbformat": "5.11.1"
+    },
+    "pytest_receptor": "1.1.0",
+    "published_plugin_path": "/tmp/recorda-tools"
+  },
+  "execution_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/tmp/recorda-tools:/tmp/recorda-activation/installed",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "RECORDA_LAB_SCIPY": "1",
+    "RECORDA_LAB_NOTEBOOK": "1"
+  },
+  "installed_runtime": {
+    "directory": "/tmp/recorda-activation/installed",
+    "versions": {
+      "recorda": "0.0.0",
+      "recorda-lab": "0.0.0"
+    },
+    "runtime_sources_identical_to_actual_checkouts": true,
+    "qualification": "previous built/installed runtimes; current lab sources/tests; not a newly built/public release"
+  },
+  "tests": {
+    "full_python314": {
+      "passed": 50,
+      "skipped": 0
+    },
+    "basic_kernel_prepared_lane": {
+      "passed": 2,
+      "scientific_notebook": "explicitly skipped"
+    },
+    "python311_installed_regression": {
+      "passed": 44,
+      "skipped": 6,
+      "skips": "two kernel and four scientific cases"
+    },
+    "source_python314_initial": {
+      "passed": 50,
+      "note": "initial trial before mutable-input omission extension"
+    },
+    "scientific_installed_extension": {
+      "passed": 4,
+      "note": "includes modified-input reference and receipt loss/change checks"
+    }
+  },
+  "scientific_summary": {
+    "parameters": [
+      2.5023636363636363,
+      -0.6966363636363636
+    ],
+    "covariance": [
+      [
+        0.00015886501533245425,
+        -7.943250780816357e-05
+      ],
+      [
+        -7.943250780816357e-05,
+        0.0004368787866062028
+      ]
+    ],
+    "least_squares_oracle": [
+      2.502363636363636,
+      -0.696636363636363
+    ],
+    "residual_sum_squares": 0.03931909090909076
+  },
+  "notebooks": {
+    "schema": "recorda-lab.examples/0.1",
+    "notebooks": {
+      "01_manual_activation.ipynb": {
+        "code_cells_passed": 9,
+        "source_sha256": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+        "executed_notebook": "01_manual_activation/executed.ipynb",
+        "executed_sha256": "64722dab435841a3ed1dbd82b1e73a541296f627ffc86232ddf2d67a859b2202"
+      },
+      "02_recording_cost.ipynb": {
+        "code_cells_passed": 4,
+        "source_sha256": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+        "executed_notebook": "02_recording_cost/executed.ipynb",
+        "executed_sha256": "87957b347c0c628411ada50e2d2bbba9923d38ca6878b7671747e54fd8976def"
+      },
+      "03_scipy_fit.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
+        "executed_notebook": "03_scipy_fit/executed.ipynb",
+        "executed_sha256": "d105eb1d967b082d9c6c01d44a6018ee139abf7ed52faa0f58cdc7975be788ab"
+      }
+    },
+    "skipped": {}
+  },
+  "usage_notebook_artifacts": "/tmp/recorda-scipy/final-tests/test_committed_usage_notebooks0/examples",
+  "scientific_artifacts": "/tmp/recorda-scipy/artifacts",
+  "artifact_sha256": {
+    "acceptance.json": "5b70bf207834de35a3436ca9a530aa9e29d7f1610dd7fb63d9cc5b10a9e029e8",
+    "comparison.jsonl": "7bb3a347909e64a116bad8d7267018972f7866c52011a7d3eddb8215e0bbf60c",
+    "native/affine.py": "378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+    "native/bounds.npy": "7c9135ca3bc50448a417129f2dfda92d37c54bfca9b13b5c727191fce33e6f47",
+    "native/fit-0-covariance.npy": "57a8ad86322dae620e9f222720e48fa2eb299daf8e9d228886e982fef2f262ee",
+    "native/fit-0-parameters.npy": "c9338dcdd7505f2237f23e7c0a4c610c4af4821548982f55fbc7b52cfec47bfe",
+    "native/fit-1-covariance.npy": "2fd683d28691ebadb45bb8c2cdc8e36dfb49706f73ce1a5108808355ad131953",
+    "native/fit-1-parameters.npy": "0988a24c0639ccba20931b2789f62ad593b3de9fb96a130fa281ee3ba431be09",
+    "native/fit-51a35e5ee23a8d9a.json": "51a35e5ee23a8d9a466e151b5ab41091e6200a004f7ae0b741347a717af811d6",
+    "native/fit-fa85208a9eda2fb4.json": "fa85208a9eda2fb4f03038d188fade80fe82adbda6ab28ae0650c5e84382e145",
+    "native/index.json": "370ff6dac93ed3cefa4a9f670e5704cd8371e7f41a58869b2f4ac0e97fc6d0b1",
+    "native/p0.npy": "a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+    "native/solver-0486410a1a00fecb.json": "0486410a1a00fecb276e4b38cfe168ae731b457c5145c7bb774a5827018f2e22",
+    "native/solver-2ad1b59500beba6e.json": "2ad1b59500beba6e935a4aac88a5025f0520f0f0e7a898f8901b1dcf8a65eeb0",
+    "native/solver-a9a9396bd692d85b.json": "a9a9396bd692d85b9e08bb8b08619354aab002b17b52b62da106df19edc74b6b",
+    "native/unbounded.npy": "2edd342846436f2f3f98271342c52a7627221a7a54e9d8ee7b1e00d18bb60a9d",
+    "native/xdata.npy": "7d7b10d12576d7fb5660d439be46cd5e3fcc54b5949d870a84a299ab9bebbd9b",
+    "native/ydata.npy": "90b2d5c29f3f5565c8ddf9300fd0721824da32664372005bdeddad8c2c3787e6",
+    "retry.jsonl": "18d299852f75035c0c0cee7f0a6e97ccf7d59c591c2c6ccdd6020f65f59634b7"
+  },
+  "source_sha256": {
+    "recorda": {
+      "src/recorda/__init__.py": "b9cfe9880b311bcb98a9036477ace88998b4809eb977f27d009d8c3ed59c7b4c",
+      "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "src/recorda/capture.py": "51b2c98a77657d09c0cfe96caca6c531daacee2dfcea9added0ba99438be37a2",
+      "src/recorda/reader.py": "a774a9a124e27edcd19158c7eae936f33cb15a13c8604515bafbe63306a72c2f",
+      "src/recorda/runtime.py": "a1430fc137f6b5896a96f04e386308c2577129f37bc35681e384eabd9ec01330",
+      "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+      "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64"
+    },
+    "recorda-lab": {
+      "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+      "tests/test_activation_experiment.py": "b2eacd47146b04f821358379de0cf3751ff8595233894063e0d518acdcf0320f",
+      "tests/test_dummy.py": "765e738e251733a3632b1dba307cfbab1a5226a67ed9d7f93cbeec03664598f4",
+      "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
+      "tests/test_notebook_experiment.py": "3bdcc8c8215502c00db7bde0cc864a04d13c2bff4bd094013078ff5c16694d0c",
+      "tests/test_performance_experiment.py": "6797c3e7c1a63b3334e5bc9ffc70c29b23c2c5332fe270ff3664b81eca0905c6",
+      "tests/test_scipy_experiment.py": "d6bb8659ae38c97a0f55126827ccd860ecc418ebbf3eeb5c50c43e2a85a1abba",
+      "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
+      "experiments/inspect_scipy_trial.py": "e11fade3afee352aa87afdb4906259eb5426dca68789d1eaaf04e46679605bed",
+      "experiments/run_activation.py": "afabfc0dff27fd313bf21b6e597678cbdefbfd65c77558cc845887f6929c2811",
+      "experiments/run_examples.py": "571c113d7143bd1b1281bccf52f4c96460872217171dbfcf771cf632763fc81b",
+      "experiments/run_notebook.py": "b5c660abf77142c0e57437a13f2429b952bab0c730984e49c608b81704e4433b",
+      "experiments/run_performance.py": "0570c964f20cd94d53ab0a66eddd9eb629bc5b53b010941049d03039795fed0c",
+      "experiments/run_scipy.py": "e7d53ccdf79a287f87b491fdf5ab21a72ee829b4131f37bdaa0b57e95f22242f",
+      "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66",
+      "experiments/scipy_consumer.py": "c02fbdb70b3d59708396b0ee86c4e4d64c946433e01f282e645c02434eeddd59",
+      "notebooks/01_manual_activation.ipynb": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+      "notebooks/02_recording_cost.ipynb": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+      "notebooks/03_scipy_fit.ipynb": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d"
+    }
+  },
+  "external_stack_conda_records": {
+    "numpy": {
+      "name": "numpy",
+      "version": "2.4.6",
+      "build": "py314h2b28147_0",
+      "subdir": "linux-64",
+      "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+      "sha256": "bc61ae892973751a6b0e6ecea57ed6d7053224bddcb007165d6ceb1d7344ad47"
+    },
+    "scipy": {
+      "name": "scipy",
+      "version": "1.18.1",
+      "build": "py314h36f0660_1",
+      "subdir": "linux-64",
+      "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+      "sha256": "d51ca962cc65f892c6e3bbcddb9c4093c83368647985cdf2b29e71ade750103b"
+    },
+    "matplotlib-base": {
+      "name": "matplotlib-base",
+      "version": "3.11.2",
+      "build": "py314h9124352_1",
+      "subdir": "linux-64",
+      "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+      "sha256": "d2c2551d55eb2bf02c02f9d49d5b9893e811787297189d2279b7a91c0d845693"
+    }
+  },
+  "scipy_callable_source": {
+    "path": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/lib/python3.14/site-packages/scipy/optimize/_minpack_py.py",
+    "sha256": "2f63d854f3085279a29c9ce4219ef14cdfb792276e37ec0ed1cdac2992767581"
+  },
+  "checks": [
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-c",
+        "import sys, recorda, recorda_lab; from importlib.metadata import version; assert sys.version_info[:2]==(3,14); assert version('pytest-receptor')=='1.1.0'; assert '/tmp/recorda-activation/installed/' in recorda.__file__; assert '/tmp/recorda-activation/installed/' in recorda_lab.__file__; print(sys.executable, recorda.__file__, version('pytest-receptor'))"
+      ],
+      "cwd": "/tmp/recorda-scipy",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "devtools/validate_governance.py"
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "devtools/validate_governance.py"
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda-lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda-lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda-lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/diego/repos@uibcdf/recorda-lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "-p",
+        "no:cacheprovider",
+        "--receptor=llm",
+        "-o",
+        "pythonpath=",
+        "--basetemp",
+        "/tmp/recorda-scipy/final-tests",
+        "/home/diego/repos@uibcdf/recorda/tests",
+        "/home/diego/repos@uibcdf/recorda-lab/tests"
+      ],
+      "cwd": "/tmp/recorda-scipy",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/home/diego/repos@uibcdf/recorda-lab/experiments/run_scipy.py",
+        "/tmp/recorda-scipy/artifacts"
+      ],
+      "cwd": "/tmp/recorda-scipy",
+      "exit_code": 0
+    }
+  ],
+  "canonical_guide": "byte-identical to local MOLI guide",
+  "limits": [
+    "controlled dimensionless fixtures; no broad scientific/research claim",
+    "adapters narrow; unknown/mutated inputs and full_output result omitted",
+    "artifact receipts are lab-specific; no generic verify/integrity/replay claim",
+    "no fresh Conda solve, hosted CI, publication or public OS qualification"
+  ]
+}
