@@ -14,6 +14,11 @@ shared platform contracts in MOLI issues. Follow `devguide/reporting_protocol.md
 issues precede queued reports; preserve resolved analysis in `devguide/archive/`.
 Cross-repository identities use `uibcdf/<repository>#<number>`.
 
+Keep defect details in owning issues, code, tests and technical documentation.
+Put only accepted, lasting contributor working instructions in the correctly scoped
+`AGENTS.md`, following `MOLI_GUIDE.md#durable-instructions-for-development-agents`.
+For developer-guide work, read `devguide/AGENTS.md`.
+
 Use Ruff and published pytest-receptor (`--receptor=llm` locally, `--receptor=ci` in CI).
 Develop with Python 3.14 and retain tests for Python 3.11–3.14. Read
 `devguide/PYTHON_SUPPORT.md` for the tracked MOLI transition. The existing shared
