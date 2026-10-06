@@ -16,6 +16,8 @@ This directory is the entry point for developers and agents working on Recorda. 
 
 8. [`CAPTURE_SELECTION.md`](CAPTURE_SELECTION.md) — bounded session selection and detail.
 
+9. [`REFERENCE_CHECKS.md`](REFERENCE_CHECKS.md) — declared local reference availability and byte checks.
+
 ## MOLI integration contract
 
 Recorda is independently useful for reproducible computational work, but MOLI uses Recorda as its recording/provenance substrate.

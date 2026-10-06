@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add explicit local file resolution and bounded reference checks, distinguishing
+  byte matches, availability, loss, alteration, unsupported digests, omissions
+  and incomplete execution. Native scientific semantics remain owner-specific
+  (`uibcdf/recorda#12`, `uibcdf/recorda-lab#9`).
+
 - Add optional session `CapturePolicy` for declared profile selection and payload
   detail. Selected lifecycle facts remain mandatory; exclusions use bounded
   aggregate coverage and disabled adapters are bypassed (`uibcdf/recorda#11`,

@@ -3,14 +3,18 @@
 from .capture import Omitted, Reference
 from .policy import CapturePolicy
 from .reader import ScientificRecord, inspect
+from .references import LocalFileResolver, check_reference, check_references
 from .runtime import RecordingSession, record, session, start, stop
 
 __all__ = [
     "CapturePolicy",
+    "LocalFileResolver",
     "Omitted",
     "RecordingSession",
     "Reference",
     "ScientificRecord",
+    "check_reference",
+    "check_references",
     "inspect",
     "record",
     "session",
