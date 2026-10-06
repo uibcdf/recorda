@@ -147,8 +147,14 @@ activation, catalog codes, fallback and confidentiality limits. Local Linux
 Python 3.14.7 tests with published pytest-receptor 1.1.0 pass: 104 core tests
 (12 integration tests explicitly skipped), and 116 with pinned SMonitor source,
 including the built/installed Recorda development wheel. The receipt is
-`evidence/recovery_diagnostics_local.json`. The separate CI source lane is not
-executed evidence until its actual run is inspected.
+`evidence/recovery_diagnostics_local.json`.
+[CI 37498367934](https://github.com/uibcdf/recorda/actions/runs/37498367934) passes
+all 11 jobs at implementation commit `70a98587d9d2f8dce0626fa2bca1bd4a6a932c47`,
+including installed-Recorda/source-SMonitor checks on Linux Python 3.11–3.14.
+Published gh-run-receptor 1.2.0 inspected the completed run. The experiment's
+resolved analysis is in [archive/recovery_diagnostics_source.md](archive/recovery_diagnostics_source.md).
+The subsequent closing documentation checkpoint changes no receipt-selected
+runtime, test, metadata or workflow byte; it does not create a new CI certificate.
 
 SMonitor `6feac9728cc35d57cbc92f284d7040d7f04cb35b` supplies the new scoped and
 registration APIs; published 0.18.0 does not. No dependency/extra, version/tag,

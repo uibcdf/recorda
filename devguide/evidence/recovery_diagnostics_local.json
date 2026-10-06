@@ -45,7 +45,7 @@
     "governance": "passed",
     "ruff_check": "passed",
     "ruff_format": "passed",
-    "supported_minor_hosted_evidence": "pending exact code-head CI"
+    "supported_minor_hosted_evidence": "passed source-provider lane on Linux Python 3.11\u20133.14; ordinary installed-core Linux/macOS lanes also passed"
   },
   "manifest_scope": "runtime Python, tests, metadata and workflow bytes; documentation is maintained separately",
   "sha256_files": {
@@ -70,5 +70,26 @@
     "tests/test_recovery_diagnostics.py": "a4672ed43f1f16453e31f36ce0f43f2fa0e9479ac66cce8065a55d999dd7e072",
     "tests/test_references.py": "86d1121a1f014473d22df34b8c957ae6b6a6564a01ed08c0b4e7f1746902fe6e",
     "tests/test_smonitor_recovery.py": "64dc8a3904d0f6cdae37cd4111ea5f7819a56e0ba82ee6a56a5414d004cb2e19"
+  },
+  "ci": {
+    "run_id": 37498367934,
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37498367934",
+    "code_commit": "70a98587d9d2f8dce0626fa2bca1bd4a6a932c47",
+    "conclusion": "success",
+    "jobs_passed": 11,
+    "jobs_total": 11,
+    "inspector": "published gh-run-receptor 1.2.0, ci profile, metadata capture",
+    "provider_lane": {
+      "python": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "os": "Linux",
+      "recorda": "installed package",
+      "smonitor": "pinned source"
+    },
+    "public_provider_qualification": false
   }
 }

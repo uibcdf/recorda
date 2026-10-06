@@ -86,6 +86,12 @@ producer context, safe event contents, native failure identity/cause/traceback,
 fixed-note fallback, recursive delivery, filtered delivery, interleaved sessions
 and threads, import isolation and application-policy preservation.
 
+The executed receipt is [evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
+Implementation commit `70a98587d9d2f8dce0626fa2bca1bd4a6a932c47` passes
+[all 11 CI jobs](https://github.com/uibcdf/recorda/actions/runs/37498367934),
+including the four Linux Python 3.11–3.14 source-provider lanes. The source
+experiment is resolved in [archive/recovery_diagnostics_source.md](archive/recovery_diagnostics_source.md).
+
 Select and qualify new published provider artifacts before declaring a supported
 optional dependency or promoting ecosystem adoption. That remains in
 `uibcdf/recorda#2` / `uibcdf/recorda#3`. Inspection presentation (#14), linking

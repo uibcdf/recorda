@@ -1,9 +1,9 @@
 ---
 summary: Qualify an explicit SMonitor adapter for native-failure recovery advice.
 issue: uibcdf/recorda#16
-status: active
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: reproduced
 area: [diagnostics, recovery, confidentiality]
 blocked_by: []
@@ -59,6 +59,10 @@ This is partial ecosystem adoption rather than a policy exception.
 
 ## Resolution
 
-Local source/installed qualification is complete. Exact-code-head hosted checks
-remain to be inspected before this experiment is closed. Public provider and
-ArgDigest adoption remain tracked in `uibcdf/recorda#2`.
+Local source/installed qualification and hosted source-provider acceptance are complete.
+[CI 37498367934](https://github.com/uibcdf/recorda/actions/runs/37498367934) passes
+all 11 jobs at code commit `70a98587d9d2f8dce0626fa2bca1bd4a6a932c47`, including
+the four installed-Recorda/source-SMonitor Linux Python 3.11–3.14 lanes. Published
+gh-run-receptor 1.2.0 inspected the completed run. The closing documentation
+checkpoint changes no runtime/test/metadata/workflow byte in the receipt.
+Public provider and ArgDigest adoption remain tracked in `uibcdf/recorda#2`.
