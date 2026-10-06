@@ -21,7 +21,26 @@ verdicts and fixed user-question comparisons. Native dummy/scientific code and
 oracles remain independent. Saved reference messages identify the supplied check;
 they do not assert freshness. This is a controlled technical presentation trial,
 not a human usability study, new scientific scenario or release/replay certificate.
-Core #15 live provider-operation correlation remains a separate analysis.
+Core #15 producer-operation correlation analysis is complete; its controlled Lab
+comparison is queued separately below.
+
+## Producer diagnostic association decision
+
+[DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md) completes the architectural
+analysis in `uibcdf/recorda#15`. Compare application-retained native bundles with
+a bounded consumer-owned association sidecar using public explicit operations,
+references, SMonitor scopes and handlers in `uibcdf/recorda-lab#14`. Keep native
+science unchanged; existing SciPy trials establish attempt/retry context, not
+native SMonitor emission. No reusable core bridge or shared MOLI rewrite is selected.
+
+The [receipt](evidence/diagnostic_correlation_analysis.json) and public reproducer
+retain **20 passing research cases** and **15 unchanged recovery/import/view guards**
+on Linux Python 3.14.7 with published SMonitor 0.19.0 py_1 and pytest-receptor 1.1.0.
+This is analysis evidence, not a working scientific diagnostic bridge or new CI.
+Provider proposals/defects belong to `uibcdf/smonitor#40` (strict nonemitting export),
+`uibcdf/smonitor#41` (buffer resizing), `uibcdf/smonitor#42` (degradation failure
+precedence), with direct-consumer notice in `uibcdf/moli#62`. The resolved report
+is [archive/diagnostic_correlation.md](archive/diagnostic_correlation.md).
 
 ## Previous published-provider receiving qualification
 
@@ -149,6 +168,9 @@ authenticated integrity, full dependency closure or replay is qualified here.
    [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md). Choose another experiment
    only for a concrete remaining scientific question and specify its oracle,
    omissions and interruption cases in a new Lab issue first.
+   The next selected comparison is `uibcdf/recorda-lab#14`, following the completed
+   core #15 analysis above. Qualify explicit diagnostic references/associations
+   before choosing a reusable automatic core adapter.
 2. **Reconcile the completed current-core ecosystem review** in
    [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
    [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for
@@ -322,7 +344,8 @@ and a separate Lab receiving issue was required before consumer/notebook changes
 Both later slices are complete as recorded above and below. Safe audience
 templates, especially hints, are proposed in `uibcdf/smonitor#39`; shared safe
 hints suffice for the first slice, so no provider or MOLI restructuring blocks it.
-Live producer-event correlation remains `uibcdf/recorda#15`.
+At that checkpoint, live producer-event correlation remained `uibcdf/recorda#15`;
+the subsequent completed analysis and Lab #14 gate are recorded above.
 
 
 ## Explicit inspection-view core prototype
@@ -351,4 +374,5 @@ The receiving experiment `uibcdf/recorda-lab#13` is complete, including notebook
 comparisons and qualified default promotion as recorded above. Safe hints remain the
 SMonitor #39 opportunity; nonbootstrapping ArgDigest registration is proposed in
 `uibcdf/argdigest#32` and coordinated with `uibcdf/moli#62`. Live producer-operation
-correlation remains Recorda #15, independently scoped.
+correlation was independently scoped in Recorda #15; its completed architectural
+decision and queued Lab #14 comparison are recorded above.

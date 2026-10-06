@@ -43,7 +43,13 @@ six notebooks/49 cells and two passing nine-job hosted runs. Safe audience-hint 
 is proposed in `uibcdf/smonitor#39` and is not a blocker. The nonbootstrapping
 ArgDigest registration opportunity is `uibcdf/argdigest#32`, coordinated with
 `uibcdf/moli#62`; the initial view uses native fact guards and existing audience. Provider-operation
-correlation (#15) remains a separate analysis of live user functionality.
+correlation analysis (#15) is complete in
+[DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md): compare application-retained
+native bundles with a bounded consumer-owned association sidecar in
+`uibcdf/recorda-lab#14` before choosing any reusable core live adapter.
+Published-provider probes expose independently owned SMonitor export/buffer/
+degradation opportunities in `uibcdf/smonitor#40`, `uibcdf/smonitor#41` and
+`uibcdf/smonitor#42`; a controlled application-owned trial needs no MOLI restructure.
 
 The experiment sections below record completed slices and design constraints;
 they are not a queue of unimplemented work. MOLI integration, API freezing,

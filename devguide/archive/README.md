@@ -16,4 +16,8 @@ Resolved implementation slices retain their owning issues and historical evidenc
 - [Current core ecosystem review](ecosystem_boundaries.md) —
   `uibcdf/recorda#2`, resolved locally; central registry reconciliation belongs to MOLI.
 - [Inspection presentation evaluation](inspection_presentation_analysis.md) —
-  `uibcdf/recorda#14`, architectural analysis resolved; prototype remains #21.
+  `uibcdf/recorda#14`, architectural analysis resolved; prototype #21 and Lab #13
+  receiving are complete.
+- [Producer diagnostic correlation evaluation](diagnostic_correlation.md) —
+  `uibcdf/recorda#15`, architectural analysis resolved; controlled comparison
+  queued in `uibcdf/recorda-lab#14`.

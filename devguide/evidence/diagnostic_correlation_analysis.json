@@ -1,0 +1,204 @@
+{
+  "created_utc": "2026-10-06T23:27:47.161792+00:00",
+  "issue": "uibcdf/recorda#15",
+  "scope": "Architectural decision and synthetic public-API research; no core bridge, scientific diagnostic scenario, provider patch, default promotion or new CI evidence",
+  "recorda_parent_commit": "75f295d8d961cdfc81935347215cbed410f20b25",
+  "recorda_installed": {
+    "source_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+    "version": "0.2.0",
+    "path": "/tmp/recorda-published-support-314/lib/python3.14/site-packages/recorda",
+    "wheel_sha256": "835e4cbaba1f082b7e5ac1934090fbf9f345c3ef05f0f646eba84892df08a250",
+    "source_installed_runtime_bytes_identical": true,
+    "runtime_source_sha256": {
+      "src/recorda/__init__.py": "784dc2cf2699db500b9399d19a9f7091becfdc3a2d50d293cafb43fcab28404a",
+      "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+      "src/recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+      "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+      "src/recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+      "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+      "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+      "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+      "src/recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+      "src/recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+      "src/recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+      "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+      "src/recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+      "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+    }
+  },
+  "python": {
+    "executable": "/tmp/recorda-published-support-314/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39"
+  },
+  "tools": {
+    "pytest-receptor": "1.1.0",
+    "pytest": "9.1.1",
+    "ruff": "ruff 0.16.5"
+  },
+  "providers": {
+    "smonitor": {
+      "version": "0.19.0",
+      "build": "py_1",
+      "fn": "smonitor-0.19.0-py_1.tar.bz2",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+      "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+    },
+    "argdigest": {
+      "version": "0.15.0",
+      "build": "py_0",
+      "fn": "argdigest-0.15.0-py_0.tar.bz2",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.15.0-py_0.tar.bz2",
+      "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1"
+    },
+    "depdigest": {
+      "version": "0.13.0",
+      "build": "py_0",
+      "fn": "depdigest-0.13.0-py_0.tar.bz2",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b"
+    }
+  },
+  "provenance": {
+    "feature": "smonitor",
+    "providers": {
+      "argdigest": {
+        "file": "argdigest-0.15.0-py_0.tar.bz2",
+        "python_files": 38,
+        "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+        "version": "0.15.0"
+      },
+      "depdigest": {
+        "file": "depdigest-0.13.0-py_0.tar.bz2",
+        "python_files": 16,
+        "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+        "version": "0.13.0"
+      },
+      "smonitor": {
+        "file": "smonitor-0.19.0-py_1.tar.bz2",
+        "python_files": 40,
+        "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+        "version": "0.19.0"
+      }
+    }
+  },
+  "smonitor_source": {
+    "commit": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "tag_commit": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "clean": true,
+    "selected_source_matches_published_bytes": true,
+    "selected_source_sha256": {
+      "smonitor/core/manager.py": "76619b9b99b08b6dee0ac16eaf4006e56fd26116bd7a7d9f57897c12b6fbc1b4",
+      "smonitor/core/capture.py": "e27d4f94f830ebfa2aaca96c54b5ba40d19d752d214386b322197a40f9c838da",
+      "smonitor/core/fingerprint.py": "80f0c8377602c8ef3cb4dc71ce02b59dd0f57bc5ed52e2790c400af66ba37856",
+      "smonitor/bundle.py": "f9ce3355a9dacff7b2d9572cbd4ac499dbbdcc038cbce3b3d2c5ade25c71bd8b",
+      "smonitor/policy/engine.py": "b15cc0eea4a545795e5852c3560105ac9fd20efdc1d97225821292691ec8bb23",
+      "smonitor/handlers/memory.py": "c12c37421cebaf6a574feabed4bff24f64df8237905bc9ec81293e9174b87543"
+    },
+    "guide_sha256": {
+      "standards/SMONITOR_GUIDE.md": "6d5ed6f99e6da9364f3a1701c1db10cc27cd554b798174a5e0a4c868ac259aa0",
+      "docs/content/user/library-integrators/scoped-capture.md": "27efb3879ad6d858b16fdd051fb93b10cdb7b843c8e14298f10a459fc862994e"
+    },
+    "retrieval": "Published Conda managed files plus clean local pinned upstream source; web source fetch failed, local Git source used"
+  },
+  "lab_context": {
+    "commit": "bf344b6db9919050857b533f4a82a149395412ed",
+    "clean": true,
+    "evidence": "Source inspection only: real failed optimizer attempt/retry context, no native SciPy SMonitor emission asserted or newly executed scientific trial",
+    "source_sha256": {
+      "experiments/scipy_consumer.py": "c02fbdb70b3d59708396b0ee86c4e4d64c946433e01f282e645c02434eeddd59",
+      "experiments/run_workflow.py": "dccaab0b66b42c394ddee61f7f0bf62af245559d6d1415be1ee331ec0b164180",
+      "experiments/inspect_workflow.py": "19a93058967e65f5f7e960103ea63aa8fc180d207bf398946db3238c0630e4b2"
+    }
+  },
+  "probe": {
+    "path": "devguide/evidence/diagnostic_correlation_probe.py",
+    "sha256": "057e62da2c7c17649feaf6e4082a887d4c3a9ec5af245b90f6cb2d8292c56630",
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-published-support-314/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' devguide/evidence/diagnostic_correlation_probe.py",
+    "exit_code": 0,
+    "passed": 20,
+    "skipped": 0,
+    "seconds": 0.18,
+    "output": "PASS exit=0 | 20 passed | 0.18s",
+    "output_sha256": "3d384dae8251a1576d687d39878054c27aa5e5da41667817b3b7918c423a782f",
+    "tests": [
+      "test_public_handler_attach_detach_preserves_configuration",
+      "test_explicit_application_reconfiguration_can_replace_attached_handler",
+      "test_detailed_safe_facts_preserve_message_and_distinct_native_ids",
+      "test_metadata_only_changes_presentation_and_excludes_payload_before_delivery",
+      "test_task_interleaving_and_nested_restoration",
+      "test_child_task_inherits_facts_after_parent_scope_ends",
+      "test_thread_context_must_be_propagated_explicitly",
+      "test_early_suppression_has_no_handler_delivery",
+      "test_filter_drop_differs_from_native_buffer_retention",
+      "test_route_selection_can_exclude_added_handler",
+      "test_aggregation_separates_safe_operation_facts_and_preserves_deferred_origin",
+      "test_ordinary_handler_failure_does_not_replace_native_return_or_exception",
+      "test_handler_degradation_warning_can_escape_direct_emit",
+      "test_lower_buffer_limit_keeps_old_capacity_but_latest_window_is_selectable",
+      "test_bundle_event_redaction_does_not_redact_top_level_argv",
+      "test_collecting_bundle_flushes_and_delivers_deferred_diagnostics",
+      "test_existing_explicit_boundary_can_reference_a_reviewed_native_bundle"
+    ],
+    "meaning": "Cases asserting provider limitations pass when the limitation is reproduced, not when a future fix is implemented"
+  },
+  "unchanged_guards": {
+    "command": "RECORDA_TEST_SMONITOR=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-published-support-314/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests/test_smonitor_recovery.py tests/test_inspection_view.py::test_plain_import_and_inspection_remain_provider_free tests/test_inspection_view.py::test_fresh_view_neither_bootstraps_nor_imports_argdigest",
+    "exit_code": 0,
+    "passed": 15,
+    "seconds": 0.7,
+    "output": "PASS exit=0 | 15 passed | 0.70s",
+    "output_sha256": "3cad6de490107d7a4e35982e685c8600850c44835d64953ff49212a40774f0ea"
+  },
+  "checks": {
+    "provider_provenance": {
+      "command": "/tmp/recorda-published-support-314/bin/python devtools/verify_support_environment.py smonitor",
+      "exit_code": 0,
+      "output": "{\"feature\": \"smonitor\", \"providers\": {\"argdigest\": {\"file\": \"argdigest-0.15.0-py_0.tar.bz2\", \"python_files\": 38, \"sha256\": \"b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1\", \"version\": \"0.15.0\"}, \"depdigest\": {\"file\": \"depdigest-0.13.0-py_0.tar.bz2\", \"python_files\": 16, \"sha256\": \"e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b\", \"version\": \"0.13.0\"}, \"smonitor\": {\"file\": \"smonitor-0.19.0-py_1.tar.bz2\", \"python_files\": 40, \"sha256\": \"4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c\", \"version\": \"0.19.0\"}}}",
+      "output_sha256": "42de486303825662af4ea5f51d06ecfe8eefbb3c006c082ff56b70604a8cb790"
+    },
+    "governance": {
+      "command": "/tmp/recorda-published-support-314/bin/python devtools/validate_governance.py",
+      "exit_code": 0,
+      "output": "Local MOLI governance surface passes.",
+      "output_sha256": "43276e637724befa0408a57ed30034ce304ed0dc220aee7ed76182fee2d50e27"
+    },
+    "canonical_governance": {
+      "command": "/tmp/recorda-published-support-314/bin/python /home/liliana/repos@uibcdf/moli/devtools/scripts/check_repository.py . --canonical-guide /home/liliana/repos@uibcdf/moli/MOLI_GUIDE.md",
+      "exit_code": 0,
+      "output": ".: conforms to MOLI governance core.",
+      "output_sha256": "46dcbdf945a9df9b00638285a3757dc5692cb1aaae9e4aa75b66334cc23f7209"
+    },
+    "ruff_check": {
+      "command": "/tmp/recorda-workflow-env/bin/ruff check .",
+      "exit_code": 0,
+      "output": "All checks passed!",
+      "output_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "ruff_format": {
+      "command": "/tmp/recorda-workflow-env/bin/ruff format --check .",
+      "exit_code": 0,
+      "output": "72 files already formatted",
+      "output_sha256": "9071fb8809290955639414bfc7f9a55bb49b60c6fbecf0b84ad6e8cffd072155"
+    }
+  },
+  "decision": {
+    "lab_issue": "uibcdf/recorda-lab#14",
+    "provider_issues": [
+      "uibcdf/smonitor#40",
+      "uibcdf/smonitor#41",
+      "uibcdf/smonitor#42"
+    ],
+    "moli_notice": "https://github.com/uibcdf/moli/issues/62#issuecomment-6027294792",
+    "recommendation": "Compare application-owned native bundle references and bounded selected diagnostic sidecars at explicit boundaries before reusable automatic core integration",
+    "platform_restructure_required_for_controlled_slice": false
+  },
+  "limits": [
+    "Linux Python 3.14.7 research only",
+    "No complete warning/call capture",
+    "No native SciPy SMonitor producer qualification",
+    "No secrets classifier or universal safe bundle export",
+    "No new release/OS/CI/replay/usability claim"
+  ]
+}

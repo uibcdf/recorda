@@ -90,8 +90,12 @@ records explicit technical findings and nonemitting resolution. Lab #13 now
 qualifies the supplied-check wording correction (#22), seven receiving regressions,
 six notebooks/49 cells and the fixed JSON/view questions with 333 installed-pair
 passes/four Sabueso skips and two nine-job hosted runs. Native scientific oracles
-remain separate; this is controlled technical utility, not a human usability study. Live provider-operation
-correlation remains a separate analysis in `uibcdf/recorda#15`.
+remain separate; this is controlled technical utility, not a human usability study.
+The producer-operation correlation analysis in `uibcdf/recorda#15` is now complete
+in [DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md). Twenty published-provider
+research cases and 15 unchanged core guards pass; no scientific diagnostic bridge
+is qualified. The native-bundle/selected-association comparison is queued in
+`uibcdf/recorda-lab#14`, with producer improvements routed to SMonitor #40–#42.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work

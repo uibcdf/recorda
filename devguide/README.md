@@ -33,6 +33,10 @@ consumer-question assessment and new local multi-step workflow qualification.
     read-only technical findings and SMonitor message resolution; laboratory
     receiving evaluation is tracked in Recorda Lab #13.
 
+13. [`DIAGNOSTIC_CORRELATION.md`](DIAGNOSTIC_CORRELATION.md) — completed producer
+    diagnostic association analysis; the application-owned comparison is queued
+    in `uibcdf/recorda-lab#14` before any reusable core live adapter.
+
 ## MOLI integration contract
 
 Recorda is independently useful for reproducible computational work, but MOLI uses Recorda as its recording/provenance substrate.
