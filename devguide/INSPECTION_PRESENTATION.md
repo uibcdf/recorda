@@ -60,7 +60,11 @@ IDs and consistent duplicate observations. JSON equality preserves exact types.
 Reference explanation messages explicitly identify the supplied check; they do
 not claim a fresh observation when the caller supplies an older report. This
 receiving correction is tracked in [Recorda #22](https://github.com/uibcdf/recorda/issues/22),
-revealed by Lab #13 after restoring native bytes.
+revealed by Lab #13 after restoring native bytes. The
+[correction receipt](evidence/inspection_view_wording.json) records 305 passing
+source/installed recovery tests and all 11
+[exact-head CI jobs](https://github.com/uibcdf/recorda/actions/runs/37544021836)
+at `48a6c9a0630027f0f2c3d8d82215de8e27764913`, with published receptors.
 
 A report does not include every nonreference value in the snapshot: this checks
 all facts it declares, **not** report provenance, freshness, a full-snapshot

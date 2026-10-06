@@ -80,7 +80,134 @@
     "pip_check": "passed"
   },
   "ci": {
-    "status": "pending"
+    "run_id": 37544021836,
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37544021836",
+    "head_sha": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+    "status": "completed",
+    "conclusion": "success",
+    "gh_run_receptor": "1.2.0",
+    "profile": "ci",
+    "capture": "full",
+    "jobs": [
+      {
+        "name": "quality",
+        "id": 112543590202,
+        "conclusion": "success"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.13",
+        "id": 112543590369,
+        "conclusion": "success"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.11",
+        "id": 112543590385,
+        "conclusion": "success"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.12",
+        "id": 112543590400,
+        "conclusion": "success"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.13)",
+        "id": 112543590463,
+        "conclusion": "success"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.14)",
+        "id": 112543590504,
+        "conclusion": "success"
+      },
+      {
+        "name": "tests (macos-latest, 3.13)",
+        "id": 112543590533,
+        "conclusion": "success"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.14",
+        "id": 112543590673,
+        "conclusion": "success"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.12)",
+        "id": 112543590700,
+        "conclusion": "success"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.11)",
+        "id": 112543590701,
+        "conclusion": "success"
+      },
+      {
+        "name": "tests (macos-latest, 3.14)",
+        "id": 112543590704,
+        "conclusion": "success"
+      }
+    ],
+    "installed_verdicts": [
+      {
+        "log": "tests (ubuntu-latest, 3.12)/9_Test installed package.txt",
+        "passed": 293,
+        "skipped": 12,
+        "sha256": "8809a347a787833418200b38baaa5f7f3ef2bc164e946e891d823fb6a0517fb0"
+      },
+      {
+        "log": "tests (macos-latest, 3.14)/9_Test installed package.txt",
+        "passed": 293,
+        "skipped": 12,
+        "sha256": "c6d82649379aa4a0d3552641a47c151e0f1ffc7e1ebec08b54fc6241882385be"
+      },
+      {
+        "log": "tests (ubuntu-latest, 3.11)/9_Test installed package.txt",
+        "passed": 293,
+        "skipped": 12,
+        "sha256": "42640ea6737c25db2e71616ebe1e2fe8d49a9ffbfa18ef8890e4c48876b3898e"
+      },
+      {
+        "log": "tests (ubuntu-latest, 3.14)/9_Test installed package.txt",
+        "passed": 293,
+        "skipped": 12,
+        "sha256": "939fd70394ff36f64cf5658181bcb3bf897ce2f07137594da741e99c029b528a"
+      },
+      {
+        "log": "tests (ubuntu-latest, 3.13)/9_Test installed package.txt",
+        "passed": 293,
+        "skipped": 12,
+        "sha256": "f0e1851e241e41abfdef0dea7427df7fecfca6b81d793efa014135357e51bcfe"
+      },
+      {
+        "log": "SMonitor recovery _ Python 3.14/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 305,
+        "skipped": 0,
+        "sha256": "2b473ab6d6fab49fe70047d2eea0c244ec65328e745ae071c6b7c171268d19d9"
+      },
+      {
+        "log": "tests (macos-latest, 3.13)/9_Test installed package.txt",
+        "passed": 293,
+        "skipped": 12,
+        "sha256": "4960f8a3cd4a5c07d78e283436ff21ba605f70b764ddeb6c979727a9526b2755"
+      },
+      {
+        "log": "SMonitor recovery _ Python 3.11/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 305,
+        "skipped": 0,
+        "sha256": "fb20291d20a0d99d89c3e94ddc2e689c57074f7b20755d683ad1b4f94f6ec08c"
+      },
+      {
+        "log": "SMonitor recovery _ Python 3.13/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 305,
+        "skipped": 0,
+        "sha256": "b3784f2985eae809001291871da37b432db74fd455b4dc2d3ab56904a1f24bd9"
+      },
+      {
+        "log": "SMonitor recovery _ Python 3.12/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 305,
+        "skipped": 0,
+        "sha256": "e0acec5a0c9061984aaddc31c2cfa6735d11f1737305d51f3c53840ab9a21e74"
+      }
+    ],
+    "logs_sha256": "8fd9dd9bfa7f86cbc292539e62fa6e08bba05d80217e490dccbaf878d3e9a591"
   },
   "scope": "Reference messages qualify the supplied-check observation; no fresh checking or change to source facts",
   "wheel": {
@@ -111,5 +238,6 @@
       },
       "url": "file:///tmp/recorda22-wheel/dist/recorda-0.2.0-py3-none-any.whl"
     }
-  }
+  },
+  "implementation_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913"
 }
