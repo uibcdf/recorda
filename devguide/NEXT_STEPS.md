@@ -9,8 +9,8 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 ## Current resumption order — 2026-10-06
 
 The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): consolidate
-standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), finish ecosystem
-boundaries (`uibcdf/recorda#2`), then complete release reviews (`uibcdf/recorda#3`,
+standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), qualify Lab's
+new receiving candidate (`uibcdf/recorda-lab#12`), then complete release reviews (`uibcdf/recorda#3`,
 `uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
 next scoped experiment before implementation. The small workflow linking native
 references across steps is implemented and qualified in `uibcdf/recorda-lab#10`;
@@ -19,18 +19,21 @@ scope. It uses the current core API and does not complete broader acceptance.
 
 The current support-library audit is in
 [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md), owned by `uibcdf/recorda#2`.
-Classification is complete for today's runtime; wider ArgDigest/SMonitor adoption
-is pending. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
+Classification and adoption are complete for today's core; MOLI registry
+reconciliation is proposed in `uibcdf/moli#62`. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
 was first qualified with provider sources in `uibcdf/recorda#16`, followed by
 explicit configuration in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md)
 under `uibcdf/recorda#17`. The new published SMonitor 0.19.0 / ArgDigest 0.15.0
 closure replaces that source route in `uibcdf/recorda#18`. Default CapturePolicy
 adoption is complete in `uibcdf/recorda#19`, with all 11 installed-package/quality
-CI jobs passing. Continue with the reference-check
-contracts in `uibcdf/recorda#20`. Keep dependency metadata,
+CI jobs passing. Reference-check contracts in `uibcdf/recorda#20` are also complete,
+with 221 source/installed tests and all 11 CI jobs passing. Keep dependency metadata,
 environment specifications and executed provider evidence aligned.
 Before advancing Lab's Recorda candidate, provision its required provider closure
 and qualify the new exact pair in `uibcdf/recorda-lab#12`.
+SMonitor inspection presentation (#14) and provider-operation correlation (#15)
+remain separate analyses of new user functionality, starting from a concrete
+consumer question and a bounded recommendation before implementation.
 
 The experiment sections below record completed slices and design constraints;
 they are not a queue of unimplemented work. MOLI integration, API freezing,

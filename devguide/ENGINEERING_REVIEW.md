@@ -17,6 +17,11 @@ configuration uses ArgDigest (#19), and reference options have their own adoptio
 SMonitor adapter (#16/#18). Scientific failures, omissions and reference observations remain
 structured Recorda data, while native objects and errors retain provider ownership.
 
+The current core ecosystem review (#2) is resolved with published-provider,
+installed-wheel and supported-minor CI evidence. MOLI's observed registry remains
+`partial`; the concrete `adopted` state proposal is recorded in `uibcdf/moli#62`.
+Distribution, OS and coverage qualification are independent reviews.
+
 DepDigest has no current core optional/heavy/backend loader. PyUnitWizard has no
 current core quantity parsing, conversion or dimensional-validation boundary.
 Their non-applicability decisions have explicit reassessment triggers in the maintained

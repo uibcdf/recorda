@@ -123,3 +123,11 @@ not rewritten by this adoption. Current argument-contract evidence is retained i
 [evidence/reference_arguments_local.json](evidence/reference_arguments_local.json).
 Lab's next receiving environments and exact-pair qualification remain in
 `uibcdf/recorda-lab#12`. This is source work after immutable 0.2.0.
+
+The new 50 receiving regressions and all 221 source/installed-wheel tests pass
+on Python 3.14.7 with published pytest-receptor 1.1.0 (default lane: 209 passes,
+12 explicit recovery skips). [CI 37534456487](https://github.com/uibcdf/recorda/actions/runs/37534456487)
+passes all 11 jobs at `c6248686815bd405a08955565e4fdc232bcef906`, including
+installed-package Linux Python 3.11–3.14/macOS 3.13–3.14 and four recovery lanes,
+inspected with published gh-run-receptor 1.2.0. The resolved analysis is
+[archive/reference_arguments.md](archive/reference_arguments.md).

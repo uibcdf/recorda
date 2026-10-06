@@ -3,8 +3,10 @@
 Owned by [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
 This is the current-runtime assessment, replacing the initial blanket description
 of basic guards and future diagnostics in [ENGINEERING_REVIEW.md](ENGINEERING_REVIEW.md).
-The classification is complete for the inspected prototype; adoption remains
-partial. No exception or registry promotion is established by this assessment.
+Classification and adoption are complete for the current standalone core.
+The resolved review is [archive/ecosystem_boundaries.md](archive/ecosystem_boundaries.md).
+MOLI's observed registry remains `partial`; the concrete `adopted` state proposal
+belongs to `uibcdf/moli#62`. No exception or registry promotion is claimed here.
 
 The normative rule is MOLI's
 [Python support libraries policy](https://github.com/uibcdf/moli/blob/d94ba1cc63ba4e90775c6364629af889fe9533b0/devguide/policies/python_support_libraries_policy.md).
@@ -16,7 +18,7 @@ their MolSysSuite synchronization instructions do not govern Recorda.
 
 | Library | Current boundary | Assessment and remaining work |
 | --- | --- | --- |
-| ArgDigest | `CapturePolicy.__post_init__` canonicalizes bounded profile collections. Reference-check APIs constrain root/index, resolver/record, algorithm and byte-limit options. | Default configuration (#19) and local reference options (#20) use published ArgDigest 0.15.0 with closed signatures and metadata-only value pipelines, retaining mandatory guards. Reference receiving qualification is in progress; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) and [REFERENCE_CHECKS.md](REFERENCE_CHECKS.md). |
+| ArgDigest | `CapturePolicy.__post_init__` canonicalizes bounded profile collections. Reference-check APIs constrain root/index, resolver/record, algorithm and byte-limit options. | Default configuration (#19) and local reference options (#20) use published ArgDigest 0.15.0 with closed signatures and metadata-only value pipelines, retaining mandatory guards. Both receiving slices are qualified; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) and [REFERENCE_CHECKS.md](REFERENCE_CHECKS.md). |
 | DepDigest | ArgDigest/SMonitor are now required providers, loaded at configuration use. No backend discovery/availability loader or optional capability fallback exists. | No present Recorda-owned boundary. ArgDigest retains its own DepDigest integration. Caller-supplied exact-type reference adapters are trusted callbacks, not discovered packages. Reassess when Recorda itself manages optional/heavy/backend availability. |
 | SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | An explicit adapter uses published SMonitor 0.19.0, the Recorda catalog and scoped safe emission. Wider diagnostic features remain separate; see [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md). |
 | PyUnitWizard | The core records bounded scalars, safe references and omissions. It parses, converts and dimensionally validates no physical quantity. | No present core boundary. An unregistered quantity object remains unsupported, and a reference does not certify its producer's unit schema. Reassess before a quantity adapter or persisted quantity representation is introduced. |
@@ -114,9 +116,10 @@ native return/exception identity, secret and opaque-value omissions, missing or
 altered references, persistence faults and later session activation. They prove
 current behavior; they cannot prove an integration that has not been implemented.
 
-Keep `uibcdf/recorda#2` open and MOLI's `python_ecosystem_review` state `partial`
-until applicable boundaries have implementation and test evidence, or a governed
-bounded exception records its rationale, owner and exit condition. Recovery in
+The review kept `uibcdf/recorda#2` open and MOLI's ecosystem state `partial` until
+applicable boundaries had implementation and test evidence. Those local criteria
+are now satisfied; central registry reconciliation is requested in `uibcdf/moli#62`.
+Recovery in
 `uibcdf/recorda#16` and explicit configuration in #17 first qualified development
 sources because the earlier published releases lacked scoped APIs. Their receipts
 and archives preserve that evidence; they are not rewritten as public-package tests.
@@ -159,6 +162,11 @@ guarded byte-check core that avoids repeated digestion inside a report cache.
 Invalid individual reference values retain observations rather than configuration
 exceptions. Current receiving evidence is tracked separately in
 [evidence/reference_arguments_local.json](evidence/reference_arguments_local.json).
+That adoption passes 221 source/installed tests, or 209 with 12 recovery skips in
+the default lane. [CI 37534456487](https://github.com/uibcdf/recorda/actions/runs/37534456487)
+passes all 11 jobs at `c6248686815bd405a08955565e4fdc232bcef906`, inspected
+with published gh-run-receptor 1.2.0. The resolved slice is
+[archive/reference_arguments.md](archive/reference_arguments.md).
 This work does not qualify a public Recorda release or promote MOLI's registry.
 Required metadata changes are also tracked in `uibcdf/recorda#3`.
 

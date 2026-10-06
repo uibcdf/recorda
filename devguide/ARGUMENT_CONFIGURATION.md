@@ -111,8 +111,8 @@ Earlier source and public-provider receipts remain historical:
 Reference-check calls now use their own option contracts in
 `uibcdf/recorda#20`; see [REFERENCE_CHECKS.md](REFERENCE_CHECKS.md). The #19
 receipt preserves the earlier checking-call import behavior. The umbrella
-ecosystem review stays partial pending reference qualification and registry
-reconciliation; public Recorda
+ecosystem review is complete for the current core; MOLI registry reconciliation
+is proposed in `uibcdf/moli#62`. Public Recorda
 distribution/release and OS qualification remain in #3 / #4.
 Lab's next installed candidate needs dependency provisioning under
 `uibcdf/recorda-lab#12`; its previous qualified pair is unchanged.

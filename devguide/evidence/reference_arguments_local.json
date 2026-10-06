@@ -150,7 +150,8 @@
     "governance": "passed",
     "shared_moli_checker": "passed",
     "git_diff_check": "passed",
-    "known_tool_warning": "post-verdict /dev/null ResourceWarning from published pytest-receptor 1.1.0, already resolved upstream in uibcdf/pytest-receptor#4; no verdict/exit effect or local suppression"
+    "known_tool_warning": "post-verdict /dev/null ResourceWarning from published pytest-receptor 1.1.0, already resolved upstream in uibcdf/pytest-receptor#4; no verdict/exit effect or local suppression",
+    "native_byte_check_review": "AST comparison with parent 5553e658beee816cc84bb6c48529e7419d179bd1 confirms both public checker signatures and the entire guarded native byte-check body are unchanged"
   },
   "manifest_scope": "runtime, tests, tools, Conda routes, metadata, workflow and wheel README; devguide documentation maintained separately",
   "sha256_files": {
@@ -197,8 +198,71 @@
     "default_arguments_local.json"
   ],
   "ci": {
-    "state": "pending",
-    "expected_jobs": 11,
-    "scope": "installed default reference/capture contracts on Linux Python 3.11-3.14/macOS 3.13-3.14; explicit SMonitor recovery on Linux 3.11-3.14; quality"
-  }
+    "state": "passed",
+    "run_id": 37534456487,
+    "run_attempt": 1,
+    "head_sha": "c6248686815bd405a08955565e4fdc232bcef906",
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487",
+    "jobs_passed": 11,
+    "inspector": "published gh-run-receptor 1.2.0, profile ci, adaptive capture; PASS",
+    "scope": "installed default reference/capture contracts: Linux Python 3.11-3.14 and macOS 3.13-3.14; explicit SMonitor recovery Linux 3.11-3.14; quality",
+    "jobs": [
+      {
+        "name": "quality",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511752996"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.11",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753308"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.14",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753371"
+      },
+      {
+        "name": "tests (macos-latest, 3.13)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753377"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.11)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753399"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.12",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753406"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.13",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753420"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.13)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753436"
+      },
+      {
+        "name": "tests (macos-latest, 3.14)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753532"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.14)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753553"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.12)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37534456487/job/112511753587"
+      }
+    ]
+  },
+  "recorda_implementation_commit": "c6248686815bd405a08955565e4fdc232bcef906"
 }

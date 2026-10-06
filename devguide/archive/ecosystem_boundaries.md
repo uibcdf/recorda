@@ -1,9 +1,9 @@
 ---
 summary: Complete support-library adoption at the current Recorda-owned boundaries.
 issue: uibcdf/recorda#2
-status: partial
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: reproduced
 area: [engineering, arguments, diagnostics]
 blocked_by: []
@@ -41,13 +41,18 @@ both contract axes against pinned development sources with mandatory core guards
 all 15 jobs pass at its code/test commit, including Python 3.11–3.14 provider lanes.
 Default configuration now uses ArgDigest under `uibcdf/recorda#19`, with required
 metadata, aligned Conda routes and a local recipe/preflight. Reference-check
-contracts are implemented with receiving qualification in progress in #20.
+contracts are implemented and qualified in #20.
 The original optional integration route's
 receipt is [../evidence/published_support_local.json](../evidence/published_support_local.json);
 default-adoption evidence is [../evidence/default_arguments_local.json](../evidence/default_arguments_local.json).
 Default adoption passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`;
 the resolved analysis is [../archive/default_arguments.md](../archive/default_arguments.md).
 See [../ARGUMENT_CONFIGURATION.md](../ARGUMENT_CONFIGURATION.md).
+Reference adoption passes 221 source/installed tests and all 11 jobs in
+[CI 37534456487](https://github.com/uibcdf/recorda/actions/runs/37534456487)
+at `c6248686815bd405a08955565e4fdc232bcef906`; see
+[reference_arguments.md](reference_arguments.md) and
+[../evidence/reference_arguments_local.json](../evidence/reference_arguments_local.json).
 DepDigest has no current core backend loader, and
 PyUnitWizard has no quantity parsing/conversion/validation boundary.
 
@@ -84,10 +89,19 @@ at a time, with published-provider and compatibility evidence.
 
 ## Resolution
 
-Partial. Current-runtime classification, regressions and the bounded source-provider
-recovery/configuration integrations are recorded. Default CapturePolicy adoption
-is complete in #19; reference-check receiving qualification is in progress in #20.
-After that gate, reconcile the local completed applicability/adoption evidence
-with MOLI's registry through `uibcdf/moli#62`; its observed state remains `partial`.
-Distribution/release qualification remains independently open in #3/#4.
+Resolved for the current standalone core. Every identified applicable boundary
+has implementation and published-provider test evidence: SMonitor recovery
+(#16/#18), default ArgDigest configuration (#19), and reference options (#20).
+DepDigest has no Recorda-owned optional/heavy/backend loader; PyUnitWizard has
+no quantity parsing/conversion/dimensional-validation boundary. Their explicit
+triggers stay in the maintained review. No bounded exception is needed.
+
+Submit the concrete `partial` to `adopted` ecosystem-state proposal in
+`uibcdf/moli#62`, pointing to these exact qualified commits and receipts. MOLI's
+observed registry state remains `partial` until its owner reconciles it; this
+resolved Recorda review does not itself edit or promote that registry. Distribution,
+supported OS, coverage and public release remain independent #3/#4/#6 reviews.
+Lab's next exact-pair receiving work stays in `uibcdf/recorda-lab#12`.
+Inspection presentation (#14) and provider-operation correlation (#15) are future
+functionality analyses, not missing implementations of current core boundaries.
 No public Recorda release, registry promotion or policy exception is claimed.

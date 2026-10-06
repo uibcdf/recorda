@@ -100,7 +100,7 @@ authenticated integrity, full dependency closure or replay is qualified here.
    [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md). Choose another experiment
    only for a concrete remaining scientific question and specify its oracle,
    omissions and interruption cases in a new Lab issue first.
-2. **Adopt the identified ecosystem boundaries** in
+2. **Reconcile the completed current-core ecosystem review** in
    [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
    [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for
    the current runtime. SMonitor applies to existing persistence-recovery advice;
@@ -110,9 +110,13 @@ authenticated integrity, full dependency closure or replay is qualified here.
    and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
    evidence. Published-provider qualification is complete for SMonitor 0.19.0 /
    ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default configuration adoption is
-   complete in `uibcdf/recorda#19`; reference-check contracts remain in #20.
+   complete in `uibcdf/recorda#19`; reference-check contracts are qualified in #20.
    DepDigest and PyUnitWizard
    have no current core boundary, with explicit reassessment triggers.
+   The local review is resolved; the concrete ecosystem-state change is proposed
+   to MOLI in `uibcdf/moli#62`, with its observed registry still `partial`.
+   Before advancing Lab's candidate, qualify the required provider environments
+   and exact Recorda/Lab pair under `uibcdf/recorda-lab#12`.
 3. **Before a distributable release**, complete packaging/distribution
    [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3), installed-candidate
    OS evidence [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4), and
@@ -216,3 +220,32 @@ and exact-pair qualification in `uibcdf/recorda-lab#12`. No Lab default SHA was
 advanced. The recipe has not been built or published; public release, broader
 OS acceptance and MOLI registry promotion remain separate. Closing documentation
 changes no receipt-selected runtime/test/tool/metadata/Conda/workflow/README byte.
+
+## Subsequent reference-option adoption and core review closure
+
+`uibcdf/recorda#20` now uses published ArgDigest for resolver construction and
+reference-check options. Closed signatures, exact identities, positive non-boolean
+byte limits and declared algorithms remain explicit. Index shape and relative
+confinement are checked before root processing. Invalid individual references
+retain structured observations; the guarded native byte-check body is unchanged.
+Each report validates configuration once and caches distinct reference checks.
+Plain import and journal reading stay provider-free; checking calls now load the
+already-required providers. Earlier receipts retain their historical import scope.
+
+The [new receipt](evidence/reference_arguments_local.json) records 50 new receiving
+regressions, 221 passing source/installed tests on Python 3.14.7 with published
+pytest-receptor 1.1.0, or 209 with 12 recovery skips in the default lane.
+[CI 37534456487](https://github.com/uibcdf/recorda/actions/runs/37534456487)
+passes all 11 jobs at `c6248686815bd405a08955565e4fdc232bcef906`, inspected
+with published gh-run-receptor 1.2.0. Closing documentation preserves every
+receipt-selected implementation/test/tool/metadata/Conda/workflow/README byte.
+The resolved slice is [archive/reference_arguments.md](archive/reference_arguments.md).
+
+The current-core four-library review (#2) is locally complete, preserved in
+[archive/ecosystem_boundaries.md](archive/ecosystem_boundaries.md): both applicable
+providers have receiving evidence; DepDigest/PyUnitWizard retain explicit present
+non-applicability and reassessment triggers. A concrete `partial` to `adopted`
+registry proposal belongs to `uibcdf/moli#62`; the observed central state is still
+`partial`, with no registry change made here. Lab receiving/exact-pair work stays
+in `uibcdf/recorda-lab#12`. Public release/OS/coverage remain independent, and
+SMonitor presentation/correlation (#14/#15) remain future functionality analyses.
