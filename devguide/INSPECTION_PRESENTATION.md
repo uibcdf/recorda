@@ -1,9 +1,92 @@
-# Technical inspection presentation — bounded decision
+# Technical inspection presentation — experimental view
 
 Architectural evaluation: [uibcdf/recorda#14](https://github.com/uibcdf/recorda/issues/14).
-Queued prototype: [uibcdf/recorda#21](https://github.com/uibcdf/recorda/issues/21).
-This is a recommendation with provider research evidence, not an implemented
-Recorda view, changed CLI or frozen public API.
+Prototype: [uibcdf/recorda#21](https://github.com/uibcdf/recorda/issues/21).
+The core prototype is implemented. Its API remains experimental; laboratory
+receiving/user-view evaluation is separately owned by
+[uibcdf/recorda-lab#13](https://github.com/uibcdf/recorda-lab/issues/13).
+The architectural research below retains the reasoning and original evidence.
+
+## Current API and limits
+
+```python
+record = recorda.inspect("analysis.jsonl")
+view = recorda.inspection_view(record)
+# Checking remains a separate, explicit call with a caller-owned resolver.
+report = recorda.check_references(record, resolver=local_files)
+view = recorda.inspection_view(record, reference_report=report)
+```
+
+The returned JSON-compatible dictionary contains independent copies of `record`
+and optional `reference_report`, execution totals, reference totals, coverage
+omissions and grouped `findings`. `references.check_state` is `not_requested` or
+`provided`; absent checking has `checked_occurrences=None`. Matched observations
+remain totals, without a new diagnostic. Expected omissions and excluded calls
+remain coverage facts, without one warning per deliberately omitted value.
+
+Each finding keeps a fixed domain/state/code/level, occurrence count, distinct
+full reference count where applicable, numeric `source_indices`, a minimal
+state/count `fallback`, and `presentation` status/reason/message/hint. Operation
+indices address `record.operations`, problem indices address `record.problems`,
+and reference indices address `reference_report.references`. Unknown reference
+states/problems retain their raw source values and an `unclassified` finding.
+Distinct totals count valid full identities; an invalid-reference finding uses
+`distinct_references=None` because its identity cannot be established.
+The codes are defined in Recorda's `_inspection_catalog.py`; reference codes use
+the original state uppercased with hyphens under `RECORDA-INSPECT-REFERENCE-`.
+
+The first slice has **no local audience option**. It respects the application's
+existing SMonitor audience and validates native facts without a new digestion
+transformation. Importing published ArgDigest 0.15.0 in a previously unconfigured
+process can bootstrap SMonitor and change warning/logging hooks. The public
+registration-only opportunity is
+[uibcdf/argdigest#32](https://github.com/uibcdf/argdigest/issues/32), coordinated
+with [uibcdf/moli#62](https://github.com/uibcdf/moli/issues/62). Existing ArgDigest
+configuration/checking boundaries are unchanged. Do not add an explicit audience
+option through private provider imports, monkeypatching or bootstrap side effects.
+
+Inputs require the exact `ScientificRecord` type and bounded native JSON values;
+no arbitrary copying/string/iteration hooks or scalar conversions are used.
+Each snapshot/report has at most 100,000 visited nodes, depth 24, 10,000 items per
+collection, 4,096 characters per string and 1,048,576 aggregate string characters.
+Integers have at most 256 bits, floats must be finite, and observed byte counts
+must be nonnegative integers below 2**64. Exceeding a bound rejects input instead
+of silently truncating facts. These prototype limits may reject larger journals.
+
+Before provider access, validation checks the snapshot's consumed lifecycle and
+coverage fields, complete ordered declared-reference/omission scope, report
+session/status/coverage/scope, full identities and context, incomplete-operation
+IDs and consistent duplicate observations. JSON equality preserves exact types.
+A report does not include every nonreference value in the snapshot: this checks
+all facts it declares, **not** report provenance, freshness, a full-snapshot
+fingerprint or authenticity of the claimed byte observations. Unknown observation
+states remain explicit; impossible reference identities and malformed shapes fail.
+
+Presentation is lazy when findings need explanations. Public `register_provider`
+registers the catalog; public `resolve` runs in a metadata-only diagnostic scope
+with only computed counts. Current catalog definitions and resolved templates are
+checked to distinguish missing/malformed catalog output from valid explanations.
+Registration may read its trusted provider declaration; the view never resolves
+scientific references, reads their bytes or reruns work. No events or handlers are
+created and no application configuration is selected. Plain import/inspection
+remains provider-free; ordinary CLI JSON and journal/schema are unchanged.
+
+A finding's presentation is `resolved`, or `unavailable` with `provider_missing`,
+`catalog_unavailable`, `invalid_resolution` or `rendering_failed`. Missing SMonitor
+is an installation fault, not an optional package contract. Facts and the minimal
+fallback survive ordinary faults without native exception text. Invalid input,
+KeyboardInterrupt, SystemExit and cancellation propagate. An incomplete session
+can have zero incomplete operations; neither that count nor a truncated tail
+identifies an interruption cause.
+
+The [implementation receipt](evidence/inspection_view_local.json) records 83 new
+regressions and 304 passing source/ordinary-installed recovery tests on Python
+3.14.7, or 292 installed default tests with 12 recovery skips. All 15 runtime
+files match source, wheel and installation. Published providers, pytest-receptor,
+governance, Ruff and dependency preflight pass. Hosted qualification is pending
+at the initial implementation commit and is added after actual run inspection. Research evidence below remains historical;
+it does not substitute for receiving evaluation in Lab #13. Live provider-event
+correlation stays in Recorda #15.
 
 ## Recommendation
 
@@ -152,7 +235,7 @@ These are provider API probes and source-fact observations, not a working render
 or useful-user-view qualification. No new CI run is required or claimed for analysis.
 
 `uibcdf/recorda#21` owns the prototype and its installed exact-head regressions.
-Before notebook/consumer changes, create a separately owned Lab receiving issue to
+`uibcdf/recorda-lab#13` owns the subsequent receiving experiment to
 compare the proposed view with JSON on the existing missing/modified/unverified/
 omitted/incomplete scenarios, including hostile fields, failures and duplicates.
 Only that experiment can establish the view's practical value. Live producer-event

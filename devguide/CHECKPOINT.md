@@ -304,3 +304,26 @@ receiving needs its own issue before consumer/notebook changes. Safe audience
 templates, especially hints, are proposed in `uibcdf/smonitor#39`; shared safe
 hints suffice for the first slice, so no provider or MOLI restructuring blocks it.
 Live producer-event correlation remains `uibcdf/recorda#15`.
+
+
+## Explicit inspection-view core prototype
+
+`uibcdf/recorda#21` implements `inspection_view(record, *, reference_report=None)`:
+independent bounded JSON facts, execution/reference/coverage summaries, grouped
+technical findings and lazy nonemitting SMonitor messages. No local audience
+option bootstraps the application; native fact guards retain a closed signature.
+Read [INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md) for the bounds,
+source pointers, report-binding limits and presentation fault reasons.
+
+The [local receipt](evidence/inspection_view_local.json) records 83 new regressions,
+304 passing source/installed recovery tests on Linux Python 3.14.7 and 292 installed
+default passes/12 explicit recovery skips with published pytest-receptor 1.1.0.
+All 15 runtime files match source, wheel and ordinary installation. Published
+provider verification, pip check, dependency preflight, governance/shared MOLI
+core and Ruff pass. Exact-head hosted qualification is pending before issue closure.
+
+The next receiving experiment is `uibcdf/recorda-lab#13`, opened before notebook
+changes. Lab's default core SHA above remains unchanged. Safe hints remain the
+SMonitor #39 opportunity; nonbootstrapping ArgDigest registration is proposed in
+`uibcdf/argdigest#32` and coordinated with `uibcdf/moli#62`. Live producer-operation
+correlation remains Recorda #15, independently scoped.

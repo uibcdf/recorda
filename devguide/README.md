@@ -29,9 +29,9 @@ consumer-question assessment and new local multi-step workflow qualification.
 11. [`ARGUMENT_CONFIGURATION.md`](ARGUMENT_CONFIGURATION.md) — default ArgDigest
     capture configuration, lazy imports and published-provider qualification.
 
-12. [`INSPECTION_PRESENTATION.md`](INSPECTION_PRESENTATION.md) — completed
-    architectural evaluation of explicit technical summaries; the Recorda #21
-    prototype is queued, not implemented.
+12. [`INSPECTION_PRESENTATION.md`](INSPECTION_PRESENTATION.md) — experimental
+    read-only technical findings and SMonitor message resolution; laboratory
+    receiving evaluation is tracked in Recorda Lab #13.
 
 ## MOLI integration contract
 

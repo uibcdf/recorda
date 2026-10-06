@@ -76,7 +76,14 @@ Conda environment before installing this checkout; see
 [recovery diagnostics](devguide/RECOVERY_DIAGNOSTICS.md) and
 [argument configuration](devguide/ARGUMENT_CONFIGURATION.md) and
 [reference checks](devguide/REFERENCE_CHECKS.md).
-The providers are required installation dependencies, loaded at configuration or checking use.
+An explicitly requested experimental `recorda.inspection_view(record,
+reference_report=report)` adds grouped technical findings and SMonitor messages
+beside copied inspection facts. The reference report is optional and checking
+remains a separate call. Presentation preserves recorded execution and existing
+application policy. See [inspection presentation](devguide/INSPECTION_PRESENTATION.md)
+for the contract, bounds and unavailable-message fallbacks.
+
+The providers are required installation dependencies, loaded at configuration, checking or explicit presentation use.
 Importing Recorda and reading a saved journal keep independent, light imports.
 
 Session-local `reference_adapters={NativeResult: adapter}` lets decorated calls

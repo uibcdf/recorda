@@ -33,11 +33,15 @@ Lab's required-provider receiving adoption is complete in `uibcdf/recorda-lab#12
 242 local installed-pair tests pass, and both explicit-candidate and subsequent
 default Jupyter/SciPy runs pass all nine jobs. The current exact pair and separate
 receipts are identified in `CHECKPOINT.md`; Sabueso remains historical evidence.
-SMonitor inspection presentation analysis (#14) is complete. Read
-[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md): explicit read-only
-Recorda findings plus nonemitting SMonitor resolution are recommended; prototype
-implementation is queued in `uibcdf/recorda#21`. Safe audience-hint improvement
-is proposed in `uibcdf/smonitor#39` and is not a blocker. Provider-operation
+SMonitor inspection presentation analysis (#14) is complete. The explicit
+read-only core prototype in `uibcdf/recorda#21` now implements grouped findings
+and nonemitting message resolution; read
+[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md). Its core qualification
+is being recorded, and receiving/user-view evaluation is owned by
+`uibcdf/recorda-lab#13` before notebook changes or Lab default promotion. Safe audience-hint improvement
+is proposed in `uibcdf/smonitor#39` and is not a blocker. The nonbootstrapping
+ArgDigest registration opportunity is `uibcdf/argdigest#32`, coordinated with
+`uibcdf/moli#62`; the initial view uses native fact guards and existing audience. Provider-operation
 correlation (#15) remains a separate analysis of live user functionality.
 
 The experiment sections below record completed slices and design constraints;

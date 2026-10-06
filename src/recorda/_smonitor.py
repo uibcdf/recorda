@@ -1,6 +1,9 @@
 """Provider declarations and safe first-use defaults; application policy wins."""
 
-from recorda._recovery import CODES as CODES
+from recorda._inspection_catalog import CODES as INSPECTION_CODES
+from recorda._recovery import CODES as RECOVERY_CODES
+
+CODES = {**RECOVERY_CODES, **INSPECTION_CODES}
 
 SIGNALS = {}
 
