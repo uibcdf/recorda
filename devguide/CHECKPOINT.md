@@ -95,16 +95,18 @@ authenticated integrity, full dependency closure or replay is qualified here.
 1. **Consolidate standalone acceptance** in
    [uibcdf/recorda#1](https://github.com/uibcdf/recorda/issues/1) and
    [uibcdf/recorda-lab#1](https://github.com/uibcdf/recorda-lab/issues/1).
-   The individual trials above are complete. Assess their useful provenance
-   links and remaining coverage before choosing another experiment. A candidate
-   is a small multi-step workflow with retained native references between steps;
-   specify its scientific oracle, consumer question, omissions and interruption
-   cases in a new Lab issue first. Its scope is still a proposal.
-2. **Finish the ecosystem boundary review** in
-   [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2): explicit
-   applicability of ArgDigest, DepDigest, SMonitor and PyUnitWizard. Revisit
-   diagnostics before adding advice/logging, and quantity codecs only when a
-   concrete scientific scenario needs them.
+   The individual trials above and the multi-step native-reference workflow in
+   `uibcdf/recorda-lab#10` are complete. The consumer-question assessment is in
+   [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md). Choose another experiment
+   only for a concrete remaining scientific question and specify its oracle,
+   omissions and interruption cases in a new Lab issue first.
+2. **Adopt the identified ecosystem boundaries** in
+   [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
+   [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for
+   the current runtime. SMonitor applies to existing persistence-recovery advice;
+   ArgDigest applies to Recorda-owned argument contracts. Their implementation
+   and published-provider qualification remain pending. DepDigest and PyUnitWizard
+   have no current core boundary, with explicit reassessment triggers.
 3. **Before a distributable release**, complete packaging/distribution
    [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3), installed-candidate
    OS evidence [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4), and
@@ -117,11 +119,22 @@ authenticated integrity, full dependency closure or replay is qualified here.
 
 ## Subsequent local acceptance assessment
 
-`uibcdf/recorda-lab#10` implements the candidate preparation/fitting/evaluation
-workflow locally. Read [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for
-the scientific questions, exact local receipt and outstanding review. Core runtime
-and the previously published source pair above are unchanged; local new Lab
-evidence does not replace their historical hosted results.
+`uibcdf/recorda-lab#10` completed the preparation/fitting/evaluation workflow and
+was closed after direct integration into main. Read
+[STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for the scientific questions,
+local receipt and separate hosted Jupyter/SciPy qualification. Core runtime and
+the previously published source pair above are unchanged; the new Lab evidence
+does not replace their historical hosted results.
+
+## Subsequent ecosystem boundary audit
+
+[SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) and
+`evidence/ecosystem_boundaries_local.json` record the current-runtime audit in
+`uibcdf/recorda#2`, with 91 core regressions passing locally under published
+pytest-receptor on Python 3.14.7. The initial basic-guard/future-diagnostic rationale
+is superseded by explicit ArgDigest/SMonitor applicability. Adoption remains
+partial; no runtime dependency, accepted exception or registry promotion follows
+from the classification alone.
 
 The broad acceptance and engineering issues remain open. A completed local
 scenario or configured CI lane does not close their wider obligations.

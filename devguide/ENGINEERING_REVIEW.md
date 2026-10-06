@@ -9,15 +9,19 @@ must be reconciled in MOLI; the laboratory is associated test infrastructure.
 
 ## Runtime boundaries
 
-The first slice uses the Python standard library. Public inputs currently have ordinary
-type, size and lifecycle guards. No argument normalization engine or optional scientific
-backend is introduced; ArgDigest and DepDigest have no selected runtime use yet.
-Scientific failures and capture omissions are structured record data, not diagnostic logs.
-Storage faults propagate as Python I/O exceptions. A richer user-facing diagnostic boundary
-must be reviewed for SMonitor before adding warnings, recovery advice or a logging framework.
-No physical quantities are encoded by this first laboratory; future quantity adapters
+The current runtime uses the Python standard library, but its boundary review is
+partial. [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) records the current assessment
+and source/test receipt in `uibcdf/recorda#2`. Profile normalization and reference-check
+options create Recorda-owned argument contracts for ArgDigest; recovery advice already
+attached to native exceptions creates a SMonitor diagnostic boundary. Neither adoption
+is implemented. Scientific failures, omissions and reference observations remain
+structured Recorda data, while native objects and errors retain provider ownership.
+
+DepDigest has no current core optional/heavy/backend loader. PyUnitWizard has no
+current core quantity parsing, conversion or dimensional-validation boundary.
+Their non-applicability decisions have explicit reassessment triggers in the maintained
+review. A stdlib-only runtime is not itself a policy exception. Future quantity adapters
 must consume PyUnitWizard's codec without altering application unit configuration.
-This bounded inspection is not a suite-wide non-applicability decision.
 
 ## Development and distribution
 

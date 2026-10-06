@@ -14,7 +14,7 @@ consumer-question assessment and new local multi-step workflow qualification.
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
 3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.
-4. [`ENGINEERING_REVIEW.md`](ENGINEERING_REVIEW.md) — MOLI engineering applicability and remaining qualification.
+4. [`ENGINEERING_REVIEW.md`](ENGINEERING_REVIEW.md) — MOLI engineering applicability and remaining qualification; [`SUPPORT_LIBRARIES.md`](SUPPORT_LIBRARIES.md) records current boundary decisions and pending adoption.
 5. [`reporting_protocol.md`](reporting_protocol.md) — owning issues, report queues and archive.
 6. [`PYTHON_SUPPORT.md`](PYTHON_SUPPORT.md) — Python 3.11–3.14 and the tracked MOLI transition.
 7. [`ACTIVATION.md`](ACTIVATION.md) — recommended start/stop, context ownership and native adapters.

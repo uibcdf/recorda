@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-06",
+  "issue": "uibcdf/recorda#2",
+  "scope": "current_runtime_boundary_classification_and_existing_core_regressions",
+  "source": {
+    "repository": "uibcdf/recorda",
+    "commit": "c695b39f655f55ca1928f7fd5f7735ba8ab21a8d",
+    "manifest_scope": "all_runtime_modules_and_core_test_modules; guide changes follow qualification",
+    "sha256": {
+      "src/recorda/__init__.py": "3339e01bb48b599c80c41e0947ed8cff0721f946915d332d44df34d464009b33",
+      "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+      "src/recorda/policy.py": "629ff718915a469bbbc0aad18d7783d2f75957374c693b8b3dd0a62db75ffa72",
+      "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+      "src/recorda/references.py": "8a5cdf0a187bf716c56698ee4821de4730e3f73b5a04dfcc758754e3fa24bf5f",
+      "src/recorda/runtime.py": "c8f0d76ef28fb267610f0de3aeef9bfa442e8cb189e8fc0fcd4bfbd65acf435a",
+      "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+      "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+      "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+      "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+      "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+      "tests/test_references.py": "86d1121a1f014473d22df34b8c957ae6b6a6564a01ed08c0b4e7f1746902fe6e"
+    },
+    "pyproject_sha256": "a486d5d3fa7ea50d3f6a3c616a253a56afe371bbfbf62533284dfa7cb81a12ff"
+  },
+  "policy": {
+    "repository": "uibcdf/moli",
+    "commit": "d94ba1cc63ba4e90775c6364629af889fe9533b0",
+    "path": "devguide/policies/python_support_libraries_policy.md",
+    "sha256": "b7b272510158336db2923c873c464946fa9e77ba82d87882522239bad380e199",
+    "registry_ecosystem_review_state": "partial"
+  },
+  "environment": {
+    "sys_executable": "/tmp/recorda-workflow-env/bin/python",
+    "sys_version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "Linux",
+    "machine": "x86_64",
+    "pytest_receptor": {
+      "version": "1.1.0",
+      "module_path": "/tmp/recorda-workflow-env/lib/python3.14/site-packages/pytest_receptor/__init__.py",
+      "direct_url": null,
+      "provenance": "published PyPI distribution used in multi_step_workflow_local.json",
+      "metadata_sha256": "78ef69d98790321808e9d13fc88fd8829ea362300f205fa21d92eed05d54b064"
+    },
+    "ruff": "0.16.5"
+  },
+  "runtime_inventory": {
+    "import_roots": [
+      "argparse",
+      "contextvars",
+      "copy",
+      "dataclasses",
+      "datetime",
+      "functools",
+      "hashlib",
+      "importlib",
+      "inspect",
+      "json",
+      "math",
+      "os",
+      "pathlib",
+      "re",
+      "stat",
+      "threading",
+      "uuid"
+    ],
+    "non_stdlib_import_roots": [],
+    "required_project_dependencies": [],
+    "optional_project_dependencies": {},
+    "isolated_import_probe": {
+      "command": "/tmp/recorda-workflow-env/bin/python -I -S -c <stdlib-only import probe> /home/liliana/repos@uibcdf/recorda/src",
+      "non_stdlib_import_roots_except_recorda": [],
+      "exit_code": 0
+    }
+  },
+  "classification": {
+    "argdigest": "applicable_to_recorda_owned_argument_contracts_not_adopted",
+    "smonitor": "applicable_to_existing_persistence_recovery_advice_not_adopted",
+    "depdigest": "no_current_core_optional_heavy_or_backend_loader",
+    "pyunitwizard": "no_current_core_quantity_parsing_conversion_or_dimensional_validation",
+    "evidence_scope": "policy_and_source_inspection; not implementation adoption"
+  },
+  "core_regressions": {
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /tmp/recorda-workflow-env/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm --basetemp=/tmp/recorda-ecosystem-review-tests tests",
+    "working_directory": "/home/liliana/repos@uibcdf/recorda",
+    "passed": 91,
+    "skipped": 0,
+    "exit_code": 0,
+    "receptor_output": "PASS exit=0 | 91 passed | 0.95s"
+  },
+  "local_checks": [
+    {
+      "command": "/tmp/recorda-workflow-env/bin/python devtools/validate_governance.py",
+      "exit_code": 0
+    },
+    {
+      "command": "/tmp/recorda-workflow-env/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": "/tmp/recorda-workflow-env/bin/ruff format --check .",
+      "exit_code": 0
+    },
+    {
+      "command": "/tmp/recorda-workflow-env/bin/python ../moli/devtools/scripts/check_repository.py . --canonical-guide ../moli/MOLI_GUIDE.md",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "published_provider_metadata": {
+    "solver_index_url": "https://conda.anaconda.org/uibcdf/noarch/repodata.json",
+    "solver_index_sha256": "43b47675f0dff21da94f43d54400b2b89bd0c7c99f8e19787abf85663c50690e",
+    "artifacts": [
+      {
+        "name": "smonitor",
+        "version": "0.18.0",
+        "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.18.0-py_0.tar.bz2",
+        "sha256": "7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578",
+        "conda_dependencies": [
+          "python >=3.11,<3.15"
+        ],
+        "requires_python": "<3.15,>=3.11",
+        "requires_dist": [
+          "rich>=13; extra == \"rich\"",
+          "pytest<10,>=8; extra == \"pytest\"",
+          "pytest-receptor<2,>=1.2; extra == \"pytest\""
+        ],
+        "metadata_sha256": "fcfba2e44152469f280032e6b19248b080d88d2f57aa719e1f30b70d96f6f910",
+        "evidence_scope": "downloaded_archive_identity_and_metadata_only"
+      },
+      {
+        "name": "argdigest",
+        "version": "0.14.0",
+        "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.14.0-py_0.tar.bz2",
+        "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "conda_dependencies": [
+          "depdigest >=0.11.0",
+          "python >=3.11,<3.15",
+          "smonitor >=0.16.0"
+        ],
+        "requires_python": "<3.15,>=3.11",
+        "requires_dist": [
+          "depdigest>=0.11.0",
+          "smonitor>=0.16.0",
+          "numpy>=1.20.0; extra == \"science\"",
+          "beartype>=0.16.0; extra == \"beartype\"",
+          "pydantic>=2.0.0; extra == \"pydantic\"",
+          "pyunitwizard>=0.11.0; extra == \"pyunitwizard\"",
+          "numpy>=1.20.0; extra == \"pyunitwizard\"",
+          "beartype>=0.16.0; extra == \"all\"",
+          "pydantic>=2.0.0; extra == \"all\"",
+          "pyunitwizard>=0.11.0; extra == \"all\"",
+          "PyYAML>=6.0; extra == \"all\"",
+          "numpy>=1.20.0; extra == \"all\"",
+          "pandas>=2.0.0; extra == \"all\""
+        ],
+        "metadata_sha256": "2b493a1c4f077bf574fc23a03a04b2e77d804dc9caf08bdd080c5adc2a59a739",
+        "evidence_scope": "downloaded_archive_identity_and_metadata_only"
+      },
+      {
+        "name": "depdigest",
+        "version": "0.13.0",
+        "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+        "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+        "conda_dependencies": [
+          "python >=3.11,<3.15",
+          "smonitor >=0.13.0"
+        ],
+        "requires_python": "<3.15.0,>=3.11.0",
+        "requires_dist": [
+          "smonitor>=0.13.0"
+        ],
+        "metadata_sha256": "f50c5f0cdf23d6791b5410fee3c61f092810bec957a5b71d4d380e278504c35c",
+        "evidence_scope": "downloaded_archive_identity_and_metadata_only"
+      }
+    ],
+    "limits": [
+      "No provider installation, solve or runtime integration qualified here.",
+      "Python bounds are declared metadata, not executed compatibility evidence.",
+      "Shared provider imports remain editable and are not substituted as published evidence.",
+      "The Anaconda API latest_version values lag the file lists and solver index."
+    ]
+  },
+  "limits": [
+    "No core runtime, test, schema, dependency, version or tag changes.",
+    "No policy exemption or registry adoption promotion.",
+    "No new Lab/Sabueso qualification, public support, release or replay evidence.",
+    "Hosted gates for the documentation delivery are recorded in the owning issue."
+  ]
+}

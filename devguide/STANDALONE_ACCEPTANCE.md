@@ -73,7 +73,9 @@ the next consumer question from a concrete scientific need, rather than adding
 all capabilities from DESIGN.md. Physical quantities require a concrete scenario
 and the PyUnitWizard codec; they are not introduced by dimensionless fixtures.
 
-Complete the support-library applicability decisions in `uibcdf/recorda#2`.
+The current support-library applicability decisions are in
+[SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md); implement and qualify the applicable
+ArgDigest/SMonitor boundaries in `uibcdf/recorda#2`.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work
