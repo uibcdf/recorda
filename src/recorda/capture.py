@@ -35,6 +35,29 @@ def _omit(reason):
     return {"kind": "omitted", "reason": reason}
 
 
+def _adapt(value, adapter):
+    try:
+        reference = adapter(value)
+    except Exception:
+        return _omit("reference_adapter_failed")
+    if not isinstance(reference, (Reference, Omitted)):
+        return _omit("invalid_reference_adapter_result")
+    return capture(reference)
+
+
+def exception_reference(error, *, reference_adapters=None):
+    """Reference an exact registered exception type without replacing its propagation."""
+    adapter = (reference_adapters or {}).get(type(error))
+    if adapter is None:
+        return _omit("unsupported_type")
+    try:
+        return _adapt(error, adapter)
+    except BaseException:
+        # An interrupt inside trusted capture must not replace the already failing
+        # scientific operation's exception (including its cancellation/interrupt).
+        return _omit("reference_adapter_failed")
+
+
 def capture(value, name="", *, reference_adapters=None):
     if _SENSITIVE.search(name):
         return _omit("sensitive_name")
@@ -53,13 +76,7 @@ def capture(value, name="", *, reference_adapters=None):
         return value if len(value) <= 1024 else _omit("oversized_value")
     adapter = (reference_adapters or {}).get(type(value))
     if adapter is not None:
-        try:
-            reference = adapter(value)
-        except Exception:
-            return _omit("reference_adapter_failed")
-        if not isinstance(reference, (Reference, Omitted)):
-            return _omit("invalid_reference_adapter_result")
-        return capture(reference, name)
+        return _adapt(value, adapter)
     return _omit("unsupported_type")
 
 

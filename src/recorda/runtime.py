@@ -11,16 +11,17 @@ from pathlib import Path
 from threading import RLock
 from uuid import uuid4
 
-from .capture import capture, fields, label
+from .capture import capture, exception_reference, fields, label
 
 _ACTIVE = ContextVar("recorda_session", default=None)
 _PARENTS = ContextVar("recorda_parents", default=())
 
 
-def _exception(error):
+def _exception(error, reference_adapters):
     return {
         "type": f"{type(error).__module__}.{type(error).__qualname__}",
         "message": {"kind": "omitted", "reason": "exception_message_may_be_sensitive"},
+        "reference": exception_reference(error, reference_adapters=reference_adapters),
     }
 
 
@@ -219,7 +220,7 @@ class Operation:
                 "status": "failed" if error is not None else "succeeded",
             }
             if error is not None:
-                data["exception"] = _exception(error)
+                data["exception"] = _exception(error, self.session._reference_adapters)
             try:
                 self.session._write("operation_finished", **data)
             except BaseException:

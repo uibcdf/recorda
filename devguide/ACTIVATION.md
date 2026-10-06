@@ -94,6 +94,45 @@ Callbacks are trusted integration code. They must provide safe identities and av
 changing scientific objects or performing scientific work. Reference capture does
 not preserve or resolve source bytes; the owner retains the native result/file.
 
+## Native exception references
+
+The post-0.1.0 extension tracked by `uibcdf/recorda#7` uses the same exact-type mapping:
+
+```python
+recorda.start(
+    "source_analysis",
+    path="source_analysis.jsonl",
+    reference_adapters={NativeSourceError: retain_native_failure_reference},
+)
+```
+
+The trusted producer adapter receives the original exception and returns `Reference`
+or `Omitted`. It may retain an existing native trace using the producer's supported
+serialization; Recorda writes only the safe reference under `exception.reference`
+on the failed operation. Scientific code and the caller's normal error handling need
+no new recording statements. Explicit boundaries, synchronous decorators and async
+decorators share this behavior. An adapter is not invoked for inactive instrumentation
+or unregistered exception subclasses. No superclass fallback is inferred.
+
+Without an exact registration, the reference is explicitly omitted as
+`unsupported_type`. Invalid adapter results, explicit omission and callback failures
+have the same bounded omission reasons as other reference capture. Even a
+`BaseException` raised inside this exception-capture callback becomes an omission
+so it cannot replace the native error already propagating. This containment is
+specific to failure capture; it does not change normal input/output interrupt behavior.
+
+The original error, cause and traceback propagate. Its message, repr, dictionary,
+cause text and traceback content are not persisted. Callbacks remain trusted code:
+they must avoid scientific mutation and unsafe identities. Storage failure is still
+visible as incomplete recording; this extension does not implement a reliability
+policy, exception-group traversal or retention/replay guarantee. Historical journals
+without `exception.reference` remain readable. The additive field stays in the
+provisional `recorda.journal/0.1` schema.
+
+The Sabueso adoption is tracked by `uibcdf/recorda-lab#6`. Its exact ConnectorError
+adapter retains the native acquisition trace and its inspector reads the reference
+from the failed operation, while still accepting historical caller-owned indices.
+
 `profile=` is a bounded semantic label on an operation, supported by decorators and
 explicit operations. It is stored and exposed by inspection. It does not yet select
 fields, filter events, route records or resolve strict/buffered policy. Readers accept

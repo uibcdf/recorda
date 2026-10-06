@@ -81,15 +81,24 @@ local development sources, not evidence
 for published Sabueso/provider packages, complete pipeline capture or MOLI routing.
 The full local pair passed 54 tests, including all four usage notebooks.
 
-## Next — safe native exception provenance
+## Native exception provenance
 
-`uibcdf/recorda#7` tracks a concrete limitation: input/return adapters do not link
-native provenance attached to exceptions. The Lab currently catches the unchanged
-exception and explicitly retains its trace against the failed operation. Evaluate
-a small opt-in boundary mechanism that preserves original exception identity,
-propagation and native ownership, with visible safe omission. Do not capture arbitrary
-exception messages, dictionaries or repr, freeze a hook API prematurely, or add a
-MOLI dependency. This work precedes broader platform integration.
+`uibcdf/recorda#7` adds opt-in native exception references using the existing session
+mapping. Failed operations retain `exception.reference` without new scientific
+function arguments or caller recording statements. Unknown types and callback faults
+are visible omissions; the native exception, cause and traceback propagate unchanged.
+No arbitrary exception messages, dictionaries or repr are captured. The controlled
+Sabueso adoption in `uibcdf/recorda-lab#6` removes manual trace-sidecar retention from
+the runner and fourth notebook. The provisional API has no new MOLI dependency.
+
+## Next — manual recovery from incomplete operation persistence
+
+`uibcdf/recorda#8` records a pre-existing limitation found during exception-capture
+regressions: failed terminal writes leave an operation classified as running, so
+manual stop rejects finalization even after its execution has ended. Context-managed
+cleanup can finish incomplete. Separate running work from incomplete persistence
+before changing manual finalization, preserving owner context and genuinely active
+async operations. Broader reliability policies remain a later platform concern.
 
 ## Later — MolSysSuite and MOLI
 

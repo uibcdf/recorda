@@ -76,6 +76,12 @@ returns produce explicit omissions; credential-named fields are omitted before a
 adapter runs. Configuration is copied at session creation. Adapter callbacks are
 trusted integration code and must themselves avoid secrets and scientific side effects.
 
+The post-0.1.0 source extension also accepts exact exception types in that mapping.
+Their adapter supplies a safe native trace reference under `exception.reference`
+on the failed operation. It preserves the original exception; unsupported errors and
+adapter faults produce explicit omissions without capturing exception messages or repr.
+See [`native exception references`](devguide/ACTIVATION.md#native-exception-references).
+
 `profile=` currently records a semantic label; it does not implement the broad
 profile catalog, filtering, routing or reliability-policy engine described in the design.
 See [`devguide/ACTIVATION.md`](devguide/ACTIVATION.md) for lifecycle and ownership rules.
