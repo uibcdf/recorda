@@ -42,7 +42,20 @@ IPykernel here is 7.4.0; previous qualification used 7.3.0. Exact sources, tooli
 commands, checks and artifact fingerprints are retained in
 [evidence/multi_step_workflow_local.json](evidence/multi_step_workflow_local.json),
 byte-identical to the Lab receipt. These local results do not requalify Sabueso's
-frozen provider stack or establish new hosted CI evidence.
+frozen provider stack. Hosted evidence is recorded separately below.
+
+## Executed hosted checks
+
+Published gh-run-receptor 1.2.0 inspected the actual implementation runs; native
+GitHub conclusions agree. [Core CI](https://github.com/uibcdf/recorda/actions/runs/37440493804)
+passed seven jobs. [Lab PR CI](https://github.com/uibcdf/recorda-lab/actions/runs/37440479013)
+passed four routine dummy/minor jobs and skipped two manual-only jobs.
+[Manual Jupyter/SciPy integration](https://github.com/uibcdf/recorda-lab/actions/runs/37440827173)
+passed all seven jobs at Lab `77e7c36a34a2ae0d140c3ad51b461e046ee0b7d5`, pinned to
+Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`. The scientific log reports
+112 passed and four explicit Sabueso skips. These runs qualify the named source
+heads; later documentation commits do not change their tested file fingerprints.
+See [the paired hosted receipt](evidence/multi_step_workflow_hosted.json).
 
 Implementation and owner review are tracked in
 [uibcdf/recorda-lab#10](https://github.com/uibcdf/recorda-lab/issues/10).

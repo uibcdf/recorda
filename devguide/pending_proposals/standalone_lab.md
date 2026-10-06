@@ -63,7 +63,8 @@ stays open for standalone acceptance consolidation and engineering review.
 `uibcdf/recorda-lab#10` now prepares a multi-step scientific workflow using
 the existing core API. [../STANDALONE_ACCEPTANCE.md](../STANDALONE_ACCEPTANCE.md)
 records local qualification, useful native dependency links and remaining limits.
-Owner review and hosted evidence for that new Lab source remain separate.
+Hosted Jupyter/SciPy qualification is retained separately in the assessment;
+owner review remains in `uibcdf/recorda-lab#11` and `uibcdf/recorda#13`.
 
 ## Acceptance criteria
 
