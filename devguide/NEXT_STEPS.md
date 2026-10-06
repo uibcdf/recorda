@@ -19,9 +19,11 @@ scope. It uses the current core API and does not complete broader acceptance.
 
 The current support-library audit is in
 [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md), owned by `uibcdf/recorda#2`.
-Classification is complete for today's runtime; ArgDigest/SMonitor adoption is
-pending. Start the next implementation with safe persistence-recovery diagnostics,
-then Recorda-owned configuration contracts. Verify published providers and their
+Classification is complete for today's runtime; wider ArgDigest/SMonitor adoption
+is pending. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
+is a source-provider experiment owned by `uibcdf/recorda#16`. Continue with
+published-provider selection/qualification and Recorda-owned configuration
+contracts. Verify published providers and their
 dependency closure before changing runtime metadata or CI provisioning.
 
 The experiment sections below record completed slices and design constraints;

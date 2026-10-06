@@ -11,6 +11,7 @@ from pathlib import Path
 from threading import RLock
 from uuid import uuid4
 
+from ._recovery import advise
 from .capture import capture, exception_reference, fields, label
 from .policy import CapturePolicy
 
@@ -33,7 +34,16 @@ def _exception(error, reference_adapters, *, capture_reference=True):
 class RecordingSession:
     """One journal, activated manually or through an optional context manager."""
 
-    def __init__(self, name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
+    def __init__(
+        self,
+        name,
+        *,
+        path,
+        gaps=(),
+        reference_adapters=None,
+        capture_policy=None,
+        recovery_diagnostics=None,
+    ):
         self.name = label(name)
         self.path = Path(path)
         if isinstance(gaps, str):
@@ -53,6 +63,16 @@ class RecordingSession:
             raise TypeError("capture_policy must be a CapturePolicy")
         self._configured_policy = capture_policy is not None
         self._capture_policy = capture_policy or CapturePolicy()
+        if recovery_diagnostics is not None and not callable(recovery_diagnostics):
+            raise TypeError("recovery_diagnostics must be a callable or None")
+        if recovery_diagnostics is not None and any(
+            python_inspect.iscoroutinefunction(candidate)
+            or python_inspect.isgeneratorfunction(candidate)
+            or python_inspect.isasyncgenfunction(candidate)
+            for candidate in (recovery_diagnostics, type(recovery_diagnostics).__call__)
+        ):
+            raise TypeError("recovery_diagnostics must be synchronous")
+        self._recovery_diagnostics = recovery_diagnostics
         self._excluded_profiles = {}
         self._excluded_other = 0
         self.id = str(uuid4())
@@ -163,8 +183,11 @@ class RecordingSession:
                 except BaseException:
                     if error is None:
                         raise
-                    error.add_note(
-                        "Recorda could not persist session completion; inspect for gaps."
+                    advise(
+                        error,
+                        "RECORDA-RECOVERY-SESSION-001",
+                        self._recovery_diagnostics,
+                        session_id=self.id,
                     )
             finally:
                 self._file.close()
@@ -309,7 +332,13 @@ class Operation:
             except BaseException:
                 if error is None:
                     raise
-                error.add_note("Recorda could not persist operation completion; inspect for gaps.")
+                advise(
+                    error,
+                    "RECORDA-RECOVERY-OPERATION-001",
+                    self.session._recovery_diagnostics,
+                    session_id=self.session.id,
+                    operation_id=self.id,
+                )
         finally:
             # Execution ended even if its terminal event could not be persisted.
             # The independent broken-writer flag retains the incomplete outcome.
@@ -320,7 +349,9 @@ class Operation:
         return False
 
 
-def session(name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
+def session(
+    name, *, path, gaps=(), reference_adapters=None, capture_policy=None, recovery_diagnostics=None
+):
     """Create a session; context-manager activation remains available as a convenience."""
     return RecordingSession(
         name,
@@ -328,10 +359,13 @@ def session(name, *, path, gaps=(), reference_adapters=None, capture_policy=None
         gaps=gaps,
         reference_adapters=reference_adapters,
         capture_policy=capture_policy,
+        recovery_diagnostics=recovery_diagnostics,
     )
 
 
-def start(name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
+def start(
+    name, *, path, gaps=(), reference_adapters=None, capture_policy=None, recovery_diagnostics=None
+):
     """Activate recording for instrumented calls and return the session handle."""
     return session(
         name,
@@ -339,6 +373,7 @@ def start(name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
         gaps=gaps,
         reference_adapters=reference_adapters,
         capture_policy=capture_policy,
+        recovery_diagnostics=recovery_diagnostics,
     ).start()
 
 

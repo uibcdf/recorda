@@ -29,7 +29,10 @@ pytest-receptor on Python 3.14. The source/import/test receipt is
 constraints. ArgDigest applicability is no longer covered by a blanket claim
 that every guard is basic. Operation/session completion fault handlers already
 append recovery advice to native exceptions, making SMonitor applicable now.
-Neither is adopted. DepDigest has no current core backend loader, and
+The recovery adapter in `uibcdf/recorda#16` now exercises the resolved SMonitor
+source APIs through explicit selection; public-provider adoption is still pending.
+See [../RECOVERY_DIAGNOSTICS.md](../RECOVERY_DIAGNOSTICS.md) and its executed receipt.
+ArgDigest has not been adopted. DepDigest has no current core backend loader, and
 PyUnitWizard has no quantity parsing/conversion/validation boundary.
 
 Published SMonitor 0.18.0, ArgDigest 0.14.0 and DepDigest 0.13.0 Conda archive
@@ -65,6 +68,7 @@ at a time, with published-provider and compatibility evidence.
 
 ## Resolution
 
-Partial. Current-runtime classification and regressions are recorded. Applicable
-ArgDigest/SMonitor adoption remains open in `uibcdf/recorda#2`; MOLI's registry
+Partial. Current-runtime classification, regressions and the bounded source-provider
+recovery integration are recorded. Applicable ArgDigest/public-SMonitor adoption
+remains open in `uibcdf/recorda#2`; MOLI's registry
 remains `partial`. No release, provider qualification or policy exception is claimed.

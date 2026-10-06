@@ -138,3 +138,20 @@ from the classification alone.
 
 The broad acceptance and engineering issues remain open. A completed local
 scenario or configured CI lane does not close their wider obligations.
+
+## Subsequent recovery-diagnostic source integration
+
+`uibcdf/recorda#16` adds an explicitly selected SMonitor adapter at the two native
+failure recovery sites. Read [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md) for
+activation, catalog codes, fallback and confidentiality limits. Local Linux
+Python 3.14.7 tests with published pytest-receptor 1.1.0 pass: 104 core tests
+(12 integration tests explicitly skipped), and 116 with pinned SMonitor source,
+including the built/installed Recorda development wheel. The receipt is
+`evidence/recovery_diagnostics_local.json`. The separate CI source lane is not
+executed evidence until its actual run is inspected.
+
+SMonitor `6feac9728cc35d57cbc92f284d7040d7f04cb35b` supplies the new scoped and
+registration APIs; published 0.18.0 does not. No dependency/extra, version/tag,
+public provider qualification or completed ecosystem adoption is inferred from
+this development experiment. ArgDigest configuration work and #14/#15 remain
+separate; MOLI's wider ecosystem state remains partial.

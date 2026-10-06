@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-06T16:45:37.754111+00:00",
+  "issue": "uibcdf/recorda#16",
+  "scope": "development recovery adapter; installed Recorda wheel with full-commit SMonitor source, not a published-provider or release certificate",
+  "recorda_parent_commit": "606eef5b246077c54217868a3292a6447caa068d",
+  "python": {
+    "executable": "/tmp/recorda-support-review-314/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "linux"
+  },
+  "tools": {
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5",
+    "gh-run-receptor": "1.2.0",
+    "gh-run-receptor_release_wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c"
+  },
+  "provider": {
+    "repository": "uibcdf/smonitor",
+    "commit": "6feac9728cc35d57cbc92f284d7040d7f04cb35b",
+    "route": "source checkout on PYTHONPATH; no editable/shared environment modification",
+    "published_api_qualification": false
+  },
+  "wheel": {
+    "name": "recorda-0.2.0-py3-none-any.whl",
+    "sha256": "aedfaaffd327df03858b4ea92327abd2ea0a85b3b0b70e2f53c68e5b5ee35d03",
+    "build": "isolated source snapshot, pip wheel --no-deps --no-build-isolation",
+    "installed_target": "/tmp/recorda-recovery-installed",
+    "release_candidate": false
+  },
+  "checks": {
+    "baseline": {
+      "passed": 104,
+      "skipped": 12,
+      "skip_reason": "explicit source-provider lane disabled"
+    },
+    "source_with_smonitor": {
+      "passed": 116,
+      "skipped": 0
+    },
+    "installed_recorda_with_source_smonitor": {
+      "passed": 116,
+      "skipped": 0
+    },
+    "pytest_plugin_autoload": false,
+    "governance": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "supported_minor_hosted_evidence": "pending exact code-head CI"
+  },
+  "manifest_scope": "runtime Python, tests, metadata and workflow bytes; documentation is maintained separately",
+  "sha256_files": {
+    ".github/workflows/tests.yml": "e0e0c7aabcb83df40777bfdc846a226869c7aa4f730e2eee6bfc81eee3ca76af",
+    "pyproject.toml": "a486d5d3fa7ea50d3f6a3c616a253a56afe371bbfbf62533284dfa7cb81a12ff",
+    "src/recorda/__init__.py": "3339e01bb48b599c80c41e0947ed8cff0721f946915d332d44df34d464009b33",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "f941e9d5082389a1906a17f73d17bba57cd899d69c5543655cc39fc9d24f71e3",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/smonitor.py": "e0ea933a68eadbfcfc7d63a8d2b33e3d37bc06b34d5412f6ef41047f7fda440f",
+    "src/recorda/policy.py": "629ff718915a469bbbc0aad18d7783d2f75957374c693b8b3dd0a62db75ffa72",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "8a5cdf0a187bf716c56698ee4821de4730e3f73b5a04dfcc758754e3fa24bf5f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d",
+    "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+    "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+    "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+    "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+    "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+    "tests/test_recovery_diagnostics.py": "a4672ed43f1f16453e31f36ce0f43f2fa0e9479ac66cce8065a55d999dd7e072",
+    "tests/test_references.py": "86d1121a1f014473d22df34b8c957ae6b6a6564a01ed08c0b4e7f1746902fe6e",
+    "tests/test_smonitor_recovery.py": "64dc8a3904d0f6cdae37cd4111ea5f7819a56e0ba82ee6a56a5414d004cb2e19"
+  }
+}

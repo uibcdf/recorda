@@ -23,6 +23,9 @@ consumer-question assessment and new local multi-step workflow qualification.
 
 9. [`REFERENCE_CHECKS.md`](REFERENCE_CHECKS.md) — declared local reference availability and byte checks.
 
+10. [`RECOVERY_DIAGNOSTICS.md`](RECOVERY_DIAGNOSTICS.md) — explicitly selected
+    SMonitor recovery diagnostics and the bounded source-provider qualification.
+
 ## MOLI integration contract
 
 Recorda is independently useful for reproducible computational work, but MOLI uses Recorda as its recording/provenance substrate.

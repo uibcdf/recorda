@@ -18,7 +18,7 @@ their MolSysSuite synchronization instructions do not govern Recorda.
 | --- | --- | --- |
 | ArgDigest | `CapturePolicy.__post_init__` accepts several collection forms and produces a sorted, deduplicated tuple of validated profiles. Reference-check APIs also constrain resolver, digest and byte-limit options. | Applicable to Recorda-owned argument contracts; not adopted. Specify both function and value contracts before replacing public normalization. Preserve mandatory capture, path and lifecycle invariants. |
 | DepDigest | Core runtime imports are stdlib-only; `pyproject.toml` has no dependencies or optional backend loader. | No present core boundary. Caller-supplied exact-type reference adapters are trusted callbacks, not discovered packages. Reassess when Recorda itself loads an optional/heavy/backend dependency. |
-| SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | Applicable to those diagnostics; not adopted. Review catalog-based presentation and safe structured fields while preserving native exceptions and recording failure visibility. |
+| SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | An explicit source-qualified recovery adapter now uses the Recorda catalog and scoped safe emission. Published-provider selection and wider adoption remain pending; see [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md). |
 | PyUnitWizard | The core records bounded scalars, safe references and omissions. It parses, converts and dimensionally validates no physical quantity. | No present core boundary. An unregistered quantity object remains unsupported, and a reference does not certify its producer's unit schema. Reassess before a quantity adapter or persisted quantity representation is introduced. |
 
 The two non-applicability decisions concern the present core, not every laboratory
@@ -50,10 +50,14 @@ must not disable them. Ordinary signature binding remains Python's responsibilit
 
 ## Diagnostic adoption boundary
 
-There are two existing advice sites in `runtime.py`, in the handlers for failed
-operation completion and failed session completion. They retain the scientific
-exception and append a fixed note explaining the provenance gap. They are a
-diagnostic use, even though no logging framework or warning system exists.
+There are two advice sites in `runtime.py`, in the handlers for failed operation
+completion and failed session completion. They retain the scientific exception
+and append a fixed catalog-owned note explaining the provenance gap. The optional
+`recovery_diagnostics` sink also receives only a code and Recorda-owned UUIDs.
+The explicit SMonitor adapter registers declarations without changing application
+policy and emits inside a metadata-only scope. Core import/recording/inspection
+remain independent of SMonitor; a diagnostic fault or filtered event retains the
+note and cannot replace the native error. No general backend discovery exists.
 The historical description that SMonitor matters only before adding advice is
 therefore insufficient for today's implementation.
 
@@ -104,18 +108,24 @@ not a policy exemption. This review does not qualify installed support-library
 behavior: the shared environment's provider installations are editable sources,
 and the inspected archives were not substituted into that environment.
 
-Existing tests cover immutable capture configuration, minimal/excluded calls,
+The original audit's tests cover immutable capture configuration, minimal/excluded calls,
 native return/exception identity, secret and opaque-value omissions, missing or
 altered references, persistence faults and later session activation. They prove
 current behavior; they cannot prove an integration that has not been implemented.
 
 Keep `uibcdf/recorda#2` open and MOLI's `python_ecosystem_review` state `partial`
 until applicable boundaries have implementation and test evidence, or a governed
-bounded exception records its rationale, owner and exit condition. The next
-implementation should start with the small recovery-advice boundary, then the
-configuration argument contract. The candidate metadata above admits the required
-Python minors; execute clean installation and integration checks before adopting
-those versions. Source guides or editable imports do not provide that evidence.
+bounded exception records its rationale, owner and exit condition. Recovery
+integration under `uibcdf/recorda#16` is a controlled source experiment against
+SMonitor `6feac9728cc35d57cbc92f284d7040d7f04cb35b`: the closed provider #37/#38 APIs
+are absent from published 0.18.0. Its separate CI lane covers Python 3.11–3.14;
+executed local source/installed-Recorda evidence is in
+[evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
+The ordinary lane deliberately leaves provider tests disabled. This does not
+qualify a public SMonitor artifact or complete ArgDigest adoption. Select a new
+published provider before declaring a supported dependency/extra; the next code
+boundary is the Recorda-owned configuration contract. Earlier metadata and source
+receipts retain their historical limits.
 Any required dependency
 change also updates the distribution work in `uibcdf/recorda#3`.
 
