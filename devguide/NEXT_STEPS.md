@@ -61,14 +61,35 @@ inspector checks trial receipts. This qualifies that scenario, not arbitrary Sci
 outputs or general research workflows. See `evidence/scipy_local.json` and the
 laboratory's `devguide/SCIPY_TRIAL.md`. No core runtime dependency is added.
 
-## Next experiment — Sabueso semantic boundaries
+## Controlled Sabueso semantic boundaries
 
-Use the same standalone substrate on exactly enough real functionality to test two patterns:
+`uibcdf/recorda-lab#5` now exercises native UniProt retrieval and Sabueso entity
+resolution with three attributed frozen public responses and no source connections.
+Resolution actually consumes the retrieved primary accession. The trial retains
+ambiguity, organism-based selection and discarded alternatives, returned semantic
+errors and a native source exception. Sabueso owns Cards, decisions and acquisition
+traces; Recorda references them at seven declared operation boundaries. Direct,
+dormant and active scientific content agrees. An eight-cell fourth notebook uses
+start/stop across cells. The independent reader requires Recorda and stdlib only
+and detects removed or modified native files.
 
-- one knowledge-retrieval boundary, including source/query, retrieval time, implementation/version, safe response identity or snapshot reference, produced Sabueso object reference, and failure;
-- one entity-resolution boundary, including input entity/query, decision or ambiguity status, produced object/reference, and operation lineage.
+Read the laboratory's `devguide/SABUESO_TRIAL.md` and
+`devguide/evidence/sabueso_linux_py314.json` for Linux Python 3.14 co-development
+identities and source hashes. Final receipts use frozen copies of the scientific
+development packages because their live checkouts changed concurrently. These are
+local development sources, not evidence
+for published Sabueso/provider packages, complete pipeline capture or MOLI routing.
+The full local pair passed 54 tests, including all four usage notebooks.
 
-Sabueso owns Knowledge semantics. Recorda records the declared operation and its provenance. Use a controlled scientific workflow to ask whether the record is useful to a scientist, whether missing dependencies and failures are visible, and whether instrumentation is low-friction.
+## Next — safe native exception provenance
+
+`uibcdf/recorda#7` tracks a concrete limitation: input/return adapters do not link
+native provenance attached to exceptions. The Lab currently catches the unchanged
+exception and explicitly retains its trace against the failed operation. Evaluate
+a small opt-in boundary mechanism that preserves original exception identity,
+propagation and native ownership, with visible safe omission. Do not capture arbitrary
+exception messages, dictionaries or repr, freeze a hook API prematurely, or add a
+MOLI dependency. This work precedes broader platform integration.
 
 ## Later — MolSysSuite and MOLI
 

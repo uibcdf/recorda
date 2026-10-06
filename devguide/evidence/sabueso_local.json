@@ -1,0 +1,20 @@
+{
+  "schema": "recorda.sabueso-local-reference/0.1",
+  "observed": "2026-10-05",
+  "issue": "uibcdf/recorda-lab#5",
+  "recorda_commit": "7e0c8dc79fbc529826d27e467de381e248c36da8",
+  "recorda_tag": "0.1.0",
+  "lab_commit": "84fec7dbac4daa63b976bee06882403bb734400c",
+  "authoritative_receipt": "https://github.com/uibcdf/recorda-lab/blob/84fec7dbac4daa63b976bee06882403bb734400c/devguide/evidence/sabueso_linux_py314.json",
+  "receipt_sha256": "2d62ce3e6b169ea1a40a7bd6d1ec4f23145794a7c3647315ea09b99837edfe5b",
+  "tests": {
+    "passed": 54,
+    "receptor": "published pytest-receptor 1.1.0, --receptor=llm",
+    "python": "3.14.7",
+    "notebook_code_cells": 29,
+    "sabueso_regressions": 4,
+    "participant_bytes_verified_before_and_after": true
+  },
+  "scope": "Local Linux source execution. Scientific packages are frozen temporary copies of editable development packages because their live checkouts changed concurrently. Exact source manifests, paths and notebook receipts are retained in the authoritative Lab receipt. No clean published scientific package closure, platform adoption, authenticated integrity or replay is claimed.",
+  "followup": "uibcdf/recorda#7"
+}
