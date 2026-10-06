@@ -25,9 +25,12 @@ was first qualified with provider sources in `uibcdf/recorda#16`, followed by
 explicit configuration in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md)
 under `uibcdf/recorda#17`. The new published SMonitor 0.19.0 / ArgDigest 0.15.0
 closure replaces that source route in `uibcdf/recorda#18`. Default CapturePolicy
-adoption is tracked in `uibcdf/recorda#19`. Continue with the reference-check
+adoption is complete in `uibcdf/recorda#19`, with all 11 installed-package/quality
+CI jobs passing. Continue with the reference-check
 contracts in `uibcdf/recorda#20`. Keep dependency metadata,
 environment specifications and executed provider evidence aligned.
+Before advancing Lab's Recorda candidate, provision its required provider closure
+and qualify the new exact pair in `uibcdf/recorda-lab#12`.
 
 The experiment sections below record completed slices and design constraints;
 they are not a queue of unimplemented work. MOLI integration, API freezing,

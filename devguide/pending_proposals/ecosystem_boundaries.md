@@ -44,6 +44,8 @@ metadata, aligned Conda routes and a local recipe/preflight. Reference-check
 contracts remain in #20. The original optional integration route's
 receipt is [../evidence/published_support_local.json](../evidence/published_support_local.json);
 default-adoption evidence is [../evidence/default_arguments_local.json](../evidence/default_arguments_local.json).
+Default adoption passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`;
+the resolved analysis is [../archive/default_arguments.md](../archive/default_arguments.md).
 See [../ARGUMENT_CONFIGURATION.md](../ARGUMENT_CONFIGURATION.md).
 DepDigest has no current core backend loader, and
 PyUnitWizard has no quantity parsing/conversion/validation boundary.
@@ -83,7 +85,7 @@ at a time, with published-provider and compatibility evidence.
 
 Partial. Current-runtime classification, regressions and the bounded source-provider
 recovery/configuration integrations are recorded. Default CapturePolicy adoption
-is tracked in #19; reference-check contracts and complete release qualification
+is complete in #19; reference-check contracts and complete release qualification
 remain open in
 `uibcdf/recorda#2`; MOLI's registry
 remains `partial`. No public Recorda release, registry promotion or policy exception is claimed.

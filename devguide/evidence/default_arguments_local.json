@@ -190,8 +190,71 @@
     "tests/test_smonitor_recovery.py": "4d9585009b443534e4cde1ee38cd7483a332324d7203a78bb33a4be281780511"
   },
   "ci": {
-    "state": "pending",
-    "expected_jobs": 11,
-    "scope": "installed default ArgDigest on Linux Python 3.11-3.14/macOS 3.13-3.14; explicit SMonitor recovery on Linux 3.11-3.14; quality"
-  }
+    "state": "passed",
+    "run_id": 37532171347,
+    "run_attempt": 1,
+    "head_sha": "87ec6526fbd17e6d849efdc14773e3596cfa7bd8",
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347",
+    "jobs_passed": 11,
+    "inspector": "published gh-run-receptor 1.2.0, profile ci, adaptive capture; PASS",
+    "scope": "installed default ArgDigest: Linux Python 3.11-3.14 and macOS 3.13-3.14; explicit SMonitor recovery Linux 3.11-3.14; quality",
+    "jobs": [
+      {
+        "name": "quality",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504003845"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.11",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004053"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.13",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004167"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.12",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004173"
+      },
+      {
+        "name": "SMonitor recovery / Python 3.14",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004179"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.11)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004258"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.14)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004276"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.13)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004285"
+      },
+      {
+        "name": "tests (ubuntu-latest, 3.12)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004383"
+      },
+      {
+        "name": "tests (macos-latest, 3.14)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004435"
+      },
+      {
+        "name": "tests (macos-latest, 3.13)",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/recorda/actions/runs/37532171347/job/112504004442"
+      }
+    ]
+  },
+  "recorda_implementation_commit": "87ec6526fbd17e6d849efdc14773e3596cfa7bd8"
 }

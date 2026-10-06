@@ -9,3 +9,5 @@ Resolved implementation slices retain their owning issues and historical evidenc
   `uibcdf/recorda#17`, resolved with installed-Recorda/source-provider evidence.
 - [Published support-provider qualification](published_support.md) —
   `uibcdf/recorda#18`, resolved with exact public Conda archives and installed-Recorda CI.
+- [Default argument configuration](default_arguments.md) —
+  `uibcdf/recorda#19`, resolved with default constructor and installed-package CI.

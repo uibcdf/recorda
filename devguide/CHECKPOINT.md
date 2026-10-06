@@ -110,7 +110,7 @@ authenticated integrity, full dependency closure or replay is qualified here.
    and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
    evidence. Published-provider qualification is complete for SMonitor 0.19.0 /
    ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default configuration adoption is
-   tracked in `uibcdf/recorda#19`; reference-check contracts remain in #20.
+   complete in `uibcdf/recorda#19`; reference-check contracts remain in #20.
    DepDigest and PyUnitWizard
    have no current core boundary, with explicit reassessment triggers.
 3. **Before a distributable release**, complete packaging/distribution
@@ -189,3 +189,30 @@ Continue with default ArgDigest adoption and the reference-check argument contra
 inspection presentation and provider-operation correlation remain independent.
 No public Recorda release, generic dependency loader, quantity schema, full OS
 qualification or MOLI registry promotion follows from this provider checkpoint.
+
+## Subsequent default argument adoption
+
+`uibcdf/recorda#19` adopts published ArgDigest for ordinary CapturePolicy
+construction, preserving the closed constructor signature and mandatory native
+guards. Providers load lazily at configuration use. Plain import, journal reading
+and existing reference checks retain provider-free imports. Recorda's first-use
+SMonitor baseline disables global logging/warning/exception capture while an
+existing application/project policy wins. Scientific calls remain native.
+
+Required metadata, all four Conda environments and the local noarch development
+recipe agree; a read-only preflight has negative route/constraint regressions.
+The [receipt](evidence/default_arguments_local.json) records 171 passing source
+and installed-wheel tests on Python 3.14.7 with published pytest-receptor 1.1.0;
+the default lane passes 159 with 12 explicit recovery skips.
+[CI 37532171347](https://github.com/uibcdf/recorda/actions/runs/37532171347)
+passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`, including
+default installed-package Linux Python 3.11–3.14/macOS 3.13–3.14 and four Linux
+recovery lanes, inspected with published gh-run-receptor 1.2.0.
+The resolved report is [archive/default_arguments.md](archive/default_arguments.md).
+
+Continue with reference-check contracts in `uibcdf/recorda#20`; the ecosystem
+umbrella remains partial. Lab's next candidate requires receiving environments
+and exact-pair qualification in `uibcdf/recorda-lab#12`. No Lab default SHA was
+advanced. The recipe has not been built or published; public release, broader
+OS acceptance and MOLI registry promotion remain separate. Closing documentation
+changes no receipt-selected runtime/test/tool/metadata/Conda/workflow/README byte.

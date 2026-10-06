@@ -98,6 +98,12 @@ Default ArgDigest regressions run in every installed-package CI lane on Linux
 Python 3.11–3.14 and the existing macOS 3.13/3.14 lanes. The recovery matrix also
 enables `RECORDA_TEST_SMONITOR=1`. No provider source substitution is used.
 Current evidence is [evidence/default_arguments_local.json](evidence/default_arguments_local.json).
+Source and installed-wheel suites pass 171 tests on Python 3.14.7 with recovery
+enabled, or 159 with 12 recovery skips in the default lane.
+[CI 37532171347](https://github.com/uibcdf/recorda/actions/runs/37532171347)
+passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`, inspected
+with published gh-run-receptor 1.2.0. The resolved adoption is preserved in
+[archive/default_arguments.md](archive/default_arguments.md).
 Earlier source and public-provider receipts remain historical:
 [archive/argument_configuration_source.md](archive/argument_configuration_source.md),
 [archive/published_support.md](archive/published_support.md).
@@ -105,3 +111,5 @@ Earlier source and public-provider receipts remain historical:
 Reference-check contracts are the next independent boundary in
 `uibcdf/recorda#20`. The umbrella ecosystem review stays partial; public Recorda
 distribution/release and OS qualification remain in #3 / #4.
+Lab's next installed candidate needs dependency provisioning under
+`uibcdf/recorda-lab#12`; its previous qualified pair is unchanged.

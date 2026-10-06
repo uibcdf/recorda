@@ -146,6 +146,11 @@ provider-free imports; configuration/recording uses the required providers.
 Recorda's safe first-use baseline disables global logging/warning/exception
 capture unless the application or project has already selected its own policy.
 Evidence is in [evidence/default_arguments_local.json](evidence/default_arguments_local.json).
+Source and installed-wheel suites pass 171 tests; default suites pass 159 with
+12 explicit recovery skips. [CI 37532171347](https://github.com/uibcdf/recorda/actions/runs/37532171347)
+passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`, inspected
+with published gh-run-receptor. The resolved report is
+[archive/default_arguments.md](archive/default_arguments.md).
 Reference-check argument contracts remain open in `uibcdf/recorda#20`.
 This work does not qualify a public Recorda release or promote MOLI's registry.
 Environment/optional metadata changes are also tracked in `uibcdf/recorda#3`.
