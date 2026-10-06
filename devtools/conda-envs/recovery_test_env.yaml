@@ -1,0 +1,13 @@
+name: recorda-recovery
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.15
+  - smonitor=0.19.0=py_1
+  - pip
+  - setuptools>=77
+  - wheel
+  - pytest
+  - pip:
+      - pytest-receptor==1.1.0

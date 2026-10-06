@@ -1,0 +1,176 @@
+{
+  "created_utc": "2026-10-06T20:50:01.773548+00:00",
+  "issue": "uibcdf/recorda#18",
+  "scope": "published providers for explicit integrations; installed development Recorda wheel, not Recorda release or default ArgDigest adoption",
+  "recorda_parent_commit": "ae528ae2cd27abc90281206c661ab4f1ad5a152f",
+  "python": {
+    "executable": "/tmp/recorda-published-support-314/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "linux"
+  },
+  "tools": {
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5",
+    "gh-run-receptor": "1.2.0"
+  },
+  "providers": {
+    "smonitor": {
+      "version": "0.19.0",
+      "build": "py_1",
+      "file": "smonitor-0.19.0-py_1.tar.bz2",
+      "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+      "conda_depends": [
+        "python >=3.11,<3.15"
+      ],
+      "requires_dist": [
+        "rich>=13; extra == \"rich\"",
+        "pytest<10,>=8; extra == \"pytest\"",
+        "pytest-receptor<2,>=1.2; extra == \"pytest\""
+      ],
+      "python_bound": "<3.15,>=3.11",
+      "import_path": "/tmp/recorda-published-support-314/lib/python3.14/site-packages/smonitor/__init__.py",
+      "matched_archive_python_files": 40,
+      "public_index_sha_matches": true,
+      "downloaded_archive_sha_matches": true
+    },
+    "argdigest": {
+      "version": "0.15.0",
+      "build": "py_0",
+      "file": "argdigest-0.15.0-py_0.tar.bz2",
+      "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.15.0-py_0.tar.bz2",
+      "conda_depends": [
+        "depdigest >=0.11.0",
+        "python >=3.11,<3.15",
+        "smonitor >=0.16.0"
+      ],
+      "requires_dist": [
+        "depdigest>=0.11.0",
+        "smonitor>=0.16.0",
+        "numpy>=1.20.0; extra == \"science\"",
+        "beartype>=0.16.0; extra == \"beartype\"",
+        "pydantic>=2.0.0; extra == \"pydantic\"",
+        "pyunitwizard>=0.11.0; extra == \"pyunitwizard\"",
+        "numpy>=1.20.0; extra == \"pyunitwizard\"",
+        "beartype>=0.16.0; extra == \"all\"",
+        "pydantic>=2.0.0; extra == \"all\"",
+        "pyunitwizard>=0.11.0; extra == \"all\"",
+        "PyYAML>=6.0; extra == \"all\"",
+        "numpy>=1.20.0; extra == \"all\"",
+        "pandas>=2.0.0; extra == \"all\""
+      ],
+      "python_bound": "<3.15,>=3.11",
+      "import_path": "/tmp/recorda-published-support-314/lib/python3.14/site-packages/argdigest/__init__.py",
+      "matched_archive_python_files": 38,
+      "public_index_sha_matches": true,
+      "downloaded_archive_sha_matches": true
+    },
+    "depdigest": {
+      "version": "0.13.0",
+      "build": "py_0",
+      "file": "depdigest-0.13.0-py_0.tar.bz2",
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "conda_depends": [
+        "python >=3.11,<3.15",
+        "smonitor >=0.13.0"
+      ],
+      "requires_dist": [
+        "smonitor>=0.13.0"
+      ],
+      "python_bound": "<3.15.0,>=3.11.0",
+      "import_path": "/tmp/recorda-published-support-314/lib/python3.14/site-packages/depdigest/__init__.py",
+      "matched_archive_python_files": 16,
+      "public_index_sha_matches": true,
+      "downloaded_archive_sha_matches": true
+    }
+  },
+  "provider_source_substitution": false,
+  "metadata": {
+    "recorda_requires_dist": [
+      "smonitor<0.20,>=0.19.0; extra == \"smonitor\"",
+      "argdigest<0.16,>=0.15.0; extra == \"argdigest\"",
+      "smonitor<0.20,>=0.19.0; extra == \"argdigest\""
+    ],
+    "recorda_provides_extra": [
+      "smonitor",
+      "argdigest"
+    ]
+  },
+  "wheel": {
+    "name": "recorda-0.2.0-py3-none-any.whl",
+    "sha256": "8d8072a2548e95276a11771c14521499dc04b29293da1cecdc034775a264e3f7",
+    "build": "Python 3.14.7, isolated source snapshot, pip wheel --no-deps --no-build-isolation",
+    "installation": "/tmp/recorda-published-support-314",
+    "release_candidate": false
+  },
+  "checks": {
+    "source_recorda_with_published_providers": {
+      "passed": 158,
+      "skipped": 0
+    },
+    "installed_recorda_with_published_providers": {
+      "passed": 158,
+      "skipped": 0
+    },
+    "installed_provider_disabled": {
+      "passed": 104,
+      "skipped": 54
+    },
+    "installed_smonitor_only_enabled": {
+      "passed": 116,
+      "skipped": 42
+    },
+    "feature_and_conda_provenance": "passed; exact coordinates/digests, supported metadata bounds, installed .py hashes and import locations",
+    "public_index_and_downloaded_archives": "passed; installed Python files byte-identical with public archive payloads",
+    "old_smonitor_negative": "rejected SMonitor 0.18.0 below optional feature floor",
+    "source_shadow_negative": "rejected sibling-source SMonitor import outside the installed prefix",
+    "pip_check": "passed",
+    "scientific_imports": false,
+    "pytest_plugin_autoload": false,
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "governance": "passed",
+    "shared_moli_checker": "passed",
+    "git_diff_check": "passed",
+    "known_tool_warning": "post-verdict /dev/null ResourceWarning from published pytest-receptor 1.1.0, already resolved upstream in uibcdf/pytest-receptor#4; no verdict/exit effect or local suppression"
+  },
+  "manifest_scope": "runtime, tests, tools, Conda environment specifications, metadata, workflow and wheel README; devguide documentation maintained separately",
+  "sha256_files": {
+    ".github/workflows/tests.yml": "b7c603e98ee99933e13405c468ee116b4ff785115e88fc507fa65b075651b74c",
+    "README.md": "2d7d3cbae5ff7565726c419d230729f7185728a8b6aa68d5bebfb0ebd9252e57",
+    "devtools/conda-envs/development_env.yaml": "58b9031d16118358997d5284224e6473a39de2ff1993172097db3cd18154d14d",
+    "devtools/conda-envs/recovery_test_env.yaml": "dd8ee67ddb23b4b614faf7cb5f9fd363d99530204d9a2f2d15803c4fc5b9193b",
+    "devtools/conda-envs/support_test_env.yaml": "6c2b95950906d123b8ce7b09d41df8969a2f1d93e16a5a6d04c73059a4511947",
+    "devtools/conda-envs/test_env.yaml": "0d35207559c9941a48a285576395bd2a56212d03bb3964fa30b6609060737396",
+    "devtools/validate_governance.py": "cb501c41d50f10a537bfb1e3be4203d8722b34b462439eb5b67dfcf62957c503",
+    "devtools/verify_support_environment.py": "ea97d99c679b877299944554ac60efcef05694e789a7fb2c41031c9c9ce1c33f",
+    "pyproject.toml": "bb1c3576db8af349988a4da6304a799780072b400a799201c57022d8a4463f8e",
+    "src/recorda/__init__.py": "3339e01bb48b599c80c41e0947ed8cff0721f946915d332d44df34d464009b33",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "f941e9d5082389a1906a17f73d17bba57cd899d69c5543655cc39fc9d24f71e3",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/argdigest.py": "ded9da67a8ac6ccbd3a53c142fc86ab4f19ba2db73ad793b2d34d1bc845682d9",
+    "src/recorda/integrations/smonitor.py": "3f3411ae01901f22e52edab9c2b4a98d89bd23b21710da55137d61ec09256daf",
+    "src/recorda/policy.py": "9085461e484aec12c6f83176930665916bc4452f1df9410bf6cc67b0bd94cdba",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "8a5cdf0a187bf716c56698ee4821de4730e3f73b5a04dfcc758754e3fa24bf5f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d",
+    "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+    "tests/test_argdigest_policy.py": "1a896b2b2c90cd1220cf4b24924206abe5d695c98e467e5ff74da91b6b1fdec8",
+    "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+    "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+    "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+    "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+    "tests/test_recovery_diagnostics.py": "a4672ed43f1f16453e31f36ce0f43f2fa0e9479ac66cce8065a55d999dd7e072",
+    "tests/test_references.py": "86d1121a1f014473d22df34b8c957ae6b6a6564a01ed08c0b4e7f1746902fe6e",
+    "tests/test_smonitor_recovery.py": "4d9585009b443534e4cde1ee38cd7483a332324d7203a78bb33a4be281780511"
+  },
+  "ci": {
+    "state": "pending",
+    "provider_lane": "installed published providers and installed Recorda on Linux Python 3.11-3.14; baseline installed-core Linux/macOS unchanged"
+  }
+}

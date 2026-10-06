@@ -21,12 +21,12 @@ The current support-library audit is in
 [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md), owned by `uibcdf/recorda#2`.
 Classification is complete for today's runtime; wider ArgDigest/SMonitor adoption
 is pending. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
-is a source-provider experiment owned by `uibcdf/recorda#16`. Continue with
-published-provider selection/qualification after the explicit configuration
-experiment in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md), owned by
-`uibcdf/recorda#17`. Default ArgDigest adoption and reference-check contracts
-remain separate work. Verify published providers and their
-dependency closure before changing runtime metadata or CI provisioning.
+was first qualified with provider sources in `uibcdf/recorda#16`, followed by
+explicit configuration in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md)
+under `uibcdf/recorda#17`. The new published SMonitor 0.19.0 / ArgDigest 0.15.0
+closure replaces that source route in `uibcdf/recorda#18`. Continue with default
+ArgDigest adoption and reference-check contracts. Keep dependency metadata,
+environment specifications and executed provider evidence aligned.
 
 The experiment sections below record completed slices and design constraints;
 they are not a queue of unimplemented work. MOLI integration, API freezing,

@@ -69,6 +69,15 @@ objects or bounded ordinary scalars. Existing journal paths are never overwritte
 `@recorda.record("operation.name")` is the opt-in function boundary; inactive calls
 bypass capture. Session activation alone observes no arbitrary calls.
 
+Explicit support integrations can use published SMonitor 0.19.0 for recovery
+diagnostics and ArgDigest 0.15.0 for capture configuration. Provision the optional
+Conda environments before installing this checkout; see
+[environment routes](devtools/conda-envs/README.md),
+[recovery diagnostics](devguide/RECOVERY_DIAGNOSTICS.md) and
+[argument configuration](devguide/ARGUMENT_CONFIGURATION.md).
+The `smonitor` and `argdigest` extras declare the feature bounds; core use remains
+independent of these providers.
+
 Session-local `reference_adapters={NativeResult: adapter}` lets decorated calls
 capture references without adding recording statements inside scientific functions.
 An adapter matches an exact declared type and returns `Reference` or `Omitted`.

@@ -1,4 +1,4 @@
-# ArgDigest capture configuration — experimental source integration
+# ArgDigest capture configuration — explicit published-provider integration
 
 Owned by [uibcdf/recorda#17](https://github.com/uibcdf/recorda/issues/17), under
 the ecosystem review `uibcdf/recorda#2`.
@@ -60,32 +60,37 @@ This cannot undo diagnostics produced independently by enclosing scientific code
 An absent or older provider fails on explicit adapter import, before caller
 configuration values reach digestion. Ordinary `import recorda`, direct core
 policy construction, recording and independent reading import none of ArgDigest,
-DepDigest or SMonitor. No dependency extra or supported published floor has been
-selected. There is no automatic optional-backend loader to which DepDigest must
+DepDigest or SMonitor. The `argdigest` extra declares ArgDigest `>=0.15.0,<0.16`
+and SMonitor `>=0.19.0,<0.20`; the explicit SMonitor floor is required for safe
+capture even though ArgDigest's general dependency floor remains older.
+There is no automatic optional-backend loader to which DepDigest must
 be added; ArgDigest itself retains its provider-owned DepDigest integration.
 Basic configuration neither imports nor requires NumPy, Pint or PyUnitWizard.
 
 ## Qualification and remaining work
 
-On 2026-10-06, the latest checked published ArgDigest 0.14.0 and SMonitor 0.18.0
-lack the required APIs from `uibcdf/argdigest#29` / #30 and
-`uibcdf/smonitor#37` / #38. The controlled development route uses:
+Published ArgDigest 0.15.0 and SMonitor 0.19.0 now provide the APIs from
+`uibcdf/argdigest#29` / #30 and `uibcdf/smonitor#37` / #38. Qualification in
+`uibcdf/recorda#18` replaces the earlier pinned-source test route:
 
 | Provider | Qualified route |
 | --- | --- |
-| ArgDigest | source `5e7925ddcd14922d00647d39b6a97eed2499bc23` |
-| SMonitor | source `6feac9728cc35d57cbc92f284d7040d7f04cb35b` |
-| DepDigest | published Conda 0.13.0, `uibcdf` with `conda-forge` |
+| ArgDigest | published Conda 0.15.0, build `py_0` |
+| SMonitor | published Conda 0.19.0, build `py_1` |
+| DepDigest | published Conda 0.13.0, build `py_0` |
 
-The separate CI lane provisions the published DepDigest closure with Conda and
-tests installed Recorda using both exact source commits on Linux Python
-3.11–3.14. The SMonitor-only and ordinary installed-core lanes remain available.
-All lanes use published pytest-receptor 1.1.0. Local Python 3.14 qualification:
+Create the published closure using
+[`support_test_env.yaml`](../devtools/conda-envs/support_test_env.yaml), from
+`uibcdf` with `conda-forge`, then install this unpublished Recorda checkout with
+`python -m pip install --no-deps --editable .`. The separate CI lane tests
+installed Recorda with these published providers on Linux Python 3.11–3.14.
+No sibling checkout or provider `PYTHONPATH` is used. The SMonitor-only and
+ordinary installed-core lanes remain available. All lanes use published
+pytest-receptor 1.1.0. Local Python 3.14 qualification:
 
 ```bash
 RECORDA_TEST_ARGDIGEST=1 RECORDA_TEST_SMONITOR=1 \
 PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
-PYTHONPATH=/path/to/pinned/argdigest:/path/to/pinned/smonitor \
 python -m pytest -p pytest_receptor.plugin --receptor=llm
 ```
 
@@ -93,7 +98,9 @@ The receiving tests cover accepted forms, bounds before deduplication, copying,
 exact booleans, native refusals, opaque values, public bypass rejection, diagnostic
 delivery faults, application configuration, inherited telemetry, native calls,
 mandatory recorded facts, disabled adapters, import isolation and older providers.
-Executed evidence is in
+Current published-provider evidence is in
+[evidence/published_support_local.json](evidence/published_support_local.json).
+The earlier source-provider evidence remains in
 [evidence/argument_configuration_local.json](evidence/argument_configuration_local.json).
 Local source and installed-Recorda suites pass **158 tests** on Python 3.14.7;
 the baseline passes 104 with 54 explicit provider skips. Code/test commit
@@ -103,8 +110,9 @@ including the four installed-Recorda ArgDigest lanes on Linux Python 3.11–3.14
 Published gh-run-receptor 1.2.0 inspected that completed run. The resolved analysis
 is in [archive/argument_configuration_source.md](archive/argument_configuration_source.md).
 
-This factory is an opt-in experiment, not default-core ArgDigest adoption or a
-public-provider qualification. The wider review remains partial. Select and
-qualify published artifacts before changing dependency metadata or replacing
-default normalization; review reference-check options as their own slice in
+This factory remains explicitly selected. The wider review is partial because
+default-core ArgDigest adoption and the reference-check contracts remain open.
+The earlier publication obstacle is removed by the current provider qualification;
+Recorda itself remains an unpublished source checkout. Review reference-check
+options as their own slice in
 `uibcdf/recorda#2`. Distribution remains `uibcdf/recorda#3`.

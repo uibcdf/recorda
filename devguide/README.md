@@ -24,10 +24,10 @@ consumer-question assessment and new local multi-step workflow qualification.
 9. [`REFERENCE_CHECKS.md`](REFERENCE_CHECKS.md) — declared local reference availability and byte checks.
 
 10. [`RECOVERY_DIAGNOSTICS.md`](RECOVERY_DIAGNOSTICS.md) — explicitly selected
-    SMonitor recovery diagnostics and the bounded source-provider qualification.
+    SMonitor recovery diagnostics and published-provider qualification.
 
 11. [`ARGUMENT_CONFIGURATION.md`](ARGUMENT_CONFIGURATION.md) — explicit ArgDigest
-    capture configuration and the bounded source-provider qualification.
+    capture configuration and published-provider qualification.
 
 ## MOLI integration contract
 

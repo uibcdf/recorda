@@ -1,4 +1,4 @@
-"""Opt-in installed/source provider qualification; baseline needs no SMonitor."""
+"""Opt-in published provider qualification; baseline needs no SMonitor."""
 
 import asyncio
 import json
@@ -15,7 +15,7 @@ import recorda
 
 pytestmark = pytest.mark.skipif(
     os.environ.get("RECORDA_TEST_SMONITOR") != "1",
-    reason="explicit SMonitor source qualification lane",
+    reason="explicit SMonitor integration lane",
 )
 
 

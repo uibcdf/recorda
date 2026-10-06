@@ -1,4 +1,4 @@
-# Explicit recovery diagnostics — experimental source integration
+# Explicit recovery diagnostics — published-provider integration
 
 Owned by [uibcdf/recorda#16](https://github.com/uibcdf/recorda/issues/16), under
 the wider support-library review in `uibcdf/recorda#2`.
@@ -15,13 +15,14 @@ propagate in that last case.
 
 ## Explicit activation
 
-The new scoped APIs are implemented in SMonitor source
-`6feac9728cc35d57cbc92f284d7040d7f04cb35b`, but its latest checked public release,
-0.18.0, does not provide them. This adapter is a controlled development route;
-there is no supported public provider version or install extra selected yet.
-Install that exact provider checkout in an isolated development environment
-with its declared build prerequisites, or use the pinned source lane below.
-Do not substitute a branch name or attach these APIs to the old release.
+SMonitor 0.19.0 provides the scoped capture and provider registration APIs.
+The `smonitor` extra declares `smonitor>=0.19.0,<0.20`. Provision the published
+Conda package from `uibcdf` with `conda-forge` using
+[`recovery_test_env.yaml`](../devtools/conda-envs/recovery_test_env.yaml), then
+install this unpublished Recorda checkout with
+`python -m pip install --no-deps --editable .`. Qualification uses the exact
+`smonitor-0.19.0-py_1.tar.bz2` artifact in `uibcdf/recorda#18`.
+Earlier 0.18.0 cannot provide this adapter's required API.
 
 ```python
 import recorda
@@ -70,14 +71,14 @@ Callers remain responsible for arbitrary actions performed by their own sink.
 ## Qualification and remaining work
 
 Ordinary CI tests the installed core without activating this adapter. The separate
-Linux Python 3.11–3.14 lane tests installed Recorda with the exact SMonitor source
-above and published pytest-receptor 1.1.0. It is source-provider qualification,
-not a published-provider certificate. Locally, use a Python 3.14 environment
-containing that published receptor and the SMonitor checkout at the exact SHA:
+Linux Python 3.11–3.14 lane now tests installed Recorda with published SMonitor
+0.19.0 and published pytest-receptor 1.1.0. No sibling checkout or provider
+`PYTHONPATH` is used. Locally, use a Python 3.14 environment containing these
+published packages:
 
 ```bash
 RECORDA_TEST_SMONITOR=1 PYTHONDONTWRITEBYTECODE=1 \
-PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONPATH=/path/to/pinned/smonitor \
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 python -m pytest -p pytest_receptor.plugin --receptor=llm
 ```
 
@@ -86,13 +87,16 @@ producer context, safe event contents, native failure identity/cause/traceback,
 fixed-note fallback, recursive delivery, filtered delivery, interleaved sessions
 and threads, import isolation and application-policy preservation.
 
-The executed receipt is [evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
+Current published-provider evidence is in
+[evidence/published_support_local.json](evidence/published_support_local.json).
+The earlier source-provider receipt is
+[evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
 Implementation commit `70a98587d9d2f8dce0626fa2bca1bd4a6a932c47` passes
 [all 11 CI jobs](https://github.com/uibcdf/recorda/actions/runs/37498367934),
 including the four Linux Python 3.11–3.14 source-provider lanes. The source
 experiment is resolved in [archive/recovery_diagnostics_source.md](archive/recovery_diagnostics_source.md).
 
-Select and qualify new published provider artifacts before declaring a supported
-optional dependency or promoting ecosystem adoption. That remains in
-`uibcdf/recorda#2` / `uibcdf/recorda#3`. Inspection presentation (#14), linking
-provider diagnostics (#15) and ArgDigest configuration adoption remain separate.
+Published-provider selection is tracked by `uibcdf/recorda#18`; it does not
+qualify a public Recorda release or complete the wider ecosystem/distribution
+reviews in `uibcdf/recorda#2` / #3. Inspection presentation (#14), linking
+provider diagnostics (#15) and default ArgDigest adoption remain separate.

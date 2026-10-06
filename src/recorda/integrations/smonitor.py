@@ -1,6 +1,6 @@
-"""Experimental SMonitor recovery adapter requiring its new scoped public API.
+"""Explicit recovery adapter for the qualified SMonitor 0.19 public API.
 
-Import this module explicitly with the qualified SMonitor source installed.
+Import this module explicitly with the qualified SMonitor provider installed.
 No provider import or diagnostic activation occurs through `import recorda`.
 """
 

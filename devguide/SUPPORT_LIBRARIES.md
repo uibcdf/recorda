@@ -16,9 +16,9 @@ their MolSysSuite synchronization instructions do not govern Recorda.
 
 | Library | Current boundary | Assessment and remaining work |
 | --- | --- | --- |
-| ArgDigest | `CapturePolicy.__post_init__` accepts several collection forms and produces a sorted, deduplicated tuple of validated profiles. Reference-check APIs also constrain resolver, digest and byte-limit options. | An explicit source-provider factory declares a closed signature and value pipelines for capture configuration, retaining mandatory core validation. Default adoption, reference options and published-provider qualification remain pending; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md). |
-| DepDigest | Core runtime imports are stdlib-only; `pyproject.toml` has no dependencies or optional backend loader. | No present core boundary. Caller-supplied exact-type reference adapters are trusted callbacks, not discovered packages. Reassess when Recorda itself loads an optional/heavy/backend dependency. |
-| SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | An explicit source-qualified recovery adapter now uses the Recorda catalog and scoped safe emission. Published-provider selection and wider adoption remain pending; see [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md). |
+| ArgDigest | `CapturePolicy.__post_init__` accepts several collection forms and produces a sorted, deduplicated tuple of validated profiles. Reference-check APIs also constrain resolver, digest and byte-limit options. | An explicit factory uses published ArgDigest 0.15.0 with a closed signature and value pipelines, retaining mandatory core validation. Default adoption and reference options remain pending; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md). |
+| DepDigest | Core runtime imports are stdlib-only; optional extras select explicit integrations but no backend discovery/availability loader exists. | No present core boundary. ArgDigest retains its own DepDigest integration. Caller-supplied exact-type reference adapters are trusted callbacks, not discovered packages. Reassess when Recorda itself manages optional/heavy/backend availability. |
+| SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | An explicit adapter uses published SMonitor 0.19.0, the Recorda catalog and scoped safe emission. Wider diagnostic features remain separate; see [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md). |
 | PyUnitWizard | The core records bounded scalars, safe references and omissions. It parses, converts and dimensionally validates no physical quantity. | No present core boundary. An unregistered quantity object remains unsupported, and a reference does not certify its producer's unit schema. Reassess before a quantity adapter or persisted quantity representation is introduced. |
 
 The two non-applicability decisions concern the present core, not every laboratory
@@ -80,7 +80,8 @@ automatically Recorda diagnostic events.
 
 ## Evidence and exit criteria
 
-The downloaded public Conda archives match the solver's `uibcdf/noarch` index:
+The original audit inspected these public Conda archives against the solver's
+`uibcdf/noarch` index; this table preserves that historical candidate closure:
 
 | Candidate | Required package dependencies | Declared Python bounds |
 | --- | --- | --- |
@@ -115,20 +116,25 @@ current behavior; they cannot prove an integration that has not been implemented
 
 Keep `uibcdf/recorda#2` open and MOLI's `python_ecosystem_review` state `partial`
 until applicable boundaries have implementation and test evidence, or a governed
-bounded exception records its rationale, owner and exit condition. Recovery
-integration under `uibcdf/recorda#16` is a controlled source experiment against
-SMonitor `6feac9728cc35d57cbc92f284d7040d7f04cb35b`: the closed provider #37/#38 APIs
-are absent from published 0.18.0. Its separate CI lane covers Python 3.11–3.14;
-executed local source/installed-Recorda evidence is in
-[evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
-The ordinary lane deliberately leaves provider tests disabled. This does not
-qualify a public SMonitor artifact or complete ArgDigest adoption. Select a new
-published provider before declaring a supported dependency/extra. The configuration
-boundary is now exercised by an explicit factory in `uibcdf/recorda#17`
-against pinned ArgDigest/SMonitor sources and published DepDigest 0.13.0. This
-does not replace default core normalization or qualify public provider artifacts.
-Earlier metadata and source receipts retain their historical limits. Any required
-dependency change also updates the distribution work in `uibcdf/recorda#3`.
+bounded exception records its rationale, owner and exit condition. Recovery in
+`uibcdf/recorda#16` and explicit configuration in #17 first qualified development
+sources because the earlier published releases lacked scoped APIs. Their receipts
+and archives preserve that evidence; they are not rewritten as public-package tests.
+
+The new [SMonitor 0.19.0 release](https://github.com/uibcdf/smonitor/releases/tag/0.19.0)
+and [ArgDigest 0.15.0 release](https://github.com/uibcdf/argdigest/releases/tag/0.15.0)
+contain those APIs. `uibcdf/recorda#18` qualifies their exact public Conda archives
+with DepDigest 0.13.0; the current receipt is
+[evidence/published_support_local.json](evidence/published_support_local.json).
+Two optional extras declare the feature bounds, including the SMonitor 0.19 floor
+required by restrictive ArgDigest use. The installed-provider lanes provision Conda
+packages, verify artifact/file provenance and dependency consistency, and run the
+existing integrations without provider sources or PYTHONPATH substitutions.
+The ordinary lane deliberately leaves provider tests disabled.
+
+Default ArgDigest adoption and reference-check argument contracts remain open.
+This work does not qualify a public Recorda release or promote MOLI's registry.
+Environment/optional metadata changes are also tracked in `uibcdf/recorda#3`.
 
 Reassess DepDigest during that dependency review if adoption adds an optional or
 backend loader. Reassess PyUnitWizard only when quantities cross a Recorda-owned

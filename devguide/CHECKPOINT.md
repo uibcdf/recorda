@@ -108,8 +108,9 @@ authenticated integrity, full dependency closure or replay is qualified here.
    experiments now cover recovery (`uibcdf/recorda#16`) and capture configuration
    (`uibcdf/recorda#17`); read [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
    and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
-   evidence. Default ArgDigest adoption, reference-check contracts and published
-   provider qualification remain pending. DepDigest and PyUnitWizard
+   evidence. Published-provider qualification is now tracked against SMonitor 0.19.0 /
+   ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default adoption and reference-check
+   contracts remain pending. DepDigest and PyUnitWizard
    have no current core boundary, with explicit reassessment triggers.
 3. **Before a distributable release**, complete packaging/distribution
    [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3), installed-candidate

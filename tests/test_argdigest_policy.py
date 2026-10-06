@@ -1,4 +1,4 @@
-"""Explicit configuration factory with pinned providers; scientific calls stay native."""
+"""Explicit configuration factory with published providers; scientific calls stay native."""
 
 import importlib
 import json
@@ -14,7 +14,7 @@ import recorda
 
 pytestmark = pytest.mark.skipif(
     os.environ.get("RECORDA_TEST_ARGDIGEST") != "1",
-    reason="explicit ArgDigest source qualification lane",
+    reason="explicit ArgDigest integration lane",
 )
 
 
