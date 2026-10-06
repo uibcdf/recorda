@@ -55,8 +55,10 @@ first remains deferred.
 The controlled slices are published: manual activation, notebooks/cost trials,
 SciPy, offline Sabueso, native exception references, persistence recovery,
 capture selection and explicit local reference checks. [../CHECKPOINT.md](../CHECKPOINT.md)
-identifies the exact source pair, 112 local passing tests, six notebooks/45 cells,
-successful hosted core/Jupyter/SciPy checks and the local-only provider limits.
+identifies historical receipts and the current required-provider receiving pair:
+242 local installed-pair tests pass with four explicit Sabueso skips, six selected
+notebooks/45 cells, and successful hosted Jupyter/SciPy checks. The current pair
+does not requalify the historical local-only Sabueso provider stack.
 Resolved slice analyses remain in `../archive/`; this broader coordination report
 stays open for standalone acceptance consolidation and engineering review.
 

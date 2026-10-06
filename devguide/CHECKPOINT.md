@@ -5,7 +5,38 @@ maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed
 work and proposed next work; it does not authorize a new release or integration.
 
-## Published and qualified source pair
+## Current receiving qualification
+
+Recorda `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac` is now paired with Lab
+receiving implementation `11b1465f9b8558a2ac4c7c172ab2377251820af3` and default
+promotion `4256184d185cbae469b90de36f6f0fb260b7e4d4`, under
+[uibcdf/recorda-lab#12](https://github.com/uibcdf/recorda-lab/issues/12).
+All four Recorda-bearing Lab environments provision published SMonitor 0.19.0
+py_1, ArgDigest 0.15.0 py_0 and transitive DepDigest 0.13.0 py_0. Dummy native
+code, metadata and routine CI remain independent.
+
+Local installed-wheel qualification on Linux Python 3.14.7 passes **242 tests
+with four explicit Sabueso skips** (221 core + 21 Lab), six selected notebooks/45
+cells and the real-kernel fault scenario. Provider provenance, pip check,
+preflight rejection scenarios, governance and Ruff pass. The current pair runs
+the seventh/multi-step notebook and excludes the fourth/Sabueso notebook.
+
+[Explicit-candidate CI](https://github.com/uibcdf/recorda-lab/actions/runs/37536928526)
+passes all nine jobs before default promotion;
+[default CI](https://github.com/uibcdf/recorda-lab/actions/runs/37537236289) passes
+the same nine afterward without a Recorda SHA override. Hosted kernels and dummy
+checks cover Linux Python 3.11–3.14; the scientific/recovery lane uses 3.14 and
+reports 242 passing tests/four skips. Published pytest-receptor 1.1.0 and
+gh-run-receptor 1.2.0 were used. Exact source selection, manifests and verdicts
+are retained in Lab's `devguide/evidence/published_providers_linux_py314.json`
+and `published_providers_hosted.json`; read its maintained checkpoint.
+
+This receiving pair does not requalify the historical Sabueso stack or establish
+a public release, general OS support or replay. Earlier receipts below preserve
+their original sources and limits. Subsequent documentation commits retain the
+tested runtime, tools, environments, metadata, README and promoted workflow bytes.
+
+## Historical reference-check source pair
 
 | Repository | Implementation/experiment commit |
 | --- | --- |
@@ -246,6 +277,7 @@ The current-core four-library review (#2) is locally complete, preserved in
 providers have receiving evidence; DepDigest/PyUnitWizard retain explicit present
 non-applicability and reassessment triggers. A concrete `partial` to `adopted`
 registry proposal belongs to `uibcdf/moli#62`; the observed central state is still
-`partial`, with no registry change made here. Lab receiving/exact-pair work stays
-in `uibcdf/recorda-lab#12`. Public release/OS/coverage remain independent, and
+`partial`, with no registry change made here. Lab receiving/exact-pair work is
+complete in `uibcdf/recorda-lab#12`, as recorded above. Public release/OS/coverage
+remain independent, and
 SMonitor presentation/correlation (#14/#15) remain future functionality analyses.

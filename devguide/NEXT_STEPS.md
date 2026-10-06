@@ -9,8 +9,8 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 ## Current resumption order — 2026-10-06
 
 The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): consolidate
-standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), qualify Lab's
-new receiving candidate (`uibcdf/recorda-lab#12`), then complete release reviews (`uibcdf/recorda#3`,
+standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), then complete
+release reviews (`uibcdf/recorda#3`,
 `uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
 next scoped experiment before implementation. The small workflow linking native
 references across steps is implemented and qualified in `uibcdf/recorda-lab#10`;
@@ -29,8 +29,10 @@ adoption is complete in `uibcdf/recorda#19`, with all 11 installed-package/quali
 CI jobs passing. Reference-check contracts in `uibcdf/recorda#20` are also complete,
 with 221 source/installed tests and all 11 CI jobs passing. Keep dependency metadata,
 environment specifications and executed provider evidence aligned.
-Before advancing Lab's Recorda candidate, provision its required provider closure
-and qualify the new exact pair in `uibcdf/recorda-lab#12`.
+Lab's required-provider receiving adoption is complete in `uibcdf/recorda-lab#12`:
+242 local installed-pair tests pass, and both explicit-candidate and subsequent
+default Jupyter/SciPy runs pass all nine jobs. The current exact pair and separate
+receipts are identified in `CHECKPOINT.md`; Sabueso remains historical evidence.
 SMonitor inspection presentation (#14) and provider-operation correlation (#15)
 remain separate analyses of new user functionality, starting from a concrete
 consumer question and a bounded recommendation before implementation.

@@ -26,7 +26,8 @@ The Lab consumer prepares finite observations, calls unmodified SciPy curve_fit 
 evaluates residuals. Direct, dormant and recorded executions agree with closed-form
 OLS: slope 87/35, intercept -23/35 and residual sum of squares 1/14. Four recorded
 dependency occurrences connect prepared data to fitting and evaluation, and the fit
-to evaluation. The independent reader requires Recorda and stdlib only.
+to evaluation. The independent reader requires Recorda, its required support
+providers and stdlib.
 
 Acceptance retains actual optimizer failure/retry, hard process exit after
 preparation, minimal-capture omissions and intermediate-file removal/alteration/
@@ -74,8 +75,16 @@ all capabilities from DESIGN.md. Physical quantities require a concrete scenario
 and the PyUnitWizard codec; they are not introduced by dimensionless fixtures.
 
 The current support-library applicability decisions are in
-[SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md); implement and qualify the applicable
-ArgDigest/SMonitor boundaries in `uibcdf/recorda#2`.
+[SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md). Applicable ArgDigest/SMonitor
+boundaries are implemented and qualified; `uibcdf/recorda#2` is locally complete.
+Lab receiving adoption in `uibcdf/recorda-lab#12` qualifies the current installed
+pair: 242 passing tests/four explicit Sabueso skips, six selected notebooks/45
+cells, and two nine-job hosted runs before and after default promotion. Read
+[CHECKPOINT.md](CHECKPOINT.md) for exact sources and receipt locations. These
+regressions preserve the multi-step scientific oracle; they do not add a new
+scientific scenario or replace Sabueso's historical provider qualification.
+SMonitor inspection presentation and provider-operation correlation remain
+separate user-functionality analyses in `uibcdf/recorda#14` and `uibcdf/recorda#15`.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work
