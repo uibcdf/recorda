@@ -115,5 +115,13 @@ authenticated integrity, full dependency closure or replay is qualified here.
    cross-process routing and replay remain future work. Standalone Recorda
    retains no MOLI runtime dependency.
 
+## Subsequent local acceptance assessment
+
+`uibcdf/recorda-lab#10` implements the candidate preparation/fitting/evaluation
+workflow locally. Read [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for
+the scientific questions, exact local receipt and outstanding review. Core runtime
+and the previously published source pair above are unchanged; local new Lab
+evidence does not replace their historical hosted results.
+
 The broad acceptance and engineering issues remain open. A completed local
 scenario or configured CI lane does not close their wider obligations.

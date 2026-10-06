@@ -60,6 +60,11 @@ successful hosted core/Jupyter/SciPy checks and the local-only provider limits.
 Resolved slice analyses remain in `../archive/`; this broader coordination report
 stays open for standalone acceptance consolidation and engineering review.
 
+`uibcdf/recorda-lab#10` now prepares a multi-step scientific workflow using
+the existing core API. [../STANDALONE_ACCEPTANCE.md](../STANDALONE_ACCEPTANCE.md)
+records local qualification, useful native dependency links and remaining limits.
+Owner review and hosted evidence for that new Lab source remain separate.
+
 ## Acceptance criteria
 
 - Persist starts before calls and detect process interruption without inferring success.

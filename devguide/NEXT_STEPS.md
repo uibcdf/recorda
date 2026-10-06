@@ -12,8 +12,10 @@ The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): consolidate
 standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), finish ecosystem
 boundaries (`uibcdf/recorda#2`), then complete release reviews (`uibcdf/recorda#3`,
 `uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
-next scoped experiment before implementation; a small workflow linking native
-references across steps is a proposal, not an implemented or authorized feature.
+next scoped experiment before implementation. The small workflow linking native
+references across steps is now implemented locally in `uibcdf/recorda-lab#10`;
+read [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for evidence and remaining
+review. It uses the current core API and does not complete broader acceptance.
 
 The experiment sections below record completed slices and design constraints;
 they are not a queue of unimplemented work. MOLI integration, API freezing,
