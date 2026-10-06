@@ -103,8 +103,15 @@
     "tests/test_smonitor_recovery.py": "64dc8a3904d0f6cdae37cd4111ea5f7819a56e0ba82ee6a56a5414d004cb2e19"
   },
   "ci": {
-    "state": "pending",
+    "run_id": 37505815276,
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37505815276",
+    "code_commit": "4ad2531b84373f83a81ca69d0861ce2e106fefc0",
+    "conclusion": "success",
+    "jobs_passed": 15,
+    "jobs_total": 15,
+    "inspector": "published gh-run-receptor 1.2.0, ci profile, metadata capture",
     "lane": "installed Recorda on Linux Python 3.11-3.14, pinned ArgDigest/SMonitor sources, Conda DepDigest 0.13.0",
+    "public_provider_qualification": false,
     "initial_attempt": {
       "run_id": 37505479057,
       "url": "https://github.com/uibcdf/recorda/actions/runs/37505479057",

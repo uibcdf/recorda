@@ -95,6 +95,13 @@ delivery faults, application configuration, inherited telemetry, native calls,
 mandatory recorded facts, disabled adapters, import isolation and older providers.
 Executed evidence is in
 [evidence/argument_configuration_local.json](evidence/argument_configuration_local.json).
+Local source and installed-Recorda suites pass **158 tests** on Python 3.14.7;
+the baseline passes 104 with 54 explicit provider skips. Code/test commit
+`4ad2531b84373f83a81ca69d0861ce2e106fefc0` passes
+[all 15 hosted jobs](https://github.com/uibcdf/recorda/actions/runs/37505815276),
+including the four installed-Recorda ArgDigest lanes on Linux Python 3.11–3.14.
+Published gh-run-receptor 1.2.0 inspected that completed run. The resolved analysis
+is in [archive/argument_configuration_source.md](archive/argument_configuration_source.md).
 
 This factory is an opt-in experiment, not default-core ArgDigest adoption or a
 public-provider qualification. The wider review remains partial. Select and
