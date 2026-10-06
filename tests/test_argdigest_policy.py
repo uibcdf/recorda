@@ -223,9 +223,12 @@ def test_native_calls_selected_facts_and_disabled_adapters(factory, tmp_path):
 
 def _subprocess(code, *, provider_paths=True):
     env = os.environ.copy()
-    paths = [str(Path(recorda.__file__).resolve().parents[1])]
+    paths = []
     if provider_paths:
         paths.extend(filter(None, env.get("PYTHONPATH", "").split(os.pathsep)))
+    # An installed Recorda shares site-packages with the older published providers.
+    # Preserve the qualified source precedence before adding Recorda's import root.
+    paths.append(str(Path(recorda.__file__).resolve().parents[1]))
     env["PYTHONPATH"] = os.pathsep.join(paths)
     env["PYTHONDONTWRITEBYTECODE"] = "1"
     return subprocess.run([sys.executable, "-c", code], env=env, capture_output=True, text=True)

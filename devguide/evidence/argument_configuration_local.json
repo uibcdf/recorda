@@ -44,7 +44,8 @@
     "sha256": "23bb34fc1f21ec5b02d8f58a9295712efc59d71788781a363c446eda9dbf8569",
     "build": "isolated source snapshot, pip wheel --no-deps --no-build-isolation",
     "installed_target": "/tmp/recorda-argument-installed",
-    "release_candidate": false
+    "release_candidate": false,
+    "additional_install": "/tmp/recorda-support-review-314/lib/python3.14/site-packages; regular isolated-environment install beside published providers"
   },
   "checks": {
     "baseline": {
@@ -68,7 +69,12 @@
     "ruff_check": "passed",
     "ruff_format": "passed",
     "git_diff_check": "passed",
-    "known_tool_warning": "Some source-provider runs print a post-verdict /dev/null ResourceWarning from published pytest-receptor 1.1.0; known uibcdf/pytest-receptor#4 (resolved upstream). Exit and test verdict remain successful; no local suppression or provider patch."
+    "known_tool_warning": "Some source-provider runs print a post-verdict /dev/null ResourceWarning from published pytest-receptor 1.1.0; known uibcdf/pytest-receptor#4 (resolved upstream). Exit and test verdict remain successful; no local suppression or provider patch.",
+    "installed_recorda_beside_published_providers": {
+      "passed": 158,
+      "skipped": 0
+    },
+    "subprocess_precedence_regression": "Reproduced initial CI failure locally (3 failed, 39 passed) with Recorda in ordinary site-packages; corrected subprocess PYTHONPATH to keep pinned provider sources before the shared site-packages root. Full installed suite then passed 158 tests."
   },
   "manifest_scope": "runtime Python, tests, metadata and workflow bytes; documentation maintained separately",
   "sha256_files": {
@@ -87,7 +93,7 @@
     "src/recorda/references.py": "8a5cdf0a187bf716c56698ee4821de4730e3f73b5a04dfcc758754e3fa24bf5f",
     "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d",
     "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
-    "tests/test_argdigest_policy.py": "fe4dc2f4d66439aadb9424e41e77f97fa734b65712ee6f0e60110c4d485b50cc",
+    "tests/test_argdigest_policy.py": "f9c1701a8b85c5749bcdc6f090b47d818f4769efaca596b74d493c59594b3e84",
     "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
     "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
     "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
@@ -98,6 +104,15 @@
   },
   "ci": {
     "state": "pending",
-    "lane": "installed Recorda on Linux Python 3.11-3.14, pinned ArgDigest/SMonitor sources, Conda DepDigest 0.13.0"
+    "lane": "installed Recorda on Linux Python 3.11-3.14, pinned ArgDigest/SMonitor sources, Conda DepDigest 0.13.0",
+    "initial_attempt": {
+      "run_id": 37505479057,
+      "url": "https://github.com/uibcdf/recorda/actions/runs/37505479057",
+      "code_commit": "f081b686ea36c3600bbfb75fa6ac261490f4d505",
+      "conclusion": "failure",
+      "jobs_passed": 11,
+      "jobs_failed": 4,
+      "cause": "Test subprocesses prepended shared site-packages and shadowed pinned provider sources; 3 receiving tests failed in each ArgDigest lane. Fixed and locally reproduced; follow-up exact-head CI required."
+    }
   }
 }
