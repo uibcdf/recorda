@@ -102,6 +102,16 @@ failed finalization, subsequent activation and nested operation lineage. See
 `archive/manual_persistence_finalization.md` and `evidence/manual_recovery_local.json`.
 Broader reliability policies remain a later platform concern.
 
+## Bounded capture selection
+
+`uibcdf/recorda#11` and `uibcdf/recorda-lab#8` compare two session policies over
+the same unchanged dummy calculation. Selected lifecycle/implementation facts
+remain mandatory; profile selection and payload-group switches expose explicit
+coverage and omissions. The fifth notebook keeps ordinary calls across cells.
+See `CAPTURE_SELECTION.md` for the limits: excluded outcomes are unobserved,
+minimal detail loses native dependencies, and timing is scenario-specific.
+This is not the broader MOLI profile/routing/reliability engine.
+
 ## Later — MolSysSuite and MOLI
 
 Before adding Recorda to any MolSysSuite component, inspect that component's existing records and identify a concrete missing provenance link. Component-owned records and Results remain authoritative. Decide case by case whether a Recorda hook, a reference to a native record, or another adapter adds value. Do not impose a suite-wide recording pattern from this prototype.

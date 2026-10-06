@@ -14,6 +14,8 @@ This directory is the entry point for developers and agents working on Recorda. 
 6. [`PYTHON_SUPPORT.md`](PYTHON_SUPPORT.md) — Python 3.11–3.14 and the tracked MOLI transition.
 7. [`ACTIVATION.md`](ACTIVATION.md) — recommended start/stop, context ownership and native adapters.
 
+8. [`CAPTURE_SELECTION.md`](CAPTURE_SELECTION.md) — bounded session selection and detail.
+
 ## MOLI integration contract
 
 Recorda is independently useful for reproducible computational work, but MOLI uses Recorda as its recording/provenance substrate.

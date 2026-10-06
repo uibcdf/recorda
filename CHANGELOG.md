@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add optional session `CapturePolicy` for declared profile selection and payload
+  detail. Selected lifecycle facts remain mandatory; exclusions use bounded
+  aggregate coverage and disabled adapters are bypassed (`uibcdf/recorda#11`,
+  `uibcdf/recorda-lab#8`).
+
 - Manual finalization can close an idle session as incomplete after an operation's
   terminal write fails. Native errors, persisted prefixes, context ownership and
   the stop barrier for running async work are preserved (`uibcdf/recorda#8`).

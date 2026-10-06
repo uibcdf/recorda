@@ -42,6 +42,7 @@ def inspect(path):
     start = events[0]
     operations = {}
     terminal = None
+    coverage = dict(start["coverage"])
     for event in events[1:]:
         if event.get("session_id") != start["session_id"] or terminal is not None:
             raise ValueError("event outside its session")
@@ -67,6 +68,8 @@ def inspect(path):
                 "status": "incomplete",
                 "outputs": {},
             }
+            if "capture" in event:
+                operations[operation_id]["capture"] = event["capture"]
         elif kind in {"operation_output", "operation_finished"}:
             if operation_id not in operations or operations[operation_id]["status"] != "incomplete":
                 raise ValueError("event has no active operation")
@@ -84,6 +87,8 @@ def inspect(path):
             if event["status"] not in {"succeeded", "failed", "incomplete"}:
                 raise ValueError("invalid session outcome")
             terminal = event["status"]
+            if "excluded_boundaries" in event:
+                coverage["excluded_boundaries"] = event["excluded_boundaries"]
         else:
             raise ValueError("unknown journal event")
     status = terminal or "incomplete"
@@ -98,7 +103,7 @@ def inspect(path):
         start["session_id"],
         start["name"],
         status,
-        start["coverage"],
+        coverage,
         list(operations.values()),
         problems,
     )

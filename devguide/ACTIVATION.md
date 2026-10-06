@@ -140,9 +140,10 @@ The Sabueso adoption is tracked by `uibcdf/recorda-lab#6`. Its exact ConnectorEr
 adapter retains the native acquisition trace and its inspector reads the reference
 from the failed operation, while still accepting historical caller-owned indices.
 
-`profile=` is a bounded semantic label on an operation, supported by decorators and
-explicit operations. It is stored and exposed by inspection. It does not yet select
-fields, filter events, route records or resolve strict/buffered policy. Readers accept
+`profile=` is a bounded semantic label on decorators and explicit operations.
+An optional session `CapturePolicy` can select those labels and payload groups;
+see [`CAPTURE_SELECTION.md`](CAPTURE_SELECTION.md). It does not define a governed
+profile catalog, route records or resolve strict/buffered policy. Readers accept
 older prototype operations without a profile and expose `None` for that field.
 
 ## Evidence

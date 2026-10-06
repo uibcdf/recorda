@@ -12,23 +12,28 @@ from threading import RLock
 from uuid import uuid4
 
 from .capture import capture, exception_reference, fields, label
+from .policy import CapturePolicy
 
 _ACTIVE = ContextVar("recorda_session", default=None)
 _PARENTS = ContextVar("recorda_parents", default=())
 
 
-def _exception(error, reference_adapters):
+def _exception(error, reference_adapters, *, capture_reference=True):
     return {
         "type": f"{type(error).__module__}.{type(error).__qualname__}",
         "message": {"kind": "omitted", "reason": "exception_message_may_be_sensitive"},
-        "reference": exception_reference(error, reference_adapters=reference_adapters),
+        "reference": (
+            exception_reference(error, reference_adapters=reference_adapters)
+            if capture_reference
+            else {"kind": "omitted", "reason": "capture_policy"}
+        ),
     }
 
 
 class RecordingSession:
     """One journal, activated manually or through an optional context manager."""
 
-    def __init__(self, name, *, path, gaps=(), reference_adapters=None):
+    def __init__(self, name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
         self.name = label(name)
         self.path = Path(path)
         if isinstance(gaps, str):
@@ -44,6 +49,12 @@ class RecordingSession:
         ):
             raise TypeError("reference_adapters must map exact types to callables")
         self._reference_adapters = dict(reference_adapters)
+        if capture_policy is not None and type(capture_policy) is not CapturePolicy:
+            raise TypeError("capture_policy must be a CapturePolicy")
+        self._configured_policy = capture_policy is not None
+        self._capture_policy = capture_policy or CapturePolicy()
+        self._excluded_profiles = {}
+        self._excluded_other = 0
         self.id = str(uuid4())
         self._sequence = 0
         self._file = None
@@ -96,11 +107,16 @@ class RecordingSession:
         self._used = True
         fd = os.open(self.path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
         self._file = os.fdopen(fd, "wb", buffering=0)
+        coverage = {"mode": "declared_boundaries", "known_gaps": self.gaps}
+        if self._configured_policy:
+            coverage.update(
+                capture_policy=self._capture_policy.describe(), excluded_boundaries=None
+            )
         try:
             self._write(
                 "session_started",
                 name=self.name,
-                coverage={"mode": "declared_boundaries", "known_gaps": self.gaps},
+                coverage=coverage,
             )
         except BaseException:
             self._file.close()
@@ -132,7 +148,18 @@ class RecordingSession:
             # A final marker may be attempted after a recording fault; it never clears it.
             try:
                 try:
-                    self._append("session_finished", status=status)
+                    selection = {}
+                    if self._configured_policy:
+                        selection["excluded_boundaries"] = {
+                            "by_profile": [
+                                {"profile": profile, "calls": count}
+                                for profile, count in sorted(
+                                    self._excluded_profiles.items(), key=lambda item: item[0] or ""
+                                )
+                            ],
+                            "other_calls": self._excluded_other,
+                        }
+                    self._append("session_finished", status=status, **selection)
                 except BaseException:
                     if error is None:
                         raise
@@ -156,7 +183,20 @@ class RecordingSession:
         return False
 
     def operation(self, name, *, inputs=None, parameters=None, implementation=None, profile=None):
+        name = label(name)
+        profile = None if profile is None else label(profile)
+        if not self._capture_policy.accepts(profile):
+            return ExcludedOperation(self, profile)
         return Operation(self, name, inputs, parameters, implementation, profile)
+
+    def _exclude(self, profile):
+        with self._lock:
+            if _ACTIVE.get() is not self or self._file is None:
+                raise RuntimeError("excluded boundary requires its active session")
+            if profile in self._excluded_profiles or len(self._excluded_profiles) < 64:
+                self._excluded_profiles[profile] = self._excluded_profiles.get(profile, 0) + 1
+            else:
+                self._excluded_other += 1
 
     @property
     def record(self):
@@ -165,12 +205,45 @@ class RecordingSession:
         return inspect(self.path)
 
 
+class ExcludedOperation:
+    """Unobserved explicit boundary: no payload adapters, outcome or parent event."""
+
+    def __init__(self, session, profile):
+        self.session = session
+        self.profile = profile
+        self._used = False
+        self._active = False
+
+    def __enter__(self):
+        if self._used:
+            raise RuntimeError("operation may be entered only once")
+        self.session._exclude(self.profile)
+        self._used = self._active = True
+        return self
+
+    def output(self, name, value):
+        if not self._active or self.session._file is None:
+            raise RuntimeError("outputs require an active operation")
+        label(name)
+
+    def __exit__(self, exc_type, error, traceback):
+        self._active = False
+        return False
+
+
 class Operation:
     def __init__(self, session, name, inputs, parameters, implementation, profile):
         self.session = session
         self.name = label(name)
-        self.inputs = fields(inputs, reference_adapters=session._reference_adapters)
-        self.parameters = fields(parameters, reference_adapters=session._reference_adapters)
+        policy = session._capture_policy
+        self.inputs = (
+            fields(inputs, reference_adapters=session._reference_adapters) if policy.inputs else {}
+        )
+        self.parameters = (
+            fields(parameters, reference_adapters=session._reference_adapters)
+            if policy.parameters
+            else {}
+        )
         self.implementation = fields(implementation)
         self.profile = None if profile is None else label(profile)
         self.id = str(uuid4())
@@ -185,6 +258,9 @@ class Operation:
                 )
             self._used = True
             parents = _PARENTS.get()
+            detail = {}
+            if self.session._configured_policy:
+                detail["capture"] = self.session._capture_policy.detail()
             self.session._write(
                 "operation_started",
                 operation_id=self.id,
@@ -194,6 +270,7 @@ class Operation:
                 inputs=self.inputs,
                 parameters=self.parameters,
                 implementation=self.implementation,
+                **detail,
             )
             self.session._running_operations.add(self.id)
         self._token = _PARENTS.set((*parents, self.id))
@@ -204,6 +281,8 @@ class Operation:
         if not self._active or self.session._file is None:
             raise RuntimeError("outputs require an active operation")
         name = label(name)
+        if not self.session._capture_policy.outputs:
+            return
         self.session._write(
             "operation_output",
             operation_id=self.id,
@@ -220,7 +299,11 @@ class Operation:
                 "status": "failed" if error is not None else "succeeded",
             }
             if error is not None:
-                data["exception"] = _exception(error, self.session._reference_adapters)
+                data["exception"] = _exception(
+                    error,
+                    self.session._reference_adapters,
+                    capture_reference=self.session._capture_policy.exception_references,
+                )
             try:
                 self.session._write("operation_finished", **data)
             except BaseException:
@@ -237,14 +320,26 @@ class Operation:
         return False
 
 
-def session(name, *, path, gaps=(), reference_adapters=None):
+def session(name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
     """Create a session; context-manager activation remains available as a convenience."""
-    return RecordingSession(name, path=path, gaps=gaps, reference_adapters=reference_adapters)
+    return RecordingSession(
+        name,
+        path=path,
+        gaps=gaps,
+        reference_adapters=reference_adapters,
+        capture_policy=capture_policy,
+    )
 
 
-def start(name, *, path, gaps=(), reference_adapters=None):
+def start(name, *, path, gaps=(), reference_adapters=None, capture_policy=None):
     """Activate recording for instrumented calls and return the session handle."""
-    return session(name, path=path, gaps=gaps, reference_adapters=reference_adapters).start()
+    return session(
+        name,
+        path=path,
+        gaps=gaps,
+        reference_adapters=reference_adapters,
+        capture_policy=capture_policy,
+    ).start()
 
 
 def stop():
@@ -267,8 +362,11 @@ def record(name=None, *, profile=None):
         operation_profile = None if profile is None else label(profile)
 
         def boundary(active, args, kwargs):
-            bound = python_inspect.signature(function).bind(*args, **kwargs)
-            bound.apply_defaults()
+            inputs = None
+            if active._capture_policy.inputs:
+                bound = python_inspect.signature(function).bind(*args, **kwargs)
+                bound.apply_defaults()
+                inputs = dict(bound.arguments)
             package = function.__module__.split(".")[0]
             try:
                 package_version = version(package)
@@ -276,7 +374,7 @@ def record(name=None, *, profile=None):
                 package_version = None
             return active.operation(
                 operation_name,
-                inputs=dict(bound.arguments),
+                inputs=inputs,
                 profile=operation_profile,
                 implementation={
                     "package": package,
@@ -292,6 +390,9 @@ def record(name=None, *, profile=None):
                 active = _ACTIVE.get()
                 if active is None:
                     return await function(*args, **kwargs)
+                if not active._capture_policy.accepts(operation_profile):
+                    active._exclude(operation_profile)
+                    return await function(*args, **kwargs)
                 with boundary(active, args, kwargs) as operation:
                     result = await function(*args, **kwargs)
                     operation.output("return", result)
@@ -302,6 +403,9 @@ def record(name=None, *, profile=None):
             def observed(*args, **kwargs):
                 active = _ACTIVE.get()
                 if active is None:
+                    return function(*args, **kwargs)
+                if not active._capture_policy.accepts(operation_profile):
+                    active._exclude(operation_profile)
                     return function(*args, **kwargs)
                 with boundary(active, args, kwargs) as operation:
                     result = function(*args, **kwargs)
