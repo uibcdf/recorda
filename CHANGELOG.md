@@ -1,5 +1,11 @@
 # Source checkpoints
 
+## Unreleased
+
+- Manual finalization can close an idle session as incomplete after an operation's
+  terminal write fails. Native errors, persisted prefixes, context ownership and
+  the stop barrier for running async work are preserved (`uibcdf/recorda#8`).
+
 ## 0.2.0
 
 Experimental checkpoint tracked by `uibcdf/recorda#9`.

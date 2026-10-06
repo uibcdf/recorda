@@ -46,6 +46,13 @@ be created with `recorda.session(...)` or `RecordingSession(...)`, then started 
   incomplete. Neither normal process exit nor an exit hook manufactures successful closure.
 - Completion persistence errors propagate and detach/close the journal so a new session
   can start. Inspect the stored prefix; do not assume completion was persisted.
+- After an operation's terminal write fails, manual stop can finalize the session
+  once all recorded execution has ended. The session remains incomplete even if a
+  terminal line was written before fsync failed. Its broken writer still rejects
+  subsequent declared calls before their target executes. If the final session
+  marker also fails, stop propagates that error after detaching and closing the
+  journal; the stored prefix remains inspectable and a new session can activate.
+  Running async operations and owner-context checks still prevent premature stop.
 
 Context activation is local. New processes/threads need an explicit future propagation
 contract. Async work must finish before its owner stops the session. This experiment

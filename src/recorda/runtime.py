@@ -50,7 +50,7 @@ class RecordingSession:
         self._used = False
         self._broken = False
         self._failed = False
-        self._open_operations = set()
+        self._running_operations = set()
         self._lock = RLock()
 
     def _append(self, event, **data):
@@ -123,11 +123,11 @@ class RecordingSession:
         with self._lock:
             if self._file is None or _ACTIVE.get() is not self:
                 raise RuntimeError("this session is not active in the current context")
-            if self._open_operations and not allow_incomplete:
+            if self._running_operations and not allow_incomplete:
                 raise RuntimeError("cannot stop while recorded operations are running")
             self._detach()
             status = "failed" if error is not None or self._failed else "succeeded"
-            if self._broken or self._open_operations:
+            if self._broken or self._running_operations:
                 status = "incomplete"
             # A final marker may be attempted after a recording fault; it never clears it.
             try:
@@ -195,7 +195,7 @@ class Operation:
                 parameters=self.parameters,
                 implementation=self.implementation,
             )
-            self.session._open_operations.add(self.id)
+            self.session._running_operations.add(self.id)
         self._token = _PARENTS.set((*parents, self.id))
         self._active = True
         return self
@@ -227,9 +227,11 @@ class Operation:
                 if error is None:
                     raise
                 error.add_note("Recorda could not persist operation completion; inspect for gaps.")
-            else:
-                self.session._open_operations.discard(self.id)
         finally:
+            # Execution ended even if its terminal event could not be persisted.
+            # The independent broken-writer flag retains the incomplete outcome.
+            with self.session._lock:
+                self.session._running_operations.discard(self.id)
             self._active = False
             _PARENTS.reset(self._token)
         return False

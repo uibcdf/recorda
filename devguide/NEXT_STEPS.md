@@ -91,14 +91,16 @@ No arbitrary exception messages, dictionaries or repr are captured. The controll
 Sabueso adoption in `uibcdf/recorda-lab#6` removes manual trace-sidecar retention from
 the runner and fourth notebook. The provisional API has no new MOLI dependency.
 
-## Next — manual recovery from incomplete operation persistence
+## Manual recovery from incomplete operation persistence
 
-`uibcdf/recorda#8` records a pre-existing limitation found during exception-capture
-regressions: failed terminal writes leave an operation classified as running, so
-manual stop rejects finalization even after its execution has ended. Context-managed
-cleanup can finish incomplete. Separate running work from incomplete persistence
-before changing manual finalization, preserving owner context and genuinely active
-async operations. Broader reliability policies remain a later platform concern.
+`uibcdf/recorda#8` fixes a pre-existing limitation found during exception-capture
+regressions. Running execution is now tracked independently of writer failure, so
+manual stop can finish incomplete after an operation's terminal write fails.
+Owner-context and genuinely active async-operation barriers remain enforced.
+Seven regressions cover before-line and after-line fsync faults, original errors,
+failed finalization, subsequent activation and nested operation lineage. See
+`archive/manual_persistence_finalization.md` and `evidence/manual_recovery_local.json`.
+Broader reliability policies remain a later platform concern.
 
 ## Later — MolSysSuite and MOLI
 
