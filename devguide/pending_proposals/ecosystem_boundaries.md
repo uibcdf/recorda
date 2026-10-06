@@ -32,7 +32,11 @@ append recovery advice to native exceptions, making SMonitor applicable now.
 The recovery adapter in `uibcdf/recorda#16` now exercises the resolved SMonitor
 source APIs through explicit selection; public-provider adoption is still pending.
 See [../RECOVERY_DIAGNOSTICS.md](../RECOVERY_DIAGNOSTICS.md) and its executed receipt.
-ArgDigest has not been adopted. DepDigest has no current core backend loader, and
+The explicit ArgDigest capture factory in `uibcdf/recorda#17` exercises both
+contract axes against pinned development sources with mandatory core guards.
+Default/public-provider adoption and reference-check contracts remain pending.
+See [../ARGUMENT_CONFIGURATION.md](../ARGUMENT_CONFIGURATION.md).
+DepDigest has no current core backend loader, and
 PyUnitWizard has no quantity parsing/conversion/validation boundary.
 
 Published SMonitor 0.18.0, ArgDigest 0.14.0 and DepDigest 0.13.0 Conda archive

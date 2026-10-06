@@ -22,6 +22,10 @@ chosen once by the caller. A policy is frozen and copies its profile collection;
 all four detail switches require actual booleans. The provisional public argument
 is available on start, session and RecordingSession.
 
+An explicit ArgDigest factory can construct the same core policy in the controlled
+source-provider experiment; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md).
+Direct core construction retains its mandatory validation and independent imports.
+
 ## Mandatory and selectable facts
 
 Every selected operation retains id, declared name/profile, nearest recorded

@@ -5,6 +5,23 @@ from dataclasses import dataclass
 from .capture import label
 
 
+def _profiles(value):
+    """Canonicalize only explicitly accepted bounded built-in collections."""
+    if value is None:
+        return None
+    if type(value) not in {tuple, list, set, frozenset}:
+        raise TypeError("profiles must be a bounded collection of semantic labels")
+    if len(value) > 64:
+        raise ValueError("at most 64 profiles may be selected")
+    return tuple(sorted({label(p) for p in value}))
+
+
+def _detail_switch(value):
+    if type(value) is not bool:
+        raise TypeError("capture detail switches must be bool")
+    return value
+
+
 @dataclass(frozen=True)
 class CapturePolicy:
     """Select declared profiles and payload groups; lifecycle facts stay mandatory."""
@@ -16,15 +33,9 @@ class CapturePolicy:
     exception_references: bool = True
 
     def __post_init__(self):
-        if self.profiles is not None:
-            if type(self.profiles) not in {tuple, list, set, frozenset}:
-                raise TypeError("profiles must be a bounded collection of semantic labels")
-            if len(self.profiles) > 64:
-                raise ValueError("at most 64 profiles may be selected")
-            object.__setattr__(self, "profiles", tuple(sorted({label(p) for p in self.profiles})))
+        object.__setattr__(self, "profiles", _profiles(self.profiles))
         for name in ("inputs", "parameters", "outputs", "exception_references"):
-            if type(getattr(self, name)) is not bool:
-                raise TypeError("capture detail switches must be bool")
+            _detail_switch(getattr(self, name))
 
     def accepts(self, profile):
         return self.profiles is None or profile in self.profiles

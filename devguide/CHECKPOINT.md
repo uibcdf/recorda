@@ -104,8 +104,12 @@ authenticated integrity, full dependency closure or replay is qualified here.
    [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
    [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for
    the current runtime. SMonitor applies to existing persistence-recovery advice;
-   ArgDigest applies to Recorda-owned argument contracts. Their implementation
-   and published-provider qualification remain pending. DepDigest and PyUnitWizard
+   ArgDigest applies to Recorda-owned argument contracts. Explicit source-provider
+   experiments now cover recovery (`uibcdf/recorda#16`) and capture configuration
+   (`uibcdf/recorda#17`); read [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
+   and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
+   evidence. Default ArgDigest adoption, reference-check contracts and published
+   provider qualification remain pending. DepDigest and PyUnitWizard
    have no current core boundary, with explicit reassessment triggers.
 3. **Before a distributable release**, complete packaging/distribution
    [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3), installed-candidate

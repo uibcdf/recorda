@@ -16,7 +16,7 @@ their MolSysSuite synchronization instructions do not govern Recorda.
 
 | Library | Current boundary | Assessment and remaining work |
 | --- | --- | --- |
-| ArgDigest | `CapturePolicy.__post_init__` accepts several collection forms and produces a sorted, deduplicated tuple of validated profiles. Reference-check APIs also constrain resolver, digest and byte-limit options. | Applicable to Recorda-owned argument contracts; not adopted. Specify both function and value contracts before replacing public normalization. Preserve mandatory capture, path and lifecycle invariants. |
+| ArgDigest | `CapturePolicy.__post_init__` accepts several collection forms and produces a sorted, deduplicated tuple of validated profiles. Reference-check APIs also constrain resolver, digest and byte-limit options. | An explicit source-provider factory declares a closed signature and value pipelines for capture configuration, retaining mandatory core validation. Default adoption, reference options and published-provider qualification remain pending; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md). |
 | DepDigest | Core runtime imports are stdlib-only; `pyproject.toml` has no dependencies or optional backend loader. | No present core boundary. Caller-supplied exact-type reference adapters are trusted callbacks, not discovered packages. Reassess when Recorda itself loads an optional/heavy/backend dependency. |
 | SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | An explicit source-qualified recovery adapter now uses the Recorda catalog and scoped safe emission. Published-provider selection and wider adoption remain pending; see [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md). |
 | PyUnitWizard | The core records bounded scalars, safe references and omissions. It parses, converts and dimensionally validates no physical quantity. | No present core boundary. An unregistered quantity object remains unsupported, and a reference does not certify its producer's unit schema. Reassess before a quantity adapter or persisted quantity representation is introduced. |
@@ -123,11 +123,12 @@ executed local source/installed-Recorda evidence is in
 [evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
 The ordinary lane deliberately leaves provider tests disabled. This does not
 qualify a public SMonitor artifact or complete ArgDigest adoption. Select a new
-published provider before declaring a supported dependency/extra; the next code
-boundary is the Recorda-owned configuration contract. Earlier metadata and source
-receipts retain their historical limits.
-Any required dependency
-change also updates the distribution work in `uibcdf/recorda#3`.
+published provider before declaring a supported dependency/extra. The configuration
+boundary is now exercised by an explicit factory in `uibcdf/recorda#17`
+against pinned ArgDigest/SMonitor sources and published DepDigest 0.13.0. This
+does not replace default core normalization or qualify public provider artifacts.
+Earlier metadata and source receipts retain their historical limits. Any required
+dependency change also updates the distribution work in `uibcdf/recorda#3`.
 
 Reassess DepDigest during that dependency review if adoption adds an optional or
 backend loader. Reassess PyUnitWizard only when quantities cross a Recorda-owned

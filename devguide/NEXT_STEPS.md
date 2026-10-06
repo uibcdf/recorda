@@ -22,8 +22,10 @@ The current support-library audit is in
 Classification is complete for today's runtime; wider ArgDigest/SMonitor adoption
 is pending. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
 is a source-provider experiment owned by `uibcdf/recorda#16`. Continue with
-published-provider selection/qualification and Recorda-owned configuration
-contracts. Verify published providers and their
+published-provider selection/qualification after the explicit configuration
+experiment in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md), owned by
+`uibcdf/recorda#17`. Default ArgDigest adoption and reference-check contracts
+remain separate work. Verify published providers and their
 dependency closure before changing runtime metadata or CI provisioning.
 
 The experiment sections below record completed slices and design constraints;
