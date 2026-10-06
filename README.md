@@ -33,9 +33,10 @@ Existing scientific results and native provenance remain owned by their librarie
 
 ## Status
 
-Version **0.1.0** is the first experimental source checkpoint for tracking future
-changes ([uibcdf/recorda#5](https://github.com/uibcdf/recorda/issues/5)). Package metadata,
-runtime version and the Git tag use the same identity. Distribution and public OS
+Version **0.2.0** is the experimental source checkpoint for native exception
+references ([uibcdf/recorda#9](https://github.com/uibcdf/recorda/issues/9)). Package metadata,
+runtime version and the Git tag use the same identity. Version `0.1.0` remains the
+historical first checkpoint. See [the changelog](CHANGELOG.md). Distribution and public OS
 qualification remain open in [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3)
 and [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4).
 
@@ -76,7 +77,7 @@ returns produce explicit omissions; credential-named fields are omitted before a
 adapter runs. Configuration is copied at session creation. Adapter callbacks are
 trusted integration code and must themselves avoid secrets and scientific side effects.
 
-The post-0.1.0 source extension also accepts exact exception types in that mapping.
+Version 0.2.0 also accepts exact exception types in that mapping.
 Their adapter supplies a safe native trace reference under `exception.reference`
 on the failed operation. It preserves the original exception; unsupported errors and
 adapter faults produce explicit omissions without capturing exception messages or repr.

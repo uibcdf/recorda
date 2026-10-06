@@ -96,7 +96,7 @@ not preserve or resolve source bytes; the owner retains the native result/file.
 
 ## Native exception references
 
-The post-0.1.0 extension tracked by `uibcdf/recorda#7` uses the same exact-type mapping:
+The 0.2.0 extension tracked by `uibcdf/recorda#7` uses the same exact-type mapping:
 
 ```python
 recorda.start(
