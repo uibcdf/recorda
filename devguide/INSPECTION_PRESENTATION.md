@@ -57,6 +57,11 @@ Before provider access, validation checks the snapshot's consumed lifecycle and
 coverage fields, complete ordered declared-reference/omission scope, report
 session/status/coverage/scope, full identities and context, incomplete-operation
 IDs and consistent duplicate observations. JSON equality preserves exact types.
+Reference explanation messages explicitly identify the supplied check; they do
+not claim a fresh observation when the caller supplies an older report. This
+receiving correction is tracked in [Recorda #22](https://github.com/uibcdf/recorda/issues/22),
+revealed by Lab #13 after restoring native bytes.
+
 A report does not include every nonreference value in the snapshot: this checks
 all facts it declares, **not** report provenance, freshness, a full-snapshot
 fingerprint or authenticity of the claimed byte observations. Unknown observation

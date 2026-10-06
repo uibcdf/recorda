@@ -76,6 +76,24 @@ def test_real_byte_observations_keep_the_original_record(snapshot, state):
     assert bool(view["findings"]) == (state != "matched")
 
 
+def test_saved_observation_message_does_not_claim_fresh_checking(snapshot, configured):
+    record, resolver, path = snapshot
+    original = path.read_bytes()
+    path.unlink()
+    saved = recorda.check_references(record, resolver=resolver)
+    path.write_bytes(original)
+    fresh = recorda.check_references(record, resolver=resolver)
+    assert {row["status"] for row in fresh["references"]} == {"matched"}
+    view = recorda.inspection_view(record, reference_report=saved)
+    assert view["reference_report"] == saved
+    assert view["execution"]["status"] == "succeeded"
+    (finding,) = view["findings"]
+    assert finding["state"] == "missing" and finding["count"] == 2
+    message = finding["presentation"]["message"]
+    assert message.startswith("Supplied reference check: ")
+    assert "now" not in message
+
+
 @pytest.mark.parametrize(
     "state",
     [

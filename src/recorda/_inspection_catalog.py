@@ -1,7 +1,7 @@
 """Recorda-owned, count-only technical presentation templates."""
 
 _REFERENCE_MESSAGES = {
-    "missing": ("WARNING", "retained reference occurrences are missing now"),
+    "missing": ("WARNING", "retained reference occurrences are missing"),
     "mismatched": ("WARNING", "reference occurrences have different current bytes"),
     "unresolved": ("INFO", "reference occurrences have no supplied local binding"),
     "available_unverified": (
@@ -22,13 +22,13 @@ def reference_code(state):
     return "RECORDA-INSPECT-REFERENCE-" + state.upper().replace("_", "-")
 
 
-def _entry(level, message, hint):
+def _entry(level, message, hint, *, prefix=""):
     # A metadata_message would override the application's audience selection.
     return {
         "level": level,
         "category": "inspection",
-        "user_message": "{count} " + message + ".",
-        "dev_message": "Inspection observation ({count} occurrences): " + message + ".",
+        "user_message": prefix + "{count} " + message + ".",
+        "dev_message": prefix + "Inspection observation ({count} occurrences): " + message + ".",
         "metadata_hint": hint,
     }
 
@@ -38,6 +38,7 @@ CODES = {
         level,
         message,
         "Review the declared reference and trusted local index; recorded execution is unchanged.",
+        prefix="Supplied reference check: ",
     )
     for state, (level, message) in _REFERENCE_MESSAGES.items()
 }
