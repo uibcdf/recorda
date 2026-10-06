@@ -280,4 +280,27 @@ registry proposal belongs to `uibcdf/moli#62`; the observed central state is sti
 `partial`, with no registry change made here. Lab receiving/exact-pair work is
 complete in `uibcdf/recorda-lab#12`, as recorded above. Public release/OS/coverage
 remain independent, and
-SMonitor presentation/correlation (#14/#15) remain future functionality analyses.
+SMonitor presentation/correlation remain separate from this core adoption.
+
+## Subsequent inspection-presentation evaluation
+
+`uibcdf/recorda#14` completes its architectural analysis, not a renderer
+implementation. [INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md)
+recommends explicitly requested Recorda-owned findings with a lazy, nonemitting
+SMonitor resolve-only adapter. Execution, current reference observations,
+expected coverage omissions and presentation availability remain separate.
+Current package dependencies and plain import/inspection behavior are unchanged.
+
+The [analysis receipt](evidence/inspection_presentation_analysis.json) records
+13 passing published-SMonitor 0.19.0 research probes on Python 3.14.7 with
+published pytest-receptor 1.1.0, five passing unchanged recovery/import guards,
+and real example facts from the unchanged Lab #9 scenario. The reproducer is
+retained with the evidence. Analysis does not qualify a working user view or
+claim a new CI certificate. The resolved report is
+[archive/inspection_presentation_analysis.md](archive/inspection_presentation_analysis.md).
+
+Prototype implementation is separately queued in `uibcdf/recorda#21`; Lab
+receiving needs its own issue before consumer/notebook changes. Safe audience
+templates, especially hints, are proposed in `uibcdf/smonitor#39`; shared safe
+hints suffice for the first slice, so no provider or MOLI restructuring blocks it.
+Live producer-event correlation remains `uibcdf/recorda#15`.

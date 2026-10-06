@@ -83,8 +83,10 @@ cells, and two nine-job hosted runs before and after default promotion. Read
 [CHECKPOINT.md](CHECKPOINT.md) for exact sources and receipt locations. These
 regressions preserve the multi-step scientific oracle; they do not add a new
 scientific scenario or replace Sabueso's historical provider qualification.
-SMonitor inspection presentation and provider-operation correlation remain
-separate user-functionality analyses in `uibcdf/recorda#14` and `uibcdf/recorda#15`.
+SMonitor inspection presentation analysis (`uibcdf/recorda#14`) is complete;
+[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md) recommends a read-only
+technical view, with prototype queued in `uibcdf/recorda#21`. Live provider-operation
+correlation remains a separate analysis in `uibcdf/recorda#15`.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work

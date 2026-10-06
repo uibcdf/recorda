@@ -1,0 +1,228 @@
+{
+  "created_utc": "2026-10-06T22:11:36.253814+00:00",
+  "issue": "uibcdf/recorda#14",
+  "scope": "Architectural evaluation, published provider API probes and unchanged existing Lab #9 example observations; no implemented Recorda presentation or new scientific experiment",
+  "recorda_parent_commit": "04fd8d06cb1612d83bcf72b33ff03e6b2864da8f",
+  "lab_example_source_commit": "0baa00e7618a0cca8ae377ddb13178a41180b13e",
+  "smonitor_guide": {
+    "tag": "0.19.0",
+    "tag_object": "6bfa8bbc8fd9feee90edc31e34711468f78b5f8d",
+    "source_commit": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "sha256": "6d5ed6f99e6da9364f3a1701c1db10cc27cd554b798174a5e0a4c868ac259aa0",
+    "url": "https://github.com/uibcdf/smonitor/blob/f604b940ab281df4554869fdd24f796ea6d42c27/standards/SMONITOR_GUIDE.md",
+    "retrieval": "GitHub contents API fallback after web fetch failure"
+  },
+  "python": {
+    "executable": "/tmp/recorda-published-support-314/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "linux"
+  },
+  "tools": {
+    "pytest-receptor": "1.1.0",
+    "pytest": "9.1.1",
+    "ruff": "0.16.5"
+  },
+  "providers": {
+    "smonitor": {
+      "version": "0.19.0",
+      "build": "py_1",
+      "fn": "smonitor-0.19.0-py_1.tar.bz2",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+      "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+    },
+    "argdigest": {
+      "version": "0.15.0",
+      "build": "py_0",
+      "fn": "argdigest-0.15.0-py_0.tar.bz2",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.15.0-py_0.tar.bz2",
+      "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1"
+    },
+    "depdigest": {
+      "version": "0.13.0",
+      "build": "py_0",
+      "fn": "depdigest-0.13.0-py_0.tar.bz2",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b"
+    }
+  },
+  "provider_provenance": "core verify_support_environment.py smonitor passed exact public Conda coordinates/hashes and all managed package Python bytes; no scientific imports",
+  "probe": {
+    "path": "devguide/evidence/inspection_presentation_probe.py",
+    "sha256": "c941a15fb81f414b1d5889a14e146f17edca102d16d8ff4a4439d21c4dedc6aa",
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-published-support-314/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' devguide/evidence/inspection_presentation_probe.py",
+    "passed": 13,
+    "skipped": 0,
+    "exit_code": 0,
+    "seconds": 0.09,
+    "output_sha256": "1f794d348b385e1c060db018a8145152a338e2a558bbb8f0caa532c02a7ac1ad",
+    "cases": [
+      "user/dev/qa/agent safe nonemitting resolution",
+      "distinct audience messages with common safe hint",
+      "explicit preview under disabled/critical delivery",
+      "shared metadata_message audience precedence",
+      "ordinary audience hints absent in metadata-only resolution",
+      "missing approved field fallback",
+      "unknown code fallback",
+      "attribute/index traversal refused",
+      "opaque fields rejected before repr/str",
+      "atomic conflicting catalog registration"
+    ],
+    "activation": "temporary research-only provider catalog; configured application is explicit test setup, not a Recorda implementation"
+  },
+  "unchanged_core_guards": {
+    "passed": 5,
+    "exit_code": 0,
+    "command": "RECORDA_TEST_SMONITOR=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-published-support-314/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests/test_smonitor_recovery.py::test_adapter_registers_without_replacing_application_policy tests/test_smonitor_recovery.py::test_core_import_is_independent_and_old_provider_fails_before_activation tests/test_reference_arguments.py::test_reference_first_use_keeps_safe_baseline_and_no_scientific_imports",
+    "output_sha256": "0748a0a5a8ede57a0928204840a13a024f484cd35afdb899aa295240ac74fd04"
+  },
+  "existing_lab_examples": {
+    "owning_issue": "uibcdf/recorda-lab#9",
+    "command": "/tmp/recorda-lab12-scientific/bin/python /home/liliana/repos@uibcdf/recorda-lab/experiments/run_reference_checks.py /tmp/recorda-presentation-existing-reference-scenario",
+    "runtime_prefix": "/tmp/recorda-lab12-scientific",
+    "output_sha256": "037d642210d8b6af734f7d317b9be96f02892ccc3e646523573c9813d1f4f98d",
+    "scientific_result": {
+      "owner": "recorda-lab",
+      "schema": "recorda-lab.result/0.1",
+      "count": 4,
+      "mean": 2.5,
+      "variance": 1.25
+    },
+    "observations": [
+      {
+        "scenario": "intact",
+        "journal": "full",
+        "recorded_session_status": "succeeded",
+        "reference_occurrences_by_state": {
+          "matched": 4
+        },
+        "distinct_full_references_by_state": {
+          "matched": 2
+        },
+        "omissions_by_reason": {},
+        "incomplete_operations": 0
+      },
+      {
+        "scenario": "missing_input",
+        "journal": "full",
+        "recorded_session_status": "succeeded",
+        "reference_occurrences_by_state": {
+          "missing": 2,
+          "matched": 2
+        },
+        "distinct_full_references_by_state": {
+          "missing": 1,
+          "matched": 1
+        },
+        "omissions_by_reason": {},
+        "incomplete_operations": 0
+      },
+      {
+        "scenario": "modified_output",
+        "journal": "full",
+        "recorded_session_status": "succeeded",
+        "reference_occurrences_by_state": {
+          "matched": 2,
+          "mismatched": 2
+        },
+        "distinct_full_references_by_state": {
+          "matched": 1,
+          "mismatched": 1
+        },
+        "omissions_by_reason": {},
+        "incomplete_operations": 0
+      },
+      {
+        "scenario": "restored",
+        "journal": "full",
+        "recorded_session_status": "succeeded",
+        "reference_occurrences_by_state": {
+          "matched": 4
+        },
+        "distinct_full_references_by_state": {
+          "matched": 2
+        },
+        "omissions_by_reason": {},
+        "incomplete_operations": 0
+      },
+      {
+        "scenario": "intact",
+        "journal": "minimal",
+        "recorded_session_status": "succeeded",
+        "reference_occurrences_by_state": {},
+        "distinct_full_references_by_state": {},
+        "omissions_by_reason": {
+          "capture_policy": 6
+        },
+        "incomplete_operations": 0
+      },
+      {
+        "scenario": "intact",
+        "journal": "limits",
+        "recorded_session_status": "succeeded",
+        "reference_occurrences_by_state": {
+          "available_unverified": 1,
+          "unresolved": 1
+        },
+        "distinct_full_references_by_state": {
+          "available_unverified": 1,
+          "unresolved": 1
+        },
+        "omissions_by_reason": {},
+        "incomplete_operations": 0
+      },
+      {
+        "scenario": "intact",
+        "journal": "interrupted",
+        "recorded_session_status": "incomplete",
+        "reference_occurrences_by_state": {
+          "matched": 1
+        },
+        "distinct_full_references_by_state": {
+          "matched": 1
+        },
+        "omissions_by_reason": {},
+        "incomplete_operations": 1
+      }
+    ],
+    "scope": "unchanged accepted existing scenario with installed Recorda/Lab and published providers; rerun for examples, not new Lab feature qualification"
+  },
+  "implementation_unchanged_sha256": {
+    "src/recorda/__init__.py": "3339e01bb48b599c80c41e0947ed8cff0721f946915d332d44df34d464009b33",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "03543d9eff132de02f8e1d417f2e088fb5b4be263eeb13e6fb35d3f7b31eb5a9",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+    "src/recorda/integrations/smonitor.py": "3f3411ae01901f22e52edab9c2b4a98d89bd23b21710da55137d61ec09256daf",
+    "src/recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+  },
+  "installed_recorda_python_payload_matches_source": true,
+  "lab_example_input_sha256": {
+    "experiments/run_reference_checks.py": "6e5974dd72b752cd58d1d431fc6bd7da3c7b4ec9dd4913042e6324dccf8cf63b",
+    "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
+    "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d"
+  },
+  "followups": {
+    "prototype": "uibcdf/recorda#21",
+    "safe_audience_templates": "uibcdf/smonitor#39",
+    "separate_live_correlation": "uibcdf/recorda#15"
+  },
+  "ci": {
+    "new_run_executed": false,
+    "reason": "analysis/docs and explicit research probes only; production source, dependencies, workflows and CLI unchanged; no new exact-head CI certificate claimed"
+  },
+  "checks": {
+    "governance": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "dependency_preflight": "passed",
+    "shared_moli_checker": "passed",
+    "git_diff_check": "passed"
+  },
+  "historical_receipts": "unchanged"
+}

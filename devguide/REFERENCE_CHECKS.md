@@ -121,8 +121,9 @@ closure. The historical stdlib-only laboratory receipt is
 evidence/reference_checks_local.json; its source identities and notebook scope are
 not rewritten by this adoption. Current argument-contract evidence is retained in
 [evidence/reference_arguments_local.json](evidence/reference_arguments_local.json).
-Lab's next receiving environments and exact-pair qualification remain in
-`uibcdf/recorda-lab#12`. This is source work after immutable 0.2.0.
+Lab receiving environments and exact-pair qualification are complete in
+`uibcdf/recorda-lab#12`; read `CHECKPOINT.md` for current sources and evidence.
+This is source work after immutable 0.2.0.
 
 The new 50 receiving regressions and all 221 source/installed-wheel tests pass
 on Python 3.14.7 with published pytest-receptor 1.1.0 (default lane: 209 passes,

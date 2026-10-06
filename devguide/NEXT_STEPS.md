@@ -33,9 +33,12 @@ Lab's required-provider receiving adoption is complete in `uibcdf/recorda-lab#12
 242 local installed-pair tests pass, and both explicit-candidate and subsequent
 default Jupyter/SciPy runs pass all nine jobs. The current exact pair and separate
 receipts are identified in `CHECKPOINT.md`; Sabueso remains historical evidence.
-SMonitor inspection presentation (#14) and provider-operation correlation (#15)
-remain separate analyses of new user functionality, starting from a concrete
-consumer question and a bounded recommendation before implementation.
+SMonitor inspection presentation analysis (#14) is complete. Read
+[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md): explicit read-only
+Recorda findings plus nonemitting SMonitor resolution are recommended; prototype
+implementation is queued in `uibcdf/recorda#21`. Safe audience-hint improvement
+is proposed in `uibcdf/smonitor#39` and is not a blocker. Provider-operation
+correlation (#15) remains a separate analysis of live user functionality.
 
 The experiment sections below record completed slices and design constraints;
 they are not a queue of unimplemented work. MOLI integration, API freezing,
