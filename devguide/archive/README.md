@@ -7,3 +7,5 @@ Resolved implementation slices retain their owning issues and historical evidenc
   `uibcdf/recorda#16`, resolved with installed-Recorda/source-provider evidence.
 - [ArgDigest configuration experiment](argument_configuration_source.md) —
   `uibcdf/recorda#17`, resolved with installed-Recorda/source-provider evidence.
+- [Published support-provider qualification](published_support.md) —
+  `uibcdf/recorda#18`, resolved with exact public Conda archives and installed-Recorda CI.

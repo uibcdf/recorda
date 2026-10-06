@@ -32,6 +32,9 @@ append recovery advice to native exceptions, making SMonitor applicable now.
 The recovery adapter in `uibcdf/recorda#16` now exercises the resolved SMonitor
 source APIs through explicit selection; published-provider qualification follows
 in `uibcdf/recorda#18` with SMonitor 0.19.0 and ArgDigest 0.15.0.
+That published-provider qualification is complete: all 15 jobs pass at
+`2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891`, including eight Linux
+Python 3.11–3.14 provider lanes. See [../archive/published_support.md](../archive/published_support.md).
 See [../RECOVERY_DIAGNOSTICS.md](../RECOVERY_DIAGNOSTICS.md) and its executed receipt.
 The resolved explicit ArgDigest capture experiment in `uibcdf/recorda#17` exercises
 both contract axes against pinned development sources with mandatory core guards;

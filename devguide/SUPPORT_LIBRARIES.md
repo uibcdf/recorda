@@ -131,6 +131,10 @@ required by restrictive ArgDigest use. The installed-provider lanes provision Co
 packages, verify artifact/file provenance and dependency consistency, and run the
 existing integrations without provider sources or PYTHONPATH substitutions.
 The ordinary lane deliberately leaves provider tests disabled.
+Published-provider acceptance is complete: [CI 37529525379](https://github.com/uibcdf/recorda/actions/runs/37529525379)
+passes all 15 jobs, including eight installed-provider Linux Python 3.11–3.14
+lanes at `2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891`. The resolved analysis is
+[archive/published_support.md](archive/published_support.md).
 
 Default ArgDigest adoption and reference-check argument contracts remain open.
 This work does not qualify a public Recorda release or promote MOLI's registry.

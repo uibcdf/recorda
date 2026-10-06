@@ -170,7 +170,26 @@
     "tests/test_smonitor_recovery.py": "4d9585009b443534e4cde1ee38cd7483a332324d7203a78bb33a4be281780511"
   },
   "ci": {
-    "state": "pending",
-    "provider_lane": "installed published providers and installed Recorda on Linux Python 3.11-3.14; baseline installed-core Linux/macOS unchanged"
+    "run_id": 37529525379,
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37529525379",
+    "code_commit": "2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891",
+    "conclusion": "success",
+    "jobs_passed": 15,
+    "jobs_total": 15,
+    "inspector": "published gh-run-receptor 1.2.0, ci profile, metadata capture",
+    "provider_lane": {
+      "os": "Linux",
+      "python": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "recovery_jobs": 4,
+      "configuration_jobs": 4,
+      "recorda": "installed package",
+      "providers": "exact published Conda artifacts; no sibling source route"
+    },
+    "recorda_release_qualification": false
   }
 }

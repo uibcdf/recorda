@@ -1,9 +1,9 @@
 ---
 summary: Qualify published SMonitor and ArgDigest for the explicit Recorda integrations.
 issue: uibcdf/recorda#18
-status: active
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: reproduced
 area: [engineering, distribution, arguments, diagnostics]
 blocked_by: []
@@ -43,5 +43,19 @@ not publish Recorda, promote MOLI's registry or add a quantity/backend boundary.
 
 ## Resolution
 
-Local published-provider receiving checks pass; hosted acceptance is pending.
+Local source and installed-Recorda suites pass 158 tests with both integrations;
+the disabled suite passes 104 with 54 explicit skips, and the recovery-only suite
+passes 116 with 42 explicit skips. Published pytest-receptor 1.1.0, Ruff and
+local/shared governance checks pass under Python 3.14.7.
+
+[CI 37529525379](https://github.com/uibcdf/recorda/actions/runs/37529525379)
+passes all 15 jobs at `2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891`, including
+the eight published-provider lanes on Linux Python 3.11–3.14. Published
+gh-run-receptor 1.2.0 inspected that completed run. Provider archive hashes,
+installed-file identities and optional-feature requirements passed before tests.
+
+The closing documentation checkpoint changes no tested runtime, tool, metadata,
+environment, workflow or wheel README bytes. No Recorda release or broader
+default ArgDigest adoption is implied; those remaining contracts retain their
+owning umbrella issues.
 Receipt: [../evidence/published_support_local.json](../evidence/published_support_local.json).

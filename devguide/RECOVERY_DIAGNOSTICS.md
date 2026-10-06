@@ -89,6 +89,11 @@ and threads, import isolation and application-policy preservation.
 
 Current published-provider evidence is in
 [evidence/published_support_local.json](evidence/published_support_local.json).
+Commit `2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891` passes
+[all 15 CI jobs](https://github.com/uibcdf/recorda/actions/runs/37529525379),
+including the four published-SMonitor recovery lanes on Linux Python 3.11–3.14.
+Published gh-run-receptor 1.2.0 inspected the completed run. See
+[archive/published_support.md](archive/published_support.md).
 The earlier source-provider receipt is
 [evidence/recovery_diagnostics_local.json](evidence/recovery_diagnostics_local.json).
 Implementation commit `70a98587d9d2f8dce0626fa2bca1bd4a6a932c47` passes

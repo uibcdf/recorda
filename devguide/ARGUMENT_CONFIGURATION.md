@@ -100,6 +100,11 @@ delivery faults, application configuration, inherited telemetry, native calls,
 mandatory recorded facts, disabled adapters, import isolation and older providers.
 Current published-provider evidence is in
 [evidence/published_support_local.json](evidence/published_support_local.json).
+The installed published-provider suite passes **158 tests** locally. Commit
+`2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891` passes
+[all 15 CI jobs](https://github.com/uibcdf/recorda/actions/runs/37529525379),
+including published ArgDigest/SMonitor on Linux Python 3.11–3.14, inspected with
+published gh-run-receptor 1.2.0. See [archive/published_support.md](archive/published_support.md).
 The earlier source-provider evidence remains in
 [evidence/argument_configuration_local.json](evidence/argument_configuration_local.json).
 Local source and installed-Recorda suites pass **158 tests** on Python 3.14.7;

@@ -108,7 +108,7 @@ authenticated integrity, full dependency closure or replay is qualified here.
    experiments now cover recovery (`uibcdf/recorda#16`) and capture configuration
    (`uibcdf/recorda#17`); read [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
    and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
-   evidence. Published-provider qualification is now tracked against SMonitor 0.19.0 /
+   evidence. Published-provider qualification is complete for SMonitor 0.19.0 /
    ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default adoption and reference-check
    contracts remain pending. DepDigest and PyUnitWizard
    have no current core boundary, with explicit reassessment triggers.
@@ -158,6 +158,7 @@ all 11 jobs at implementation commit `70a98587d9d2f8dce0626fa2bca1bd4a6a932c47`,
 including installed-Recorda/source-SMonitor checks on Linux Python 3.11–3.14.
 Published gh-run-receptor 1.2.0 inspected the completed run. The experiment's
 resolved analysis is in [archive/recovery_diagnostics_source.md](archive/recovery_diagnostics_source.md).
+
 The subsequent closing documentation checkpoint changes no receipt-selected
 runtime, test, metadata or workflow byte; it does not create a new CI certificate.
 
@@ -166,3 +167,23 @@ registration APIs; published 0.18.0 does not. No dependency/extra, version/tag,
 public provider qualification or completed ecosystem adoption is inferred from
 this development experiment. ArgDigest configuration work and #14/#15 remain
 separate; MOLI's wider ecosystem state remains partial.
+
+## Subsequent published-provider qualification
+
+`uibcdf/recorda#18` replaces the provider-source routes with published SMonitor
+0.19.0 build 1, ArgDigest 0.15.0 build 0 and DepDigest 0.13.0 build 0. The explicit
+integrations remain caller-selected; optional extras and dedicated Conda environment
+specifications declare their bounds. The core remains provider-independent.
+
+The [current receipt](evidence/published_support_local.json) records public-index
+and downloaded-archive hashes, byte-identical installed provider files, a tested
+development Recorda wheel and 158 passing source/installed tests on Python 3.14.7
+with published pytest-receptor 1.1.0. [CI 37529525379](https://github.com/uibcdf/recorda/actions/runs/37529525379)
+passes all 15 jobs at `2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891`, including
+eight installed-provider lanes on Linux Python 3.11–3.14, inspected with published
+gh-run-receptor 1.2.0. Earlier receipts keep their original source/publication limits.
+
+Continue with default ArgDigest adoption and the reference-check argument contract;
+inspection presentation and provider-operation correlation remain independent.
+No public Recorda release, generic dependency loader, quantity schema, full OS
+qualification or MOLI registry promotion follows from this provider checkpoint.
