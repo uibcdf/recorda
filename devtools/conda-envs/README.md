@@ -6,7 +6,8 @@ then install this unpublished Recorda checkout with
 ArgDigest `>=0.15,<0.16` and SMonitor `>=0.19,<0.20`; ArgDigest owns its DepDigest
 dependency. No scientific producer package is required. Pytest-receptor, Ruff,
 PyYAML and packaging are development tools. Plain import/journal reading stay
-free of provider imports; configuration/recording uses the required providers.
+free of provider imports; configuration/recording and reference-checking calls
+use the required providers.
 
 | Specification | Runtime scope |
 | --- | --- |

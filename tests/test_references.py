@@ -167,13 +167,13 @@ def test_record_reports_references_omissions_and_incomplete_without_mutation(tmp
     record = handle.stop()
     import recorda.references as checks
 
-    original, calls = checks.check_reference, []
+    original, calls = checks._check_reference, []
 
     def counted(*args, **kwargs):
         calls.append(args[0])
         return original(*args, **kwargs)
 
-    monkeypatch.setattr(checks, "check_reference", counted)
+    monkeypatch.setattr(checks, "_check_reference", counted)
     report = recorda.check_references(record, resolver=files)
     assert len(calls) == 1 and len(report["references"]) == 4
     assert {row["group"] for row in report["references"]} == {

@@ -51,7 +51,7 @@ prevent another consumer's registry replacement from rewriting this contract.
 
 Argument providers load at configuration use, including the default policy
 created when recording starts. Plain `import recorda`, independent journal
-inspection and today's reference byte checks load none of ArgDigest, DepDigest
+inspection load none of ArgDigest, DepDigest
 or SMonitor. That import property does not make those declared installation
 dependencies optional, and there is no silent validation fallback if missing.
 
@@ -108,8 +108,11 @@ Earlier source and public-provider receipts remain historical:
 [archive/argument_configuration_source.md](archive/argument_configuration_source.md),
 [archive/published_support.md](archive/published_support.md).
 
-Reference-check contracts are the next independent boundary in
-`uibcdf/recorda#20`. The umbrella ecosystem review stays partial; public Recorda
+Reference-check calls now use their own option contracts in
+`uibcdf/recorda#20`; see [REFERENCE_CHECKS.md](REFERENCE_CHECKS.md). The #19
+receipt preserves the earlier checking-call import behavior. The umbrella
+ecosystem review stays partial pending reference qualification and registry
+reconciliation; public Recorda
 distribution/release and OS qualification remain in #3 / #4.
 Lab's next installed candidate needs dependency provisioning under
 `uibcdf/recorda-lab#12`; its previous qualified pair is unchanged.

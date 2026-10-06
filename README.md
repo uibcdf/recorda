@@ -69,13 +69,14 @@ objects or bounded ordinary scalars. Existing journal paths are never overwritte
 `@recorda.record("operation.name")` is the opt-in function boundary; inactive calls
 bypass capture. Session activation alone observes no arbitrary calls.
 
-Capture configuration uses published ArgDigest 0.15.0 and SMonitor 0.19.0 by
+Capture and local reference-check configuration use published ArgDigest 0.15.0 and SMonitor 0.19.0 by
 default. Recovery diagnostics remain explicitly selected. Provision the declared
 Conda environment before installing this checkout; see
 [environment routes](devtools/conda-envs/README.md),
 [recovery diagnostics](devguide/RECOVERY_DIAGNOSTICS.md) and
-[argument configuration](devguide/ARGUMENT_CONFIGURATION.md).
-The providers are required installation dependencies, loaded at configuration use.
+[argument configuration](devguide/ARGUMENT_CONFIGURATION.md) and
+[reference checks](devguide/REFERENCE_CHECKS.md).
+The providers are required installation dependencies, loaded at configuration or checking use.
 Importing Recorda and reading a saved journal keep independent, light imports.
 
 Session-local `reference_adapters={NativeResult: adapter}` lets decorated calls

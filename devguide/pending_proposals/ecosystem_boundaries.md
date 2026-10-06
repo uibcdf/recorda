@@ -41,7 +41,8 @@ both contract axes against pinned development sources with mandatory core guards
 all 15 jobs pass at its code/test commit, including Python 3.11–3.14 provider lanes.
 Default configuration now uses ArgDigest under `uibcdf/recorda#19`, with required
 metadata, aligned Conda routes and a local recipe/preflight. Reference-check
-contracts remain in #20. The original optional integration route's
+contracts are implemented with receiving qualification in progress in #20.
+The original optional integration route's
 receipt is [../evidence/published_support_local.json](../evidence/published_support_local.json);
 default-adoption evidence is [../evidence/default_arguments_local.json](../evidence/default_arguments_local.json).
 Default adoption passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`;
@@ -85,7 +86,8 @@ at a time, with published-provider and compatibility evidence.
 
 Partial. Current-runtime classification, regressions and the bounded source-provider
 recovery/configuration integrations are recorded. Default CapturePolicy adoption
-is complete in #19; reference-check contracts and complete release qualification
-remain open in
-`uibcdf/recorda#2`; MOLI's registry
-remains `partial`. No public Recorda release, registry promotion or policy exception is claimed.
+is complete in #19; reference-check receiving qualification is in progress in #20.
+After that gate, reconcile the local completed applicability/adoption evidence
+with MOLI's registry through `uibcdf/moli#62`; its observed state remains `partial`.
+Distribution/release qualification remains independently open in #3/#4.
+No public Recorda release, registry promotion or policy exception is claimed.

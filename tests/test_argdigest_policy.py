@@ -296,7 +296,7 @@ def test_compatibility_factory_uses_the_default_contract():
         capture_policy(None, False)
 
 
-def test_inspection_and_reference_observations_work_with_blocked_provider_imports(tmp_path):
+def test_journal_inspection_works_with_blocked_provider_imports(tmp_path):
     path = tmp_path / "read-only.jsonl"
     with recorda.session("test", path=path):
         pass
@@ -307,7 +307,6 @@ def test_inspection_and_reference_observations_work_with_blocked_provider_import
         "  if fullname.split('.')[0] in {'argdigest','smonitor','depdigest'}: raise ModuleNotFoundError(fullname)\n"
         "sys.meta_path.insert(0, Missing())\n"
         f"import recorda\nassert recorda.inspect({str(path)!r}).status == 'succeeded'\n"
-        "assert recorda.check_reference(recorda.Reference('test', 'a'))['status'] == 'unresolved'\n"
         "assert not {'argdigest','smonitor','depdigest'} & sys.modules.keys()\n"
     )
     result = _subprocess(code, provider_paths=False)

@@ -16,7 +16,7 @@ their MolSysSuite synchronization instructions do not govern Recorda.
 
 | Library | Current boundary | Assessment and remaining work |
 | --- | --- | --- |
-| ArgDigest | `CapturePolicy.__post_init__` accepts several collection forms and produces a sorted, deduplicated tuple of validated profiles. Reference-check APIs also constrain resolver, digest and byte-limit options. | Default configuration now uses published ArgDigest 0.15.0 with a closed signature and value pipelines, retaining mandatory guards. Reference options remain pending in #20; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md). |
+| ArgDigest | `CapturePolicy.__post_init__` canonicalizes bounded profile collections. Reference-check APIs constrain root/index, resolver/record, algorithm and byte-limit options. | Default configuration (#19) and local reference options (#20) use published ArgDigest 0.15.0 with closed signatures and metadata-only value pipelines, retaining mandatory guards. Reference receiving qualification is in progress; see [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) and [REFERENCE_CHECKS.md](REFERENCE_CHECKS.md). |
 | DepDigest | ArgDigest/SMonitor are now required providers, loaded at configuration use. No backend discovery/availability loader or optional capability fallback exists. | No present Recorda-owned boundary. ArgDigest retains its own DepDigest integration. Caller-supplied exact-type reference adapters are trusted callbacks, not discovered packages. Reassess when Recorda itself manages optional/heavy/backend availability. |
 | SMonitor | `RecordingSession._finish` and `Operation.__exit__` add recovery advice to an existing native exception after a persistence fault. | An explicit adapter uses published SMonitor 0.19.0, the Recorda catalog and scoped safe emission. Wider diagnostic features remain separate; see [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md). |
 | PyUnitWizard | The core records bounded scalars, safe references and omissions. It parses, converts and dimensionally validates no physical quantity. | No present core boundary. An unregistered quantity object remains unsupported, and a reference does not certify its producer's unit schema. Reassess before a quantity adapter or persisted quantity representation is introduced. |
@@ -141,8 +141,10 @@ Default configuration adoption in `uibcdf/recorda#19` now moves the qualified
 ArgDigest/SMonitor floors into required metadata. All Conda routes and the local
 noarch recipe match that closure. A read-only dependency preflight detects
 missing/stale/unclassified routes, while installed checks retain artifact/file
-provenance. Plain import, journal reading and current reference checking retain
-provider-free imports; configuration/recording uses the required providers.
+provenance. Plain import and journal reading retain provider-free imports;
+configuration/recording uses the required providers. At that checkpoint, reference
+checking also avoided provider imports; the subsequent #20 adoption changes calls
+to those checking APIs without rewriting #19's historical receipt.
 Recorda's safe first-use baseline disables global logging/warning/exception
 capture unless the application or project has already selected its own policy.
 Evidence is in [evidence/default_arguments_local.json](evidence/default_arguments_local.json).
@@ -151,9 +153,14 @@ Source and installed-wheel suites pass 171 tests; default suites pass 159 with
 passes all 11 jobs at `87ec6526fbd17e6d849efdc14773e3596cfa7bd8`, inspected
 with published gh-run-receptor. The resolved report is
 [archive/default_arguments.md](archive/default_arguments.md).
-Reference-check argument contracts remain open in `uibcdf/recorda#20`.
+Reference-check argument contracts now use separate metadata-only value pipelines
+in `uibcdf/recorda#20`, with configuration validated before path processing and a
+guarded byte-check core that avoids repeated digestion inside a report cache.
+Invalid individual reference values retain observations rather than configuration
+exceptions. Current receiving evidence is tracked separately in
+[evidence/reference_arguments_local.json](evidence/reference_arguments_local.json).
 This work does not qualify a public Recorda release or promote MOLI's registry.
-Environment/optional metadata changes are also tracked in `uibcdf/recorda#3`.
+Required metadata changes are also tracked in `uibcdf/recorda#3`.
 
 Reassess DepDigest during that dependency review if adoption adds an optional or
 backend loader. Reassess PyUnitWizard only when quantities cross a Recorda-owned

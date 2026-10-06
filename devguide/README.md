@@ -26,8 +26,8 @@ consumer-question assessment and new local multi-step workflow qualification.
 10. [`RECOVERY_DIAGNOSTICS.md`](RECOVERY_DIAGNOSTICS.md) — explicitly selected
     SMonitor recovery diagnostics and published-provider qualification.
 
-11. [`ARGUMENT_CONFIGURATION.md`](ARGUMENT_CONFIGURATION.md) — explicit ArgDigest
-    capture configuration and published-provider qualification.
+11. [`ARGUMENT_CONFIGURATION.md`](ARGUMENT_CONFIGURATION.md) — default ArgDigest
+    capture configuration, lazy imports and published-provider qualification.
 
 ## MOLI integration contract
 

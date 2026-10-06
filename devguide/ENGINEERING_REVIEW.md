@@ -9,12 +9,12 @@ must be reconciled in MOLI; the laboratory is associated test infrastructure.
 
 ## Runtime boundaries
 
-The current runtime uses the Python standard library, but its boundary review is
-partial. [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) records the current assessment
-and source/test receipt in `uibcdf/recorda#2`. Profile normalization and reference-check
-options create Recorda-owned argument contracts for ArgDigest; recovery advice already
-attached to native exceptions creates a SMonitor diagnostic boundary. Neither adoption
-is implemented. Scientific failures, omissions and reference observations remain
+The current runtime requires ArgDigest and SMonitor; the initial stdlib-only
+description below is historical. [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) records
+the current assessment and evidence in `uibcdf/recorda#2`. Default profile
+configuration uses ArgDigest (#19), and reference options have their own adoption
+(#20). Recovery advice attached to native exceptions has an explicitly selected
+SMonitor adapter (#16/#18). Scientific failures, omissions and reference observations remain
 structured Recorda data, while native objects and errors retain provider ownership.
 
 DepDigest has no current core optional/heavy/backend loader. PyUnitWizard has no
@@ -51,8 +51,8 @@ configured lanes do not establish current OS support. No public support claim is
 
 Create the Conda environment in `devtools/conda-envs/`, then install this checkout with
 `python -m pip install --no-deps --editable .`. Test tooling can alternatively run in a
-virtual environment with the declared development packages, since the current runtime
-closure is empty. Version `0.1.0` identifies the first experimental source checkpoint,
+virtual environment with the declared development packages after provisioning the
+required published provider closure. Version `0.1.0` identifies the first experimental source checkpoint,
 tracked in `uibcdf/recorda#5`. Earlier `0.0.0` artifacts and their evidence remain
 historical; they do not qualify the new checkpoint. No PyPI, Conda, DOI or archival
 availability is claimed.

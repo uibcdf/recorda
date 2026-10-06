@@ -17,7 +17,7 @@ propagate in that last case.
 
 SMonitor 0.19.0 provides the scoped capture and provider registration APIs.
 Required metadata declares `smonitor>=0.19.0,<0.20` for default configuration
-digestion; the recovery sink remains explicitly selected. Provision the published
+and reference-option digestion; the recovery sink remains explicitly selected. Provision the published
 Conda package from `uibcdf` with `conda-forge` using
 [`recovery_test_env.yaml`](../devtools/conda-envs/recovery_test_env.yaml), then
 install this unpublished Recorda checkout with
@@ -107,4 +107,4 @@ experiment is resolved in [archive/recovery_diagnostics_source.md](archive/recov
 Published-provider selection is tracked by `uibcdf/recorda#18`; it does not
 qualify a public Recorda release or complete the wider ecosystem/distribution
 reviews in `uibcdf/recorda#2` / #3. Inspection presentation (#14), linking
-provider diagnostics (#15) and the remaining argument contracts (#20) stay separate.
+provider diagnostics (#15) and reference-option adoption (#20) have separate scopes.

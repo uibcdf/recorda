@@ -25,6 +25,47 @@ _OMISSION_REASONS = {
 _DEFAULT_MAX_BYTES = 64 * 1024 * 1024
 
 
+def _index_root(value):
+    if not isinstance(value, (str, os.PathLike)):
+        raise TypeError("local root must be a string or path-like object")
+    return value
+
+
+def _index_entries(value):
+    if type(value) is not dict:
+        raise TypeError("local entries must map Reference objects to relative file paths")
+    for reference, location in value.items():
+        if type(reference) is not Reference:
+            raise TypeError("local index keys must be Reference objects")
+        if not isinstance(location, (str, Path)):
+            raise TypeError("local locations must be relative file paths")
+    return value
+
+
+def _digest_algorithm(value):
+    if value is not None and (type(value) is not str or value != "sha256"):
+        raise ValueError("only an explicitly declared sha256 algorithm is supported")
+    return value
+
+
+def _resolver(value):
+    if value is not None and type(value) is not LocalFileResolver:
+        raise TypeError("resolver must be a LocalFileResolver")
+    return value
+
+
+def _max_bytes(value):
+    if type(value) is not int or value < 1:
+        raise ValueError("max_bytes must be a positive integer")
+    return value
+
+
+def _inspected_record(value):
+    if type(value) is not ScientificRecord:
+        raise TypeError("record must be an inspected ScientificRecord")
+    return value
+
+
 def _reference(value):
     if type(value) is Reference:
         value = {key: getattr(value, key) for key in ("owner", "identifier", "revision", "digest")}
@@ -47,24 +88,22 @@ class LocalFileResolver:
     """Caller-owned exact-reference index; never derive paths from identifiers."""
 
     def __init__(self, root, entries, *, digest_algorithm=None):
-        if digest_algorithm is not None and (
-            type(digest_algorithm) is not str or digest_algorithm != "sha256"
-        ):
-            raise ValueError("only an explicitly declared sha256 algorithm is supported")
-        self._digest_algorithm = digest_algorithm
-        self._root = Path(root).resolve()
-        if type(entries) is not dict:
-            raise TypeError("local entries must map Reference objects to relative file paths")
+        from ._arguments import reference_index_options
+
+        root, entries, digest_algorithm = reference_index_options(
+            digest_algorithm=digest_algorithm, entries=entries, root=root
+        )
+        # Core guards and confinement remain mandatory after provider validation.
+        self._digest_algorithm = _digest_algorithm(digest_algorithm)
+        entries = _index_entries(entries)
+        root = _index_root(root)
         self._entries = {}
         for reference, location in entries.items():
-            if type(reference) is not Reference:
-                raise TypeError("local index keys must be Reference objects")
-            if not isinstance(location, (str, Path)):
-                raise TypeError("local locations must be relative file paths")
             location = Path(location)
             if location.is_absolute() or ".." in location.parts:
                 raise ValueError("local locations must stay inside their root")
             self._entries[reference] = location
+        self._root = Path(root).resolve()
 
     @property
     def references(self):
@@ -81,14 +120,20 @@ class LocalFileResolver:
 
 
 def _options(resolver, max_bytes):
-    if resolver is not None and type(resolver) is not LocalFileResolver:
-        raise TypeError("resolver must be a LocalFileResolver")
-    if type(max_bytes) is not int or max_bytes < 1:
-        raise ValueError("max_bytes must be a positive integer")
+    _resolver(resolver)
+    _max_bytes(max_bytes)
 
 
 def check_reference(reference, *, resolver=None, max_bytes=_DEFAULT_MAX_BYTES):
     """Return local availability/byte-check facts, without exposing paths or file contents."""
+    from ._arguments import reference_check_options
+
+    resolver, max_bytes = reference_check_options(resolver, max_bytes=max_bytes)
+    return _check_reference(reference, resolver=resolver, max_bytes=max_bytes)
+
+
+def _check_reference(reference, *, resolver, max_bytes):
+    """Guarded native byte checker; record-level caching does not repeat digestion."""
     _options(resolver, max_bytes)
     reference = _reference(reference)
     result = {
@@ -153,9 +198,11 @@ def check_reference(reference, *, resolver=None, max_bytes=_DEFAULT_MAX_BYTES):
 
 def check_references(record, *, resolver=None, max_bytes=_DEFAULT_MAX_BYTES):
     """Check declared top-level reference occurrences, preserving omission and lifecycle scope."""
+    from ._arguments import record_check_options
+
+    resolver, max_bytes, record = record_check_options(resolver, max_bytes=max_bytes, record=record)
     _options(resolver, max_bytes)
-    if type(record) is not ScientificRecord:
-        raise TypeError("record must be an inspected ScientificRecord")
+    _inspected_record(record)
     references, omissions, incomplete, cache = [], [], [], {}
     for operation in record.operations:
         if operation["status"] == "incomplete":
@@ -187,10 +234,10 @@ def check_references(record, *, resolver=None, max_bytes=_DEFAULT_MAX_BYTES):
                 if type(value) is dict and value.get("kind") == "reference":
                     reference = _reference(value)
                     if reference is None:
-                        checked = check_reference(value, resolver=resolver, max_bytes=max_bytes)
+                        checked = _check_reference(value, resolver=resolver, max_bytes=max_bytes)
                     else:
                         if reference not in cache:
-                            cache[reference] = check_reference(
+                            cache[reference] = _check_reference(
                                 reference, resolver=resolver, max_bytes=max_bytes
                             )
                         checked = cache[reference]
