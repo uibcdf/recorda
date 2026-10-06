@@ -1,5 +1,9 @@
 # Initial engineering review
 
+For current source identities, executed checks and resumption priorities, read
+[CHECKPOINT.md](CHECKPOINT.md). The initial evidence below is historical; it does
+not qualify later source or close the outstanding engineering issues.
+
 Recorda is a directly governed MOLI component. Registry admission and review states
 must be reconciled in MOLI; the laboratory is associated test infrastructure.
 
@@ -62,10 +66,12 @@ full supported-minor/OS evidence, real-workload resource measurements, multi-pro
 context, crash power-loss recovery, routing, integrity certification, export and replay
 remain separate work. Do not close admission/review issues based only on configured CI.
 
-The workspace-wide guide checker also detects pre-existing drift in Nextia, Praxis
-and Sabueso, and missing guide delivery in MOLI Agent. The new Recorda and Recorda
-Lab copies match the canonical guide exactly. Component-local validators and the
-ten relevant registry/guide policy tests pass; the workspace-wide checker does not.
+At the initial review, the workspace-wide guide checker detected pre-existing
+drift in Nextia, Praxis and Sabueso, and missing guide delivery in MOLI Agent.
+Both new guide copies matched MOLI; component-local validators and ten relevant
+registry/guide policy tests passed. That historical workspace diagnosis is not a
+current audit of sibling repositories. The current checkpoint records executed
+Recorda and Lab component checks separately.
 
 ## Owning review issues
 

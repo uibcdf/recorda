@@ -6,6 +6,9 @@ This directory is the entry point for developers and agents working on Recorda. 
 
 ## Read first
 
+Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
+executed evidence, resumption checklist and prioritized remaining work.
+
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
 3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.
@@ -47,7 +50,8 @@ Recorda must remain usable without MOLI. MOLI enriches the common recording subs
 
 Do not implement the complete design at once.
 
-The first implementation uses deterministic dummy operations in `uibcdf/recorda-lab`,
-with explicit caller-owned capture and an opt-in consumer example. A real external
-library follows to evaluate practical scientific utility. Do not instrument PyUnitWizard
-or adopt routine quantity-conversion recording as a production boundary.
+The implementation began with deterministic dummy operations in `uibcdf/recorda-lab`,
+with explicit caller-owned capture and an opt-in consumer example. Controlled SciPy
+and offline Sabueso trials have since completed; their evidence remains bounded
+to the recorded scenarios. Do not instrument PyUnitWizard or adopt routine
+quantity-conversion recording as a production boundary.

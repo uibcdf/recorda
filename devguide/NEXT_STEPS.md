@@ -6,6 +6,19 @@ Recorda has an **EXPERIMENTAL STANDALONE PROTOTYPE**. The first implementation e
 
 The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the smallest correct standalone recording substrate, learn from a library outside MOLI, and only then add platform integration.
 
+## Current resumption order — 2026-10-06
+
+The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): consolidate
+standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), finish ecosystem
+boundaries (`uibcdf/recorda#2`), then complete release reviews (`uibcdf/recorda#3`,
+`uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
+next scoped experiment before implementation; a small workflow linking native
+references across steps is a proposal, not an implemented or authorized feature.
+
+The experiment sections below record completed slices and design constraints;
+they are not a queue of unimplemented work. MOLI integration, API freezing,
+generic replay and distributed routing remain later decisions.
+
 ## Do not do yet
 
 Do **not** begin by:
