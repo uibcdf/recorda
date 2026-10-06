@@ -2,8 +2,9 @@
 
 Coordinated in `uibcdf/recorda#1` and `uibcdf/recorda-lab#1`. Start with
 [CHECKPOINT.md](CHECKPOINT.md) for the previously published qualified pair.
-This assessment adds a local scientific workflow trial in `uibcdf/recorda-lab#10`;
-the core implementation and immutable 0.2.0 tag are unchanged.
+This assessment retains the historical scientific workflow trial in
+`uibcdf/recorda-lab#10` and subsequent receiving evidence below. The immutable
+0.2.0 source tag is unchanged; current prototype code is identified by exact SHA.
 
 ## What the completed mechanisms let a consumer answer
 
@@ -83,9 +84,13 @@ cells, and two nine-job hosted runs before and after default promotion. Read
 [CHECKPOINT.md](CHECKPOINT.md) for exact sources and receipt locations. These
 regressions preserve the multi-step scientific oracle; they do not add a new
 scientific scenario or replace Sabueso's historical provider qualification.
-SMonitor inspection presentation analysis (`uibcdf/recorda#14`) is complete;
-[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md) recommends a read-only
-technical view, with prototype queued in `uibcdf/recorda#21`. Live provider-operation
+SMonitor inspection presentation analysis (`uibcdf/recorda#14`) and the core
+prototype (#21) are complete. [INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md)
+records explicit technical findings and nonemitting resolution. Lab #13 now
+qualifies the supplied-check wording correction (#22), seven receiving regressions,
+six notebooks/49 cells and the fixed JSON/view questions with 333 installed-pair
+passes/four Sabueso skips and two nine-job hosted runs. Native scientific oracles
+remain separate; this is controlled technical utility, not a human usability study. Live provider-operation
 correlation remains a separate analysis in `uibcdf/recorda#15`.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,

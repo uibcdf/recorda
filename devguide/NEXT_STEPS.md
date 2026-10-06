@@ -37,8 +37,9 @@ SMonitor inspection presentation analysis (#14) is complete. The explicit
 read-only core prototype in `uibcdf/recorda#21` now implements grouped findings
 and nonemitting message resolution; read
 [INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md). Its core source/installed and all 11 exact-head CI checks pass;
-receiving/user-view evaluation is owned by
-`uibcdf/recorda-lab#13` before notebook changes or Lab default promotion. Safe audience-hint improvement
+receiving/user-view evaluation and default promotion are complete in
+`uibcdf/recorda-lab#13`, with 333 local installed-pair passes/four Sabueso skips,
+six notebooks/49 cells and two passing nine-job hosted runs. Safe audience-hint improvement
 is proposed in `uibcdf/smonitor#39` and is not a blocker. The nonbootstrapping
 ArgDigest registration opportunity is `uibcdf/argdigest#32`, coordinated with
 `uibcdf/moli#62`; the initial view uses native fact guards and existing audience. Provider-operation

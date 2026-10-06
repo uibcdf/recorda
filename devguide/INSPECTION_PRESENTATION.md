@@ -2,8 +2,8 @@
 
 Architectural evaluation: [uibcdf/recorda#14](https://github.com/uibcdf/recorda/issues/14).
 Prototype: [uibcdf/recorda#21](https://github.com/uibcdf/recorda/issues/21).
-The core prototype is implemented. Its API remains experimental; laboratory
-receiving/user-view evaluation is separately owned by
+The core prototype is implemented. Its API remains experimental; the completed
+laboratory receiving/user-view evaluation is separately owned by
 [uibcdf/recorda-lab#13](https://github.com/uibcdf/recorda-lab/issues/13).
 The architectural research below retains the reasoning and original evidence.
 
@@ -96,7 +96,7 @@ governance, Ruff and dependency preflight pass. [Exact-head CI](https://github.c
 all 11 jobs at `80ef3dd337cd7db901132007c390ced8b7980b9c`, inspected with published
 gh-run-receptor 1.2.0 and actual installed-test verdicts. The resolved report is
 [archive/inspection_view.md](archive/inspection_view.md). Research evidence below remains historical;
-it does not substitute for receiving evaluation in Lab #13. Live provider-event
+it is separate from the completed receiving evaluation in Lab #13. Live provider-event
 correlation stays in Recorda #15.
 
 ## Recommendation
@@ -251,3 +251,15 @@ compare the proposed view with JSON on the existing missing/modified/unverified/
 omitted/incomplete scenarios, including hostile fields, failures and duplicates.
 Only that experiment can establish the view's practical value. Live producer-event
 correlation, shared MOLI routing, scientific narrative and replay remain outside scope.
+
+
+## Completed laboratory receiving evaluation
+
+[Lab #13](https://github.com/uibcdf/recorda-lab/issues/13) compares actual reference
+JSON, technical messages and independent native oracles. It exposed the stale
+“missing now” ambiguity, fixed in Recorda #22 by explicitly scoping explanations
+to the supplied check. Local installed-pair checks pass 333 with four Sabueso skips,
+six notebooks/49 cells and 14 kernel fault cells. Both nine-job candidate/default
+runs pass; exact sources and receipts are in CHECKPOINT.md and Lab's maintained
+INSPECTION_VIEW.md. The view answers those fixed technical questions, without
+claiming a human usability study, fresh/authenticated reports or scientific meaning.

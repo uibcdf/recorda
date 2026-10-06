@@ -5,7 +5,25 @@ maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed
 work and proposed next work; it does not authorize a new release or integration.
 
-## Current receiving qualification
+## Current inspection-view receiving qualification
+
+Lab #13 receives Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913` (core #21 plus supplied-check wording #22)
+at Lab implementation `b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion `181f706c09cef42ec104a8edc7b3c413601307d9`. Both
+[candidate](https://github.com/uibcdf/recorda-lab/actions/runs/37544421813) and
+[default](https://github.com/uibcdf/recorda-lab/actions/runs/37544670429) runs pass
+all nine jobs with published receptors; the default run has no Recorda SHA override.
+Local installed checks pass **333 tests/four explicit Sabueso skips** (305 core +
+28 Lab), six selected notebooks/**49 code cells** and **14 real-kernel fault cells**.
+
+The [Lab receiving contract](https://github.com/uibcdf/recorda-lab/blob/main/devguide/INSPECTION_VIEW.md)
+and its local/hosted receipts preserve source/wheel/provider hashes, actual
+verdicts and fixed user-question comparisons. Native dummy/scientific code and
+oracles remain independent. Saved reference messages identify the supplied check;
+they do not assert freshness. This is a controlled technical presentation trial,
+not a human usability study, new scientific scenario or release/replay certificate.
+Core #15 live provider-operation correlation remains a separate analysis.
+
+## Previous published-provider receiving qualification
 
 Recorda `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac` is now paired with Lab
 receiving implementation `11b1465f9b8558a2ac4c7c172ab2377251820af3` and default
@@ -299,8 +317,9 @@ retained with the evidence. Analysis does not qualify a working user view or
 claim a new CI certificate. The resolved report is
 [archive/inspection_presentation_analysis.md](archive/inspection_presentation_analysis.md).
 
-Prototype implementation is separately queued in `uibcdf/recorda#21`; Lab
-receiving needs its own issue before consumer/notebook changes. Safe audience
+At that analysis checkpoint, implementation was queued in `uibcdf/recorda#21`
+and a separate Lab receiving issue was required before consumer/notebook changes.
+Both later slices are complete as recorded above and below. Safe audience
 templates, especially hints, are proposed in `uibcdf/smonitor#39`; shared safe
 hints suffice for the first slice, so no provider or MOLI restructuring blocks it.
 Live producer-event correlation remains `uibcdf/recorda#15`.
@@ -328,8 +347,8 @@ report is [archive/inspection_view.md](archive/inspection_view.md). Closing
 documentation preserves all receipt-selected implementation and qualification
 bytes; this is a core prototype, not a new Lab default or release.
 
-The next receiving experiment is `uibcdf/recorda-lab#13`, opened before notebook
-changes. Lab's default core SHA above remains unchanged. Safe hints remain the
+The receiving experiment `uibcdf/recorda-lab#13` is complete, including notebook
+comparisons and qualified default promotion as recorded above. Safe hints remain the
 SMonitor #39 opportunity; nonbootstrapping ArgDigest registration is proposed in
 `uibcdf/argdigest#32` and coordinated with `uibcdf/moli#62`. Live producer-operation
 correlation remains Recorda #15, independently scoped.
