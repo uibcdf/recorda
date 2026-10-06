@@ -1,4 +1,4 @@
-"""Explicit configuration factory with published providers; scientific calls stay native."""
+"""Default configuration digestion with published providers; scientific calls stay native."""
 
 import importlib
 import json
@@ -11,11 +11,6 @@ from pathlib import Path
 import pytest
 
 import recorda
-
-pytestmark = pytest.mark.skipif(
-    os.environ.get("RECORDA_TEST_ARGDIGEST") != "1",
-    reason="explicit ArgDigest integration lane",
-)
 
 
 class Opaque:
@@ -53,17 +48,24 @@ def configured():
 
 @pytest.fixture
 def factory(configured):
-    from recorda.integrations.argdigest import capture_policy
-
-    return capture_policy
+    return recorda.CapturePolicy
 
 
 @pytest.mark.parametrize(
-    "profiles", [None, [], ["b", "a", "b"], ("b", "a"), {"b", "a"}, frozenset({"a", "b"})]
+    "profiles, expected",
+    [
+        (None, None),
+        ([], ()),
+        (["b", "a", "b"], ("a", "b")),
+        (("b", "a"), ("a", "b")),
+        ({"b", "a"}, ("a", "b")),
+        (frozenset({"a", "b"}), ("a", "b")),
+    ],
 )
-def test_forms_match_core_canonicalization(factory, profiles):
+def test_constructor_canonicalizes_accepted_collections(factory, profiles, expected):
     result = factory(profiles, inputs=False, exception_references=False)
-    assert result == recorda.CapturePolicy(profiles, inputs=False, exception_references=False)
+    assert result.profiles == expected and result.inputs is False
+    assert result.exception_references is False
     assert type(result) is recorda.CapturePolicy
 
 
@@ -80,25 +82,24 @@ def test_bounds_copy_and_immutability(factory):
 
 
 @pytest.mark.parametrize(
-    "profiles",
+    "profiles, error",
     [
-        Opaque(),
-        "analysis",
-        {"analysis": True},
-        iter(["analysis"]),
-        [Opaque()],
-        [None],
-        [""],
-        ["x" * 257],
-        ["x"] * 65,
+        (Opaque(), TypeError),
+        ("analysis", TypeError),
+        ({"analysis": True}, TypeError),
+        (iter(["analysis"]), TypeError),
+        ([Opaque()], ValueError),
+        ([None], ValueError),
+        ([""], ValueError),
+        (["x" * 257], ValueError),
+        (["x"] * 65, ValueError),
     ],
 )
-def test_rejections_match_core_without_opaque_inspection(factory, profiles):
-    with pytest.raises((TypeError, ValueError)) as core:
-        recorda.CapturePolicy(profiles)
-    with pytest.raises(type(core.value)) as integrated:
+def test_constructor_rejects_invalid_collections_without_opaque_inspection(
+    factory, profiles, error
+):
+    with pytest.raises(error):
         factory(profiles)
-    assert integrated.value.args == core.value.args
 
 
 @pytest.mark.parametrize("name", ["inputs", "parameters", "outputs", "exception_references"])
@@ -113,12 +114,10 @@ def test_no_public_bypass_or_extra_keywords(factory):
         factory(skip_digestion=True, inputs=Opaque())
     with pytest.raises(TypeError):
         factory(unknown=Opaque())
-    with pytest.raises(TypeError):
-        factory(None, False)
     # Unwrapping the private decorated function cannot bypass mandatory guards.
-    from recorda.integrations.argdigest import _build_policy
+    from recorda._arguments import capture_profiles
 
-    bare = _build_policy
+    bare = capture_profiles
     while hasattr(bare, "__wrapped__"):
         bare = bare.__wrapped__
     with pytest.raises(TypeError):
@@ -139,9 +138,9 @@ def test_import_and_factory_preserve_application_and_ignore_global_defaults(
 
     monkeypatch.setenv("ARGDIGEST_CONFIG", "nonexistent.application.config")
     monkeypatch.setattr(config, "_DEFAULTS", DigestConfig(standardizer=forbidden, profiling=True))
-    module = importlib.import_module("recorda.integrations.argdigest")
+    module = importlib.import_module("recorda._arguments")
     module = importlib.reload(module)
-    assert module.capture_policy(["b", "a"]).profiles == ("a", "b")
+    assert recorda.CapturePolicy(["b", "a"]).profiles == ("a", "b")
     assert manager.config is before
     assert smonitor.get_capture_policy() == smonitor.CapturePolicy()
 
@@ -243,22 +242,32 @@ def test_fresh_import_has_no_scientific_dependencies():
 
 def test_core_import_is_independent_of_providers():
     result = _subprocess(
-        "import recorda, sys; recorda.CapturePolicy(['a']); assert not {'argdigest', 'smonitor', 'depdigest'} & sys.modules.keys()",
+        "import recorda, sys; assert not {'argdigest', 'smonitor', 'depdigest'} & sys.modules.keys()",
         provider_paths=False,
     )
     assert result.returncode == 0, result.stderr
 
 
-def test_missing_provider_fails_on_explicit_import():
+def test_first_configuration_does_not_enable_global_scientific_capture():
+    result = _subprocess(
+        "import recorda; recorda.CapturePolicy(); import smonitor; "
+        "config = smonitor.get_manager().config; "
+        "assert not config.capture_logging and not config.capture_warnings and not config.capture_exceptions"
+    )
+    assert result.returncode == 0, result.stderr
+
+
+def test_missing_provider_fails_at_configuration_use():
     result = _subprocess(
         "import sys, importlib.abc\n"
         "class Missing(importlib.abc.MetaPathFinder):\n"
         " def find_spec(self, fullname, path=None, target=None):\n"
         "  if fullname == 'argdigest': raise ModuleNotFoundError('missing argdigest')\n"
         "sys.meta_path.insert(0, Missing())\n"
-        "try:\n import recorda.integrations.argdigest\n"
+        "import recorda\n"
+        "try:\n recorda.CapturePolicy()\n"
         "except ModuleNotFoundError:\n pass\n"
-        "else:\n raise AssertionError('missing provider must fail')\n"
+        "else:\n raise AssertionError('missing provider must fail at use')\n"
     )
     assert result.returncode == 0, result.stderr
 
@@ -270,6 +279,36 @@ def test_old_provider_is_rejected_before_configuration_values(provider):
         "smonitor": "import smonitor; del smonitor.diagnostic_scope",
         "argdigest": "import argdigest; from dataclasses import dataclass; argdigest.DigestConfig = dataclass(type('OldConfig', (), {'__annotations__': {}}))",
     }[provider]
-    code += "\ntry:\n import recorda.integrations.argdigest\nexcept (ImportError, TypeError):\n pass\nelse:\n raise AssertionError('old provider must fail')\n"
+    code += "\nimport recorda\ntry:\n recorda.CapturePolicy()\nexcept (ImportError, TypeError):\n pass\nelse:\n raise AssertionError('old provider must fail')\n"
     result = _subprocess(code)
+    assert result.returncode == 0, result.stderr
+
+
+def test_compatibility_factory_uses_the_default_contract():
+    from recorda.integrations.argdigest import capture_policy
+
+    assert capture_policy(["b", "a"], inputs=False) == recorda.CapturePolicy(
+        ["b", "a"], inputs=False
+    )
+    with pytest.raises(TypeError):
+        capture_policy(skip_digestion=True)
+    with pytest.raises(TypeError):
+        capture_policy(None, False)
+
+
+def test_inspection_and_reference_observations_work_with_blocked_provider_imports(tmp_path):
+    path = tmp_path / "read-only.jsonl"
+    with recorda.session("test", path=path):
+        pass
+    code = (
+        "import sys, importlib.abc\n"
+        "class Missing(importlib.abc.MetaPathFinder):\n"
+        " def find_spec(self, fullname, path=None, target=None):\n"
+        "  if fullname.split('.')[0] in {'argdigest','smonitor','depdigest'}: raise ModuleNotFoundError(fullname)\n"
+        "sys.meta_path.insert(0, Missing())\n"
+        f"import recorda\nassert recorda.inspect({str(path)!r}).status == 'succeeded'\n"
+        "assert recorda.check_reference(recorda.Reference('test', 'a'))['status'] == 'unresolved'\n"
+        "assert not {'argdigest','smonitor','depdigest'} & sys.modules.keys()\n"
+    )
+    result = _subprocess(code, provider_paths=False)
     assert result.returncode == 0, result.stderr

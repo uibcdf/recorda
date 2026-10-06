@@ -5,6 +5,12 @@ inspect local availability and bytes; they do not authenticate ownership, certif
 scientific identity, validate a complete dependency closure or establish replay.
 Runtime capture, ScientificRecord inspection and the journal schema are unchanged.
 
+The next ArgDigest adoption theme is `uibcdf/recorda#20`: declare the local index's
+algorithm/entry/location contract, exact resolver/record requirements and positive
+non-boolean byte limits while preserving structured invalid-reference observations.
+That issue retains the inspected value and function contracts; no reference API
+digestion change is included in the default CapturePolicy slice (#19).
+
 ```python
 files = recorda.LocalFileResolver(
     "retained/native",

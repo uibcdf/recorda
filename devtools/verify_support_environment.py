@@ -1,4 +1,4 @@
-"""Check optional-feature metadata and exact published Conda provider provenance."""
+"""Check required-feature metadata and exact published Conda provider provenance."""
 
 import argparse
 import hashlib
@@ -34,16 +34,15 @@ ARTIFACTS = {
 def verify(feature):
     root = Path(__file__).resolve().parents[1]
     project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
-    assert not project["dependencies"], "this lane expects the provider-independent core"
     assert SpecifierSet(project["requires-python"]).contains(
         ".".join(map(str, sys.version_info[:3]))
     )
-    for text in project["optional-dependencies"][feature]:
+    for text in project["dependencies"] + project["optional-dependencies"][feature]:
         requirement = Requirement(text)
         assert requirement.specifier.contains(distribution(requirement.name).version), text
 
     prefix = Path(sys.prefix).resolve()
-    names = ("smonitor",) if feature == "smonitor" else tuple(ARTIFACTS)
+    names = tuple(ARTIFACTS)
     evidence = {}
     for name in names:
         version, build, sha = ARTIFACTS[name]

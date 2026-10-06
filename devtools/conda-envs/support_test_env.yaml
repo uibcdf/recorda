@@ -11,5 +11,6 @@ dependencies:
   - setuptools>=77
   - wheel
   - pytest
+  - pyyaml=6.0.3
   - pip:
       - pytest-receptor==1.1.0

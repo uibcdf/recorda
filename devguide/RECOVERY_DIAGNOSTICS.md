@@ -16,7 +16,8 @@ propagate in that last case.
 ## Explicit activation
 
 SMonitor 0.19.0 provides the scoped capture and provider registration APIs.
-The `smonitor` extra declares `smonitor>=0.19.0,<0.20`. Provision the published
+Required metadata declares `smonitor>=0.19.0,<0.20` for default configuration
+digestion; the recovery sink remains explicitly selected. Provision the published
 Conda package from `uibcdf` with `conda-forge` using
 [`recovery_test_env.yaml`](../devtools/conda-envs/recovery_test_env.yaml), then
 install this unpublished Recorda checkout with
@@ -40,8 +41,10 @@ finally:
 Create the adapter before activating the session. An absent/older provider fails
 on explicit adapter import before recording. Construction registers the Recorda
 catalog without selecting SMonitor's level, profile, handlers or capture policy.
-`import recorda`, ordinary recording and independent inspection do not import
-SMonitor. Default `recovery_diagnostics=None` keeps the fixed notes only.
+`import recorda` and independent inspection do not import SMonitor. Ordinary
+recording now loads it for default ArgDigest configuration, using the safe
+first-use baseline described in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md).
+Default `recovery_diagnostics=None` still keeps the fixed recovery notes only.
 
 ## Payload and failure contract
 
@@ -104,4 +107,4 @@ experiment is resolved in [archive/recovery_diagnostics_source.md](archive/recov
 Published-provider selection is tracked by `uibcdf/recorda#18`; it does not
 qualify a public Recorda release or complete the wider ecosystem/distribution
 reviews in `uibcdf/recorda#2` / #3. Inspection presentation (#14), linking
-provider diagnostics (#15) and default ArgDigest adoption remain separate.
+provider diagnostics (#15) and the remaining argument contracts (#20) stay separate.

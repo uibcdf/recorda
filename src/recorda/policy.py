@@ -33,7 +33,13 @@ class CapturePolicy:
     exception_references: bool = True
 
     def __post_init__(self):
-        object.__setattr__(self, "profiles", _profiles(self.profiles))
+        # Import at configuration use, leaving independent journal reading light.
+        from ._arguments import capture_profiles
+
+        profiles = capture_profiles(
+            self.profiles, self.inputs, self.parameters, self.outputs, self.exception_references
+        )
+        object.__setattr__(self, "profiles", _profiles(profiles))
         for name in ("inputs", "parameters", "outputs", "exception_references"):
             _detail_switch(getattr(self, name))
 

@@ -1,0 +1,11 @@
+{
+  "recipes": ["conda-recipe/meta.yaml"],
+  "environments": [
+    "devtools/conda-envs/development_env.yaml",
+    "devtools/conda-envs/test_env.yaml",
+    "devtools/conda-envs/recovery_test_env.yaml",
+    "devtools/conda-envs/support_test_env.yaml"
+  ],
+  "sibling_sources": [],
+  "non_runtime_checkouts": ["uibcdf/moli"]
+}

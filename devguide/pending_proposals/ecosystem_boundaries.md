@@ -39,9 +39,11 @@ See [../RECOVERY_DIAGNOSTICS.md](../RECOVERY_DIAGNOSTICS.md) and its executed re
 The resolved explicit ArgDigest capture experiment in `uibcdf/recorda#17` exercises
 both contract axes against pinned development sources with mandatory core guards;
 all 15 jobs pass at its code/test commit, including Python 3.11–3.14 provider lanes.
-Default adoption and reference-check contracts remain pending. Optional extras and
-Conda provider lanes now express the published integration route; see the new
-receipt in [../evidence/published_support_local.json](../evidence/published_support_local.json).
+Default configuration now uses ArgDigest under `uibcdf/recorda#19`, with required
+metadata, aligned Conda routes and a local recipe/preflight. Reference-check
+contracts remain in #20. The original optional integration route's
+receipt is [../evidence/published_support_local.json](../evidence/published_support_local.json);
+default-adoption evidence is [../evidence/default_arguments_local.json](../evidence/default_arguments_local.json).
 See [../ARGUMENT_CONFIGURATION.md](../ARGUMENT_CONFIGURATION.md).
 DepDigest has no current core backend loader, and
 PyUnitWizard has no quantity parsing/conversion/validation boundary.
@@ -80,7 +82,8 @@ at a time, with published-provider and compatibility evidence.
 ## Resolution
 
 Partial. Current-runtime classification, regressions and the bounded source-provider
-recovery/configuration integrations are recorded. Default ArgDigest adoption,
-reference-check contracts and complete release qualification remain open in
+recovery/configuration integrations are recorded. Default CapturePolicy adoption
+is tracked in #19; reference-check contracts and complete release qualification
+remain open in
 `uibcdf/recorda#2`; MOLI's registry
-remains `partial`. No release, provider qualification or policy exception is claimed.
+remains `partial`. No public Recorda release, registry promotion or policy exception is claimed.

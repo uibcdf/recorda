@@ -109,8 +109,9 @@ authenticated integrity, full dependency closure or replay is qualified here.
    (`uibcdf/recorda#17`); read [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
    and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
    evidence. Published-provider qualification is complete for SMonitor 0.19.0 /
-   ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default adoption and reference-check
-   contracts remain pending. DepDigest and PyUnitWizard
+   ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default configuration adoption is
+   tracked in `uibcdf/recorda#19`; reference-check contracts remain in #20.
+   DepDigest and PyUnitWizard
    have no current core boundary, with explicit reassessment triggers.
 3. **Before a distributable release**, complete packaging/distribution
    [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3), installed-candidate
@@ -173,9 +174,10 @@ separate; MOLI's wider ecosystem state remains partial.
 `uibcdf/recorda#18` replaces the provider-source routes with published SMonitor
 0.19.0 build 1, ArgDigest 0.15.0 build 0 and DepDigest 0.13.0 build 0. The explicit
 integrations remain caller-selected; optional extras and dedicated Conda environment
-specifications declare their bounds. The core remains provider-independent.
+specifications declared their bounds. The core remained provider-independent at
+that checkpoint, before the default-adoption work in `uibcdf/recorda#19`.
 
-The [current receipt](evidence/published_support_local.json) records public-index
+That checkpoint's [receipt](evidence/published_support_local.json) records public-index
 and downloaded-archive hashes, byte-identical installed provider files, a tested
 development Recorda wheel and 158 passing source/installed tests on Python 3.14.7
 with published pytest-receptor 1.1.0. [CI 37529525379](https://github.com/uibcdf/recorda/actions/runs/37529525379)

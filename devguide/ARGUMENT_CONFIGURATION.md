@@ -1,123 +1,107 @@
-# ArgDigest capture configuration — explicit published-provider integration
+# Default ArgDigest capture configuration
 
-Owned by [uibcdf/recorda#17](https://github.com/uibcdf/recorda/issues/17), under
-the ecosystem review `uibcdf/recorda#2`.
+Owned by [uibcdf/recorda#19](https://github.com/uibcdf/recorda/issues/19), under
+the ecosystem review `uibcdf/recorda#2`. The earlier explicit experiment and
+published-provider qualification remain archived under #17 / #18.
 
-The explicit factory `recorda.integrations.argdigest.capture_policy` uses
-ArgDigest to validate Recorda-owned configuration and returns an ordinary frozen
-`recorda.CapturePolicy`. Scientific function arguments, defaults, native objects
-and errors remain owned by their scientific provider.
-
-## Explicit use and contracts
+Ordinary `recorda.CapturePolicy` construction now uses ArgDigest. Scientific
+function arguments, defaults, native objects and errors remain owned by their
+scientific provider. The inactive scientific call path performs no digestion.
 
 ```python
 import recorda
-from recorda.integrations.argdigest import capture_policy
 
-policy = capture_policy(
+policy = recorda.CapturePolicy(
     ["scientific_analysis", "scientific_workflow"],
     inputs=False,
     outputs=False,
 )
 handle = recorda.start("analysis", path="analysis.jsonl", capture_policy=policy)
-# Execute declared semantic boundaries and stop using the ordinary session API.
+# Execute declared semantic boundaries using the ordinary API.
 result = handle.stop()
 ```
 
-The factory's closed signature accepts `profiles` positionally or by keyword and
-four keyword-only detail switches. It exposes no `skip_digestion` parameter or
-arbitrary keywords. This supplies the function-contract axis. The registered
-`recorda.capture` pipelines supply the value-contract axis:
+## Both argument contracts
+
+The existing closed dataclass constructor signature supplies the function
+contract; positional/keyword compatibility is preserved. There is no public
+`skip_digestion` or arbitrary keyword route. Registered `recorda.capture`
+pipelines supply the value contract:
 
 - Profiles accept `None` or an exact built-in list, tuple, set or frozenset.
   `None` selects all declared profiles; an empty collection selects none.
-- The input collection contains at most 64 entries, before deduplication. Each
-  entry is an exact nonempty string of at most 256 characters. The output is a
-  copied, sorted tuple of unique labels.
-- All detail switches require exact booleans; no truth-value coercion occurs.
+- At most 64 input entries are accepted before deduplication. Every entry is an
+  exact nonempty string of at most 256 characters. The copied result is a sorted
+  tuple of unique labels.
+- Detail switches require exact booleans; values are never truth-value coerced.
 
-Pipelines share the core's validators and preserve their fixed `TypeError` and
-`ValueError` refusals. Direct `CapturePolicy` construction keeps those same
-mandatory checks. Even an internal bypass or unwrapping cannot admit an invalid
-core policy. Session capture, redaction, schema, path and lifecycle guards remain
-enforced by Recorda. Scientific targets are never decorated with ArgDigest here.
+Shared validators preserve the fixed native `TypeError`/`ValueError` refusals.
+The private normalization body's checks and final policy guards remain mandatory
+even when that private helper is unwrapped. Capture, redaction, schema, filesystem
+and lifecycle invariants remain in the core. The old explicit
+`recorda.integrations.argdigest.capture_policy` factory delegates to this same
+constructor and retains its keyword-only switch signature for compatibility.
 
-The adapter explicitly selects `argument_digestion=False`: this disables digester
-discovery while retaining binding, the closed function contract and pipelines.
-An explicit `DigestConfig` prevents application defaults or `ARGDIGEST_CONFIG`
-from rewriting Recorda's configuration. Pipelines use direct registered callables,
-so another consumer replacing a registry name does not change this factory.
+Explicit `argument_digestion=False` disables global digester discovery while
+keeping binding and value pipelines active. A local `DigestConfig` isolates
+application defaults and `ARGDIGEST_CONFIG`. Direct registered rule callables
+prevent another consumer's registry replacement from rewriting this contract.
 
-## Diagnostic and dependency boundary
+## Lazy imports and diagnostic authority
 
-Provider imports, registration and decorator construction run within SMonitor's
-metadata-only scope. The decorated helper requests that same restrictive policy
-for every invocation. Validation does not inspect opaque repr, str or iterators;
-diagnostics omit values, native error text and inherited producer context.
-Application level, profile and handlers remain selected by the application.
-This cannot undo diagnostics produced independently by enclosing scientific code.
+Argument providers load at configuration use, including the default policy
+created when recording starts. Plain `import recorda`, independent journal
+inspection and today's reference byte checks load none of ArgDigest, DepDigest
+or SMonitor. That import property does not make those declared installation
+dependencies optional, and there is no silent validation fallback if missing.
 
-An absent or older provider fails on explicit adapter import, before caller
-configuration values reach digestion. Ordinary `import recorda`, direct core
-policy construction, recording and independent reading import none of ArgDigest,
-DepDigest or SMonitor. The `argdigest` extra declares ArgDigest `>=0.15.0,<0.16`
-and SMonitor `>=0.19.0,<0.20`; the explicit SMonitor floor is required for safe
-capture even though ArgDigest's general dependency floor remains older.
-There is no automatic optional-backend loader to which DepDigest must
-be added; ArgDigest itself retains its provider-owned DepDigest integration.
-Basic configuration neither imports nor requires NumPy, Pint or PyUnitWizard.
+Provider bootstrap, registration and decorator construction run within
+SMonitor's metadata-only scope; every validation invocation requests the same
+restriction. Opaque repr, str and arbitrary iterators are never consulted.
+Diagnostic payloads omit configuration values, native error text and inherited
+producer context. No scientific target is wrapped in ArgDigest or SMonitor here.
 
-## Qualification and remaining work
+Before importing ArgDigest, Recorda uses public `ensure_configured` for its own
+provider. When neither application nor project policy is selected, Recorda's
+safe first-use baseline disables global logging, warning and exception capture.
+An existing application/project configuration wins; no level, profile, handler
+or capture setting is overwritten. The explicit recovery adapter still registers
+declarations only and activates recovery events only when selected. Configuration
+validation does not turn scientific calls into automatic diagnostic boundaries.
 
-Published ArgDigest 0.15.0 and SMonitor 0.19.0 now provide the APIs from
-`uibcdf/argdigest#29` / #30 and `uibcdf/smonitor#37` / #38. Qualification in
-`uibcdf/recorda#18` replaces the earlier pinned-source test route:
+## Dependency and qualification route
 
-| Provider | Qualified route |
-| --- | --- |
-| ArgDigest | published Conda 0.15.0, build `py_0` |
-| SMonitor | published Conda 0.19.0, build `py_1` |
-| DepDigest | published Conda 0.13.0, build `py_0` |
+Required metadata now declares ArgDigest `>=0.15.0,<0.16` and SMonitor
+`>=0.19.0,<0.20`. The stricter SMonitor floor is needed for restrictive capture
+even though ArgDigest's general provider floor remains older. ArgDigest owns its
+DepDigest dependency use; no Recorda-owned optional/backend loader is introduced.
+Basic configuration requires no NumPy, Pint or PyUnitWizard.
 
-Create the published closure using
-[`support_test_env.yaml`](../devtools/conda-envs/support_test_env.yaml), from
-`uibcdf` with `conda-forge`, then install this unpublished Recorda checkout with
-`python -m pip install --no-deps --editable .`. The separate CI lane tests
-installed Recorda with these published providers on Linux Python 3.11–3.14.
-No sibling checkout or provider `PYTHONPATH` is used. The SMonitor-only and
-ordinary installed-core lanes remain available. All lanes use published
-pytest-receptor 1.1.0. Local Python 3.14 qualification:
+All development/test Conda routes provide published ArgDigest 0.15.0 build 0,
+SMonitor 0.19.0 build 1 and DepDigest 0.13.0 build 0 from `uibcdf` with
+`conda-forge`. Install this unpublished checkout with
+`python -m pip install --no-deps --editable .` after provisioning the environment.
+The local noarch recipe expresses the required closure but is not a qualified
+public release candidate. The route inventory and read-only preflight detect
+missing/stale constraints and unreviewed CI/source routes before package builds.
+
+Use Python 3.14 and published pytest-receptor 1.1.0 locally:
 
 ```bash
-RECORDA_TEST_ARGDIGEST=1 RECORDA_TEST_SMONITOR=1 \
-PYTHONDONTWRITEBYTECODE=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
+python devtools/check_dependencies.py
+python devtools/verify_support_environment.py argdigest
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 python -m pytest -p pytest_receptor.plugin --receptor=llm
 ```
 
-The receiving tests cover accepted forms, bounds before deduplication, copying,
-exact booleans, native refusals, opaque values, public bypass rejection, diagnostic
-delivery faults, application configuration, inherited telemetry, native calls,
-mandatory recorded facts, disabled adapters, import isolation and older providers.
-Current published-provider evidence is in
-[evidence/published_support_local.json](evidence/published_support_local.json).
-The installed published-provider suite passes **158 tests** locally. Commit
-`2b8b3deecc43dc65e6c34e440dfeb0cbe3d29891` passes
-[all 15 CI jobs](https://github.com/uibcdf/recorda/actions/runs/37529525379),
-including published ArgDigest/SMonitor on Linux Python 3.11–3.14, inspected with
-published gh-run-receptor 1.2.0. See [archive/published_support.md](archive/published_support.md).
-The earlier source-provider evidence remains in
-[evidence/argument_configuration_local.json](evidence/argument_configuration_local.json).
-Local source and installed-Recorda suites pass **158 tests** on Python 3.14.7;
-the baseline passes 104 with 54 explicit provider skips. Code/test commit
-`4ad2531b84373f83a81ca69d0861ce2e106fefc0` passes
-[all 15 hosted jobs](https://github.com/uibcdf/recorda/actions/runs/37505815276),
-including the four installed-Recorda ArgDigest lanes on Linux Python 3.11–3.14.
-Published gh-run-receptor 1.2.0 inspected that completed run. The resolved analysis
-is in [archive/argument_configuration_source.md](archive/argument_configuration_source.md).
+Default ArgDigest regressions run in every installed-package CI lane on Linux
+Python 3.11–3.14 and the existing macOS 3.13/3.14 lanes. The recovery matrix also
+enables `RECORDA_TEST_SMONITOR=1`. No provider source substitution is used.
+Current evidence is [evidence/default_arguments_local.json](evidence/default_arguments_local.json).
+Earlier source and public-provider receipts remain historical:
+[archive/argument_configuration_source.md](archive/argument_configuration_source.md),
+[archive/published_support.md](archive/published_support.md).
 
-This factory remains explicitly selected. The wider review is partial because
-default-core ArgDigest adoption and the reference-check contracts remain open.
-The earlier publication obstacle is removed by the current provider qualification;
-Recorda itself remains an unpublished source checkout. Review reference-check
-options as their own slice in
-`uibcdf/recorda#2`. Distribution remains `uibcdf/recorda#3`.
+Reference-check contracts are the next independent boundary in
+`uibcdf/recorda#20`. The umbrella ecosystem review stays partial; public Recorda
+distribution/release and OS qualification remain in #3 / #4.
