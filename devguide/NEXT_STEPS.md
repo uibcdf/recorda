@@ -36,8 +36,8 @@ receipts are identified in `CHECKPOINT.md`; Sabueso remains historical evidence.
 SMonitor inspection presentation analysis (#14) is complete. The explicit
 read-only core prototype in `uibcdf/recorda#21` now implements grouped findings
 and nonemitting message resolution; read
-[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md). Its core qualification
-is being recorded, and receiving/user-view evaluation is owned by
+[INSPECTION_PRESENTATION.md](INSPECTION_PRESENTATION.md). Its core source/installed and all 11 exact-head CI checks pass;
+receiving/user-view evaluation is owned by
 `uibcdf/recorda-lab#13` before notebook changes or Lab default promotion. Safe audience-hint improvement
 is proposed in `uibcdf/smonitor#39` and is not a blocker. The nonbootstrapping
 ArgDigest registration opportunity is `uibcdf/argdigest#32`, coordinated with

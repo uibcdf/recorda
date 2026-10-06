@@ -1,9 +1,9 @@
 ---
 summary: Prototype explicit read-only technical inspection findings and SMonitor resolution.
 issue: uibcdf/recorda#21
-status: active
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: measured
 area: [inspection, presentation, diagnostics]
 blocked_by: []
@@ -60,8 +60,13 @@ Core implementation and local qualification are complete: 83 new regressions,
 12 explicit recovery skips. Published Python 3.14.7/provider provenance, ordinary
 wheel/source/installed payload equality (15 runtime files), pip check, governance,
 shared MOLI core, Ruff and dependency preflight pass. Evidence is retained in
-`devguide/evidence/inspection_view_local.json`. Exact-head hosted qualification
-is pending before resolution.
+`devguide/evidence/inspection_view_local.json`. Exact-head hosted qualification also passes all 11 jobs at
+80ef3dd337cd7db901132007c390ced8b7980b9c:
+https://github.com/uibcdf/recorda/actions/runs/37541857485. Published gh-run-receptor
+1.2.0 inspected the full run; actual installed-test logs report 292 passes/12
+recovery skips in each of six default lanes and 304 passes in each of four
+recovery lanes. Quality also passes. Closing documentation preserves every
+receipt-selected runtime/test/tool/metadata/environment/workflow/README byte.
 
 Laboratory receiving/user-view evaluation is separately owned by
 uibcdf/recorda-lab#13, opened before notebook/consumer changes. The registration-only

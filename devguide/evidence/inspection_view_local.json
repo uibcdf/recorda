@@ -145,6 +145,162 @@
     ]
   },
   "ci": {
-    "status": "pending exact-head run"
-  }
+    "repository": "uibcdf/recorda",
+    "run_id": 37541857485,
+    "run_attempt": 1,
+    "url": "https://github.com/uibcdf/recorda/actions/runs/37541857485",
+    "head_sha": "80ef3dd337cd7db901132007c390ced8b7980b9c",
+    "status": "completed",
+    "conclusion": "success",
+    "receptor": "gh-run-receptor 1.2.0",
+    "profile": "ci",
+    "capture": "full",
+    "jobs": [
+      {
+        "id": 112536501276,
+        "name": "quality",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": null
+      },
+      {
+        "id": 112536501455,
+        "name": "tests (ubuntu-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 292,
+          "skipped": 12,
+          "verdict": "PASS exit=0 | 292 passed, 12 skipped | 7.09s",
+          "log_member": "tests (ubuntu-latest, 3.13)/9_Test installed package.txt",
+          "log_sha256": "f778f45935651a4ac9ad3672d1959874fce7c8fc0c8dc64a313435a600371d31"
+        }
+      },
+      {
+        "id": 112536501627,
+        "name": "tests (ubuntu-latest, 3.14)",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 292,
+          "skipped": 12,
+          "verdict": "PASS exit=0 | 292 passed, 12 skipped | 3.25s",
+          "log_member": "tests (ubuntu-latest, 3.14)/9_Test installed package.txt",
+          "log_sha256": "e92b04ec1f73481129f5a59ec28ee630326dadb99fb08c85052fa5626105c52d"
+        }
+      },
+      {
+        "id": 112536501691,
+        "name": "tests (ubuntu-latest, 3.12)",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 292,
+          "skipped": 12,
+          "verdict": "PASS exit=0 | 292 passed, 12 skipped | 3.37s",
+          "log_member": "tests (ubuntu-latest, 3.12)/9_Test installed package.txt",
+          "log_sha256": "561a092bbcfddae4f14fcdbcb9152a249c31fb8dca4a6021fac5d9625c9f4a48"
+        }
+      },
+      {
+        "id": 112536501716,
+        "name": "tests (macos-latest, 3.14)",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 292,
+          "skipped": 12,
+          "verdict": "PASS exit=0 | 292 passed, 12 skipped | 4.04s",
+          "log_member": "tests (macos-latest, 3.14)/9_Test installed package.txt",
+          "log_sha256": "38938ac05ffc30e8dbf1517fd2961207c4525d323b686b866207a8c4c4251689"
+        }
+      },
+      {
+        "id": 112536501729,
+        "name": "tests (macos-latest, 3.13)",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 292,
+          "skipped": 12,
+          "verdict": "PASS exit=0 | 292 passed, 12 skipped | 3.80s",
+          "log_member": "tests (macos-latest, 3.13)/9_Test installed package.txt",
+          "log_sha256": "5ab785e248c89dcec066e9ae9e196ee01200e3d06e03b795081b0c15db765a16"
+        }
+      },
+      {
+        "id": 112536501768,
+        "name": "SMonitor recovery / Python 3.11",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 304,
+          "skipped": 0,
+          "verdict": "PASS exit=0 | 304 passed | 3.20s",
+          "log_member": "SMonitor recovery _ Python 3.11/9_Test installed Recorda with published SMonitor.txt",
+          "log_sha256": "996689e45a637357e1a4dba171e57c6685abca7af237f8b8ecf419f81e8b228c"
+        }
+      },
+      {
+        "id": 112536501807,
+        "name": "SMonitor recovery / Python 3.14",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 304,
+          "skipped": 0,
+          "verdict": "PASS exit=0 | 304 passed | 2.99s",
+          "log_member": "SMonitor recovery _ Python 3.14/9_Test installed Recorda with published SMonitor.txt",
+          "log_sha256": "42518230ea48e6c542f0824977a3bdc8adfe81dd20bb1268a2e97016c6a83cc8"
+        }
+      },
+      {
+        "id": 112536501864,
+        "name": "tests (ubuntu-latest, 3.11)",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 292,
+          "skipped": 12,
+          "verdict": "PASS exit=0 | 292 passed, 12 skipped | 2.90s",
+          "log_member": "tests (ubuntu-latest, 3.11)/9_Test installed package.txt",
+          "log_sha256": "2fc4a49f502eab0292950a11508f6b4a6d934fde3fac5ad905ff4f548f9ff872"
+        }
+      },
+      {
+        "id": 112536501916,
+        "name": "SMonitor recovery / Python 3.12",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 304,
+          "skipped": 0,
+          "verdict": "PASS exit=0 | 304 passed | 3.16s",
+          "log_member": "SMonitor recovery _ Python 3.12/9_Test installed Recorda with published SMonitor.txt",
+          "log_sha256": "0b5e3920ade7d7859766ced47c63be7df26f1e6242cb3677d508d6fbe66fada5"
+        }
+      },
+      {
+        "id": 112536501931,
+        "name": "SMonitor recovery / Python 3.13",
+        "status": "completed",
+        "conclusion": "success",
+        "pytest_receptor": {
+          "passed": 304,
+          "skipped": 0,
+          "verdict": "PASS exit=0 | 304 passed | 3.09s",
+          "log_member": "SMonitor recovery _ Python 3.13/9_Test installed Recorda with published SMonitor.txt",
+          "log_sha256": "32f85c1a083bd3c3e3c37e93e2ba20fe139affac6b41e534435679365c3076d5"
+        }
+      }
+    ],
+    "evidence_sha256": {
+      "run.json": "b5afbbe3da777fd3abed74b399896aab44b7ebe75bb848c4d9150a6f6d060d81",
+      "jobs.json": "eb772a3d6894f2752f2683eb4d1f6c17ee2bc37d59df01b853c7f5ba030e430b",
+      "workflow.json": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6",
+      "manifest.json": "7037ab53082215a7bd0403570e0601989033cfb93a1ab54bb84f0b45fe8a7fa9",
+      "logs.zip": "2cbf543adc39d53525d1a0c746f6fad667c501d503101dda2f17f1e4d49e5707"
+    }
+  },
+  "implementation_commit": "80ef3dd337cd7db901132007c390ced8b7980b9c"
 }

@@ -320,7 +320,13 @@ The [local receipt](evidence/inspection_view_local.json) records 83 new regressi
 default passes/12 explicit recovery skips with published pytest-receptor 1.1.0.
 All 15 runtime files match source, wheel and ordinary installation. Published
 provider verification, pip check, dependency preflight, governance/shared MOLI
-core and Ruff pass. Exact-head hosted qualification is pending before issue closure.
+core and Ruff pass. [Exact-head CI](https://github.com/uibcdf/recorda/actions/runs/37541857485) passes
+all 11 jobs at `80ef3dd337cd7db901132007c390ced8b7980b9c`, inspected with published
+gh-run-receptor 1.2.0. Actual installed-test logs report 292 passes/12 recovery
+skips in six default lanes and 304 passes in four recovery lanes. The resolved
+report is [archive/inspection_view.md](archive/inspection_view.md). Closing
+documentation preserves all receipt-selected implementation and qualification
+bytes; this is a core prototype, not a new Lab default or release.
 
 The next receiving experiment is `uibcdf/recorda-lab#13`, opened before notebook
 changes. Lab's default core SHA above remains unchanged. Safe hints remain the

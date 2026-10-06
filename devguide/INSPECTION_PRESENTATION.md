@@ -83,8 +83,10 @@ The [implementation receipt](evidence/inspection_view_local.json) records 83 new
 regressions and 304 passing source/ordinary-installed recovery tests on Python
 3.14.7, or 292 installed default tests with 12 recovery skips. All 15 runtime
 files match source, wheel and installation. Published providers, pytest-receptor,
-governance, Ruff and dependency preflight pass. Hosted qualification is pending
-at the initial implementation commit and is added after actual run inspection. Research evidence below remains historical;
+governance, Ruff and dependency preflight pass. [Exact-head CI](https://github.com/uibcdf/recorda/actions/runs/37541857485) passes
+all 11 jobs at `80ef3dd337cd7db901132007c390ced8b7980b9c`, inspected with published
+gh-run-receptor 1.2.0 and actual installed-test verdicts. The resolved report is
+[archive/inspection_view.md](archive/inspection_view.md). Research evidence below remains historical;
 it does not substitute for receiving evaluation in Lab #13. Live provider-event
 correlation stays in Recorda #15.
 
