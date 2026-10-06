@@ -1,4 +1,4 @@
 # Archive
 
 Preserve closed reports here with their issue identity, dated outcome and verification.
-No reports have been closed yet.
+Resolved implementation slices retain their owning issues and historical evidence.

@@ -57,8 +57,11 @@ Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`. The scientific log reports
 heads; later documentation commits do not change their tested file fingerprints.
 See [the paired hosted receipt](evidence/multi_step_workflow_hosted.json).
 
-Implementation and owner review are tracked in
+The completed bounded implementation is tracked in
 [uibcdf/recorda-lab#10](https://github.com/uibcdf/recorda-lab/issues/10).
+The maintainer authorized direct integration into main; the two historical PRs
+were closed without merging. The resolved laboratory analysis is preserved in
+`recorda-lab/devguide/archive/multi_step_workflow.md`.
 The laboratory's `devguide/MULTI_STEP_WORKFLOW.md` defines the scientific
 contract, consumer adapters, limited native reader and scenario coverage.
 
