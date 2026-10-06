@@ -1,7 +1,7 @@
 ---
 summary: Prove a minimal standalone recording substrate with a controlled dummy library.
 issue: uibcdf/recorda#1
-status: active
+status: partial
 opened: 2026-10-05
 closed:
 verification: reproduced
@@ -46,8 +46,19 @@ are not selected as permanent production recording boundaries.
 
 ## Alternatives
 
-PyUnitWizard was considered and set aside as a laboratory host. A real third-party
-library remains a later usability check. Building all MOLI infrastructure first is deferred.
+PyUnitWizard was considered and set aside as a laboratory host. Controlled SciPy
+and offline Sabueso trials have since completed. Building all MOLI infrastructure
+first remains deferred.
+
+## Current progress — 2026-10-06
+
+The controlled slices are published: manual activation, notebooks/cost trials,
+SciPy, offline Sabueso, native exception references, persistence recovery,
+capture selection and explicit local reference checks. [../CHECKPOINT.md](../CHECKPOINT.md)
+identifies the exact source pair, 112 local passing tests, six notebooks/45 cells,
+successful hosted core/Jupyter/SciPy checks and the local-only provider limits.
+Resolved slice analyses remain in `../archive/`; this broader coordination report
+stays open for standalone acceptance consolidation and engineering review.
 
 ## Acceptance criteria
 
@@ -61,5 +72,7 @@ library remains a later usability check. Building all MOLI infrastructure first 
 
 ## Resolution
 
-Open. Local prototype and laboratory evidence are not a public release, hosted CI result,
-MOLI routing implementation or full replay guarantee.
+Partial. Completed trials and hosted checks qualify their recorded scenarios;
+consolidation of broader standalone usefulness remains in uibcdf/recorda#1.
+Distribution and engineering reviews have separate owning issues. No public
+release, MOLI routing implementation or full replay guarantee is established.
