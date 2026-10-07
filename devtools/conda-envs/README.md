@@ -43,6 +43,13 @@ missing dependencies, weaker bounds, incompatible Python constraints, unclassifi
 routes and source candidates below the declared floor. The installed provider
 check verifies project bounds, exact Conda coordinates/digests and Python-file
 hashes, and rejects source imports.
+For Python noarch providers, archive-relative `site-packages/` paths are mapped
+to the running interpreter's `sysconfig` purelib directory. Already installed
+paths are retained. Both forms must match Conda's installed `files` inventory;
+resolved paths must stay inside the environment, and provider Python files must
+stay inside the imported package. Archive coordinates and managed Python-byte
+checks remain mandatory. This corrects `uibcdf/recorda#23`; historical Lab #15
+receipts still describe the older checker's failure and their explicit workaround.
 `pip check` checks the installed dependency closure. These checks cover these
 development lanes; a local-source recipe and negative preflight fixtures are now
 present. A public release still needs an exact candidate, built Conda artifact,

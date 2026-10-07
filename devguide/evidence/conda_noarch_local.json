@@ -1,0 +1,218 @@
+{
+  "baseline_commit": "a791790d4185a94189b006dda484afb1dddfa6d5",
+  "issue": "uibcdf/recorda#23",
+  "limits": [
+    "Historical Lab #15 receipts and its runtime candidate retain their original scope.",
+    "No new public distribution, general OS support, scientific scenario or replay qualification."
+  ],
+  "python": {
+    "executable": "/tmp/recorda-published-support-314/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]"
+  },
+  "quality_checks": [
+    "Local governance",
+    "MOLI component checker and byte-identical canonical guide",
+    "dependency routes",
+    "Ruff check 0.16.5",
+    "Ruff format --check 0.16.5",
+    "pip check"
+  ],
+  "real_environments": {
+    "micromamba_installed": {
+      "prefix": "/tmp/recorda-lab12-scientific",
+      "proofs": [
+        {
+          "command": [
+            "/tmp/recorda-lab12-scientific/bin/python",
+            "devtools/verify_support_environment.py",
+            "smonitor"
+          ],
+          "evidence": {
+            "feature": "smonitor",
+            "providers": {
+              "argdigest": {
+                "file": "argdigest-0.15.0-py_0.tar.bz2",
+                "python_files": 38,
+                "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+                "version": "0.15.0"
+              },
+              "depdigest": {
+                "file": "depdigest-0.13.0-py_0.tar.bz2",
+                "python_files": 16,
+                "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+                "version": "0.13.0"
+              },
+              "smonitor": {
+                "file": "smonitor-0.19.0-py_1.tar.bz2",
+                "python_files": 40,
+                "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+                "version": "0.19.0"
+              }
+            }
+          },
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "/tmp/recorda-lab12-scientific/bin/python",
+            "devtools/verify_support_environment.py",
+            "argdigest"
+          ],
+          "evidence": {
+            "feature": "argdigest",
+            "providers": {
+              "argdigest": {
+                "file": "argdigest-0.15.0-py_0.tar.bz2",
+                "python_files": 38,
+                "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+                "version": "0.15.0"
+              },
+              "depdigest": {
+                "file": "depdigest-0.13.0-py_0.tar.bz2",
+                "python_files": 16,
+                "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+                "version": "0.13.0"
+              },
+              "smonitor": {
+                "file": "smonitor-0.19.0-py_1.tar.bz2",
+                "python_files": 40,
+                "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+                "version": "0.19.0"
+              }
+            }
+          },
+          "exit_code": 0
+        }
+      ],
+      "provider_records": {
+        "argdigest-0.15.0-py_0.json": "afb153994ead9b2d6a3d8144d21d905cf178ace8067ffc72160e79b33272df01",
+        "depdigest-0.13.0-py_0.json": "417deddf8614078ed1b902d5bdd940740ea991ec5806cfe0e00ce1146a3f3d36",
+        "smonitor-0.19.0-py_1.json": "e3449172f5c520345890f9b01ef12e685a2aaae75835d57821f86f3614f3f2d6"
+      },
+      "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]"
+    },
+    "native_conda_noarch": {
+      "prefix": "/tmp/recorda-lab15-native-env",
+      "proofs": [
+        {
+          "command": [
+            "/tmp/recorda-lab15-native-env/bin/python",
+            "devtools/verify_support_environment.py",
+            "smonitor"
+          ],
+          "evidence": {
+            "feature": "smonitor",
+            "providers": {
+              "argdigest": {
+                "file": "argdigest-0.15.0-py_0.tar.bz2",
+                "python_files": 38,
+                "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+                "version": "0.15.0"
+              },
+              "depdigest": {
+                "file": "depdigest-0.13.0-py_0.tar.bz2",
+                "python_files": 16,
+                "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+                "version": "0.13.0"
+              },
+              "smonitor": {
+                "file": "smonitor-0.19.0-py_1.tar.bz2",
+                "python_files": 40,
+                "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+                "version": "0.19.0"
+              }
+            }
+          },
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "/tmp/recorda-lab15-native-env/bin/python",
+            "devtools/verify_support_environment.py",
+            "argdigest"
+          ],
+          "evidence": {
+            "feature": "argdigest",
+            "providers": {
+              "argdigest": {
+                "file": "argdigest-0.15.0-py_0.tar.bz2",
+                "python_files": 38,
+                "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+                "version": "0.15.0"
+              },
+              "depdigest": {
+                "file": "depdigest-0.13.0-py_0.tar.bz2",
+                "python_files": 16,
+                "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+                "version": "0.13.0"
+              },
+              "smonitor": {
+                "file": "smonitor-0.19.0-py_1.tar.bz2",
+                "python_files": 40,
+                "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+                "version": "0.19.0"
+              }
+            }
+          },
+          "exit_code": 0
+        }
+      ],
+      "provider_records": {
+        "argdigest-0.15.0-py_0.json": "b8ecdf8ca01e3228d96ad6d23694fe71de0683cfb2048d6df6f0efa5823339e2",
+        "depdigest-0.13.0-py_0.json": "784cfe7c68e685973c4a8c5d4c48437e8ced692de72081c894146c3da5670472",
+        "smonitor-0.19.0-py_1.json": "1500246ea961bcf06f89ada815c86cfcc1165a72ac0b805be65fa1a11bdddac4"
+      },
+      "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]"
+    }
+  },
+  "runtime_manifest": {
+    "src/recorda/__init__.py": "784dc2cf2699db500b9399d19a9f7091becfdc3a2d50d293cafb43fcab28404a",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "src/recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+    "src/recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+    "src/recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+    "src/recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+  },
+  "scope": "Development verifier; runtime and provider coordinates unchanged. Real-prefix checks execute the candidate source script, not the historical checker.",
+  "source_manifest": {
+    "devtools/verify_support_environment.py": "4507bccb41ca29ef92033811951354b036c3a1931bb97012a2b55572660cd51f",
+    "tests/test_support_environment.py": "2b22ce82065a9d98818387ce107c9bf2535a07ae5aa503a8f8b5876b83d42e36"
+  },
+  "tools": {
+    "pytest": "9.1.1",
+    "pytest-receptor": "1.1.0"
+  },
+  "unit_checks": {
+    "initial_regressions": {
+      "failed": 8,
+      "log_sha256": "ea0b80618ca2b401acb192302867d8967aaa553e17dd6941a3b1fa6cf4f36bb9",
+      "passed": 14,
+      "scope": "First 22 cases before path correction; sysconfig import only."
+    },
+    "installed": {
+      "command": "RECORDA_TEST_SMONITOR=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath=''",
+      "log_sha256": "22063f1b3266a03bbffd84361016952906500455219a7c38a928c789a0ab3e52",
+      "passed": 331
+    },
+    "new_regressions": 26,
+    "source": {
+      "command": "RECORDA_TEST_SMONITOR=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -p pytest_receptor.plugin --receptor=llm",
+      "log_sha256": "ccb567c7af1563c9d938d945f57cfba00bf15fd0d839f03ef24679b3845c0c29",
+      "passed": 331
+    }
+  },
+  "wheel": {
+    "path": "/tmp/recorda23-wheel/recorda-0.2.0-py3-none-any.whl",
+    "runtime_members_match_source": true,
+    "sha256": "f05a1500a8f05b63c7b20afdf239b1daad032ce959f8afc73de6c889b0aaec04"
+  }
+}

@@ -5,6 +5,7 @@ import hashlib
 import importlib
 import json
 import sys
+import sysconfig
 import tomllib
 from importlib.metadata import distribution
 from pathlib import Path
@@ -29,6 +30,30 @@ ARTIFACTS = {
         "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
     ),
 }
+
+
+def managed_paths(record, prefix):
+    """Map noarch archive paths while checking actual installation ownership."""
+    purelib = Path(sysconfig.get_path("purelib")).resolve()
+    installed = set(record["files"])
+    managed = {}
+    for item in record["paths_data"]["paths"]:
+        relative = Path(item["_path"])
+        assert not relative.is_absolute() and ".." not in relative.parts, item["_path"]
+        if relative.parts[0] == "site-packages":
+            assert record.get("noarch") == "python", "expected Python noarch metadata"
+            path = purelib.joinpath(*relative.parts[1:])
+        else:
+            path = prefix / relative
+        assert path.is_relative_to(prefix) and path.resolve().is_relative_to(prefix), (
+            f"outside environment: {path}"
+        )
+        assert path.relative_to(prefix).as_posix() in installed, (
+            f"not a managed installation file: {path}"
+        )
+        assert path not in managed, f"duplicate managed path: {path}"
+        managed[path] = item
+    return managed
 
 
 def verify(feature):
@@ -56,12 +81,14 @@ def verify(feature):
         module = importlib.import_module(name)
         module_path = Path(module.__file__).resolve()
         assert module_path.is_relative_to(prefix), f"{name}: source/provider shadowing"
-        managed = {item["_path"]: item for item in record["paths_data"]["paths"]}
-        assert str(module_path.relative_to(prefix)) in managed, name
+        managed = managed_paths(record, prefix)
+        assert module_path in managed, f"{name}: source/provider shadowing"
         checked = 0
-        for item in managed.values():
-            path = prefix / item["_path"]
+        for path, item in managed.items():
             if path.suffix == ".py" and path.is_relative_to(module_path.parent):
+                assert path.resolve().is_relative_to(module_path.parent), (
+                    f"{name}: Python file outside provider: {path}"
+                )
                 expected = item.get("sha256_in_prefix", item["sha256"])
                 assert hashlib.sha256(path.read_bytes()).hexdigest() == expected, str(path)
                 checked += 1
