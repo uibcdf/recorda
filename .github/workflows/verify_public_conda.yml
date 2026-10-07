@@ -1,0 +1,79 @@
+name: Verify published Conda package
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_sha:
+        description: Original qualified source SHA
+        required: true
+        type: string
+      candidate_run_id:
+        description: Successful run retaining the tested Conda file and manifest
+        required: true
+        type: string
+      expected_sha256:
+        description: SHA256 of the qualified public file
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  public-macos:
+    runs-on: macos-15
+    env:
+      RECORDA_TEST_SMONITOR: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          persist-credentials: false
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: devtools/conda-envs/test_env.yaml
+          create-args: python=3.14 --strict-channel-priority
+      - uses: actions/download-artifact@v4
+        with:
+          name: recorda-conda-candidate
+          path: candidate
+          run-id: ${{ inputs.candidate_run_id }}
+          github-token: ${{ github.token }}
+      - name: Verify original source, retained bytes and public coordinate
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
+        run: |
+          python - <<'PY'
+          import json, os, re, subprocess
+          source = os.environ['CANDIDATE_SHA']
+          expected = os.environ['EXPECTED_SHA256']
+          assert re.fullmatch('[0-9a-f]{40}', source)
+          assert re.fullmatch('[0-9a-f]{64}', expected)
+          assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip() == source
+          manifest = json.load(open('candidate/manifest.json'))
+          assert manifest['source_sha'] == source and manifest['sha256'] == expected
+          PY
+          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.0-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
+          python -m devtools.release_candidate public --manifest candidate/manifest.json --output "$RUNNER_TEMP/public-registry.json"
+      - name: Solve and test the public package on Apple Silicon
+        run: |
+          micromamba install --yes --prefix "$CONDA_PREFIX" --strict-channel-priority -c uibcdf -c conda-forge recorda=0.3.0=py_0
+          python devtools/verify_support_environment.py argdigest
+          python -m pip check
+          python -m devtools.release_candidate installed --manifest candidate/manifest.json --output "$RUNNER_TEMP/public-installed.json"
+          python -m pytest -p pytest_receptor.plugin --receptor=ci -o pythonpath=''
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-macos-verification
+          path: |
+            ${{ runner.temp }}/verified.json
+            ${{ runner.temp }}/public-registry.json
+            ${{ runner.temp }}/public-installed.json
+          if-no-files-found: error

@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-15]
         python: ['3.11', '3.12', '3.13', '3.14']
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ${{ matrix.os }}
@@ -60,7 +60,7 @@ jobs:
           EXPECTED_OS: ${{ matrix.os }}
         run: >-
           python -c "import os, platform;
-          assert os.environ['EXPECTED_OS'] != 'macos-latest' or platform.machine() == 'arm64';
+          assert not os.environ['EXPECTED_OS'].startswith('macos-') or platform.machine() == 'arm64';
           print(platform.system(), platform.machine())"
       - name: Test installed package
         run: python -m pytest --receptor=ci -o pythonpath=''
