@@ -1,0 +1,165 @@
+name: Conda release candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_sha:
+        description: Full source commit to build and qualify without publication
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      source: ${{ steps.identity.outputs.source }}
+      sha256: ${{ steps.identity.outputs.sha256 }}
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          persist-credentials: false
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: devtools/conda-envs/build_env.yaml
+          create-args: --strict-channel-priority
+      - name: Check source and publication configuration
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          PUBLISH_TOKEN: ${{ secrets.ANACONDA_UIBCDF_TOKEN || secrets.ANACONDA_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, re, subprocess
+          candidate = os.environ['CANDIDATE_SHA']
+          assert re.fullmatch('[0-9a-f]{40}', candidate)
+          assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip() == candidate
+          print('Anaconda publication credential available:', bool(os.environ['PUBLISH_TOKEN']))
+          PY
+          python devtools/check_dependencies.py
+          python devtools/verify_support_environment.py argdigest
+          python devtools/validate_governance.py
+      - name: Build candidate with the published UIBCDF action
+        id: build
+        uses: uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2 # v2.3.0
+        with:
+          meta_yaml_dir: devtools/conda-build
+          upload: false
+          conda_build_args: --python 3.14 --package-format 1 --override-channels -c uibcdf -c conda-forge
+      - name: Inspect and seal the exact candidate
+        id: identity
+        env:
+          BUILT_PATHS: ${{ steps.build.outputs.built_paths }}
+        run: |
+          mkdir "$RUNNER_TEMP/candidate"
+          python - <<'PY'
+          import os, pathlib, shutil
+          paths = os.environ['BUILT_PATHS'].split()
+          assert len(paths) == 1
+          shutil.copyfile(paths[0], pathlib.Path(os.environ['RUNNER_TEMP']) / 'candidate' / pathlib.Path(paths[0]).name)
+          PY
+          python -m devtools.release_candidate inspect --artifact "$RUNNER_TEMP/candidate/recorda-0.3.0-py_0.tar.bz2" --output "$RUNNER_TEMP/candidate/manifest.json"
+          python -m devtools.release_candidate unoccupied --manifest "$RUNNER_TEMP/candidate/manifest.json" --output "$RUNNER_TEMP/registry-preflight.json"
+          python - <<'PY'
+          import json, os, pathlib
+          manifest = json.loads((pathlib.Path(os.environ['RUNNER_TEMP']) / 'candidate/manifest.json').read_text())
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write(f"source={manifest['source_sha']}\nsha256={manifest['sha256']}\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recorda-conda-candidate
+          path: ${{ runner.temp }}/candidate
+          if-no-files-found: error
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: conda-build-evidence
+          path: |
+            ${{ runner.temp }}/registry-preflight.json
+            ${{ steps.build.outputs.evidence_path }}
+  installed:
+    needs: build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.12', '3.13', '3.14']
+    env:
+      RECORDA_TEST_SMONITOR: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.source }}
+          persist-credentials: false
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: devtools/conda-envs/test_env.yaml
+          create-args: python=${{ matrix.python }} --strict-channel-priority
+      - uses: actions/download-artifact@v4
+        with:
+          name: recorda-conda-candidate
+          path: candidate
+      - name: Verify exact bytes and install the Conda file
+        env:
+          CANDIDATE_SHA: ${{ needs.build.outputs.source }}
+        run: |
+          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.0-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
+          micromamba install --yes --no-deps --prefix "$CONDA_PREFIX" "$PWD/candidate/recorda-0.3.0-py_0.tar.bz2"
+          python devtools/verify_support_environment.py argdigest
+          python -m pip check
+          python -m devtools.release_candidate installed --manifest candidate/manifest.json --output "$RUNNER_TEMP/installed.json"
+      - name: Test the installed candidate
+        if: matrix.os != 'ubuntu-latest' || matrix.python != '3.14'
+        run: python -m pytest -p pytest_receptor.plugin --receptor=ci -o pythonpath=''
+      - name: Test and measure installed runtime coverage
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.14'
+        run: |
+          python -m pip install --disable-pip-version-check pytest-cov==7.0.0 coverage==7.16.2
+          python -m pytest -p pytest_receptor.plugin -p pytest_cov.plugin --receptor=ci -o pythonpath='' --cov=recorda --cov-branch --cov-report=term --cov-report="xml:$RUNNER_TEMP/coverage.xml"
+          python -m devtools.release_candidate coverage --manifest candidate/manifest.json --coverage "$RUNNER_TEMP/coverage.xml" --output "$RUNNER_TEMP/coverage-paths.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: installed-${{ matrix.os }}-${{ matrix.python }}
+          path: ${{ runner.temp }}/installed.json
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.14'
+        with:
+          name: installed-coverage
+          path: ${{ runner.temp }}/coverage.xml
+          if-no-files-found: error
+  coverage:
+    needs: [build, installed]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.build.outputs.source }}
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: installed-coverage
+      - uses: codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac # v5
+        with:
+          files: coverage.xml
+          disable_search: true
+          use_oidc: true
+          fail_ci_if_error: true
+          override_commit: ${{ needs.build.outputs.source }}
+          override_branch: main

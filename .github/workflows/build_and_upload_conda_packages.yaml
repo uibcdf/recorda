@@ -1,0 +1,145 @@
+name: Publish qualified Conda package
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_sha:
+        description: Exact source commit already tagged as 0.3.0
+        required: true
+        type: string
+      candidate_run_id:
+        description: Successful Conda candidate run whose exact file will be uploaded
+        required: true
+        type: string
+      expected_sha256:
+        description: Digest of the tested Conda file
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: recorda-conda-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check exact source, tag and successful mandatory runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          CANDIDATE_RUN_ID: ${{ inputs.candidate_run_id }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, re, subprocess
+          source = os.environ['CANDIDATE_SHA']
+          run_id = os.environ['CANDIDATE_RUN_ID']
+          assert re.fullmatch('[0-9a-f]{40}', source) and re.fullmatch('[0-9]+', run_id)
+          assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip() == source
+          assert subprocess.check_output(['git', 'rev-parse', '0.3.0^{}'], text=True).strip() == source
+          def api(path):
+              return json.loads(subprocess.check_output(['gh', 'api', f'repos/{os.environ["GITHUB_REPOSITORY"]}/{path}'], text=True))
+          candidate = api('actions/runs/' + run_id)
+          assert candidate['head_sha'] == source and candidate['conclusion'] == 'success'
+          assert candidate['path'] == '.github/workflows/release_candidate.yml'
+          jobs = api('actions/runs/' + run_id + '/jobs?per_page=100')['jobs']
+          assert len(jobs) == 10 and all(job['conclusion'] == 'success' for job in jobs)
+          runs = api('actions/runs?head_sha=' + source + '&per_page=100')['workflow_runs']
+          sources = [run for run in runs if run['path'] == '.github/workflows/tests.yml' and run['conclusion'] == 'success']
+          assert sources, 'no successful exact-source gate'
+          source_jobs = api('actions/runs/' + str(sources[0]['id']) + '/jobs?per_page=100')['jobs']
+          assert len(source_jobs) == 14 and all(job['conclusion'] == 'success' for job in source_jobs)
+          print('Exact source, tag and mandatory candidate/source runs verified.')
+          PY
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: devtools/conda-envs/build_env.yaml
+          create-args: --strict-channel-priority
+      - uses: actions/download-artifact@v4
+        with:
+          name: recorda-conda-candidate
+          path: candidate
+          run-id: ${{ inputs.candidate_run_id }}
+          github-token: ${{ github.token }}
+      - name: Verify retained file and empty immutable coordinate
+        env:
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
+        run: |
+          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.0-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
+          python - <<'PY'
+          import json, os, re
+          expected = os.environ['EXPECTED_SHA256']
+          assert re.fullmatch('[0-9a-f]{64}', expected)
+          assert json.load(open('candidate/manifest.json'))['sha256'] == expected
+          PY
+          python -m devtools.release_candidate unoccupied --manifest candidate/manifest.json --output "$RUNNER_TEMP/registry-before-upload.json"
+      - name: Upload the exact qualified file without rebuilding
+        id: upload
+        uses: uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2 # v2.3.0
+        with:
+          artifact: candidate/recorda-0.3.0-py_0.tar.bz2
+          package-spec: uibcdf/recorda/0.3.0/noarch/recorda-0.3.0-py_0.tar.bz2
+          expected-sha256: ${{ inputs.expected_sha256 }}
+          candidate-sha: ${{ inputs.candidate_sha }}
+          label: main
+          token: ${{ secrets.ANACONDA_UIBCDF_TOKEN || secrets.ANACONDA_TOKEN }}
+      - name: Independently observe public poststate
+        run: python -m devtools.release_candidate public --manifest candidate/manifest.json --output "$RUNNER_TEMP/public-registry.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: conda-publication-receipts
+          path: |
+            ${{ runner.temp }}/registry-before-upload.json
+            ${{ runner.temp }}/public-registry.json
+            ${{ steps.upload.outputs.receipt }}
+  public-install:
+    needs: publish
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          persist-credentials: false
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: devtools/conda-envs/test_env.yaml
+          create-args: python=3.14 --strict-channel-priority
+      - uses: actions/download-artifact@v4
+        with:
+          name: recorda-conda-candidate
+          path: candidate
+          run-id: ${{ inputs.candidate_run_id }}
+          github-token: ${{ github.token }}
+      - name: Install the independently published channel package
+        run: |
+          micromamba install --yes --prefix "$CONDA_PREFIX" --strict-channel-priority -c uibcdf -c conda-forge recorda=0.3.0=py_0
+          python devtools/verify_support_environment.py argdigest
+          python -m pip check
+          python -m devtools.release_candidate installed --manifest candidate/manifest.json --output "$RUNNER_TEMP/public-installed.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-installed-${{ matrix.os }}
+          path: ${{ runner.temp }}/public-installed.json
+          if-no-files-found: error

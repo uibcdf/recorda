@@ -95,7 +95,7 @@ def audit(root):
         str(p.relative_to(root)) for p in (root / "devtools/conda-envs").glob("*.yaml")
     }
     discovered_recipes = {
-        str(p.relative_to(root)) for p in (root / "conda-recipe").rglob("meta.yaml")
+        str(p.relative_to(root)) for p in (root / "devtools/conda-build").rglob("meta.yaml")
     }
     if discovered_envs != set(inventory["environments"]) or discovered_recipes != set(
         inventory["recipes"]
@@ -123,7 +123,7 @@ def audit(root):
                 raise ValueError(f"{path}: recipe package identity differs from pyproject")
     sources = {entry["repository"]: entry for entry in inventory["sibling_sources"]}
     observed_sources = set()
-    for workflow in (root / ".github/workflows").glob("*.yml"):
+    for workflow in sorted((root / ".github/workflows").glob("*.y*ml")):
         jobs = yaml.safe_load(workflow.read_text()).get("jobs", {})
         for job in jobs.values():
             steps = job.get("steps", [])

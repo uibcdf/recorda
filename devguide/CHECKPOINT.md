@@ -1,5 +1,15 @@
 # Development checkpoint — 2026-10-07
 
+## Active stabilization candidate
+
+The maintainer has authorized version **0.3.0**, an immutable source tag and an
+official Conda package, after the remaining release gates. Follow
+[`RELEASING.md`](RELEASING.md). The working metadata/recipe now select 0.3.0;
+publication and new exact-candidate evidence remain pending in
+`uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Earlier source-pair
+and scientific receipts below retain their original identities. After release,
+wait for consumer-owned adoption by MOLI components and MolSysMT.
+
 Start here when resuming, then read [NEXT_STEPS.md](NEXT_STEPS.md) and the
 maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed

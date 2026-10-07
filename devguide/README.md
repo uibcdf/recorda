@@ -12,6 +12,10 @@ Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
 completed original standalone acceptance matrix, consumer questions and separately
 scoped scientific qualification.
 
+[`RELEASING.md`](RELEASING.md) describes the authorized 0.3.0 stabilization
+candidate, its exact-artifact gates and publication route. Until its receipts are
+recorded, a planned workflow does not establish publication or platform support.
+
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
 3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.

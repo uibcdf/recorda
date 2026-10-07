@@ -1,6 +1,20 @@
-# Source checkpoints
+# Release history
 
-## Unreleased
+## 0.3.0 — stabilization candidate
+
+The standalone experimental slice is complete. This release prepares adoption
+by scientific consumers while the API and JSONL schema remain provisional.
+
+- Adopt published ArgDigest 0.15.0 and SMonitor 0.19.0 for Recorda-owned
+  configuration, reference-check contracts and explicit technical presentation.
+  Recovery diagnostics remain explicitly selected.
+- Add read-only inspection views beside structured native facts, preserving
+  execution outcomes, ownership, safe omissions and supplied-check scope.
+- Qualify independent dummy, real SciPy and offline native Sabueso consumers,
+  including interruption, native failures/retries and conditional diagnostics.
+- Verify native Conda and micromamba noarch provider metadata without weakening
+  installed ownership or Python-byte checks.
+- Add digest-bound Conda candidate qualification and publication gates.
 
 - Add explicit local file resolution and bounded reference checks, distinguishing
   byte matches, availability, loss, alteration, unsupported digests, omissions

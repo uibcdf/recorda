@@ -1,6 +1,7 @@
 {
-  "recipes": ["conda-recipe/meta.yaml"],
+  "recipes": ["devtools/conda-build/meta.yaml"],
   "environments": [
+    "devtools/conda-envs/build_env.yaml",
     "devtools/conda-envs/development_env.yaml",
     "devtools/conda-envs/test_env.yaml",
     "devtools/conda-envs/recovery_test_env.yaml",

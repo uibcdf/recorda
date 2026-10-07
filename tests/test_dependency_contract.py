@@ -31,11 +31,11 @@ def tree(tmp_path):
 
 
 def test_committed_runtime_routes_match_metadata():
-    assert audit(ROOT) == {"recipes": 1, "environments": 4, "sibling_sources": 0}
+    assert audit(ROOT) == {"recipes": 1, "environments": 5, "sibling_sources": 0}
 
 
 def test_missing_recipe_dependency_blocks_preflight(tree):
-    path = tree / "conda-recipe/meta.yaml"
+    path = tree / "devtools/conda-build/meta.yaml"
     data = yaml.safe_load(path.read_text())
     data["requirements"]["run"] = [
         text for text in data["requirements"]["run"] if not text.startswith("argdigest")

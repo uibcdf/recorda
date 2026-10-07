@@ -33,12 +33,14 @@ Existing scientific results and native provenance remain owned by their librarie
 
 ## Status
 
-Version **0.2.0** is the experimental source checkpoint for native exception
-references ([uibcdf/recorda#9](https://github.com/uibcdf/recorda/issues/9)). Package metadata,
-runtime version and the Git tag use the same identity. Version `0.1.0` remains the
-historical first checkpoint. See [the changelog](CHANGELOG.md). Distribution and public OS
-qualification remain open in [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3)
-and [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4).
+Version **0.3.0** is the stabilization candidate being qualified for official Conda
+distribution. Its tag and public package are created only after the exact installed
+artifact passes the release gates in [the release guide](devguide/RELEASING.md).
+The immutable `0.1.0` and `0.2.0` tags retain their historical source checkpoints.
+See [the changelog](CHANGELOG.md). Distribution and public OS qualification remain
+tracked in [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3) and
+[uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4) until executed evidence
+and independently observed publication are recorded.
 
 Recorda now has an **experimental first standalone implementation**. Its API and journal
 schema are provisional. The controlled laboratory lives in `uibcdf/recorda-lab`;

@@ -15,6 +15,7 @@ use the required providers.
 | `test_env.yaml` | Default configuration/core tests, Python 3.11–3.14 |
 | `recovery_test_env.yaml` | Required closure plus opt-in recovery diagnostic tests |
 | `support_test_env.yaml` | Compatibility specification for the same required published closure |
+| `build_env.yaml` | Python 3.14 Conda build and exact-file publication tooling |
 
 For example, create the support environment for local Python 3.14 development:
 
@@ -31,7 +32,7 @@ python -m pytest -p pytest_receptor.plugin --receptor=llm
 
 The shared specifications admit the complete supported range; for routine local
 development select Python 3.14 when creating the environment. CI passes an exact
-minor override for each matrix cell. All four specifications pin ArgDigest 0.15.0
+minor override for each matrix cell. All five specifications pin ArgDigest 0.15.0
 build 0, SMonitor 0.19.0 build 1 and DepDigest 0.13.0 build 0. The old extra names
 are empty compatibility aliases; package metadata now declares these providers
 as required. Conda supplies the closure before `--no-deps` installation.
@@ -52,6 +53,8 @@ checks remain mandatory. This corrects `uibcdf/recorda#23`; historical Lab #15
 receipts still describe the older checker's failure and their explicit workaround.
 `pip check` checks the installed dependency closure. These checks cover these
 development lanes; a local-source recipe and negative preflight fixtures are now
-present. A public release still needs an exact candidate, built Conda artifact,
-shared publication workflow and OS evidence in `uibcdf/recorda#3` / #4. No sibling
+present. The recipe is maintained at `devtools/conda-build/meta.yaml`.
+[Release qualification](../../devguide/RELEASING.md) builds once with the published
+UIBCDF action, tests that same file and uploads it without rebuilding. Public
+publication and OS evidence remain tracked in `uibcdf/recorda#3` / #4. No sibling
 source CI installation route is retained.

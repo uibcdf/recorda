@@ -1,11 +1,12 @@
-# Local source-development recipe. It is not a qualified public release candidate.
+# Build from the exact checked-out candidate; version must match its planned tag.
 package:
   name: recorda
-  version: 0.2.0
+  version: 0.3.0
 source:
-  path: ..
+  path: ../..
 build:
   number: 0
+  string: py_0
   noarch: python
   script: python -m pip install --no-deps --no-build-isolation .
 requirements:
