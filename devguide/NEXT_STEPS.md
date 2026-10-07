@@ -50,6 +50,14 @@ is now qualified in `uibcdf/recorda-lab#14`: 364 local installed-pair passes/fou
 Sabueso skips, seven notebooks/55 cells and nine exact-pair hosted jobs. Existing
 explicit references suffice for the controlled question; a real producer/user
 question is required before choosing any reusable core live adapter.
+The native follow-up question is now exercised in `uibcdf/recorda-lab#15`: actual
+Sabueso source partial/failure diagnostics beside its retained Cards and acquisition
+traces. Corrected local qualification passes 380 tests/four historical Sabueso skips;
+[exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes all 13 jobs, with 47 native passes per Python 3.11–3.14 minor. Existing explicit references suffice for
+this bounded real-library question. Before another native Conda receiving run,
+resolve the separately owned development preflight mapping in `uibcdf/recorda#23`.
+No core automatic adapter or MOLI routing implementation is queued by this trial.
 Published-provider probes expose independently owned SMonitor export/buffer/
 degradation opportunities in `uibcdf/smonitor#40`, `uibcdf/smonitor#41` and
 `uibcdf/smonitor#42`; a controlled application-owned trial needs no MOLI restructure.

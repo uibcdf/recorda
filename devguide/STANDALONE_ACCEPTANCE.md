@@ -103,6 +103,20 @@ Read [Lab's trial](https://github.com/uibcdf/recorda-lab/blob/main/devguide/DIAG
 for native-bundle review, ownership, gaps and separate scientific/diagnostic oracles.
 Real producer usefulness requires a new question/experiment; native SciPy SMonitor
 emission is not established. Provider improvements remain SMonitor #40–#42.
+The subsequent native producer trial in `uibcdf/recorda-lab#15` answers a concrete
+Sabueso Card/source question. The unchanged public API emits its native partial
+and failed-source diagnostics while returning a Card; a direct failed source query
+remains a failed attempt, even after retry. Local installed qualification passes
+380 tests/four historical Sabueso skips, including 16 native receiving cases.
+Missing/changed artifacts, filtered delivery, producer-free reading and native
+failure/interruption precedence remain explicit. Read
+[Lab's maintained native trial](https://github.com/uibcdf/recorda-lab/blob/main/devguide/SABUESO_DIAGNOSTICS.md).
+[Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes all 13 jobs, including 47 passes per native Python 3.11–3.14 lane. This offline real-library scenario
+uses fictional RCSB-shaped responses and attributed public UniProt fixtures; it
+establishes neither live source completeness nor human usability. Existing explicit
+references suffice; no automatic core context/attachment contract is selected.
+
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work

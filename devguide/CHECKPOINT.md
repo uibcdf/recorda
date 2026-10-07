@@ -5,7 +5,34 @@ maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed
 work and proposed next work; it does not authorize a new release or integration.
 
-## Controlled producer diagnostic comparison qualification
+## Native Sabueso diagnostic receiving trial
+
+`uibcdf/recorda-lab#15` executes the real producer question: a Card was returned,
+but which requested source was partial or failed, which native diagnostic was
+delivered, and to which attempt does it belong? Clean Sabueso
+`68dac8f8bfc35944f5b6dd59aca8cb2a2819388d` is an ordinary source-built installed
+wheel with published support providers. Its source and Recorda's runtime remain
+unchanged. The fixture transport uses attributed public UniProt data and explicitly
+fictional RCSB-shaped responses; source connections are forbidden.
+
+The corrected installed pair passes **380 tests/four historical Sabueso skips**
+(305 core + 75 Lab), including **16 new native receiving cases**, seven notebooks/
+**55 cells** and **14 kernel-fault cells**. Native source status, execution and
+conditional diagnostic observation have independent acceptance checks. [Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes all **13 jobs** at Lab `a0376799c25c6b650ffa79aa6e4012601892d24c`;
+actual native lanes report 47 passes each on Python 3.11–3.14. Published
+pytest-receptor 1.1.0 and gh-run-receptor 1.2.0 were used.
+
+Read [Lab's native trial](https://github.com/uibcdf/recorda-lab/blob/main/devguide/SABUESO_DIAGNOSTICS.md)
+and its frozen source/wheel/provider evidence. Existing explicit references answer
+this bounded question. Any automatic ordinary-call integration needs a separately
+scoped public context/attachment decision; MOLI routing is unchanged.
+`uibcdf/recorda#23` owns the reproduced native Conda noarch-metadata preflight
+limitation. Local Lab evidence explicitly maps and byte-verifies its closure;
+it does not claim the unchanged core checker passed. Historical Sabueso tests
+remain distinct from this new native diagnostic scenario.
+
+## Previous controlled producer diagnostic comparison qualification
 
 Lab #14 qualifies both existing-reference alternatives at Lab implementation
 `214a68d93a878bfe2b0d70a3aa90f81e00620db1`, paired with existing Recorda
@@ -32,7 +59,7 @@ are required for a further integration slice.
 ## Previous inspection-view receiving qualification
 
 Lab #13 receives Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913` (core #21 plus supplied-check wording #22)
-at Lab implementation `b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion `181f706c09cef42ec104a8edc7b3c413641307d9`. Both
+at Lab implementation `b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion `181f706c09cef42ec104a8edc7b3c413601307d9`. Both
 [candidate](https://github.com/uibcdf/recorda-lab/actions/runs/37544421813) and
 [default](https://github.com/uibcdf/recorda-lab/actions/runs/37544670429) runs pass
 all nine jobs with published receptors; the default run has no Recorda SHA override.
@@ -194,10 +221,11 @@ authenticated integrity, full dependency closure or replay is qualified here.
    [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md). Choose another experiment
    only for a concrete remaining scientific question and specify its oracle,
    omissions and interruption cases in a new Lab issue first.
-   The selected diagnostic comparison in `uibcdf/recorda-lab#14` is now complete.
-   Use its explicit references until a real producer/user question justifies
-   another separately owned integration experiment. Core automatic attachment
-   remains a design gate, not queued implementation.
+   The controlled comparison in `uibcdf/recorda-lab#14` and native Sabueso
+   follow-up in `uibcdf/recorda-lab#15` are complete. Existing explicit references
+   answer the bounded source/attempt question. Resolve development preflight
+   `uibcdf/recorda#23` before another native Conda receiving run; core automatic
+   attachment remains a separately scoped design gate, not queued implementation.
 2. **Reconcile the completed current-core ecosystem review** in
    [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
    [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for

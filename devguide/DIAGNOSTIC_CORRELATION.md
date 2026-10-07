@@ -231,3 +231,30 @@ facts/gaps; reviewed native bundle subsets retain more detail. This synthetic
 consumer evidence requires a real producer/user question before a reusable
 automatic integration decision. Broader standalone acceptance (#1),
 distribution (#3), OS (#4), coverage (#6) and replay remain separately open.
+
+## Native Sabueso receiving question
+
+`uibcdf/recorda-lab#15` follows the controlled comparison with unchanged public
+Sabueso Card construction and actual native producer diagnostics. A partial or
+failed enrichment can coexist with a succeeded Card call. A separate native source
+exception is a failed attempt; the next successful Card cannot rewrite it.
+
+The original producer records the source outcome and diagnostic meaning; Recorda
+binds retained Card/acquisition/diagnostic references to the declared attempt.
+A producer-free consumer reads native source facts and selected codes independently.
+Filtering warning delivery does not erase the Card's partial/error records or its
+native Python warning behavior. Retained native quantity nodes are not reinterpreted.
+
+Local installed qualification passes 380 tests/four historical Sabueso skips,
+including 16 new cases and 31 unchanged association regressions. Clean Sabueso
+`68dac8f8bfc35944f5b6dd59aca8cb2a2819388d` and current Recorda runtime are unmodified;
+source-built wheels and published support-provider bytes are verified. [Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes all 13 jobs, including 47 passes per native Python 3.11–3.14 lane. Read
+[the Lab contract](https://github.com/uibcdf/recorda-lab/blob/main/devguide/SABUESO_DIAGNOSTICS.md)
+for fictional/public fixture attribution, safe retention and source/wheel manifests.
+
+Existing public references answer this real-library bounded question. An automatic
+adapter remains a separate proposal about public context/attachment and conditional
+coverage, rather than an implicit change to core operation semantics or MOLI routing.
+The development preflight mapping defect is separately owned by `uibcdf/recorda#23`;
+this trial makes no provider implementation or scientific ownership change.

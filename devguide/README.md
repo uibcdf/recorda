@@ -35,7 +35,8 @@ consumer-question assessment and new local multi-step workflow qualification.
 
 13. [`DIAGNOSTIC_CORRELATION.md`](DIAGNOSTIC_CORRELATION.md) — completed producer
     diagnostic association analysis and completed application-owned comparison
-    in `uibcdf/recorda-lab#14`; a reusable core live adapter needs a new decision.
+    in `uibcdf/recorda-lab#14`, followed by native Sabueso receiving qualification
+    in `uibcdf/recorda-lab#15`; a reusable core live adapter needs a new decision.
 
 ## MOLI integration contract
 
