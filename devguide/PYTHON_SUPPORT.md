@@ -36,5 +36,11 @@ the experiment. Preserve source and installed-wheel results with interpreter/too
 versions and artifact fingerprints in `evidence/`.
 
 Required CI includes 3.14 without tolerated failures, while preserving older minors.
-Configured workflows and local Linux results do not establish public macOS support
-or qualify a public release. The existing OS/distribution reviews remain open.
+Version 0.3.0 qualifies the same Conda file on Linux x86_64 and macOS arm64 for
+every admitted minor, with the full 345-test suite and published provider closure.
+Source CI passes all 14 jobs and the exact-Conda candidate all 10. Independent
+public-registry and clean channel installation evidence are preserved in
+[`release_0_3_0.json`](evidence/release_0_3_0.json), owned by `uibcdf/recorda#3` / #4.
+Recurring required source CI retains every OS/minor cell. Windows and other
+architectures are not admitted by this receipt; shared MOLI registry reconciliation
+remains separately owned.

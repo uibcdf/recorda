@@ -6,6 +6,17 @@ This remains a pre-1.0 experimental API and journal schema. Consumer adoption
 belongs to receiving MOLI components and MolSysMT; it does not introduce a MOLI
 runtime dependency or imply arbitrary-call capture, complete workflows or replay.
 
+The executed 0.3.0 qualification and publication are recorded in the
+[release receipt](evidence/release_0_3_0.json),
+[scientific receipt](evidence/release_0_3_0_scientific.json) and
+[GitHub release/finalization receipt](evidence/release_0_3_0_github.json).
+The original publication route finishes with three successful jobs on attempt 2;
+only the previously unstarted macOS installation was rerun. The upload executed
+once. A temporary alternative CI route was withdrawn after the original route
+succeeded, and the qualified configuration was restored without changing the tag
+or artifact. Cancelled alternatives are not qualification evidence.
+The procedure below describes those gates; a future version must select and qualify its own exact identities.
+
 Ownership: distribution `uibcdf/recorda#3`, installed-platform qualification
 `uibcdf/recorda#4`, coverage `uibcdf/recorda#6`. The original standalone acceptance
 is complete in `uibcdf/recorda#1` and `uibcdf/recorda-lab#1`. Existing scientific
@@ -57,7 +68,10 @@ Independent public-registry observation must match the retained file SHA256 and
 main label. Fresh Linux and macOS arm64 environments then solve the public channel
 package and verify installed provenance and representative recording/inspection.
 Create GitHub Release `0.3.0` with that exact artifact, manifest and checksums only
-after public evidence succeeds. The official route is Conda `uibcdf` with
+after public evidence succeeds. Verify the existing tag object and peeled source
+independently; when creating the release for that existing tag, omit `--target`.
+The GitHub API ignores `target_commitish` for existing tags, so its default `main`
+metadata does not replace the tag's source identity. The official route is Conda `uibcdf` with
 `conda-forge`; no PyPI or DOI/archive availability is claimed.
 
 Record the actual source/run IDs, artifact hashes, coverage acceptance and public

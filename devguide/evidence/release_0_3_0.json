@@ -1,0 +1,791 @@
+{
+  "anonymous_public_download": {
+    "matches_retained_candidate": true,
+    "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+    "url": "https://conda.anaconda.org/uibcdf/noarch/recorda-0.3.0-py_0.tar.bz2"
+  },
+  "artifact": {
+    "conda_dependencies": [
+      "argdigest >=0.15.0,<0.16",
+      "python >=3.11,<3.15",
+      "smonitor >=0.19.0,<0.20"
+    ],
+    "coordinate": "uibcdf/recorda/0.3.0/noarch/recorda-0.3.0-py_0.tar.bz2",
+    "filename": "recorda-0.3.0-py_0.tar.bz2",
+    "python_requires": ">=3.11,<3.15",
+    "required_metadata": [
+      "argdigest>=0.15.0,<0.16",
+      "smonitor>=0.19.0,<0.20"
+    ],
+    "resources": "No generated or vendored runtime resources; all Python files checked.",
+    "runtime_sha256": {
+      "recorda/__init__.py": "b90075f7bc0246fc6b41f7f24ae9c14bfe70bc3928e1d4fce5ee8b3596d59994",
+      "recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+      "recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+      "recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+      "recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+      "recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+      "recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+      "recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+      "recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+      "recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+      "recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+      "recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+      "recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+      "recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+    },
+    "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+    "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "version": "0.3.0"
+  },
+  "coverage": {
+    "api_url": "https://api.codecov.io/api/v2/github/uibcdf/repos/recorda/commits/101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "branch": "main",
+    "commit": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "response_sha256": "9bdfada138f1a6e9578d02005cd4968010f1164afdc58d5fa40bc688dd3b48ec",
+    "service": "Codecov",
+    "state": "complete",
+    "totals": {
+      "branches": 179,
+      "complexity": 0.0,
+      "complexity_ratio": 0,
+      "complexity_total": 0.0,
+      "coverage": 91.96,
+      "diff": 0,
+      "files": 14,
+      "hits": 881,
+      "lines": 958,
+      "methods": 0,
+      "misses": 49,
+      "partials": 28,
+      "sessions": 1
+    }
+  },
+  "gates": {
+    "candidate": {
+      "attempt": 1,
+      "capture_file_sha256": {
+        "artifacts.json": "315a28ebb5024eda1524d84107cf4c68963b8020ef2a298f22107982b87cd8fd",
+        "checks.json": "ab2e12a1ae257c418e5a89df540a9a52c22bc6ef70ff5d1166f3b2572842ba62",
+        "jobs.json": "f27ce4acfa5538357072017fcea78b5b6aa47f24708fa01fb00449010ae16d5c",
+        "logs.zip": "66c276677e271794113ec4d1d778920f21098c4f968403e460dc80cfbe595bfa",
+        "manifest.json": "9e4e15be7edc66e890fe30852c035fed146cfc82ba931ecd9009df91d6e3c799",
+        "run.json": "8ba9934a7708dfb7f11259d5fabb93d21ffba969c8797fca2995bc9973ecd9e1",
+        "workflow.json": "f470bcfc97b39e1b40402c633d4740a6a1c08e53941a38e872e3fe31a602908a"
+      },
+      "capture_manifest": {
+        "api_version": "2022-11-28",
+        "capture_policy": "full",
+        "captured_at": "2026-10-07T09:00:11.891050+00:00",
+        "complete": true,
+        "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+        "hostname": "github.com",
+        "members": [
+          {
+            "bytes": 12834,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "8ba9934a7708dfb7f11259d5fabb93d21ffba969c8797fca2995bc9973ecd9e1"
+          },
+          {
+            "bytes": 551,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "f470bcfc97b39e1b40402c633d4740a6a1c08e53941a38e872e3fe31a602908a"
+          },
+          {
+            "bytes": 40601,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "f27ce4acfa5538357072017fcea78b5b6aa47f24708fa01fb00449010ae16d5c"
+          },
+          {
+            "bytes": 9316,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "315a28ebb5024eda1524d84107cf4c68963b8020ef2a298f22107982b87cd8fd"
+          },
+          {
+            "bytes": 43113,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "ab2e12a1ae257c418e5a89df540a9a52c22bc6ef70ff5d1166f3b2572842ba62"
+          },
+          {
+            "bytes": 318126,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "66c276677e271794113ec4d1d778920f21098c4f968403e460dc80cfbe595bfa"
+          }
+        ],
+        "receptor_version": "1.2.0",
+        "repository": "uibcdf/recorda",
+        "run_attempt": 1,
+        "run_id": 37595337965,
+        "schema": "gh-run-receptor.bundle@1",
+        "warnings": []
+      },
+      "conclusion": "success",
+      "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "jobs": [
+        {
+          "completed_at": "2026-10-07T08:43:02Z",
+          "conclusion": "success",
+          "id": 112706489830,
+          "name": "build",
+          "started_at": "2026-10-07T08:40:41Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:43:47Z",
+          "conclusion": "success",
+          "id": 112707422019,
+          "name": "installed (ubuntu-latest, 3.14)",
+          "started_at": "2026-10-07T08:43:06Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:46:59Z",
+          "conclusion": "success",
+          "id": 112707422044,
+          "name": "installed (macos-latest, 3.11)",
+          "started_at": "2026-10-07T08:46:13Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:47:42Z",
+          "conclusion": "success",
+          "id": 112707422074,
+          "name": "installed (macos-latest, 3.14)",
+          "started_at": "2026-10-07T08:47:00Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:57:47Z",
+          "conclusion": "success",
+          "id": 112707422085,
+          "name": "installed (macos-latest, 3.12)",
+          "started_at": "2026-10-07T08:56:59Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:43:36Z",
+          "conclusion": "success",
+          "id": 112707422092,
+          "name": "installed (ubuntu-latest, 3.13)",
+          "started_at": "2026-10-07T08:43:06Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:58:50Z",
+          "conclusion": "success",
+          "id": 112707422096,
+          "name": "installed (macos-latest, 3.13)",
+          "started_at": "2026-10-07T08:57:57Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:43:40Z",
+          "conclusion": "success",
+          "id": 112707422117,
+          "name": "installed (ubuntu-latest, 3.11)",
+          "started_at": "2026-10-07T08:43:06Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:43:39Z",
+          "conclusion": "success",
+          "id": 112707422153,
+          "name": "installed (ubuntu-latest, 3.12)",
+          "started_at": "2026-10-07T08:43:06Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:59:04Z",
+          "conclusion": "success",
+          "id": 112713321760,
+          "name": "coverage",
+          "started_at": "2026-10-07T08:58:54Z"
+        }
+      ],
+      "run_id": 37595337965
+    },
+    "publication": {
+      "attempt": 2,
+      "capture_file_sha256": {
+        "artifacts.json": "ccb5d4458b5907d76120376a569b91bf989bf344fb50c8c333e65b0b0c4dd29f",
+        "checks.json": "ecd34ffeda568841b38f561e6850fe21dbe845037783d45ae6011cb0f345adf3",
+        "jobs.json": "04efd475527b9fa16336fbf1b463209b7f3a9ad7fe942c774e1ad9422ef62b85",
+        "logs.zip": "4a06cc3f3559aca38f5e108d7ce8c1fb61276e11efdb7b4e6f3a0ae68ab9e00a",
+        "manifest.json": "c9386cbe760e8208f2598f6bfff55c23e694818865eac4edf24c600e6df9967c",
+        "run.json": "dd47d27e955b663fc02b7d0db085e5f16e587f8e6e337b7260ea3c57ee4c56dc",
+        "workflow.json": "a329e86010a05bd071ad685aad21c19f40e387d141f54b3f72a38ce1d321e0fb"
+      },
+      "capture_manifest": {
+        "api_version": "2022-11-28",
+        "capture_policy": "full",
+        "captured_at": "2026-10-07T10:04:04.516714+00:00",
+        "complete": true,
+        "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+        "hostname": "github.com",
+        "members": [
+          {
+            "bytes": 12942,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "dd47d27e955b663fc02b7d0db085e5f16e587f8e6e337b7260ea3c57ee4c56dc"
+          },
+          {
+            "bytes": 599,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "a329e86010a05bd071ad685aad21c19f40e387d141f54b3f72a38ce1d321e0fb"
+          },
+          {
+            "bytes": 11243,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "04efd475527b9fa16336fbf1b463209b7f3a9ad7fe942c774e1ad9422ef62b85"
+          },
+          {
+            "bytes": 2581,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "ccb5d4458b5907d76120376a569b91bf989bf344fb50c8c333e65b0b0c4dd29f"
+          },
+          {
+            "bytes": 12954,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "ecd34ffeda568841b38f561e6850fe21dbe845037783d45ae6011cb0f345adf3"
+          },
+          {
+            "bytes": 26425,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "4a06cc3f3559aca38f5e108d7ce8c1fb61276e11efdb7b4e6f3a0ae68ab9e00a"
+          }
+        ],
+        "receptor_version": "1.2.0",
+        "repository": "uibcdf/recorda",
+        "run_attempt": 2,
+        "run_id": 37598242844,
+        "schema": "gh-run-receptor.bundle@1",
+        "warnings": []
+      },
+      "conclusion": "success",
+      "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "jobs": [
+        {
+          "completed_at": "2026-10-07T09:56:51Z",
+          "conclusion": "success",
+          "id": 112725388085,
+          "name": "public-install (macos-latest)",
+          "started_at": "2026-10-07T09:55:54Z"
+        },
+        {
+          "completed_at": "2026-10-07T09:06:34Z",
+          "conclusion": "success",
+          "id": 112725388368,
+          "name": "publish",
+          "started_at": "2026-10-07T09:05:58Z"
+        },
+        {
+          "completed_at": "2026-10-07T09:07:13Z",
+          "conclusion": "success",
+          "id": 112725389707,
+          "name": "public-install (ubuntu-latest)",
+          "started_at": "2026-10-07T09:06:37Z"
+        }
+      ],
+      "run_id": 37598242844
+    },
+    "source": {
+      "attempt": 1,
+      "capture_file_sha256": {
+        "artifacts.json": "f1c295632fff2e755944d90d77863b0005026a31d87e69bedfd7b80531cc3d4f",
+        "checks.json": "1cbc59546633b71bf4895f66f4fa7129ad32de52565c8837e0b92b64b8e3638c",
+        "jobs.json": "fa3b4d14350c0fe823a7f217a6ee81b04eaf6fae4addbfd9e650a2c8d0fbd356",
+        "logs.zip": "0ba7427377bf51d334dcb6ece7d756adf5059c2a7069407ad22f9ef7145e05e6",
+        "manifest.json": "1bb4df5a5286de190cbe146da4d02de1dac75cf9a07d43f007948f9538fb445e",
+        "run.json": "4ad29ceab15152c5f7daa2c791e621786420a3ccf6bf290a8292423113913bf6",
+        "workflow.json": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+      },
+      "capture_manifest": {
+        "api_version": "2022-11-28",
+        "capture_policy": "full",
+        "captured_at": "2026-10-07T09:04:36.776979+00:00",
+        "complete": true,
+        "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+        "hostname": "github.com",
+        "members": [
+          {
+            "bytes": 12846,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "4ad29ceab15152c5f7daa2c791e621786420a3ccf6bf290a8292423113913bf6"
+          },
+          {
+            "bytes": 521,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+          },
+          {
+            "bytes": 62933,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "fa3b4d14350c0fe823a7f217a6ee81b04eaf6fae4addbfd9e650a2c8d0fbd356"
+          },
+          {
+            "bytes": 877,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "f1c295632fff2e755944d90d77863b0005026a31d87e69bedfd7b80531cc3d4f"
+          },
+          {
+            "bytes": 60331,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "1cbc59546633b71bf4895f66f4fa7129ad32de52565c8837e0b92b64b8e3638c"
+          },
+          {
+            "bytes": 370102,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "0ba7427377bf51d334dcb6ece7d756adf5059c2a7069407ad22f9ef7145e05e6"
+          }
+        ],
+        "receptor_version": "1.2.0",
+        "repository": "uibcdf/recorda",
+        "run_attempt": 1,
+        "run_id": 37595326267,
+        "schema": "gh-run-receptor.bundle@1",
+        "warnings": []
+      },
+      "conclusion": "success",
+      "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "jobs": [
+        {
+          "completed_at": "2026-10-07T08:40:38Z",
+          "conclusion": "success",
+          "id": 112706442145,
+          "name": "quality",
+          "started_at": "2026-10-07T08:40:29Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:05Z",
+          "conclusion": "success",
+          "id": 112706442351,
+          "name": "coverage",
+          "started_at": "2026-10-07T08:40:27Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:40:57Z",
+          "conclusion": "success",
+          "id": 112706442466,
+          "name": "SMonitor recovery / Python 3.11",
+          "started_at": "2026-10-07T08:40:27Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:40:53Z",
+          "conclusion": "success",
+          "id": 112706442560,
+          "name": "SMonitor recovery / Python 3.13",
+          "started_at": "2026-10-07T08:40:27Z"
+        },
+        {
+          "completed_at": "2026-10-07T09:00:00Z",
+          "conclusion": "success",
+          "id": 112706442575,
+          "name": "tests (macos-latest, 3.11)",
+          "started_at": "2026-10-07T08:59:11Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:29Z",
+          "conclusion": "success",
+          "id": 112706442592,
+          "name": "SMonitor recovery / Python 3.14",
+          "started_at": "2026-10-07T08:40:56Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:01Z",
+          "conclusion": "success",
+          "id": 112706442632,
+          "name": "SMonitor recovery / Python 3.12",
+          "started_at": "2026-10-07T08:40:27Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:59:45Z",
+          "conclusion": "success",
+          "id": 112706442799,
+          "name": "tests (macos-latest, 3.13)",
+          "started_at": "2026-10-07T08:59:00Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:40:59Z",
+          "conclusion": "success",
+          "id": 112706442820,
+          "name": "tests (ubuntu-latest, 3.14)",
+          "started_at": "2026-10-07T08:40:27Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:48Z",
+          "conclusion": "success",
+          "id": 112706442840,
+          "name": "tests (macos-latest, 3.12)",
+          "started_at": "2026-10-07T08:41:04Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:30Z",
+          "conclusion": "success",
+          "id": 112706442843,
+          "name": "tests (ubuntu-latest, 3.12)",
+          "started_at": "2026-10-07T08:40:58Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:27Z",
+          "conclusion": "success",
+          "id": 112706442858,
+          "name": "tests (ubuntu-latest, 3.11)",
+          "started_at": "2026-10-07T08:41:02Z"
+        },
+        {
+          "completed_at": "2026-10-07T09:03:53Z",
+          "conclusion": "success",
+          "id": 112706442865,
+          "name": "tests (macos-latest, 3.14)",
+          "started_at": "2026-10-07T09:03:02Z"
+        },
+        {
+          "completed_at": "2026-10-07T08:41:28Z",
+          "conclusion": "success",
+          "id": 112706442976,
+          "name": "tests (ubuntu-latest, 3.13)",
+          "started_at": "2026-10-07T08:41:03Z"
+        }
+      ],
+      "run_id": 37595326267
+    }
+  },
+  "incidental_tag_ci": {
+    "capture_manifest": {
+      "api_version": "2022-11-28",
+      "capture_policy": "metadata",
+      "captured_at": "2026-10-07T09:24:09.666658+00:00",
+      "complete": true,
+      "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "hostname": "github.com",
+      "members": [
+        {
+          "bytes": 12849,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "6dbe8cf6cab2b9e21857081d21b5f89ccc636783bb61c983e0044bb69b8255ae"
+        },
+        {
+          "bytes": 521,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+        },
+        {
+          "bytes": 49027,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "74f12062fb122a5cb85c94082a7e0474c3d7fafe0360da95d34305bf0aee8fae"
+        },
+        {
+          "bytes": 878,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "9f54638ebbe87247597690b22c1a3724977c8599685746ce4b67c8e72a58f63e"
+        },
+        {
+          "bytes": 62143,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "19bfce9e26059e7aeb97f92e59f2ea8eea81acb5ff34173ef3c656942676367b"
+        }
+      ],
+      "receptor_version": "1.2.0",
+      "repository": "uibcdf/recorda",
+      "run_attempt": 1,
+      "run_id": 37598222343,
+      "schema": "gh-run-receptor.bundle@1",
+      "warnings": []
+    },
+    "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "native_conclusion": "cancelled",
+    "operator_reason": "Agent explicitly cancelled an unchanged-source repetition with no failed jobs, after source 14/14 and exact Conda 10/10 gates succeeded. This run is not used as qualification evidence.",
+    "run_id": 37598222343
+  },
+  "installed_matrix": [
+    {
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.11.17 (main, Oct  6 2026, 23:54:59) [Clang 21.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Darwin",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.12.15 (main, Oct  6 2026, 23:42:14) [Clang 21.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Darwin",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.13.16 | packaged by conda-forge | (main, Oct  7 2026, 00:20:42) [Clang 21.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Darwin",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.14.8 | packaged by conda-forge | (main, Oct  7 2026, 00:15:59) [Clang 20.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Darwin",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Linux",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.12.15 (main, Oct  6 2026, 23:50:18) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Linux",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.13.16 | packaged by conda-forge | (main, Oct  7 2026, 00:29:52) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Linux",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.14.8 | packaged by conda-forge | (main, Oct  7 2026, 00:23:19) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Linux",
+      "version": "0.3.0"
+    }
+  ],
+  "observed_at": "2026-10-07T10:05:34.633738+00:00",
+  "operational_recovery": {
+    "qualified_candidate_source": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "read_only_verification_run_id": 37602445007,
+    "routine_source_run_id": 37602444901,
+    "runner": "macos-15",
+    "state": "Alternative public verification cancelled as redundant after original macOS public install passed. Separate routine source CI retains its own identity; no qualification inferred from pending jobs.",
+    "workflow_commit": "033f3bd2c7915da97b85d4f0e8cfb3a9d6b77aa2"
+  },
+  "public_install_pending": [],
+  "public_installed": [
+    {
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.14.8 | packaged by conda-forge | (main, Oct  7 2026, 00:15:59) [Clang 20.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Darwin",
+      "version": "0.3.0"
+    },
+    {
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.14.8 | packaged by conda-forge | (main, Oct  7 2026, 00:23:19) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "system": "Linux",
+      "version": "0.3.0"
+    }
+  ],
+  "public_installed_linux": {
+    "machine": "x86_64",
+    "prefix": "/home/runner/micromamba/envs/recorda-test",
+    "python": "3.14.8 | packaged by conda-forge | (main, Oct  7 2026, 00:23:19) [GCC 15.3.0]",
+    "recording_and_cli": "passed",
+    "runtime_files": 15,
+    "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+    "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "system": "Linux",
+    "version": "0.3.0"
+  },
+  "public_registry_independent": {
+    "file": {
+      "basename": "noarch/recorda-0.3.0-py_0.tar.bz2",
+      "labels": [
+        "main"
+      ],
+      "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33"
+    },
+    "url": "https://api.anaconda.org/release/uibcdf/recorda/0.3.0"
+  },
+  "publication_attempt1": {
+    "capture_manifest": {
+      "api_version": "2022-11-28",
+      "capture_policy": "full",
+      "captured_at": "2026-10-07T09:30:28.859589+00:00",
+      "complete": true,
+      "head_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+      "hostname": "github.com",
+      "members": [
+        {
+          "bytes": 12867,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "29a2a22f52796201c0120b864502b0bb42ac975c4a28b77a7c3ea5a170ac309a"
+        },
+        {
+          "bytes": 599,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "a329e86010a05bd071ad685aad21c19f40e387d141f54b3f72a38ce1d321e0fb"
+        },
+        {
+          "bytes": 8846,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "f0c0ee9e8e92bb5f6e4abffdaca387f34f30e045e559fa173da8fa2418723b25"
+        },
+        {
+          "bytes": 1735,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "80a43b046a07c819e70b63445737015764e1f643b082d8c280f3b6cb1c9f6cfc"
+        },
+        {
+          "bytes": 13407,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "4ede243aad11a6211ae1dde26a17c57c090ddd03d28d2e58bcb7a2c0fb25ef2c"
+        },
+        {
+          "bytes": 76589,
+          "complete": true,
+          "kind": "github.logs",
+          "path": "logs.zip",
+          "sha256": "d7ed2707fe7b3ae63ad0b64a7d81c4b06962d76daf3801e54f6486650bd78e0a"
+        }
+      ],
+      "receptor_version": "1.2.0",
+      "repository": "uibcdf/recorda",
+      "run_attempt": 1,
+      "run_id": 37598242844,
+      "schema": "gh-run-receptor.bundle@1",
+      "warnings": []
+    },
+    "native_conclusion": "cancelled",
+    "operator_reason": "Runner acquisition remained queued for over 20 minutes; only unstarted macOS job retried as attempt 2. Upload and Linux success retained at original timestamps.",
+    "successful_jobs": [
+      "publish",
+      "public-install (ubuntu-latest)"
+    ],
+    "unstarted_cancelled_job": "public-install (macos-latest)"
+  },
+  "publication_pending": false,
+  "publication_run_id": 37598242844,
+  "scientific_receipt_sha256": "bc7843b43fe25d8654d51b3e8df8c3f4e14f1edb53393baa521abaabbb2a11cd",
+  "source_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+  "state": "qualified source/tag and public Conda artifact; independent registry/download and both clean public installs passed",
+  "tag": {
+    "name": "0.3.0",
+    "object_sha": "064227d15483a1b63ae120eb2a4264568d9e8e06",
+    "remote_verified": true,
+    "target_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18"
+  },
+  "tool_versions": {
+    "gh-run-receptor": "1.2.0",
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5"
+  },
+  "upload_receipt": {
+    "candidate_sha": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "checked_at": "2026-10-07T09:06:31.040562+00:00",
+    "coordinate": {
+      "filename": "recorda-0.3.0-py_0.tar.bz2",
+      "owner": "uibcdf",
+      "package": "recorda",
+      "subdir": "noarch",
+      "version": "0.3.0"
+    },
+    "label": "main",
+    "preflight": {
+      "scope": "all-labels",
+      "state": "absent"
+    },
+    "schema": "uibcdf.conda-upload@1",
+    "sha256": "3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+    "state": "verified",
+    "subject": {
+      "repository": "uibcdf/recorda",
+      "run_attempt": "1",
+      "run_id": "37598242844"
+    }
+  },
+  "version": "0.3.0"
+}

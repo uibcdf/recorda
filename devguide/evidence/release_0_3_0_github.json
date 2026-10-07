@@ -1,0 +1,95 @@
+{
+  "api_target_commitish": "main",
+  "assets": [
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/manifest.json",
+      "digest": "sha256:ab36ff2baa9536eca076c066232cbfdce032e797b624383da81f96c00b3d6786",
+      "id": 618319763,
+      "name": "manifest.json",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/publication-original-attempt.zip",
+      "digest": "sha256:1a9a18167783428cf6f09f4a7306e2f7f44d12405e83d119b829b8a707350b9a",
+      "id": 618319781,
+      "name": "publication-original-attempt.zip",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/qualification-candidate.zip",
+      "digest": "sha256:ee1066dfc8395d81175a987aa18f935ad9b2883fd04f324ee0b8790ce524f18c",
+      "id": 618319775,
+      "name": "qualification-candidate.zip",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/qualification-publication.zip",
+      "digest": "sha256:3e3815d4d0e0777b6e9c56e5fb45ce8ae8e5bcc588126b5f470a989a561f07a5",
+      "id": 618319774,
+      "name": "qualification-publication.zip",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/qualification-source.zip",
+      "digest": "sha256:fb4d74069e4ab9607159d90b517337268f35d6f82f7398804d55674ecd2e7512",
+      "id": 618319749,
+      "name": "qualification-source.zip",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/recorda-0.3.0-py_0.tar.bz2",
+      "digest": "sha256:3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33",
+      "id": 618319751,
+      "name": "recorda-0.3.0-py_0.tar.bz2",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/release_0_3_0.json",
+      "digest": "sha256:f3111aad5146fc2448060dac17eaff972fb06d47c7972369670fc7d6d9ee6f12",
+      "id": 618319748,
+      "name": "release_0_3_0.json",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/release_0_3_0_scientific.json",
+      "digest": "sha256:bc7843b43fe25d8654d51b3e8df8c3f4e14f1edb53393baa521abaabbb2a11cd",
+      "id": 618319744,
+      "name": "release_0_3_0_scientific.json",
+      "state": "uploaded"
+    },
+    {
+      "browser_download_url": "https://github.com/uibcdf/recorda/releases/download/0.3.0/SHA256SUMS",
+      "digest": "sha256:c94e3ce3057855208f661dd47903ae41179110ab53eefa77bd80a7c190fdae4a",
+      "id": 618319783,
+      "name": "SHA256SUMS",
+      "state": "uploaded"
+    }
+  ],
+  "post_release_finalization": {
+    "reason": "Original exact-source public macOS arm64 installation succeeded on publication attempt 2; the alternative was withdrawn and qualified CI restored.",
+    "restoration_commit": "fe209a0688f062046c2faf9e9c5b78591d1d8916",
+    "restored_qualified_tree": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+    "sealed_release_receipts": "release_0_3_0.json and release_0_3_0_scientific.json remain byte-identical to published assets; this separate receipt records later finalization.",
+    "verification": "git diff --name-only qualified-source restoration-commit is empty; release tag and original artifact unchanged",
+    "withdrawn_operational_commit": "033f3bd2c7915da97b85d4f0e8cfb3a9d6b77aa2",
+    "withdrawn_runs": [
+      {
+        "conclusion": "cancelled",
+        "id": 37602444901,
+        "scope": "source CI for withdrawn alternative; not release qualification"
+      },
+      {
+        "conclusion": "cancelled",
+        "id": 37602445007,
+        "scope": "unstarted read-only alternative public macOS verification; unnecessary after original route succeeded"
+      }
+    ]
+  },
+  "published_at": "2026-10-07T10:15:02Z",
+  "qualified_tag_target": "101b8ba82f3b3dba7f434a074b3637d072056a18",
+  "release_id": 405632452,
+  "tag_name": "0.3.0",
+  "tag_object": "064227d15483a1b63ae120eb2a4264568d9e8e06",
+  "url": "https://github.com/uibcdf/recorda/releases/tag/0.3.0",
+  "verification": "all API digests match retained asset bytes; remote existing tag target independently verified"
+}

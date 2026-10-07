@@ -1,14 +1,35 @@
 # Development checkpoint — 2026-10-07
 
-## Active stabilization candidate
+## Stabilization release and adoption checkpoint
 
-The maintainer has authorized version **0.3.0**, an immutable source tag and an
-official Conda package, after the remaining release gates. Follow
-[`RELEASING.md`](RELEASING.md). The working metadata/recipe now select 0.3.0;
-publication and new exact-candidate evidence remain pending in
-`uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Earlier source-pair
-and scientific receipts below retain their original identities. After release,
-wait for consumer-owned adoption by MOLI components and MolSysMT.
+The maintainer-authorized **0.3.0** tag identifies qualified source
+`101b8ba82f3b3dba7f434a074b3637d072056a18`. The official public Conda artifact is
+`recorda-0.3.0-py_0.tar.bz2`, SHA256
+`3f86072ed1449ea4d600312fb539caa2d807b611d18ac8faab10374f7b330e33`.
+Source [CI 37595326267](https://github.com/uibcdf/recorda/actions/runs/37595326267)
+passes all **14 jobs** and exact-Conda
+[candidate 37595337965](https://github.com/uibcdf/recorda/actions/runs/37595337965)
+all **10**, including **345 passes per Linux x86_64/macOS arm64 Python 3.11–3.14
+cell**. Every installed receipt confirms the same source/digest and all 15 runtime
+files. [Publication](https://github.com/uibcdf/recorda/actions/runs/37598242844)
+uploads that retained file without rebuilding; independent public-registry and
+anonymous-download checks match its SHA256 and main label.
+
+The [release receipt](evidence/release_0_3_0.json) retains source/run identities,
+artifact/closure metadata, published receptor captures, coverage acceptance and
+public channel installation evidence. Codecov accepts the exact main commit with
+91.96% service coverage; coverage.py reports 94% combined statement/branch coverage.
+The separately scoped [scientific receipt](evidence/release_0_3_0_scientific.json)
+records the exact Conda with unchanged Lab/SciPy/native Sabueso participants:
+**420 passes/four historical skips**, seven notebooks/55 code cells and 14 kernel
+fault cells on Linux Python 3.14. Earlier receipts keep their original identities.
+
+The API/schema remain experimental before 1.0. Distribution, installed-platform
+and coverage evidence belong to `uibcdf/recorda#3`, `uibcdf/recorda#4` and
+`uibcdf/recorda#6`. Shared registry reconciliation is separately owned in
+`uibcdf/moli#62`. Follow [RELEASING.md](RELEASING.md) for future candidates.
+The current direction is to **wait for consumer-owned adoption by MOLI components
+and MolSysMT**, then respond to concrete receiving feedback.
 
 Start here when resuming, then read [NEXT_STEPS.md](NEXT_STEPS.md) and the
 maintained guide for the behavior being changed. Recorda remains an experimental
@@ -28,9 +49,10 @@ scientific and current-core hosted runs were reinspected with published
 gh-run-receptor 1.2.0; their separate source scopes and counts remain unchanged.
 
 This completes the minimal experimental substrate/laboratory, with provisional
-API/schema. Packaging, installed-candidate OS evidence, coverage, new scientific
+API/schema. At that acceptance checkpoint, packaging, installed-candidate OS evidence, coverage, new scientific
 questions and shared integration retain their separate gates. The original
-coordination analyses are archived; the next engineering work is `uibcdf/recorda#3`.
+coordination analyses are archived; at that point the next engineering work was
+`uibcdf/recorda#3`, now qualified by the release above.
 
 ## Native Conda provider preflight correction
 
@@ -240,10 +262,11 @@ repeating that lane. A different provider tree requires a new receipt.
 
 The immutable **0.2.0** source tag still identifies
 `4e3d422fef1b0927fe63422323dc6d941c061bfb`; it does not contain later recovery,
-selection or reference-check work. Runtime metadata remains 0.2.0, so identify
-current source by commit as well as version. Lab's dummy remains 0.0.0.
-No new installed release candidate, public registry state, public OS support,
-authenticated integrity, full dependency closure or replay is qualified here.
+selection or reference-check work. At that pre-release checkpoint runtime metadata
+remained 0.2.0; source was identified by commit as well as version. Lab's dummy
+remains 0.0.0. That historical checkpoint did not qualify a new installed release
+candidate, public registry state, OS support, authenticated integrity, full
+dependency closure or replay. The 0.3.0 release evidence is recorded above.
 
 ## Resumption checklist
 
@@ -268,14 +291,12 @@ authenticated integrity, full dependency closure or replay is qualified here.
 
 ## Next work, in order
 
-1. **Qualify packaging/distribution** in
-   [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3). Select an exact
-   source/artifact candidate and qualify the built Conda artifact with its required
-   closure. Source wheels and a local recipe do not establish public distribution.
-2. **Complete release evidence** in installed-candidate OS review
-   [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4) and coverage/badge
-   review [uibcdf/recorda#6](https://github.com/uibcdf/recorda/issues/6).
-   A new tag needs its own exact candidate qualification; keep 0.2.0 immutable.
+1. **Wait for receiving adoption** by MOLI components and MolSysMT. Each consumer
+   owns its semantic boundary, native records and exact installed receiving gate.
+   Use the public 0.3.0 artifact; do not infer adoption from publication alone.
+2. **Respond to concrete feedback** in the owning repository. The 0.3.0 release
+   resolves local packaging/OS/coverage qualification (#3/#4/#6); a future source
+   or build change needs a new candidate. Keep 0.1.0, 0.2.0 and 0.3.0 immutable.
 3. **Track shared ecosystem reconciliation** in
    [uibcdf/moli#62](https://github.com/uibcdf/moli/issues/62). The local review
    `uibcdf/recorda#2`, published-provider adoption and receiving trials are complete;

@@ -1,5 +1,10 @@
 # Recorda
 
+[![Tests](https://github.com/uibcdf/recorda/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/uibcdf/recorda/actions/workflows/tests.yml)
+[![Coverage](https://codecov.io/gh/uibcdf/recorda/branch/main/graph/badge.svg)](https://app.codecov.io/gh/uibcdf/recorda)
+[![Conda](https://anaconda.org/uibcdf/recorda/badges/version.svg)](https://anaconda.org/uibcdf/recorda)
+[![Release](https://img.shields.io/github/v/release/uibcdf/recorda)](https://github.com/uibcdf/recorda/releases)
+
 **Scientific recording and provenance for reproducible computational work.**
 
 Recorda is a lightweight recording layer for scientific software. Activate a session
@@ -33,14 +38,14 @@ Existing scientific results and native provenance remain owned by their librarie
 
 ## Status
 
-Version **0.3.0** is the stabilization candidate being qualified for official Conda
-distribution. Its tag and public package are created only after the exact installed
-artifact passes the release gates in [the release guide](devguide/RELEASING.md).
-The immutable `0.1.0` and `0.2.0` tags retain their historical source checkpoints.
-See [the changelog](CHANGELOG.md). Distribution and public OS qualification remain
-tracked in [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3) and
-[uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4) until executed evidence
-and independently observed publication are recorded.
+Version **0.3.0** is the official Conda stabilization release. Its immutable tag,
+package metadata and runtime version agree. The same Conda file passes the full
+installed suite on Linux x86_64 and macOS arm64, Python 3.11–3.14. See
+[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.0),
+[the qualification receipt](devguide/evidence/release_0_3_0.json) and
+[the changelog](CHANGELOG.md). The `0.1.0` and `0.2.0` tags retain their historical
+source checkpoints. Consumer-owned adoption by MOLI components and MolSysMT is the
+next step; the API and schema remain experimental before 1.0.
 
 Recorda now has an **experimental first standalone implementation**. Its API and journal
 schema are provisional. The controlled laboratory lives in `uibcdf/recorda-lab`;
@@ -50,8 +55,15 @@ See [`devguide/DESIGN.md`](devguide/DESIGN.md) for the broad design and [`devgui
 
 ## Capture and complementary interfaces
 
-Create the declared development environment, then install this unreleased checkout with
-`python -m pip install --no-deps --editable .`. For an unmodified external library,
+Install the public package from the official channels:
+
+```bash
+micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.0
+micromamba activate recorda
+```
+
+For development, create the declared development environment and install the checkout
+with `python -m pip install --no-deps --editable .`. For an unmodified external library,
 the caller can explicitly wrap an operation:
 
 ```python
@@ -124,8 +136,12 @@ recognize every secret in arbitrary text. Exception messages are omitted by defa
 
 Recorda is directly governed by MOLI, with no MOLI runtime dependency. Read
 `MOLI_GUIDE.md`, `AGENTS.md` and `devguide/ENGINEERING_REVIEW.md`.
-Python 3.11–3.14 is the current target; development uses Python 3.14. Public OS support
-and distribution remain unqualified. See [the tracked Python transition](devguide/PYTHON_SUPPORT.md).
+Python 3.11–3.14 is the qualified range on Linux x86_64 and macOS arm64;
+development uses Python 3.14. See [Python support](devguide/PYTHON_SUPPORT.md).
+
+macOS support is currently limited to Apple Silicon (arm64). Intel-based macOS
+(x86_64) is not part of the supported platform matrix. Support may be reconsidered
+if there is demonstrated user demand.
 
 The broad direction remains:
 
@@ -152,4 +168,5 @@ A scientific component should not need to depend on MOLI merely to participate i
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE). No public package distribution or archival claim is made yet.
+MIT. See [`LICENSE`](LICENSE). Official distribution uses Conda `uibcdf` with
+`conda-forge`. No DOI or archival availability is claimed.

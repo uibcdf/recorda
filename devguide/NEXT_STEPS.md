@@ -10,10 +10,12 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 The original standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`)
 is resolved with a criterion/evidence matrix and archived coordination reports.
-The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): qualify
-packaging/distribution (`uibcdf/recorda#3`), then complete the related release reviews
-(`uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
-next scoped experiment before implementation. The small workflow linking native
+Version 0.3.0 completes packaging/distribution and installed-platform/coverage
+qualification (`uibcdf/recorda#3`, `uibcdf/recorda#4`, `uibcdf/recorda#6`), with
+[executed release evidence](evidence/release_0_3_0.json). The maintainer's current
+direction is to wait for consumer-owned adoption by MOLI components and MolSysMT.
+Track shared registry reconciliation in `uibcdf/moli#62`; choose a new scoped
+experiment only when a receiving consumer has a concrete question. The small workflow linking native
 references across steps is implemented and qualified in `uibcdf/recorda-lab#10`;
 read [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for evidence and remaining
 scope. It uses the current core API; the bounded native Sabueso follow-on also
@@ -207,9 +209,10 @@ Then evaluate, in an order informed by the experiments:
 ## Packaging and repository infrastructure
 
 Do not let packaging drive scientific design. License, `pyproject.toml`, tests, CI
-configuration and Python policy are present. Before a distributable release, finish
-versioning/release policy, Conda packaging and the distribution/OS reviews with
-executed evidence under the applicable engineering/governance policies.
+configuration and Python policy are present. The 0.3.0 release has a qualified
+Conda artifact and publication route, exact installed OS/minor evidence and an
+accepted live coverage producer. Follow [RELEASING.md](RELEASING.md) for a future
+candidate; source or build-input changes require their own qualification.
 
 ## Gate for broad implementation
 

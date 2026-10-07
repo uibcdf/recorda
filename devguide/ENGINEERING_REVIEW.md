@@ -1,5 +1,20 @@
 # Initial engineering review
 
+## Current stabilization release
+
+Version 0.3.0 completes the local distribution, OS and coverage reviews in
+`uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Its immutable tag
+identifies `101b8ba82f3b3dba7f434a074b3637d072056a18`; the public Conda file is
+bound by SHA256 to all eight Linux x86_64/macOS arm64 Python 3.11–3.14 installed
+gates. Source CI passes 14 jobs, Conda qualification 10, and Codecov accepts a
+recent main report. The [receipt](evidence/release_0_3_0.json) retains exact
+artifact/closure identity, independent public poststate and clean channel checks.
+No PyPI or DOI/archive claim is made. Shared MOLI registry reconciliation is
+proposed separately in `uibcdf/moli#62`. Wait for consumer-owned MOLI/MolSysMT
+adoption; API/schema freezing and broader integration need receiving evidence.
+
+## Historical admission evidence
+
 For current source identities, executed checks and resumption priorities, read
 [CHECKPOINT.md](CHECKPOINT.md). The initial evidence below is historical; it does
 not qualify later source or close the outstanding engineering issues.

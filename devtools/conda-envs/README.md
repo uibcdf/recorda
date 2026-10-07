@@ -1,7 +1,7 @@
 # Recorda environment routes
 
 All Conda routes use `uibcdf` with `conda-forge`. Create the selected environment,
-then install this unpublished Recorda checkout with
+then install this development checkout with
 `python -m pip install --no-deps --editable .`. Ordinary core requirements are
 ArgDigest `>=0.15,<0.16` and SMonitor `>=0.19,<0.20`; ArgDigest owns its DepDigest
 dependency. No scientific producer package is required. Pytest-receptor, Ruff,
@@ -36,7 +36,10 @@ minor override for each matrix cell. All five specifications pin ArgDigest 0.15.
 build 0, SMonitor 0.19.0 build 1 and DepDigest 0.13.0 build 0. The old extra names
 are empty compatibility aliases; package metadata now declares these providers
 as required. Conda supplies the closure before `--no-deps` installation.
-No public `recorda` Conda package or complete pip dependency route is claimed.
+Recorda 0.3.0 is publicly available through `uibcdf` with `conda-forge`;
+[the receipt](../../devguide/evidence/release_0_3_0.json) binds the installed
+candidate and publication proof. Development installation still provisions the
+declared closure before `--no-deps`; no complete PyPI dependency route is claimed.
 
 The static `check_dependencies.py` gate compares required metadata with the local
 noarch recipe, every inventoried environment and CI/source routes. It rejects
@@ -56,5 +59,5 @@ development lanes; a local-source recipe and negative preflight fixtures are now
 present. The recipe is maintained at `devtools/conda-build/meta.yaml`.
 [Release qualification](../../devguide/RELEASING.md) builds once with the published
 UIBCDF action, tests that same file and uploads it without rebuilding. Public
-publication and OS evidence remain tracked in `uibcdf/recorda#3` / #4. No sibling
+publication and OS evidence are recorded in `uibcdf/recorda#3` / #4. No sibling
 source CI installation route is retained.

@@ -12,9 +12,10 @@ Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
 completed original standalone acceptance matrix, consumer questions and separately
 scoped scientific qualification.
 
-[`RELEASING.md`](RELEASING.md) describes the authorized 0.3.0 stabilization
-candidate, its exact-artifact gates and publication route. Until its receipts are
-recorded, a planned workflow does not establish publication or platform support.
+[`RELEASING.md`](RELEASING.md) describes the 0.3.0 stabilization qualification
+and exact-file publication route. Its [release receipt](evidence/release_0_3_0.json)
+records executed gates and independently observed publication. Consumer-owned
+MOLI/MolSysMT adoption is the next step.
 
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.

@@ -1,6 +1,6 @@
 # Release history
 
-## 0.3.0 — stabilization candidate
+## 0.3.0 — 2026-10-07
 
 The standalone experimental slice is complete. This release prepares adoption
 by scientific consumers while the API and JSONL schema remain provisional.
