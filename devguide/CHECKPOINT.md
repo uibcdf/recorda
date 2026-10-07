@@ -5,6 +5,33 @@ maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed
 work and proposed next work; it does not authorize a new release or integration.
 
+## Native Conda provider preflight correction
+
+`uibcdf/recorda#23` is resolved by the development checker correction at Recorda
+`9228c84f78221442a4ceb0cfbc45887a919d8367`. It accepts both native Conda's
+archive-relative noarch paths and micromamba's installation-relative paths,
+matching the actual installed `files` inventory. Exact published coordinates,
+import ownership and Python-byte checks remain mandatory; escaping paths and
+duplicate mapped entries are rejected.
+
+Linux Python 3.14.7 with published pytest-receptor 1.1.0 passes **331 source tests**
+and **331 installed-wheel tests**, including **26 new verifier regressions**.
+Both real prefixes pass both feature checks, each verifying **94 provider Python
+files**. Governance, dependency routes, Ruff and pip checks pass. All 15 runtime
+files match the previous qualified source bytes. The
+[local receipt](evidence/conda_noarch_local.json) retains provider-record, source,
+runtime, wheel and log hashes. [Exact-source CI](https://github.com/uibcdf/recorda/actions/runs/37587276559)
+passes all **11 jobs**, inspected with published gh-run-receptor 1.2.0. Actual
+installed logs report 319 passes/12 opt-in recovery skips in six default lanes
+(Linux Python 3.11–3.14, macOS 3.13/3.14), and 331 passes in each of four Linux
+recovery lanes. The [hosted receipt](evidence/conda_noarch_hosted.json) retains
+the full capture hashes and ten successful provider preflights. Hosted
+provisioning uses micromamba; actual native Conda evidence is local.
+
+The historical Lab #15 receipts retain their original checker failure and explicit
+mapping workaround. This correction does not promote a new Lab default, change
+scientific code or requalify those earlier experiment receipts.
+
 ## Native Sabueso diagnostic receiving trial
 
 `uibcdf/recorda-lab#15` executes the real producer question: a Card was returned,
@@ -27,9 +54,10 @@ Read [Lab's native trial](https://github.com/uibcdf/recorda-lab/blob/main/devgui
 and its frozen source/wheel/provider evidence. Existing explicit references answer
 this bounded question. Any automatic ordinary-call integration needs a separately
 scoped public context/attachment decision; MOLI routing is unchanged.
-`uibcdf/recorda#23` owns the reproduced native Conda noarch-metadata preflight
-limitation. Local Lab evidence explicitly maps and byte-verifies its closure;
-it does not claim the unchanged core checker passed. Historical Sabueso tests
+The historical trial encountered the native Conda noarch-metadata preflight
+limitation owned by `uibcdf/recorda#23`; the subsequent correction is described
+above. Local Lab evidence explicitly mapped and byte-verified its closure;
+it does not claim the older core checker passed. Historical Sabueso tests
 remain distinct from this new native diagnostic scenario.
 
 ## Previous controlled producer diagnostic comparison qualification
@@ -223,9 +251,10 @@ authenticated integrity, full dependency closure or replay is qualified here.
    omissions and interruption cases in a new Lab issue first.
    The controlled comparison in `uibcdf/recorda-lab#14` and native Sabueso
    follow-up in `uibcdf/recorda-lab#15` are complete. Existing explicit references
-   answer the bounded source/attempt question. Resolve development preflight
-   `uibcdf/recorda#23` before another native Conda receiving run; core automatic
-   attachment remains a separately scoped design gate, not queued implementation.
+   answer the bounded source/attempt question. Development preflight
+   `uibcdf/recorda#23` is resolved with local and exact-source CI qualification;
+   core automatic attachment remains a separately scoped design gate, not queued
+   implementation.
 2. **Reconcile the completed current-core ecosystem review** in
    [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
    [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for

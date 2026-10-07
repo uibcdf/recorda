@@ -256,5 +256,8 @@ for fictional/public fixture attribution, safe retention and source/wheel manife
 Existing public references answer this real-library bounded question. An automatic
 adapter remains a separate proposal about public context/attachment and conditional
 coverage, rather than an implicit change to core operation semantics or MOLI routing.
-The development preflight mapping defect is separately owned by `uibcdf/recorda#23`;
-this trial makes no provider implementation or scientific ownership change.
+The historical trial encountered the development preflight mapping defect owned
+by `uibcdf/recorda#23`. Its subsequent correction and separate verifier evidence
+are recorded in [CHECKPOINT.md](CHECKPOINT.md); the original trial receipts retain
+their failure/workaround scope. This trial makes no provider implementation or
+scientific ownership change.

@@ -55,8 +55,9 @@ Sabueso source partial/failure diagnostics beside its retained Cards and acquisi
 traces. Corrected local qualification passes 380 tests/four historical Sabueso skips;
 [exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
 passes all 13 jobs, with 47 native passes per Python 3.11–3.14 minor. Existing explicit references suffice for
-this bounded real-library question. Before another native Conda receiving run,
-resolve the separately owned development preflight mapping in `uibcdf/recorda#23`.
+this bounded real-library question. The separately owned development preflight
+mapping in `uibcdf/recorda#23` is resolved; its exact source
+and hosted qualification are recorded in [CHECKPOINT.md](CHECKPOINT.md).
 No core automatic adapter or MOLI routing implementation is queued by this trial.
 Published-provider probes expose independently owned SMonitor export/buffer/
 degradation opportunities in `uibcdf/smonitor#40`, `uibcdf/smonitor#41` and

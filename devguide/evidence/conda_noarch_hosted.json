@@ -1,0 +1,399 @@
+{
+  "capture": {
+    "all_member_hashes_verified": true,
+    "directory": "/tmp/recorda23-ci-final",
+    "observed_utc": "2026-10-07T07:32:54.419362+00:00",
+    "policy": "full",
+    "sha256": {
+      "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+      "checks.json": "1aab092fd17b39f5c5824b911e250652a70f5511c67f3a56878386b1c9fe6064",
+      "jobs.json": "145c74a193b2ecd6a1a69d73a2022e48896c548248bf0c392b9fc170460fd2ea",
+      "logs.zip": "a8752ff38153b8fbed206d2a37560b8f1bec80a4092408e601fc470baba0714b",
+      "manifest.json": "040a9b3981ae54e98188de680ddf4cd1395f0dc482b031c0160e1bfbbf3400a5",
+      "run.json": "55e50c2ed1aeefb331fa49ec555ff55123d4ee180a29ec0e6ac3d7ee2293c50c",
+      "workflow.json": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+    }
+  },
+  "implementation_commit": "9228c84f78221442a4ceb0cfbc45887a919d8367",
+  "issue": "uibcdf/recorda#23",
+  "jobs": [
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224565",
+      "id": 112680224565,
+      "name": "quality"
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224786",
+      "id": 112680224786,
+      "name": "SMonitor recovery / Python 3.13",
+      "provider_preflight": {
+        "feature": "smonitor",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "SMonitor recovery _ Python 3.13/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 331,
+        "sha256": "ce4a3c0c1b1d146b75b5f8a42d826d9e42445cfb251a317c4cb67ac16d755694",
+        "skipped": 0
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224800",
+      "id": 112680224800,
+      "name": "SMonitor recovery / Python 3.12",
+      "provider_preflight": {
+        "feature": "smonitor",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "SMonitor recovery _ Python 3.12/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 331,
+        "sha256": "6635f59611cfff5b58d38f5f80174963f4d844575a17d9bf17a07c0726115546",
+        "skipped": 0
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224874",
+      "id": 112680224874,
+      "name": "SMonitor recovery / Python 3.14",
+      "provider_preflight": {
+        "feature": "smonitor",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "SMonitor recovery _ Python 3.14/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 331,
+        "sha256": "9eb60eff15cee7a7deec393a5131b0718291b5a7da447bce116ded59d1bd9628",
+        "skipped": 0
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224876",
+      "id": 112680224876,
+      "name": "tests (ubuntu-latest, 3.14)",
+      "provider_preflight": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "tests (ubuntu-latest, 3.14)/9_Test installed package.txt",
+        "passed": 319,
+        "sha256": "71fdc7ca3778122c87820ec365612731b5c51f94c36d7e533d7799cd83f01878",
+        "skipped": 12
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224893",
+      "id": 112680224893,
+      "name": "tests (ubuntu-latest, 3.13)",
+      "provider_preflight": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "tests (ubuntu-latest, 3.13)/9_Test installed package.txt",
+        "passed": 319,
+        "sha256": "a740425c649ac9a5ba34c5a1c8ddf55d83f136d37f4ddbe4b272b154d17bd616",
+        "skipped": 12
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224895",
+      "id": 112680224895,
+      "name": "tests (macos-latest, 3.13)",
+      "provider_preflight": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "tests (macos-latest, 3.13)/9_Test installed package.txt",
+        "passed": 319,
+        "sha256": "79ef13fec52bda943124c6f3449742306f1886a7cf2c1e2098b40fba62565969",
+        "skipped": 12
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224910",
+      "id": 112680224910,
+      "name": "tests (macos-latest, 3.14)",
+      "provider_preflight": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "tests (macos-latest, 3.14)/9_Test installed package.txt",
+        "passed": 319,
+        "sha256": "b5d2b330db04f0175e85928031f0ede8284689c5ed8902b099f9ff4cc03a919f",
+        "skipped": 12
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224912",
+      "id": 112680224912,
+      "name": "SMonitor recovery / Python 3.11",
+      "provider_preflight": {
+        "feature": "smonitor",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "SMonitor recovery _ Python 3.11/9_Test installed Recorda with published SMonitor.txt",
+        "passed": 331,
+        "sha256": "fd2714de29ccff9526aec709bf572f42a1ea09c3d0c9ed5b3fff321d489ba2a8",
+        "skipped": 0
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224923",
+      "id": 112680224923,
+      "name": "tests (ubuntu-latest, 3.11)",
+      "provider_preflight": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "tests (ubuntu-latest, 3.11)/9_Test installed package.txt",
+        "passed": 319,
+        "sha256": "92af2c6e3dfab75992a37a83f54409e0ae13889b252ed7f89907f43f8a5bb542",
+        "skipped": 12
+      }
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559/job/112680224957",
+      "id": 112680224957,
+      "name": "tests (ubuntu-latest, 3.12)",
+      "provider_preflight": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.15.0-py_0.tar.bz2",
+            "python_files": 38,
+            "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+            "version": "0.15.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.13.0-py_0.tar.bz2",
+            "python_files": 16,
+            "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+            "version": "0.13.0"
+          },
+          "smonitor": {
+            "file": "smonitor-0.19.0-py_1.tar.bz2",
+            "python_files": 40,
+            "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+            "version": "0.19.0"
+          }
+        }
+      },
+      "tests": {
+        "captured_log": "tests (ubuntu-latest, 3.12)/9_Test installed package.txt",
+        "passed": 319,
+        "sha256": "a57ec372d6f0c2ce56175f89c022b8dcb9450a86464619b1e9b8b4a444a6faca",
+        "skipped": 12
+      }
+    }
+  ],
+  "limits": [
+    "Native Conda archive-relative metadata is exercised in both local actual-prefix checks and every job's parameterized fixtures; hosted provisioning uses micromamba.",
+    "General OS/public release acceptance remains in uibcdf/recorda#3 and #4.",
+    "Historical Lab #15 receipts and workflow default remain unchanged."
+  ],
+  "local_receipt_sha256": "0f3482c796b15048c3d32608023287eddfaa4c46e8e3bce118e39297ecdbe042",
+  "reader": {
+    "command": "gh-run-receptor inspect 37587276559 --repo uibcdf/recorda --receptor llm --profile ci --capture full",
+    "published_wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+    "report": "PASS conclusion=success | profile=ci | roles=test:6,other:5 | jobs=11/11 | artifacts=0 | uibcdf/recorda run=37587276559",
+    "version": "1.2.0"
+  },
+  "run": {
+    "conclusion": "success",
+    "event": "push",
+    "head_sha": "9228c84f78221442a4ceb0cfbc45887a919d8367",
+    "html_url": "https://github.com/uibcdf/recorda/actions/runs/37587276559",
+    "id": 37587276559,
+    "run_attempt": 1,
+    "status": "completed"
+  },
+  "scope": "Exact-source installed core matrix and provider verifier regression qualification; no Lab default promotion or new scientific experiment."
+}
