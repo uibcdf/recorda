@@ -34,8 +34,8 @@ consumer-question assessment and new local multi-step workflow qualification.
     receiving evaluation is tracked in Recorda Lab #13.
 
 13. [`DIAGNOSTIC_CORRELATION.md`](DIAGNOSTIC_CORRELATION.md) — completed producer
-    diagnostic association analysis; the application-owned comparison is queued
-    in `uibcdf/recorda-lab#14` before any reusable core live adapter.
+    diagnostic association analysis and completed application-owned comparison
+    in `uibcdf/recorda-lab#14`; a reusable core live adapter needs a new decision.
 
 ## MOLI integration contract
 

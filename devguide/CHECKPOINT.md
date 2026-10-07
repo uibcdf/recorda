@@ -1,14 +1,38 @@
-# Development checkpoint — 2026-10-06
+# Development checkpoint — 2026-10-07
 
 Start here when resuming, then read [NEXT_STEPS.md](NEXT_STEPS.md) and the
 maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed
 work and proposed next work; it does not authorize a new release or integration.
 
-## Current inspection-view receiving qualification
+## Controlled producer diagnostic comparison qualification
+
+Lab #14 qualifies both existing-reference alternatives at Lab implementation
+`214a68d93a878bfe2b0d70a3aa90f81e00620db1`, paired with existing Recorda
+`48a6c9a0630027f0f2c3d8d82215de8e27764913`. Native science, core runtime,
+dependencies and the workflow Recorda default remain unchanged. Local installed
+checks pass **364 tests/four explicit Sabueso skips** (305 core + 59 Lab), including
+**31 new cases**, seven notebooks/**55 cells**, and **14 kernel fault cells**.
+
+[Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37581680564)
+passes all nine jobs. Actual logs report 364 scientific/recovery passes/four skips,
+50 passes/13 optional skips per Python 3.11–3.14 kernel lane and six dummy passes
+per minor. Published pytest-receptor 1.1.0 and gh-run-receptor 1.2.0 were used.
+Lab's [maintained decision](https://github.com/uibcdf/recorda-lab/blob/main/devguide/DIAGNOSTIC_ASSOCIATION.md)
+and local/hosted receipts retain source/wheel/provider/capture hashes. Closing
+documentation preserves every qualified source byte.
+
+Selected associations answer the controlled attempt question with bounded codes,
+identities and explicit gaps; reviewed native bundles retain more diagnostic detail.
+The producer is a synthetic consumer, not native dummy/SciPy SMonitor emission.
+These results do not justify an automatic core bridge or complete capture. A real
+producer/user question and a separately owned public context/attachment decision
+are required for a further integration slice.
+
+## Previous inspection-view receiving qualification
 
 Lab #13 receives Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913` (core #21 plus supplied-check wording #22)
-at Lab implementation `b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion `181f706c09cef42ec104a8edc7b3c413601307d9`. Both
+at Lab implementation `b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion `181f706c09cef42ec104a8edc7b3c413641307d9`. Both
 [candidate](https://github.com/uibcdf/recorda-lab/actions/runs/37544421813) and
 [default](https://github.com/uibcdf/recorda-lab/actions/runs/37544670429) runs pass
 all nine jobs with published receptors; the default run has no Recorda SHA override.
@@ -21,10 +45,12 @@ verdicts and fixed user-question comparisons. Native dummy/scientific code and
 oracles remain independent. Saved reference messages identify the supplied check;
 they do not assert freshness. This is a controlled technical presentation trial,
 not a human usability study, new scientific scenario or release/replay certificate.
-Core #15 producer-operation correlation analysis is complete; its controlled Lab
-comparison is queued separately below.
+Core #15 producer-operation correlation analysis and the controlled Lab #14
+comparison are complete, as recorded below.
 
 ## Producer diagnostic association decision
+
+The original architectural decision below retains its own pre-Lab evidence scope.
 
 [DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md) completes the architectural
 analysis in `uibcdf/recorda#15`. Compare application-retained native bundles with
@@ -168,9 +194,10 @@ authenticated integrity, full dependency closure or replay is qualified here.
    [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md). Choose another experiment
    only for a concrete remaining scientific question and specify its oracle,
    omissions and interruption cases in a new Lab issue first.
-   The next selected comparison is `uibcdf/recorda-lab#14`, following the completed
-   core #15 analysis above. Qualify explicit diagnostic references/associations
-   before choosing a reusable automatic core adapter.
+   The selected diagnostic comparison in `uibcdf/recorda-lab#14` is now complete.
+   Use its explicit references until a real producer/user question justifies
+   another separately owned integration experiment. Core automatic attachment
+   remains a design gate, not queued implementation.
 2. **Reconcile the completed current-core ecosystem review** in
    [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
    [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for
@@ -375,4 +402,4 @@ comparisons and qualified default promotion as recorded above. Safe hints remain
 SMonitor #39 opportunity; nonbootstrapping ArgDigest registration is proposed in
 `uibcdf/argdigest#32` and coordinated with `uibcdf/moli#62`. Live producer-operation
 correlation was independently scoped in Recorda #15; its completed architectural
-decision and queued Lab #14 comparison are recorded above.
+decision and completed Lab #14 comparison are recorded above.

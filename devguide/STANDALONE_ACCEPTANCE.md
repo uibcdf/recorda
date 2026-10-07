@@ -12,6 +12,7 @@ This assessment retains the historical scientific workflow trial in
 | --- | --- |
 | Which declared scientific operations were attempted, and what happened? | Activation and interruption trials retain identities, implementation and outcomes; undeclared calls remain outside coverage. |
 | Which native results or exception traces belong to an operation? | Exact-type adapters preserve producer ownership and exception identity; unknown objects and adapter faults remain omissions. |
+| Which selected consumer diagnostics accompanied a declared attempt? | Lab #14 compares reviewed native bundle subsets with bounded selected associations using existing references; coverage is delivered observation, and the producer is synthetic. |
 | Can a session select less detail honestly? | Capture selection records policy omissions and excluded invocation limits; minimal capture loses scientific dependencies. |
 | Are the referenced files still available and unchanged? | Explicit local indices and bounded byte checks expose missing/altered files; receipts do not authenticate scientific identity or correctness. |
 | Which intermediate observations and fit actually fed evaluation? | The new multi-step trial links prepared arrays and the native fit by full references; its expansion rules are trial-specific. |
@@ -94,8 +95,14 @@ remain separate; this is controlled technical utility, not a human usability stu
 The producer-operation correlation analysis in `uibcdf/recorda#15` is now complete
 in [DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md). Twenty published-provider
 research cases and 15 unchanged core guards pass; no scientific diagnostic bridge
-is qualified. The native-bundle/selected-association comparison is queued in
-`uibcdf/recorda-lab#14`, with producer improvements routed to SMonitor #40–#42.
+is qualified by that analysis. The subsequent comparison in `uibcdf/recorda-lab#14`
+is now complete: 364 installed-pair passes/four Sabueso skips, 31 new receiving
+cases, seven notebooks/55 cells and all nine exact-pair hosted jobs. Existing
+explicit references answer this synthetic consumer question without a core bridge.
+Read [Lab's trial](https://github.com/uibcdf/recorda-lab/blob/main/devguide/DIAGNOSTIC_ASSOCIATION.md)
+for native-bundle review, ownership, gaps and separate scientific/diagnostic oracles.
+Real producer usefulness requires a new question/experiment; native SciPy SMonitor
+emission is not established. Provider improvements remain SMonitor #40–#42.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work

@@ -45,8 +45,11 @@ ArgDigest registration opportunity is `uibcdf/argdigest#32`, coordinated with
 `uibcdf/moli#62`; the initial view uses native fact guards and existing audience. Provider-operation
 correlation analysis (#15) is complete in
 [DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md): compare application-retained
-native bundles with a bounded consumer-owned association sidecar in
-`uibcdf/recorda-lab#14` before choosing any reusable core live adapter.
+native bundles with a bounded consumer-owned association sidecar. That comparison
+is now qualified in `uibcdf/recorda-lab#14`: 364 local installed-pair passes/four
+Sabueso skips, seven notebooks/55 cells and nine exact-pair hosted jobs. Existing
+explicit references suffice for the controlled question; a real producer/user
+question is required before choosing any reusable core live adapter.
 Published-provider probes expose independently owned SMonitor export/buffer/
 degradation opportunities in `uibcdf/smonitor#40`, `uibcdf/smonitor#41` and
 `uibcdf/smonitor#42`; a controlled application-owned trial needs no MOLI restructure.

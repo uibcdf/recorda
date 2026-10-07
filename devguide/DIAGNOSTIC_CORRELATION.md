@@ -41,10 +41,12 @@ human usability study is qualified here.
 | Explicit operation plus consumer-owned selected-diagnostic sidecar | Fixed codes and bounded association facts can answer the attempt question beside retained native references. Public handlers and scopes suffice under controlled application policy. | Sidecar coverage is delivered selected diagnostics, not all emitted warnings. Application owns selection, retention, lifetime and gaps. Compare this in Lab first. |
 | Reusable automatic Recorda live adapter | Could associate diagnostics at ordinary decorated semantic boundaries. | Current decorated calls expose no public active-operation subscription/context contract. Private Recorda context and private SMonitor observers are unsuitable dependencies. Defer core/provider API design until the comparison demonstrates added value. |
 
-The queued comparison is
+The completed controlled comparison is
 [uibcdf/recorda-lab#14](https://github.com/uibcdf/recorda-lab/issues/14).
-Keep the native dummy scientific library unchanged and independent. It needs a
-scientific oracle and a separate deterministic diagnostic-selection oracle.
+The native dummy scientific library remains unchanged and independent. Scientific
+and deterministic diagnostic-selection oracles are separately qualified. Read
+[Lab's maintained trial](https://github.com/uibcdf/recorda-lab/blob/main/devguide/DIAGNOSTIC_ASSOCIATION.md)
+for the result; the original analysis evidence below retains its own historical scope.
 Broader automatic attachment, notebook/default promotion and provider rollout
 require their own implementation and receiving evidence.
 
@@ -217,8 +219,15 @@ change requires its own MOLI proposal. ArgDigest, DepDigest and PyUnitWizard gai
 no new applicable runtime boundary from associating these dimensionless diagnostic
 identities; their current decisions remain in SUPPORT_LIBRARIES.md.
 
-The seven architectural criteria of core #15 are answered. Lab #14 must execute
-the alternatives, fault/concurrency/privacy cases and independent science/
-diagnostic oracles against an exact installed pair before choosing a reusable
-bridge or promoting consumer defaults. Broader standalone acceptance (#1),
+The seven architectural criteria of core #15 are answered. Lab #14 has qualified
+both existing-reference alternatives at Lab `214a68d93a878bfe2b0d70a3aa90f81e00620db1`
+with Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`: 364 local installed-pair
+passes/four Sabueso skips, 31 new cases, seven notebooks/55 cells and 14 real-kernel
+fault cells. [Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37581680564)
+passes nine jobs, inspected with published gh-run-receptor 1.2.0; published
+pytest-receptor 1.1.0 supplies actual verdicts. No workflow default/provider/core
+runtime changes or automatic bridge are made. Selected sidecars provide bounded
+facts/gaps; reviewed native bundle subsets retain more detail. This synthetic
+consumer evidence requires a real producer/user question before a reusable
+automatic integration decision. Broader standalone acceptance (#1),
 distribution (#3), OS (#4), coverage (#6) and replay remain separately open.
