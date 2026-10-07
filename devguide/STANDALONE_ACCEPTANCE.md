@@ -1,10 +1,54 @@
-# Standalone acceptance assessment — 2026-10-06
+# Standalone acceptance assessment — 2026-10-07
 
 Coordinated in `uibcdf/recorda#1` and `uibcdf/recorda-lab#1`. Start with
 [CHECKPOINT.md](CHECKPOINT.md) for the previously published qualified pair.
 This assessment retains the historical scientific workflow trial in
 `uibcdf/recorda-lab#10` and subsequent receiving evidence below. The immutable
 0.2.0 source tag is unchanged; current prototype code is identified by exact SHA.
+
+## Resolution of the original standalone slice
+
+The original acceptance criteria in `uibcdf/recorda#1` and
+`uibcdf/recorda-lab#1` are satisfied. Their coordination reports are resolved in
+[archive/standalone_lab.md](archive/standalone_lab.md) and
+[Lab's archive](https://github.com/uibcdf/recorda-lab/blob/main/devguide/archive/controlled_laboratory.md).
+The accepted scope is a minimal experimental standalone substrate and its
+independent controlled laboratory, with bounded real SciPy and native Sabueso
+follow-ons. API/schema remain provisional. Wider usability, publication and
+platform integration have separate acceptance gates.
+
+| Original acceptance criterion | Executed evidence |
+| --- | --- |
+| Persist operation starts before calling scientific code | Core recording tests check ordered/fsynced writes and refuse execution when the start cannot persist. |
+| Preserve original exceptions and expose incomplete work | Recording, activation, native exception-reference and recovery tests check exception identity, terminal storage faults, truncated tails and hard process exit. |
+| Support caller boundaries, opt-in decorators, inactive calls and nested correlation | The explicit and manual activation runners check native behavior, parent identities and context ownership. |
+| Retain native results through safe references | Dummy, SciPy fit and Sabueso Card/acquisition trials check native ownership and exact return/error objects. |
+| State declared coverage, omissions and safe handling | Core capture tests and Lab reports check secret/opaque omissions, unwrapped-call gaps and minimal-capture losses. |
+| Preserve fresh fixtures, native files, journals and checked reports | Both original runners write new destinations, verify native results and reject destination reuse. |
+| Inspect without the scientific producer | Fresh isolated `-I -S` children read ten journals with only Recorda supplied; scientific packages and all support providers are unavailable. Semantic reference readers separately receive the required support closure. |
+| Qualify installed artifacts and applicable checks | Installed core and scientific-pair receipts retain wheel/source/provider hashes, actual pytest verdicts, governance, Ruff and executed hosted gates. |
+| Exercise a real external library and Sabueso follow-ons | SciPy fitting/multi-step OLS and native Sabueso source/diagnostic trials check independent scientific/source facts, failed attempts, retry, interruption and artifact loss. |
+
+The final [consolidation receipt](evidence/standalone_acceptance_consolidation.json)
+records **101 fresh targeted passes**: 75 installed core guards and 26 installed
+Lab cases. Two original runners independently reproduce all five scenario outcomes
+and their ten journals are inspected in a producer-free process. It verifies all
+15 current core runtime files and 67 Lab source files against the native trial's
+manifest, plus 394 installed Sabueso wheel members. These focused checks are
+separate from the earlier complete qualifications; their totals are not merged.
+
+The existing scientific pair is Recorda
+`48a6c9a0630027f0f2c3d8d82215de8e27764913` / Lab
+`a0376799c25c6b650ffa79aa6e4012601892d24c`, with clean source-built Sabueso
+`68dac8f8bfc35944f5b6dd59aca8cb2a2819388d`: 380 local passes/four historical
+Sabueso skips and [13 successful hosted jobs](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143).
+The native cases run separately on Python 3.11–3.14; this does not requalify the
+older Sabueso #5/#6 stack. The latest development verifier correction is Recorda
+`9228c84f78221442a4ceb0cfbc45887a919d8367`: 331 source and 331 installed passes,
+and [11 successful hosted jobs](https://github.com/uibcdf/recorda/actions/runs/37587276559).
+Its runtime bytes match that scientific pair. The Lab workflow default stays at
+its previously qualified Recorda SHA. Published pytest-receptor 1.1.0 and
+gh-run-receptor 1.2.0 were used; both existing runs were reinspected successfully.
 
 ## What the completed mechanisms let a consumer answer
 
@@ -13,6 +57,7 @@ This assessment retains the historical scientific workflow trial in
 | Which declared scientific operations were attempted, and what happened? | Activation and interruption trials retain identities, implementation and outcomes; undeclared calls remain outside coverage. |
 | Which native results or exception traces belong to an operation? | Exact-type adapters preserve producer ownership and exception identity; unknown objects and adapter faults remain omissions. |
 | Which selected consumer diagnostics accompanied a declared attempt? | Lab #14 compares reviewed native bundle subsets with bounded selected associations using existing references; coverage is delivered observation, and the producer is synthetic. |
+| Which requested Sabueso source was partial or failed despite a returned Card? | Lab #15 retains native Card/source/acquisition facts beside delivered native warning codes per attempt; filtering and absent artifacts remain explicit. Inputs are controlled offline fixtures. |
 | Can a session select less detail honestly? | Capture selection records policy omissions and excluded invocation limits; minimal capture loses scientific dependencies. |
 | Are the referenced files still available and unchanged? | Explicit local indices and bounded byte checks expose missing/altered files; receipts do not authenticate scientific identity or correctness. |
 | Which intermediate observations and fit actually fed evaluation? | The new multi-step trial links prepared arrays and the native fit by full references; its expansion rules are trial-specific. |
@@ -71,9 +116,9 @@ contract, consumer adapters, limited native reader and scenario coverage.
 ## Remaining decisions
 
 The core API is sufficient for this controlled workflow; no new core limitation
-was required to implement it. Broader standalone usefulness remains open: choose
-the next consumer question from a concrete scientific need, rather than adding
-all capabilities from DESIGN.md. Physical quantities require a concrete scenario
+was required to implement it. The original standalone acceptance is complete.
+Further consumer questions need a concrete scientific use case and a separately
+scoped issue with an independent oracle. Physical quantities require a concrete scenario
 and the PyUnitWizard codec; they are not introduced by dimensionless fixtures.
 
 The current support-library applicability decisions are in
@@ -120,4 +165,5 @@ references suffice; no automatic core context/attachment contract is selected.
 Packaging/distribution, installed-candidate OS qualification and coverage remain
 `uibcdf/recorda#3`, `uibcdf/recorda#4` and `uibcdf/recorda#6`. Shared context/routing,
 reliability policy, distributed propagation and replay stay separate future work
-under the relevant MOLI contracts. Broader coordination issues remain open.
+under the relevant MOLI contracts. The original standalone coordination issues
+are resolved; this conclusion does not close those independent gates.

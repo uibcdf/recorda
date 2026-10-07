@@ -3,6 +3,8 @@
 Preserve closed reports here with their issue identity, dated outcome and verification.
 Resolved implementation slices retain their owning issues and historical evidence.
 
+- [Original standalone laboratory slice](standalone_lab.md) — `uibcdf/recorda#1`,
+  resolved against its original criteria, with bounded SciPy/native Sabueso follow-ons.
 - [Explicit recovery diagnostic experiment](recovery_diagnostics_source.md) —
   `uibcdf/recorda#16`, resolved with installed-Recorda/source-provider evidence.
 - [ArgDigest configuration experiment](argument_configuration_source.md) —
@@ -20,4 +22,4 @@ Resolved implementation slices retain their owning issues and historical evidenc
   receiving are complete.
 - [Producer diagnostic correlation evaluation](diagnostic_correlation.md) —
   `uibcdf/recorda#15`, architectural analysis resolved; controlled comparison
-  queued in `uibcdf/recorda-lab#14`.
+  and native follow-on completed in `uibcdf/recorda-lab#14` / #15.

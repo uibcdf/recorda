@@ -9,7 +9,8 @@ This directory is the entry point for developers and agents working on Recorda. 
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
 Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
-consumer-question assessment and new local multi-step workflow qualification.
+completed original standalone acceptance matrix, consumer questions and separately
+scoped scientific qualification.
 
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.

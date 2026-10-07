@@ -6,16 +6,19 @@ Recorda has an **EXPERIMENTAL STANDALONE PROTOTYPE**. The first implementation e
 
 The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the smallest correct standalone recording substrate, learn from a library outside MOLI, and only then add platform integration.
 
-## Current resumption order — 2026-10-06
+## Current resumption order — 2026-10-07
 
-The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): consolidate
-standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`), then complete
-release reviews (`uibcdf/recorda#3`,
-`uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
+The original standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`)
+is resolved with a criterion/evidence matrix and archived coordination reports.
+The current resumption order is in [CHECKPOINT.md](CHECKPOINT.md): qualify
+packaging/distribution (`uibcdf/recorda#3`), then complete the related release reviews
+(`uibcdf/recorda#4`, `uibcdf/recorda#6`) before any distributable release. Choose the
 next scoped experiment before implementation. The small workflow linking native
 references across steps is implemented and qualified in `uibcdf/recorda-lab#10`;
 read [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for evidence and remaining
-scope. It uses the current core API and does not complete broader acceptance.
+scope. It uses the current core API; the bounded native Sabueso follow-on also
+contributes to the completed original acceptance. Wider usability and shared
+integration require their own scientific questions and contracts.
 
 The current support-library audit is in
 [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md), owned by `uibcdf/recorda#2`.

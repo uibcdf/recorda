@@ -5,6 +5,23 @@ maintained guide for the behavior being changed. Recorda remains an experimental
 standalone component governed directly by MOLI. This checkpoint records completed
 work and proposed next work; it does not authorize a new release or integration.
 
+## Original standalone acceptance completed
+
+`uibcdf/recorda#1` and `uibcdf/recorda-lab#1` are resolved against their original
+criteria. [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) maps each criterion
+to installed/fault/producer-free checks and the bounded real SciPy/Sabueso trials.
+The [consolidation receipt](evidence/standalone_acceptance_consolidation.json)
+retains **101 fresh targeted passes**, two fresh five-scenario artifact sets and
+ten journals read with Recorda/stdlib alone. All 15 runtime and 67 Lab source
+files match the previously qualified native scientific manifest. Existing
+scientific and current-core hosted runs were reinspected with published
+gh-run-receptor 1.2.0; their separate source scopes and counts remain unchanged.
+
+This completes the minimal experimental substrate/laboratory, with provisional
+API/schema. Packaging, installed-candidate OS evidence, coverage, new scientific
+questions and shared integration retain their separate gates. The original
+coordination analyses are archived; the next engineering work is `uibcdf/recorda#3`.
+
 ## Native Conda provider preflight correction
 
 `uibcdf/recorda#23` is resolved by the development checker correction at Recorda
@@ -241,46 +258,28 @@ authenticated integrity, full dependency closure or replay is qualified here.
 
 ## Next work, in order
 
-1. **Consolidate standalone acceptance** in
-   [uibcdf/recorda#1](https://github.com/uibcdf/recorda/issues/1) and
-   [uibcdf/recorda-lab#1](https://github.com/uibcdf/recorda-lab/issues/1).
-   The individual trials above and the multi-step native-reference workflow in
-   `uibcdf/recorda-lab#10` are complete. The consumer-question assessment is in
-   [STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md). Choose another experiment
-   only for a concrete remaining scientific question and specify its oracle,
-   omissions and interruption cases in a new Lab issue first.
-   The controlled comparison in `uibcdf/recorda-lab#14` and native Sabueso
-   follow-up in `uibcdf/recorda-lab#15` are complete. Existing explicit references
-   answer the bounded source/attempt question. Development preflight
-   `uibcdf/recorda#23` is resolved with local and exact-source CI qualification;
-   core automatic attachment remains a separately scoped design gate, not queued
-   implementation.
-2. **Reconcile the completed current-core ecosystem review** in
-   [uibcdf/recorda#2](https://github.com/uibcdf/recorda/issues/2).
-   [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) classifies all four providers for
-   the current runtime. SMonitor applies to existing persistence-recovery advice;
-   ArgDigest applies to Recorda-owned argument contracts. Explicit source-provider
-   experiments now cover recovery (`uibcdf/recorda#16`) and capture configuration
-   (`uibcdf/recorda#17`); read [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
-   and [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md) for their separate
-   evidence. Published-provider qualification is complete for SMonitor 0.19.0 /
-   ArgDigest 0.15.0 in `uibcdf/recorda#18`. Default configuration adoption is
-   complete in `uibcdf/recorda#19`; reference-check contracts are qualified in #20.
-   DepDigest and PyUnitWizard
-   have no current core boundary, with explicit reassessment triggers.
-   The local review is resolved; the concrete ecosystem-state change is proposed
-   to MOLI in `uibcdf/moli#62`, with its observed registry still `partial`.
-   Before advancing Lab's candidate, qualify the required provider environments
-   and exact Recorda/Lab pair under `uibcdf/recorda-lab#12`.
-3. **Before a distributable release**, complete packaging/distribution
-   [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3), installed-candidate
-   OS evidence [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4), and
-   coverage/badge review [uibcdf/recorda#6](https://github.com/uibcdf/recorda/issues/6).
+1. **Qualify packaging/distribution** in
+   [uibcdf/recorda#3](https://github.com/uibcdf/recorda/issues/3). Select an exact
+   source/artifact candidate and qualify the built Conda artifact with its required
+   closure. Source wheels and a local recipe do not establish public distribution.
+2. **Complete release evidence** in installed-candidate OS review
+   [uibcdf/recorda#4](https://github.com/uibcdf/recorda/issues/4) and coverage/badge
+   review [uibcdf/recorda#6](https://github.com/uibcdf/recorda/issues/6).
    A new tag needs its own exact candidate qualification; keep 0.2.0 immutable.
-4. **After a concrete integration need**, read MOLI's `devguide/RECORDA.md` and
+3. **Track shared ecosystem reconciliation** in
+   [uibcdf/moli#62](https://github.com/uibcdf/moli/issues/62). The local review
+   `uibcdf/recorda#2`, published-provider adoption and receiving trials are complete;
+   the central registry decision is separately owned. [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md)
+   preserves all four applicability decisions and reassessment triggers.
+4. **Choose a new scientific scenario only for a concrete question**, with an
+   independent oracle, omissions and interruption cases in its own Lab issue.
+   Existing references answer the qualified source/attempt question. Core automatic
+   attachment requires a separately scoped public contract decision.
+5. **After a concrete integration need**, read MOLI's `devguide/RECORDA.md` and
    open shared-contract work there. ProjectContext/EventLedger/ProjectRecord,
    cross-process routing and replay remain future work. Standalone Recorda
-   retains no MOLI runtime dependency.
+   retains no MOLI runtime dependency. Original standalone acceptance #1 in both
+   repositories is complete; these gates do not reopen that experimental slice.
 
 ## Subsequent local acceptance assessment
 
@@ -291,7 +290,7 @@ local receipt and separate hosted Jupyter/SciPy qualification. Core runtime and
 the previously published source pair above are unchanged; the new Lab evidence
 does not replace their historical hosted results.
 
-## Subsequent ecosystem boundary audit
+## Historical ecosystem boundary audit
 
 [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md) and
 `evidence/ecosystem_boundaries_local.json` record the current-runtime audit in
@@ -301,8 +300,9 @@ is superseded by explicit ArgDigest/SMonitor applicability. Adoption remains
 partial; no runtime dependency, accepted exception or registry promotion follows
 from the classification alone.
 
-The broad acceptance and engineering issues remain open. A completed local
-scenario or configured CI lane does not close their wider obligations.
+At that audit, standalone acceptance and engineering reviews remained open.
+Original acceptance is now resolved by the separate consolidation above;
+distribution, OS and coverage retain their independently owned obligations.
 
 ## Subsequent recovery-diagnostic source integration
 

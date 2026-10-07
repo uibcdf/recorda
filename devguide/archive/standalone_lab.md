@@ -1,10 +1,10 @@
 ---
 summary: Prove a minimal standalone recording substrate with a controlled dummy library.
 issue: uibcdf/recorda#1
-status: partial
+status: resolved
 opened: 2026-10-05
-closed:
-verification: reproduced
+closed: 2026-10-07
+verification: measured
 area: [recording, persistence, laboratory]
 blocked_by: []
 supersedes: []
@@ -50,7 +50,7 @@ PyUnitWizard was considered and set aside as a laboratory host. Controlled SciPy
 and offline Sabueso trials have since completed. Building all MOLI infrastructure
 first remains deferred.
 
-## Current progress — 2026-10-06
+## Historical progress — 2026-10-06
 
 The controlled slices are published: manual activation, notebooks/cost trials,
 SciPy, offline Sabueso, native exception references, persistence recovery,
@@ -82,7 +82,16 @@ standalone acceptance and engineering reviews remain open.
 
 ## Resolution
 
-Partial. Completed trials and hosted checks qualify their recorded scenarios;
-consolidation of broader standalone usefulness remains in uibcdf/recorda#1.
-Distribution and engineering reviews have separate owning issues. No public
-release, MOLI routing implementation or full replay guarantee is established.
+Resolved on 2026-10-07 against the original minimum substrate acceptance criteria,
+including the bounded real SciPy and native Sabueso follow-ons. The criterion matrix
+is in [../STANDALONE_ACCEPTANCE.md](../STANDALONE_ACCEPTANCE.md); the paired
+consolidation receipt is `../evidence/standalone_acceptance_consolidation.json`.
+It preserves 101 fresh targeted passes, two fresh five-scenario artifact sets,
+ten Recorda-only/stdlib journal reads and qualified source/wheel continuity.
+Existing current-core CI passes 11 jobs and native scientific-pair CI passes 13,
+at their separate recorded sources. Earlier progress above remains historical.
+
+The API/schema remain provisional. Distribution/OS/coverage are Recorda #3/#4/#6;
+shared registry/contracts belong to MOLI. Future scientific questions need their
+own scoped experiments. No public release, general usability, automatic capture,
+MOLI routing implementation or replay guarantee follows from this closure.
