@@ -17,6 +17,10 @@ and exact-file publication route. Its [release receipt](evidence/release_0_3_0.j
 records executed gates and independently observed publication. Consumer-owned
 MOLI/MolSysMT adoption is the next step.
 
+For future public GitHub Releases, check that the visible title is exactly
+the `X.Y.Z` version, matching the tag and package version; descriptions
+belong in the release notes.
+
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
 3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.

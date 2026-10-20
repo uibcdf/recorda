@@ -1,5 +1,12 @@
 # Stabilization release qualification
 
+For any future public GitHub Release, verify before creating or editing it
+that the visible title (`name`) is exactly the canonical `X.Y.Z` version,
+equal to the tag and package version. Use `gh release create X.Y.Z --title X.Y.Z`
+or set the API `name` and `tag_name` identically. Put descriptive text in
+the release notes and verify the resulting metadata. This instruction does
+not retroactively change the 0.3.0 release receipt below.
+
 The maintainer has authorized a stabilization tag and official package, followed
 by a pause for consumer adoption. The selected public version is **0.3.0**.
 This remains a pre-1.0 experimental API and journal schema. Consumer adoption

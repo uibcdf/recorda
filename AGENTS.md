@@ -30,5 +30,10 @@ Run `python devtools/validate_governance.py`, `ruff check .`,
 may additionally verify the canonical guide. Declared CI is not executed evidence.
 Do not claim platform support, public packages, DOI verification or replay without evidence.
 
+Before creating or editing a public GitHub Release, check that its visible
+title is exactly the canonical `X.Y.Z` version and matches its tag and
+package version. Put descriptions in the release notes. Follow
+`MOLI_GUIDE.md#moli-engineering-baseline` and `devguide/RELEASING.md`.
+
 Read MOLI's `devguide/RECORDA.md` before changing shared context, routing, reliability
 or project integration. Keep standalone code free of a MOLI runtime dependency.
