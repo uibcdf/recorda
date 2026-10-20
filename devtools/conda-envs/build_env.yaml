@@ -4,9 +4,9 @@ channels:
   - conda-forge
 dependencies:
   - python=3.14
-  - argdigest=0.15.0=py_0
-  - smonitor=0.19.0=py_1
-  - depdigest=0.13.0=py_0
+  - argdigest=0.16.0=py_0
+  - smonitor=0.21.0=py_2
+  - depdigest=0.15.1=py_0
   - pip
   - setuptools>=77
   - wheel
