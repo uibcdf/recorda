@@ -30,6 +30,12 @@ Run `python devtools/validate_governance.py`, `ruff check .`,
 may additionally verify the canonical guide. Declared CI is not executed evidence.
 Do not claim platform support, public packages, DOI verification or replay without evidence.
 
+At task or release closeout, review temporary resources created by the work.
+Remove only owned disposable paths after their last needed use; retain useful
+evidence with an owner and review trigger. Protect active sessions, worktrees
+and caller outputs, and report cleanup failures. Follow
+`MOLI_GUIDE.md#temporary-development-resources`.
+
 Before creating or editing a public GitHub Release, check that its visible
 title is exactly the canonical `X.Y.Z` version and matches its tag and
 package version. Put descriptions in the release notes. Follow

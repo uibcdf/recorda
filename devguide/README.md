@@ -21,6 +21,13 @@ For future public GitHub Releases, check that the visible title is exactly
 the `X.Y.Z` version, matching the tag and package version; descriptions
 belong in the release notes.
 
+At task and release closeout, review temporary qualification environments,
+test output, build trees and downloaded copies. Remove owned disposable
+resources after their last needed use; retain exact candidate artifacts and
+useful evidence with an owner and review trigger. Follow
+`../MOLI_GUIDE.md#temporary-development-resources` and the local environment
+and release routes.
+
 1. [`DESIGN.md`](DESIGN.md) — current general/standalone architecture and design seed for Recorda.
 2. [`FIRST_SLICE.md`](FIRST_SLICE.md) — the first standalone implementation experiment.
 3. [`NEXT_STEPS.md`](NEXT_STEPS.md) — the sequence of experiments and implementation work.
