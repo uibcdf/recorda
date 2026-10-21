@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: uibcdf/moli
-          ref: bc75c4a4f4a9b1ae1d1bf30a8cb379a0bd0ba9d7
+          ref: 1131e16c42b339b28ef8feb987bca40b9f71e681
           path: .moli-governance
       - name: Check shared MOLI governance core
         run: >-
