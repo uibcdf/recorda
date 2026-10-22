@@ -71,15 +71,18 @@ validation does not turn scientific calls into automatic diagnostic boundaries.
 
 ## Dependency and qualification route
 
-Required metadata now declares ArgDigest `>=0.15.0,<0.16` and SMonitor
-`>=0.19.0,<0.20`. The stricter SMonitor floor is needed for restrictive capture
+Required metadata declares ArgDigest `>=0.15.0,<0.17` and SMonitor
+`>=0.19.0,<0.22`, as qualified in [latest-provider receiving](LATEST_SUPPORT_RECEIVING.md).
+The SMonitor floor is needed for restrictive capture
 even though ArgDigest's general provider floor remains older. ArgDigest owns its
 DepDigest dependency use; no Recorda-owned optional/backend loader is introduced.
 Basic configuration requires no NumPy, Pint or PyUnitWizard.
 
-All development/test Conda routes provide published ArgDigest 0.15.0 build 0,
-SMonitor 0.19.0 build 1 and DepDigest 0.13.0 build 0 from `uibcdf` with
-`conda-forge`. Install this unpublished checkout with
+Current development/test routes provision ArgDigest 0.16.0 build 0,
+SMonitor 0.21.0 build 2 and DepDigest 0.15.1 build 0 from `uibcdf` with
+`conda-forge`. [The setup decision](DIAGNOSTIC_SETUP.md) retains the explicit
+safe baseline and separately rechecks the original supported provider cohort.
+Install this checkout for development with
 `python -m pip install --no-deps --editable .` after provisioning the environment.
 The local noarch recipe expresses the required closure but is not a qualified
 public release candidate. The route inventory and read-only preflight detect
@@ -95,9 +98,9 @@ python -m pytest -p pytest_receptor.plugin --receptor=llm
 ```
 
 Default ArgDigest regressions run in every installed-package CI lane on Linux
-Python 3.11–3.14 and the existing macOS 3.13/3.14 lanes. The recovery matrix also
+and macOS arm64 Python 3.11–3.14. The recovery matrix also
 enables `RECORDA_TEST_SMONITOR=1`. No provider source substitution is used.
-Current evidence is [evidence/default_arguments_local.json](evidence/default_arguments_local.json).
+Original adoption evidence is [evidence/default_arguments_local.json](evidence/default_arguments_local.json).
 Source and installed-wheel suites pass 171 tests on Python 3.14.7 with recovery
 enabled, or 159 with 12 recovery skips in the default lane.
 [CI 37532171347](https://github.com/uibcdf/recorda/actions/runs/37532171347)

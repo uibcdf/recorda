@@ -5,8 +5,10 @@ This is the current-runtime assessment, replacing the initial blanket descriptio
 of basic guards and future diagnostics in [ENGINEERING_REVIEW.md](ENGINEERING_REVIEW.md).
 Classification and adoption are complete for the current standalone core.
 The resolved review is [archive/ecosystem_boundaries.md](archive/ecosystem_boundaries.md).
-MOLI's observed registry remains `partial`; the concrete `adopted` state proposal
-belongs to `uibcdf/moli#62`. No exception or registry promotion is claimed here.
+MolI accepted the current-core registry state as `adopted` in
+[`4b086ef`](https://github.com/uibcdf/moli/commit/4b086ef4c7bbbaa2539bc9e4c768340feb118841),
+under `uibcdf/moli#62`. Later optional receiving remains owner-local;
+[Recorda #29's setup decision](DIAGNOSTIC_SETUP.md) retains the qualified baseline.
 
 The normative rule is MOLI's
 [Python support libraries policy](https://github.com/uibcdf/moli/blob/d94ba1cc63ba4e90775c6364629af889fe9533b0/devguide/policies/python_support_libraries_policy.md).

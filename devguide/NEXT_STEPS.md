@@ -24,8 +24,8 @@ integration require their own scientific questions and contracts.
 
 The current support-library audit is in
 [SUPPORT_LIBRARIES.md](SUPPORT_LIBRARIES.md), owned by `uibcdf/recorda#2`.
-Classification and adoption are complete for today's core; MOLI registry
-reconciliation is proposed in `uibcdf/moli#62`. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
+Classification and adoption are complete for today's core; MolI accepted the
+`adopted` registry state under `uibcdf/moli#62`. The explicit recovery adapter in [RECOVERY_DIAGNOSTICS.md](RECOVERY_DIAGNOSTICS.md)
 was first qualified with provider sources in `uibcdf/recorda#16`, followed by
 explicit configuration in [ARGUMENT_CONFIGURATION.md](ARGUMENT_CONFIGURATION.md)
 under `uibcdf/recorda#17`. The new published SMonitor 0.19.0 / ArgDigest 0.15.0
@@ -45,9 +45,11 @@ and nonemitting message resolution; read
 receiving/user-view evaluation and default promotion are complete in
 `uibcdf/recorda-lab#13`, with 333 local installed-pair passes/four Sabueso skips,
 six notebooks/49 cells and two passing nine-job hosted runs. Safe audience-hint improvement
-is proposed in `uibcdf/smonitor#39` and is not a blocker. The nonbootstrapping
-ArgDigest registration opportunity is `uibcdf/argdigest#32`, coordinated with
-`uibcdf/moli#62`; the initial view uses native fact guards and existing audience. Provider-operation
+is public in SMonitor 0.21 and is not selected for this slice. ArgDigest #32's
+registration-only route is also public. [Recorda #29](DIAGNOSTIC_SETUP.md),
+coordinated with `uibcdf/moli#62`, retains the safe first-use baseline and
+defers a new registration-only path until a concrete host needs it; the
+inspection view keeps native fact guards and the existing audience. Provider-operation
 correlation analysis (#15) is complete in
 [DIAGNOSTIC_CORRELATION.md](DIAGNOSTIC_CORRELATION.md): compare application-retained
 native bundles with a bounded consumer-owned association sidecar. That comparison

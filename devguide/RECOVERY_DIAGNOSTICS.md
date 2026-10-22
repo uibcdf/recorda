@@ -16,14 +16,20 @@ propagate in that last case.
 ## Explicit activation
 
 SMonitor 0.19.0 provides the scoped capture and provider registration APIs.
-Required metadata declares `smonitor>=0.19.0,<0.20` for default configuration
+Required metadata declares `smonitor>=0.19.0,<0.22` for default configuration
 and reference-option digestion; the recovery sink remains explicitly selected. Provision the published
 Conda package from `uibcdf` with `conda-forge` using
 [`recovery_test_env.yaml`](../devtools/conda-envs/recovery_test_env.yaml), then
 install this unpublished Recorda checkout with
-`python -m pip install --no-deps --editable .`. Qualification uses the exact
+`python -m pip install --no-deps --editable .`. Original qualification uses the exact
 `smonitor-0.19.0-py_1.tar.bz2` artifact in `uibcdf/recorda#18`.
 Earlier 0.18.0 cannot provide this adapter's required API.
+
+[Latest-provider receiving](LATEST_SUPPORT_RECEIVING.md) records the current
+public cohort. [The setup decision](DIAGNOSTIC_SETUP.md) retains compatibility
+emission: catalog registration alone does not bootstrap, but actual emission
+can add a console when handlers are empty, even after explicit application
+configuration. Pure registration-only execution remains a separate deferred choice.
 
 ```python
 import recorda
@@ -74,8 +80,8 @@ Callers remain responsible for arbitrary actions performed by their own sink.
 ## Qualification and remaining work
 
 Ordinary CI tests the installed core without activating this adapter. The separate
-Linux Python 3.11–3.14 lane now tests installed Recorda with published SMonitor
-0.19.0 and published pytest-receptor 1.1.0. No sibling checkout or provider
+Linux Python 3.11–3.14 lane tests installed Recorda with the pinned current public
+SMonitor cohort and published pytest-receptor 1.1.0. No sibling checkout or provider
 `PYTHONPATH` is used. Locally, use a Python 3.14 environment containing these
 published packages:
 

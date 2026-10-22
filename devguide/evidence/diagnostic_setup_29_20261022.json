@@ -1,0 +1,275 @@
+{
+  "schema": "recorda.diagnostic_setup_receiving/1",
+  "date_utc": "2026-10-22",
+  "owner_issue": "https://github.com/uibcdf/recorda/issues/29",
+  "coordination_issue": "https://github.com/uibcdf/moli/issues/62",
+  "base_source": "b455ff5ec6fee206f8c077cbac45712f0b6c704b",
+  "runtime_implementation": "Unchanged; decision, documentation corrections and fresh-process receiving tests only",
+  "runtime_sha256": {
+    "recorda/__init__.py": "b90075f7bc0246fc6b41f7f24ae9c14bfe70bc3928e1d4fce5ee8b3596d59994",
+    "recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+    "recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+    "recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+    "recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+    "recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+    "recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+    "recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+    "recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+  },
+  "files_sha256": {
+    "tests/test_diagnostic_setup.py": "d8e0e6f00e6a71874bc158125b71c1a0fd14653c2c037f919023b77a0df9a4b7",
+    "devguide/DIAGNOSTIC_SETUP.md": "911f12507dfebfcc249dbd372980980fbda8cf9cfab1c20cb5118c1fad74ed92",
+    "pyproject.toml": "7007a8976156ca548af18297615fa5b5d53eb119bd6850cc13736ed06eec98b3",
+    "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "src/recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a"
+  },
+  "wheel": {
+    "filename": "recorda-0.3.0-py3-none-any.whl",
+    "sha256": "0d0eff397ac711893b4de1126b858f8a4420e66dc94026a7ff1777a025ca9755",
+    "purpose": "Local installed receiving, not a release candidate/publication claim"
+  },
+  "cohorts": {
+    "legacy": {
+      "python": "3.14.9",
+      "system": "Linux",
+      "machine": "x86_64",
+      "providers": [
+        {
+          "name": "smonitor",
+          "version": "0.19.0",
+          "build": "py_1",
+          "fn": "smonitor-0.19.0-py_1.tar.bz2",
+          "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+          "verified_python_files": 40,
+          "origin": "lib/python3.14/site-packages/smonitor/__init__.py"
+        },
+        {
+          "name": "argdigest",
+          "version": "0.15.0",
+          "build": "py_0",
+          "fn": "argdigest-0.15.0-py_0.tar.bz2",
+          "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.15.0-py_0.tar.bz2",
+          "verified_python_files": 38,
+          "origin": "lib/python3.14/site-packages/argdigest/__init__.py"
+        },
+        {
+          "name": "depdigest",
+          "version": "0.13.0",
+          "build": "py_0",
+          "fn": "depdigest-0.13.0-py_0.tar.bz2",
+          "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+          "verified_python_files": 16,
+          "origin": "lib/python3.14/site-packages/depdigest/__init__.py"
+        }
+      ],
+      "recorda_origin": "lib/python3.14/site-packages/recorda/__init__.py",
+      "pytest": {
+        "passed": 357,
+        "skipped": 0,
+        "failed": 0,
+        "diagnostic_setup_cases": 12,
+        "explicit_smonitor_recovery": true,
+        "receptor_complete": true,
+        "receptor_integrity_valid": true,
+        "final": {
+          "artifact_policy": {
+            "dropped_records": 0,
+            "max_bytes": 52428800,
+            "truncated": false
+          },
+          "complete": true,
+          "counts": {
+            "collected": 357,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 357,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 357,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          },
+          "duration": 6.9611912979744375,
+          "exitstatus": 0,
+          "extensions": {
+            "dropped": 0,
+            "incomplete": false,
+            "recorded": 0
+          },
+          "integrity": {
+            "algorithm": "sha256",
+            "digest": "23ac2ae883e538e10a12bdc8eab7f6d9476fae6900cc6d71e423914813a71186",
+            "records": 1072
+          },
+          "invalid_selections": [],
+          "note": "",
+          "outcome": "PASS",
+          "root_causes": 0,
+          "run_id": "f45d20c5ead9433299856a1e9e5e94c0",
+          "schema": "pytest-receptor.events@1",
+          "stop_reason": "",
+          "type": "session_finish"
+        }
+      },
+      "pip_check": "No broken requirements found.",
+      "evidence_sha256": {
+        "legacy-tests.jsonl": "ac3676966fc399e7d48319fccd1e40f15d694ff16e154ca2cb41bbb0b1dd3df8",
+        "legacy-tests.xml": "dae0e720b4cda7403ade3706f16f7d202284a82c83cdc5671ea5e1532bc6755e"
+      },
+      "installed_runtime_files_verified": 15
+    },
+    "latest": {
+      "python": "3.14.9",
+      "system": "Linux",
+      "machine": "x86_64",
+      "providers": [
+        {
+          "name": "smonitor",
+          "version": "0.21.0",
+          "build": "py_2",
+          "fn": "smonitor-0.21.0-py_2.tar.bz2",
+          "sha256": "62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.21.0-py_2.tar.bz2",
+          "verified_python_files": 40,
+          "origin": "lib/python3.14/site-packages/smonitor/__init__.py"
+        },
+        {
+          "name": "argdigest",
+          "version": "0.16.0",
+          "build": "py_0",
+          "fn": "argdigest-0.16.0-py_0.tar.bz2",
+          "sha256": "e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.16.0-py_0.tar.bz2",
+          "verified_python_files": 39,
+          "origin": "lib/python3.14/site-packages/argdigest/__init__.py"
+        },
+        {
+          "name": "depdigest",
+          "version": "0.15.1",
+          "build": "py_0",
+          "fn": "depdigest-0.15.1-py_0.tar.bz2",
+          "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+          "verified_python_files": 17,
+          "origin": "lib/python3.14/site-packages/depdigest/__init__.py"
+        }
+      ],
+      "recorda_origin": "lib/python3.14/site-packages/recorda/__init__.py",
+      "pytest": {
+        "passed": 357,
+        "skipped": 0,
+        "failed": 0,
+        "diagnostic_setup_cases": 12,
+        "explicit_smonitor_recovery": true,
+        "receptor_complete": true,
+        "receptor_integrity_valid": true,
+        "final": {
+          "artifact_policy": {
+            "dropped_records": 0,
+            "max_bytes": 52428800,
+            "truncated": false
+          },
+          "complete": true,
+          "counts": {
+            "collected": 357,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 357,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 357,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          },
+          "duration": 6.813051619014004,
+          "exitstatus": 0,
+          "extensions": {
+            "dropped": 0,
+            "incomplete": false,
+            "recorded": 0
+          },
+          "integrity": {
+            "algorithm": "sha256",
+            "digest": "2921544ad14bac62a722e88c582fca0b65038f94de1b9635d5b78513c223fa06",
+            "records": 1072
+          },
+          "invalid_selections": [],
+          "note": "",
+          "outcome": "PASS",
+          "root_causes": 0,
+          "run_id": "53976b9292a342319e475a673c989c75",
+          "schema": "pytest-receptor.events@1",
+          "stop_reason": "",
+          "type": "session_finish"
+        }
+      },
+      "pip_check": "No broken requirements found.",
+      "evidence_sha256": {
+        "latest-tests.jsonl": "6b5254fcdd1c702c4e1caa26b52c7a8e22507291f55b30135be595600b51d20f",
+        "latest-tests.xml": "fed9fcbe94e92eedce11f22c6dce4ba279bc54616c7a01eb2b1e3b9262eacca6"
+      },
+      "installed_runtime_files_verified": 15
+    }
+  },
+  "conda_closures": {
+    "file": "diagnostic_setup_29_20261022_conda.json.gz",
+    "sha256": "3ec44ed8b9cec02ffa0eb5566e04a51a7fe089b0296ac569ca41a3a593fee311",
+    "records": {
+      "legacy": 40,
+      "latest": 40
+    }
+  },
+  "developer_tools": {
+    "pytest_receptor": {
+      "version": "1.2.1",
+      "filename": "pytest_receptor-1.2.1-py3-none-any.whl",
+      "sha256": "683200648785f3894357891b238cdc0780c1e874dcf067882dbba2aaa2c527c3",
+      "source": "https://pypi.org/pypi/pytest-receptor/1.2.1/json",
+      "use": "Isolated published wheel on PYTHONPATH, autoload disabled, receptor=llm"
+    },
+    "gh_run_receptor": {
+      "version": "1.2.0",
+      "wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+      "use": "Exact-head CI verification recorded separately in owner issue"
+    }
+  },
+  "dispositions": {
+    "first_use": "Retained: explicit safe baseline; application/project setup wins",
+    "inspection": "Retained completed #21 count-only nonemitting view, without ArgDigest import or bootstrap",
+    "registration_only": "Deferred until named embedding host requires no implicit setup/handlers; qualify argument initialization and actual recovery emission together",
+    "per_call_audience": "Deferred until a real consumer needs two audience presentations without global policy change",
+    "safe_audience_maps": "Not applicable to current fixed recovery/count-only inspection explanations; revisit for a concrete safe-audience need",
+    "identity_export_live_bridge": "Not applicable to this decision; existing Lab experiments/#15 remain separately owned"
+  },
+  "observed_limits": [
+    "Registering the recovery adapter is nonconfiguring; actual emit retains compatibility console fallback even after explicit handlers=[].",
+    "Scope limits collection, not bootstrap, earlier payloads or content of caller-approved primitive facts.",
+    "Local qualification is Linux x86_64 / Python 3.14; remote exact-head matrix evidence is separate.",
+    "No new dependency floor, public artifact, scientific integration, shared contract or Nextia runtime.",
+    "The task did not reinstall or update caller-owned editable sources; isolated checkout/environments/caches are retired after durable evidence."
+  ],
+  "local_checks": [
+    "ruff check .",
+    "ruff format --check .",
+    "python -B devtools/check_dependencies.py",
+    "python -B devtools/validate_governance.py",
+    "git diff --check"
+  ]
+}

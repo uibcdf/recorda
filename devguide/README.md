@@ -6,6 +6,9 @@ This directory is the entry point for developers and agents working on Recorda. 
 
 ## Read first
 
+[Diagnostic setup decision](DIAGNOSTIC_SETUP.md) records #29's retained safe
+baseline, registration/emission distinction and optional receiving dispositions.
+
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
 Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
