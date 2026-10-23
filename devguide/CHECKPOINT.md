@@ -1,9 +1,75 @@
 # Development checkpoint — 2026-10-23
 
-## Current resumption — compatibility candidate 0.3.1
+## Current release and receiving handoff — 0.3.1
+
+**0.3.1 is publicly delivered**, with the canonical
+[GitHub Release](https://github.com/uibcdf/recorda/releases/tag/0.3.1) title/tag
+and package version. Source: `a432cc38fe675ae16eff4f6a0f2f43522b50994b`.
+Original file: `recorda-0.3.1-py_0.tar.bz2`, SHA256
+`8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9`.
+
+[Source CI](https://github.com/uibcdf/recorda/actions/runs/39989246726) passes
+all 14 jobs; [candidate qualification](https://github.com/uibcdf/recorda/actions/runs/39989597891)
+all 10, with 364 tests in every Linux x86_64/macOS arm64 Python 3.11–3.14 cell.
+[Exact-file publication](https://github.com/uibcdf/recorda/actions/runs/39991293202)
+passes all three jobs, including independent public-channel installs on Linux
+and macOS arm64. All receipts agree on the original source/digest and 15 runtime
+files. Public Anaconda metadata and anonymous downloads from both Anaconda and
+GitHub Release match; all three Release assets were independently verified.
+
+The [release receipt](evidence/release_0_3_1.json) binds qualification, upload,
+public installs, tag and Release. [Resolved analysis](archive/release_0_3_1.md)
+preserves the decision and limits. Preparation receipts below remain historical;
+their pre-publication pending states are not the current delivery state.
+
+Requested availability handoff:
+[uibcdf/molsyssuite#130](https://github.com/uibcdf/molsyssuite/issues/130), linked
+to suite #82, MOLI #40 and Praxis #10 receiving. Delivery does not establish
+consumer adoption. The original standalone/Lab acceptance and MOLI #62 are
+complete; new scientific integration requires its own consumer question.
+
+Next: receiving owners triage the new public package; Recorda's independently
+scoped developer-tool follow-up is [#31](https://github.com/uibcdf/recorda/issues/31).
+Future package-description stability is [#32](https://github.com/uibcdf/recorda/issues/32):
+the immutable package long description retains build-time candidate prose;
+version, runtime, dependency and digest evidence remain valid. Live guidance is updated.
+Keep all public tags/files immutable. Original package and complete proof are
+retained in `/tmp/recorda-031-candidate-nkrd225g` under Recorda #26 for release
+audit, reviewed at the next audit/consumer handoff or by 2026-11-22. The owned
+test environments and disposable scratch were retired; shared work was preserved.
+
+## Historical preparation and qualification — 2026-10-23
 
 Owner: [uibcdf/recorda#26](https://github.com/uibcdf/recorda/issues/26).
 Checkpoint reconciliation: [uibcdf/recorda#30](https://github.com/uibcdf/recorda/issues/30).
+
+**Qualified candidate, publication pending.** Exact source:
+`a432cc38fe675ae16eff4f6a0f2f43522b50994b`. Original file:
+`recorda-0.3.1-py_0.tar.bz2`, SHA256
+`8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9`.
+The [source gate](https://github.com/uibcdf/recorda/actions/runs/39989246726)
+passes all **14 jobs**; the
+[Conda candidate](https://github.com/uibcdf/recorda/actions/runs/39989597891)
+passes all **10**, with **364 passing tests in each of eight installed
+Linux x86_64/macOS arm64 Python 3.11–3.14 cells**. Independent archive inspection
+and all eight receipts confirm the same source/digest and all 15 runtime files.
+
+The [hosted receipt](evidence/candidate_0_3_1_hosted.json) preserves the full
+manifest, platform receipts, native executed steps and 18 verified capture-member
+digests. The [local receipt](evidence/candidate_0_3_1_local.json) records 364 source
+and 364 installed-wheel passes, exact provider files and checked inputs.
+[Credential presence](https://github.com/uibcdf/recorda/actions/runs/39989268650)
+passes; read-only metadata identifies the organization secret and no repository
+shadow. This does not prove credential validity, write access or delivery.
+
+The original candidate and complete gate evidence are retained under
+`/tmp/recorda-031-candidate-nkrd225g`, owned by Recorda #26 with review at the next
+publication/retirement decision. Use the original file and successful candidate
+run **39989597891**; do not rebuild or tag a later documentation commit. No
+0.3.1 tag, upload or public Release was created during preparation. #30 is closed;
+#26 remains open for the publication decision and public-only receiving.
+
+The following preparation rationale retains its original pre-gate scope.
 
 The active task is to prepare **0.3.1**, carrying the latest-support-provider
 compatibility accepted in #24 and the retained diagnostic setup qualified in

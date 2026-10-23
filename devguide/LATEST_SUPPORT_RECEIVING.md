@@ -2,6 +2,20 @@
 
 Owner: uibcdf/recorda#24. Coordination: uibcdf/molsyssuite#82 and uibcdf/moli#40.
 
+## Public delivery — 0.3.1, 2026-10-23
+
+The separately qualified [0.3.1 release](https://github.com/uibcdf/recorda/releases/tag/0.3.1)
+now delivers this compatibility publicly. Its [receipt](evidence/release_0_3_1.json)
+binds the original Conda file to source `a432cc38fe675ae16eff4f6a0f2f43522b50994b`,
+14 successful source jobs, 10 candidate jobs (364 tests per eight OS/minor cells),
+and three successful publication/public-install jobs. Anaconda and GitHub assets
+match SHA256 `8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9`.
+Receiving notice is `uibcdf/molsyssuite#130`; consumer adoption remains separately
+owned. The historical source-only limitations below describe the original #24
+checkpoint, not today's 0.3.1 package.
+
+## Historical source receiving — 2026-10-20
+
 On 2026-10-20 Liliana requested compatibility with the latest published support
 providers: ArgDigest 0.16.0, SMonitor 0.21.0 and DepDigest 0.15.1. Preserve the
 previous runtime floors and admit these qualified minors through bounded upper

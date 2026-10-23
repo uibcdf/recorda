@@ -1,6 +1,6 @@
 # Release history
 
-## 0.3.1 — candidate
+## 0.3.1 — 2026-10-23
 
 - Deliver the accepted provider compatibility ranges: ArgDigest `>=0.15.0,<0.17`
   and SMonitor `>=0.19.0,<0.22`, retaining the existing floors and experimental
@@ -8,8 +8,10 @@
   build 2 and transitive DepDigest 0.15.1 (`uibcdf/recorda#24`, #26).
 - Retain the qualified safe first-use diagnostic setup, application/project
   precedence, nonemitting inspection and explicit recovery contracts (#29).
-- Prepare fresh exact-file release gates and a separate canonical-credential
-  presence-only check. Candidate preparation does not publish a package.
+- Qualify and publish the original Conda file without rebuilding, with fresh
+  exact-source and eight-cell installed-package gates. Use the canonical
+  organization credential and a separate presence-only readiness check.
+  Independent public Linux/macOS installs and all three Release assets verify.
 
 ## 0.3.0 — 2026-10-07
 

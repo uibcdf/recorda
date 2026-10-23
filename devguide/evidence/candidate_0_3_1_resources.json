@@ -1,0 +1,37 @@
+{
+  "owner": "uibcdf/recorda#26, Codex task 2026-10-23",
+  "state": "preparation closeout; original candidate retained for maintainer decision",
+  "root": "/tmp/recorda-031-candidate-nkrd225g",
+  "environment_retired_with": "conda env remove --prefix <owned root>/env --yes; registration handled by Conda",
+  "removed_owned_disposable_paths": [
+    "/tmp/recorda-031-candidate-nkrd225g/pytest-source",
+    "/tmp/recorda-031-candidate-nkrd225g/pytest-installed",
+    "/tmp/recorda-031-candidate-nkrd225g/pytest-final-source",
+    "/tmp/recorda-031-candidate-nkrd225g/pytest-final-installed",
+    "/tmp/recorda-031-candidate-nkrd225g/wheels",
+    "/tmp/recorda-031-candidate-nkrd225g/environment-create.log",
+    "/tmp/recorda-031-candidate-nkrd225g/receptor-conda.log",
+    "/tmp/recorda-031-candidate-nkrd225g/local-tools.log",
+    "/tmp/recorda-031-candidate-nkrd225g/local_env.yaml",
+    "/tmp/recorda-031-candidate-nkrd225g/receptor-followup.md",
+    "/tmp/recorda-031-candidate-nkrd225g/source-tests.log",
+    "/tmp/recorda-031-candidate-nkrd225g/installed-tests.log",
+    "/tmp/recorda-031-candidate-nkrd225g/source.xml",
+    "/tmp/recorda-031-candidate-nkrd225g/installed.xml"
+  ],
+  "cleanup_failures": [],
+  "retained": [
+    "original Conda candidate and manifest",
+    "eight installed receipts and original build/coverage evidence",
+    "three verified complete GH Run Receptor captures",
+    "final local logs/JUnit and compressed Conda records",
+    "small published-tool identity proofs and handoff scripts"
+  ],
+  "next_review": "next publication authorization or explicit candidate retirement in Recorda #26; retire custody after independently verified delivery and durable evidence handoff",
+  "shared_paths_preserved": [
+    "shared molsyssuite@uibcdf_3.14 environment",
+    "caller outputs and unrelated /tmp paths",
+    "existing repository build/egg-info/pytest caches: ownership not established, shared checkout metadata may be active"
+  ],
+  "artifact_sha256_verified_after_cleanup": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9"
+}

@@ -2,8 +2,8 @@
 
 [![Tests](https://github.com/uibcdf/recorda/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/uibcdf/recorda/actions/workflows/tests.yml)
 [![Coverage](https://codecov.io/gh/uibcdf/recorda/branch/main/graph/badge.svg)](https://app.codecov.io/gh/uibcdf/recorda)
-[![Conda](https://anaconda.org/uibcdf/recorda/badges/version.svg)](https://anaconda.org/uibcdf/recorda)
 [![Release](https://img.shields.io/github/v/release/uibcdf/recorda)](https://github.com/uibcdf/recorda/releases)
+[![Conda](https://anaconda.org/uibcdf/recorda/badges/version.svg)](https://anaconda.org/uibcdf/recorda)
 
 **Scientific recording and provenance for reproducible computational work.**
 
@@ -38,21 +38,22 @@ Existing scientific results and native provenance remain owned by their librarie
 
 ## Status
 
-Version **0.3.0** is the official Conda stabilization release. Its immutable tag,
+Version **0.3.1** is the official Conda compatibility release. Its immutable tag,
 package metadata and runtime version agree. The same Conda file passes the full
 installed suite on Linux x86_64 and macOS arm64, Python 3.11–3.14. See
-[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.0),
-[the qualification receipt](devguide/evidence/release_0_3_0.json) and
+[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.1),
+[the qualification/publication receipt](devguide/evidence/release_0_3_1.json) and
 [the changelog](CHANGELOG.md). The `0.1.0` and `0.2.0` tags retain their historical
-source checkpoints. Consumer-owned adoption by MOLI components and MolSysMT is the
-next step; the API and schema remain experimental before 1.0.
+source checkpoints; 0.3.0 retains its original stabilization artifact and evidence.
+Consumer-owned receiving is communicated in
+[MolSysSuite #130](https://github.com/uibcdf/molsyssuite/issues/130).
+The API and schema remain experimental before 1.0.
 
-Development source prepares **0.3.1**, tracked in
-[Recorda #26](https://github.com/uibcdf/recorda/issues/26), to deliver accepted
-compatibility with ArgDigest 0.16 and SMonitor 0.21. This candidate is not yet
-published; the immutable public 0.3.0 package retains its narrower provider
-ceilings. See the [current checkpoint](devguide/CHECKPOINT.md) for preparation
-and receiving scope.
+The new public package delivers accepted compatibility with ArgDigest 0.16 and
+SMonitor 0.21, tracked in [Recorda #26](https://github.com/uibcdf/recorda/issues/26).
+Its tested cohort uses transitive DepDigest 0.15.1. The original public 0.3.0 package
+retains its narrower provider ceilings. See the [current checkpoint](devguide/CHECKPOINT.md)
+for exact source/file identities and receiving scope.
 
 Recorda now has an **experimental first standalone implementation**. Its API and journal
 schema are provisional. The controlled laboratory lives in `uibcdf/recorda-lab`;
@@ -65,7 +66,7 @@ See [`devguide/DESIGN.md`](devguide/DESIGN.md) for the broad design and [`devgui
 Install the public package from the official channels:
 
 ```bash
-micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.0
+micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.1
 micromamba activate recorda
 ```
 

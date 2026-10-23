@@ -1,0 +1,913 @@
+{
+  "artifact": {
+    "conda_dependencies": [
+      "argdigest >=0.15.0,<0.17",
+      "python >=3.11,<3.15",
+      "smonitor >=0.19.0,<0.22"
+    ],
+    "coordinate": "uibcdf/recorda/0.3.1/noarch/recorda-0.3.1-py_0.tar.bz2",
+    "filename": "recorda-0.3.1-py_0.tar.bz2",
+    "python_requires": ">=3.11,<3.15",
+    "required_metadata": [
+      "argdigest>=0.15.0,<0.17",
+      "smonitor>=0.19.0,<0.22"
+    ],
+    "resources": "No generated or vendored runtime resources; all Python files checked.",
+    "runtime_sha256": {
+      "recorda/__init__.py": "949e1780725a6bf807cf842852b04cb631898e9aff079e00c98c73e3f44978a9",
+      "recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+      "recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+      "recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+      "recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+      "recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+      "recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+      "recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+      "recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+      "recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+      "recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+      "recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+      "recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+      "recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+    },
+    "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+    "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+    "version": "0.3.1"
+  },
+  "artifact_receipts_sha256": {
+    "conda-build-evidence/gh-run-receptor-events-39989597891-1-build-0/gh-run-receptor-events.json": "298926d0bbb7f72e891a85ea806f26e8daa1811919af36235d0958e3745d7bdd",
+    "conda-build-evidence/registry-preflight.json": "30e3408b25a74a71b42b8dfad53d95346893cb0cf961cba8f13daeab42def522",
+    "installed-coverage/coverage.xml": "8c1e499cdac3d6eb08aa7e146bd0e08684f7921deb85bba124be63d50b136b8d",
+    "installed-macos-latest-3.11/installed.json": "c7fa828992475a3e6ec6d0abec4e9ede34c40189f3e519c08eaf18236ded0f55",
+    "installed-macos-latest-3.12/installed.json": "7e1be3a69831dc40f7aff25db4c2a5b55384e3156d0339b2ee1eb50ce5fca1b0",
+    "installed-macos-latest-3.13/installed.json": "b9b82b8c781d1c9727ea23ba58a05b46e2cc1ab7e56a15e689186fb2347f98e5",
+    "installed-macos-latest-3.14/installed.json": "72bcf7d93587a592ac6edd5ee44ede86a5888c166fd27c245721d3839c293615",
+    "installed-ubuntu-latest-3.11/installed.json": "ea43d0cb9b7fdc298fbbee192741cbca82d07313f8e47d560122cdd8c9598229",
+    "installed-ubuntu-latest-3.12/installed.json": "8be4d036db437d21e3a6069cfd6d2bf7329ad568cacb33ea7da637a533320234",
+    "installed-ubuntu-latest-3.13/installed.json": "8bf93cb744d60125d1243f79a4dd2001025bad7cafc5a1ad198291240b4b5ba9",
+    "installed-ubuntu-latest-3.14/installed.json": "1aa8bb088332e7d32ec08185ca030ca41ab71b805b83b25d4a443404897c9e55",
+    "recorda-conda-candidate/manifest.json": "b7dc5a2bc97018382959b9146e9c393194827fa32ee0b93c7ca14e911582910d",
+    "recorda-conda-candidate/recorda-0.3.1-py_0.tar.bz2": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9"
+  },
+  "candidate_source": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+  "checkpoint_issue": "uibcdf/recorda#30",
+  "coverage": {
+    "codecov_upload": "both exact-source and candidate native steps passed",
+    "limit": "upload execution is not an independent Codecov service acceptance claim",
+    "measured_xml_attributes": {
+      "branch-rate": "0.9162",
+      "branches-covered": "328",
+      "branches-valid": "358",
+      "complexity": "0",
+      "line-rate": "0.9489",
+      "lines-covered": "909",
+      "lines-valid": "958",
+      "timestamp": "1792774204323",
+      "version": "7.16.2"
+    }
+  },
+  "credential_readiness": {
+    "administrator": "Diego Prada; administrative model confirmed in uibcdf/moli#8",
+    "limits": "metadata/presence do not prove credential validity, write permission or package delivery",
+    "organization_secret_metadata": {
+      "canonical": [
+        {
+          "name": "ANACONDA_UIBCDF_TOKEN",
+          "updated_at": "2026-08-08T17:48:15Z"
+        }
+      ]
+    },
+    "presence_run": 39989268650,
+    "repository_shadow_metadata": {
+      "repository_shadows": []
+    },
+    "result": "available",
+    "workflow": "manual main-branch presence-only, no checkout or upload"
+  },
+  "date": "2026-10-23",
+  "gates": {
+    "conda_candidate": {
+      "attempt": 1,
+      "capture": {
+        "captured_at": "2026-10-23T16:51:05.322033+00:00",
+        "manifest_sha256": "4225009f1218d44680c0f2e8578207248eac99a3e1705174c30232d0f94eaac1",
+        "members": [
+          {
+            "bytes": 12853,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "4a6f48da275c4b8a75f447d8403b54e798781fe8d467aeb158971a89d7cb0b3b"
+          },
+          {
+            "bytes": 551,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "f470bcfc97b39e1b40402c633d4740a6a1c08e53941a38e872e3fe31a602908a"
+          },
+          {
+            "bytes": 40595,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "146c4ea8e4adbf1aba0e2e493941a76ea6cdd3d29aa6f88b62a7510c4abe8405"
+          },
+          {
+            "bytes": 9316,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "1d1fa7f5e3aa0385ca3ee6c3a51690557818a21d044649e9b9ebeb95fc447dcf"
+          },
+          {
+            "bytes": 43113,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "233c7429cec641bc9da9a2ad5ee188c2bab7e877babd9ba2b78f194dbc88cc37"
+          },
+          {
+            "bytes": 316850,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "70b7391854d0eb2222e8aad129d58025bf5823dd56a060e40ce4710ed5bab1fe"
+          }
+        ]
+      },
+      "conclusion": "success",
+      "event": "workflow_dispatch",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Check candidate source configuration",
+            "Build candidate with the published UIBCDF action",
+            "Inspect and seal the exact candidate",
+            "Run actions/upload-artifact@v4",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "build"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (macos-latest, 3.12)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (macos-latest, 3.11)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test and measure installed runtime coverage",
+            "Run actions/upload-artifact@v4",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (ubuntu-latest, 3.14)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (macos-latest, 3.14)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (macos-latest, 3.13)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (ubuntu-latest, 3.11)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (ubuntu-latest, 3.13)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run actions/download-artifact@v4",
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate",
+            "Run actions/upload-artifact@v4",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "installed (ubuntu-latest, 3.12)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/download-artifact@v4",
+            "Run codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "coverage"
+        }
+      ],
+      "native_verdicts": {
+        "1_installed (ubuntu-latest, 3.13).txt": [
+          "364 passed | 4.70s"
+        ],
+        "2_installed (ubuntu-latest, 3.11).txt": [
+          "364 passed | 3.93s"
+        ],
+        "3_installed (ubuntu-latest, 3.12).txt": [
+          "364 passed | 4.81s"
+        ],
+        "4_installed (ubuntu-latest, 3.14).txt": [
+          "364 passed | 4.90s"
+        ],
+        "5_installed (macos-latest, 3.14).txt": [
+          "364 passed | 4.65s"
+        ],
+        "6_installed (macos-latest, 3.13).txt": [
+          "364 passed | 3.66s"
+        ],
+        "7_installed (macos-latest, 3.12).txt": [
+          "364 passed | 3.78s"
+        ],
+        "8_installed (macos-latest, 3.11).txt": [
+          "364 passed | 6.49s"
+        ]
+      },
+      "run_id": 39989597891,
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "url": "https://github.com/uibcdf/recorda/actions/runs/39989597891",
+      "workflow": ".github/workflows/release_candidate.yml"
+    },
+    "credential_presence": {
+      "attempt": 1,
+      "capture": {
+        "captured_at": "2026-10-23T16:45:47.908562+00:00",
+        "manifest_sha256": "37630d13ca1916f2a25e5d8839e139c93d5c6aee134968946cec7af8d218f9ec",
+        "members": [
+          {
+            "bytes": 12875,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "47704ed046abeb0fbe1dcce382797f2ef5a7a3486870d5f2a30d34400459531f"
+          },
+          {
+            "bytes": 577,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "280dfb136269176c1ba331ace9c61081b01002f880052ae99f3bb75693425f8b"
+          },
+          {
+            "bytes": 1910,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "fc11ca58cd9b77a7366b51f66be0e40cd7422f51d2fd19e76c7c2e2e45b347d4"
+          },
+          {
+            "bytes": 42,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+          },
+          {
+            "bytes": 4334,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "5af0813726d036aceeac447dfa518263eb6db663be141539810ba3f02f71ef90"
+          },
+          {
+            "bytes": 3281,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "f1ee574db742d460f53b26607ffae306dc4bbb153a0cf36f0c964893e6d3fce5"
+          }
+        ]
+      },
+      "conclusion": "success",
+      "event": "workflow_dispatch",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Check canonical organization credential presence only",
+            "Complete job"
+          ],
+          "name": "presence"
+        }
+      ],
+      "native_verdicts": {},
+      "run_id": 39989268650,
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "url": "https://github.com/uibcdf/recorda/actions/runs/39989268650",
+      "workflow": ".github/workflows/publication_readiness.yml"
+    },
+    "source": {
+      "attempt": 1,
+      "capture": {
+        "captured_at": "2026-10-23T16:47:01.754800+00:00",
+        "manifest_sha256": "7e01de32b0ceb53443d6f40fa84096894324f2a552dd4b877d4b8f91f59bb49c",
+        "members": [
+          {
+            "bytes": 12872,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "fa190723337ed5e58ce9652ce1d485375e37dac9eea0b1ad20d5196dce0223b0"
+          },
+          {
+            "bytes": 521,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+          },
+          {
+            "bytes": 62933,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "f4249319956e1f8fb0886dd8ef229bd7d2f9930def8c610ac33dc973e5b0cbb9"
+          },
+          {
+            "bytes": 877,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "20806e4bcc4c50196003f3ec35e0609a946e54d2e868e099b128c2bd1489a3ce"
+          },
+          {
+            "bytes": 60331,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "19b195c455bbf22cb6f0f13351a12e2e1a7fa004fdf5d942e104c10043bd1ecb"
+          },
+          {
+            "bytes": 368905,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "18db5cdee6ba4e2390662bdf16b475781d538748a2ae34d3384f2d0fb6b96a3f"
+          }
+        ]
+      },
+      "conclusion": "success",
+      "event": "push",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip install pytest-cov==7.0.0 coverage==7.16.2",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Measure required runtime and recovery tests",
+            "Run actions/upload-artifact@v4",
+            "Run codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "coverage"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Run python -m pip install ruff==0.16.5 PyYAML==6.0.3 packaging",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/validate_governance.py",
+            "Run ruff check .",
+            "Run ruff format --check .",
+            "Check out the reviewed MOLI governance core",
+            "Check shared MOLI governance core",
+            "Post Check out the reviewed MOLI governance core",
+            "Post Run actions/setup-python@v5",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "quality"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.11)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.13"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.14"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.12)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.13)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.11)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.12"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.14)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.13)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.12)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.11"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.1.0",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.14)"
+        }
+      ],
+      "native_verdicts": {
+        "0_SMonitor recovery _ Python 3.12.txt": [
+          "364 passed | 4.75s"
+        ],
+        "10_tests (macos-latest, 3.12).txt": [
+          "346 passed, 18 skipped | 4.12s"
+        ],
+        "11_tests (ubuntu-latest, 3.11).txt": [
+          "346 passed, 18 skipped | 3.90s"
+        ],
+        "13_coverage.txt": [
+          "364 passed | 4.55s"
+        ],
+        "1_SMonitor recovery _ Python 3.11.txt": [
+          "364 passed | 4.42s"
+        ],
+        "2_SMonitor recovery _ Python 3.14.txt": [
+          "364 passed | 3.32s"
+        ],
+        "3_tests (ubuntu-latest, 3.14).txt": [
+          "346 passed, 18 skipped | 3.92s"
+        ],
+        "4_tests (ubuntu-latest, 3.12).txt": [
+          "346 passed, 18 skipped | 3.86s"
+        ],
+        "5_tests (macos-latest, 3.14).txt": [
+          "346 passed, 18 skipped | 6.59s"
+        ],
+        "6_tests (macos-latest, 3.13).txt": [
+          "346 passed, 18 skipped | 6.08s"
+        ],
+        "7_tests (ubuntu-latest, 3.13).txt": [
+          "346 passed, 18 skipped | 3.99s"
+        ],
+        "8_tests (macos-latest, 3.11).txt": [
+          "346 passed, 18 skipped | 5.04s"
+        ],
+        "9_SMonitor recovery _ Python 3.13.txt": [
+          "364 passed | 3.10s"
+        ]
+      },
+      "run_id": 39989246726,
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "url": "https://github.com/uibcdf/recorda/actions/runs/39989246726",
+      "workflow": ".github/workflows/tests.yml"
+    }
+  },
+  "installed_matrix": [
+    {
+      "artifact": "installed-macos-latest-3.11",
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.11.17 (main, Oct 13 2026, 16:38:53) [Clang 21.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Darwin",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-macos-latest-3.12",
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.12.15 (main, Oct 13 2026, 16:47:20) [Clang 21.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Darwin",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-macos-latest-3.13",
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.13.17 | packaged by conda-forge | (main, Oct 22 2026, 10:12:26) [Clang 21.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Darwin",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-macos-latest-3.14",
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:13:20) [Clang 20.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Darwin",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-ubuntu-latest-3.11",
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.11.17 (main, Oct 13 2026, 16:45:47) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Linux",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-ubuntu-latest-3.12",
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.12.15 (main, Oct 13 2026, 16:52:04) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Linux",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-ubuntu-latest-3.13",
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.13.17 | packaged by conda-forge | (main, Oct 22 2026, 10:19:54) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Linux",
+      "version": "0.3.1"
+    },
+    {
+      "artifact": "installed-ubuntu-latest-3.14",
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:21:21) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+      "source_sha": "a432cc38fe675ae16eff4f6a0f2f43522b50994b",
+      "system": "Linux",
+      "version": "0.3.1"
+    }
+  ],
+  "local_conda_records": {
+    "repository_copy": "candidate_0_3_1_local_conda.json.gz",
+    "sha256": "70951405a9a309fbb8df4bf4d6351ab55b52b7db55435b534cafcce5b38a5df6"
+  },
+  "nonblocking_followup": "uibcdf/recorda#31; old pinned pytest-receptor post-verdict discard warning",
+  "owner": "uibcdf/recorda#26",
+  "preparation_poststate": {
+    "decision": "candidate prepared; final publication authorization pending",
+    "public_0_3_0": "unchanged; historical receipt retained",
+    "publication": "not dispatched",
+    "registry": {
+      "file": null,
+      "url": "https://api.anaconda.org/release/uibcdf/recorda/0.3.1"
+    },
+    "tag_0_3_1": "absent"
+  },
+  "published_tools": {
+    "gh_run_receptor": {
+      "route": "official GitHub Release wheel",
+      "sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+      "version": "1.2.0"
+    },
+    "pytest_receptor": {
+      "filename": "pytest_receptor-1.1.0-py3-none-any.whl",
+      "installed_python_files_verified": 5,
+      "name": "pytest-receptor",
+      "published_digest_verified": true,
+      "sha256": "54d270203255673df2ae5c681b5a66a72ff7e3b983b6d6da4e6e4d8714a021bf",
+      "source": "https://pypi.org/pypi/pytest-receptor/1.1.0/json",
+      "version": "1.1.0"
+    }
+  },
+  "remaining": [
+    "owner publication decision",
+    "annotated tag on this exact source only after authorization",
+    "exact-file upload, independent public registry and clean channel installs",
+    "version-only GitHub Release and cross-owner receiving notices"
+  ],
+  "state": "qualified candidate; no tag, upload or public release",
+  "temporary_custody": {
+    "owner": "Recorda #26, Codex 2026-10-23; maintainer handoff",
+    "retain": [
+      "original Conda file and manifest",
+      "downloaded installed/build/coverage receipts",
+      "complete verified gate captures and published tool identity proofs"
+    ],
+    "review_trigger": "next publication decision; retire after independently verified delivery or explicit candidate retirement; do not rebuild or substitute bytes",
+    "root": "/tmp/recorda-031-candidate-nkrd225g"
+  },
+  "version": "0.3.1"
+}

@@ -1,12 +1,36 @@
 # Stabilization release qualification
 
-## Current preparation — 0.3.1
+## Completed publication — 0.3.1
+
+[release_0_3_1.json](evidence/release_0_3_1.json) records the successful 14-job
+source gate, 10-job exact-Conda qualification and three-job publication/public
+installation workflow. The immutable tag targets
+`a432cc38fe675ae16eff4f6a0f2f43522b50994b`. Public registry, anonymous Conda
+download and all three GitHub Release assets match the qualified bytes. The
+Release title/tag/package version are exactly `0.3.1`; receiving notice is
+`uibcdf/molsyssuite#130`. No package was rebuilt or overwritten during publication.
+
+The following preparation procedure retains its original decision sequence;
+its pending-publication statements are historical. A future version needs its
+own exact committed candidate and applicable gates. Follow the canonical
+credential route, verify title/version agreement before creating its Release,
+and preserve the original tested artifact through public verification.
+
+## Historical preparation — 0.3.1
 
 Owner: `uibcdf/recorda#26`. The selected compatibility patch is **0.3.1**;
 the public 0.3.0 release, tag and original artifact remain immutable. Source,
 recipe and runtime version must agree, and current published-provider identities
 remain pinned in the environment specifications. No schema or public API change
 is selected. Historical 0.3.0 evidence below does not certify this candidate.
+
+Preparation is now complete at source
+`a432cc38fe675ae16eff4f6a0f2f43522b50994b`, with all 14 source and all 10 Conda
+jobs successful. Use candidate run **39989597891** and retained file SHA256
+`8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9`.
+Read [candidate_0_3_1_hosted.json](evidence/candidate_0_3_1_hosted.json) and the
+checkpoint before any publication decision. Later evidence-only documentation
+commits do not change the tested source or authorize a new artifact.
 
 Commit the reviewed candidate, pass the 14-job exact-source workflow, then run
 `release_candidate.yml` with its full `candidate_sha`. Its 10 required jobs must

@@ -8,14 +8,36 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-23
 
-1. Prepare the **0.3.1 compatibility candidate** in `uibcdf/recorda#26`, with
-   fresh exact-source and exact-Conda installed gates. Preserve the 0.3.0 tag,
-   public archive and original evidence. Source compatibility in #24 and the
-   retained setup decision in #29 are complete; they do not qualify a new file.
+1. **0.3.1 is published.** Preserve its exact original file/tag and the
+   [release receipt](evidence/release_0_3_1.json). Source/candidate/publication
+   workflows pass 14/10/3 jobs; public and Release asset digests match.
+2. Receiving ownership is handed to
+   [MolSysSuite #130](https://github.com/uibcdf/molsyssuite/issues/130), linked to
+   #82, MOLI #40 and Praxis #10. Select any member adoption or new scientific
+   trial only for a concrete consumer question and qualify that scope locally.
+3. Recorda's next bounded improvement is developer-tool receiving in
+   `uibcdf/recorda#31`: adopt a suitable published pytest-receptor fix with
+   llm/ci and supported-minor evidence. The old-tool warning did not invalidate
+   this release's successful native exits or test totals.
+   Separately, `uibcdf/recorda#32` tracks stable packaged descriptions for future
+   candidates; keep the current public artifact and tag unchanged.
+4. Original acceptance, source compatibility #24, retained diagnostic setup #29,
+   checkpoint #30 and MOLI #62 coordination are complete. No routing/replay or
+   automatic producer bridge is queued by publishing 0.3.1.
+
+## Historical pre-publication order — 2026-10-23
+
+1. The **0.3.1 compatibility candidate** in `uibcdf/recorda#26` is qualified at
+   `a432cc38fe675ae16eff4f6a0f2f43522b50994b`: 14 source jobs, 10 Conda jobs and
+   364 tests in each of eight installed OS/minor cells pass. The next step is
+   the owner publication decision, using the retained original Conda file and
+   digest in [CHECKPOINT.md](CHECKPOINT.md). Preserve the 0.3.0 tag/archive and
+   all original evidence; do not rebuild the qualified file.
 2. Use [CHECKPOINT.md](CHECKPOINT.md) and [RELEASING.md](RELEASING.md) for current
    source/public distinctions and the candidate/publication decision. The
-   checkpoint correction is `uibcdf/recorda#30`. Verify credential availability
-   separately from grant, validity and successful upload; never expose values.
+   checkpoint correction `uibcdf/recorda#30` is complete. Credential availability
+   has a successful presence-only run; distinguish that observation from grant,
+   validity and successful upload, and never expose values.
 3. After authorized exact-file publication and independent public-only checks,
    return the delivery receipt to MolSysSuite #82, MOLI #40 and Praxis #10.
    Consumer-owned adoption remains separately qualified.

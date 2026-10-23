@@ -18,9 +18,11 @@ scoped scientific qualification.
 [`RELEASING.md`](RELEASING.md) describes the 0.3.0 stabilization qualification
 and exact-file publication route. Its [release receipt](evidence/release_0_3_0.json)
 records executed gates and independently observed publication. Current work is
-the **0.3.1 compatibility candidate** in `uibcdf/recorda#26`; source receiving
-with current providers is complete, but the historical 0.3.0 package retains its
-original ceilings. Read the current checkpoint before following older adoption
+the **published 0.3.1 compatibility release** in `uibcdf/recorda#26`.
+Its [release receipt](evidence/release_0_3_1.json) records fresh source, exact-Conda,
+public installation and GitHub asset checks; the historical 0.3.0 package retains
+its original ceilings. Receiving is communicated in `uibcdf/molsyssuite#130`.
+Read the current checkpoint before following older adoption
 sequences. MOLI #62 coordination and Recorda #29 receiving are complete;
 consumer adoption and a new public artifact keep their own qualification.
 

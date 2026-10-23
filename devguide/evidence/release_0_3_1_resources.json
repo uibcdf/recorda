@@ -1,0 +1,38 @@
+{
+  "owner": "Recorda #26 release audit, Codex 2026-10-23; maintainer handoff",
+  "state": "package, Release and MolSysSuite #130 delivered",
+  "root": "/tmp/recorda-031-candidate-nkrd225g",
+  "preparation_cleanup": "candidate_0_3_1_resources.json",
+  "owned_environment_retired": true,
+  "additional_disposable_copies_removed": [
+    {
+      "path": "/tmp/recorda-031-candidate-nkrd225g/public/recorda-0.3.1-py_0.tar.bz2",
+      "sha256": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9"
+    },
+    {
+      "path": "/tmp/recorda-031-candidate-nkrd225g/molsyssuite-notice.md",
+      "sha256": "f9c458d3733b144d78a79f3b9a694aa7316d33e97bdcd415580c25c824458dc1"
+    },
+    {
+      "path": "/tmp/recorda-031-candidate-nkrd225g/packaged-description-followup.md",
+      "sha256": "436985aa1df8227d777b9b9a646e8f764a2457b33b39af258bfb08bc93174bc4"
+    }
+  ],
+  "cleanup_failures": [],
+  "retained": [
+    "original qualified Conda file and manifest",
+    "all installed/build/public/coverage receipts",
+    "four full verified GH Run Receptor bundles (24 complete members)",
+    "local final test/JUnit and compressed provider/environment evidence",
+    "published-tool identity proofs and small evidence reproduction scripts"
+  ],
+  "next_review": "next release audit/consumer handoff or 2026-11-22, whichever comes first; retire original local copies after durable audit handoff because both public registries now retain verified originals",
+  "shared_paths_preserved": [
+    "shared molsyssuite@uibcdf_3.14 environment",
+    "caller outputs and unrelated /tmp paths",
+    "existing repository build/egg-info/pytest caches: ownership not established, shared checkout metadata may be active"
+  ],
+  "artifact_sha256_verified_after_cleanup": "8d040ae189d0f47ea0191a142c7e9cc0b57cd9e890303a354d8f463fe34242d9",
+  "public_release": "https://github.com/uibcdf/recorda/releases/tag/0.3.1",
+  "suite_notice": "https://github.com/uibcdf/molsyssuite/issues/130"
+}
