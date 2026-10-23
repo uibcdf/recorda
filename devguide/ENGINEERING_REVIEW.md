@@ -45,7 +45,9 @@ must consume PyUnitWizard's codec without altering application unit configuratio
 
 ## Development and distribution
 
-Use published pytest-receptor 1.1.0 and Ruff 0.16.5. The initial 25-test prototype
+Current tool receiving selects published pytest-receptor 1.2.1; see
+[TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md). The initial review used
+pytest-receptor 1.1.0 and Ruff 0.16.5. The initial 25-test prototype
 passed from source on Python 3.11 and against both built wheels on Python 3.13 outside
 the source checkout, using the published receptor 1.1.0. Other checkouts may contain
 development tool versions and are not substituted as release evidence. The local

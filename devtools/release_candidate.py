@@ -30,6 +30,12 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def description_text(metadata):
+    """Preserve description content while normalizing transport newlines."""
+    assert metadata["Description-Content-Type"] == "text/markdown", "description content type"
+    return metadata.get_payload(decode=True).decode("utf-8").replace("\r\n", "\n").rstrip("\n")
+
+
 def inspect_archive(path, root, source_sha):
     project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
     version = project["version"]
@@ -59,6 +65,17 @@ def inspect_archive(path, root, source_sha):
         assert {str(r) for r in wheel_requirements if r.marker is None} == set(
             map(str, map(Requirement, project["dependencies"]))
         ), "installed metadata dependencies differ"
+        description_path = root / project["readme"]
+        description = description_text(metadata)
+        assert description == description_path.read_text().rstrip("\n"), (
+            "packaged description differs from its declared stable source"
+        )
+        description_receipt = {
+            "source": project["readme"],
+            "source_sha256": sha256(description_path),
+            "sha256": hashlib.sha256(description.encode("utf-8")).hexdigest(),
+            "normalization": "UTF-8, CRLF to LF, remove terminal newline characters",
+        }
         sources = {
             path.relative_to(root / "src").as_posix(): sha256(path)
             for path in sorted((root / "src/recorda").rglob("*.py"))
@@ -84,6 +101,7 @@ def inspect_archive(path, root, source_sha):
         "conda_dependencies": index["depends"],
         "python_requires": project["requires-python"],
         "required_metadata": project["dependencies"],
+        "description": description_receipt,
         "resources": "No generated or vendored runtime resources; all Python files checked.",
     }
 
@@ -156,6 +174,9 @@ def installed(manifest):
     package = Path(recorda.__file__).resolve().parent
     assert package.is_relative_to(prefix), "source import instead of installed candidate"
     assert recorda.__version__ == importlib.metadata.version("recorda") == manifest["version"]
+    metadata = importlib.metadata.distribution("recorda").metadata
+    description_digest = hashlib.sha256(description_text(metadata).encode("utf-8")).hexdigest()
+    assert description_digest == manifest["description"]["sha256"], "installed description differs"
     for relative, expected in manifest["runtime_sha256"].items():
         assert sha256(package.parent / relative) == expected, relative
     records = list((prefix / "conda-meta").glob("recorda-*.json"))
@@ -185,6 +206,7 @@ def installed(manifest):
         "system": platform.system(),
         "machine": platform.machine(),
         "runtime_files": len(manifest["runtime_sha256"]),
+        "description_sha256": description_digest,
         "recording_and_cli": "passed",
     }
 

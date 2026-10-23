@@ -1,5 +1,28 @@
 # Stabilization release qualification
 
+## Active 0.3.2 qualification
+
+Owner: `uibcdf/recorda#33`, under Diego's authorization to publish after fixes
+#31/#32 qualify and no release blocker remains. Select source/runtime/recipe
+0.3.2, keep existing tags/files immutable and execute fresh 14-job source and
+10-job same-file Conda gates. The four test/development environments and CI use
+published pytest-receptor 1.2.1. Both llm/ci native exits and complete artifacts
+are tested on every supported minor through the receiving regression.
+
+The package reads stable `PACKAGE_README.md`. Inspect actual wheel and Conda
+METADATA before tagging; the manifest binds the description source/digest and
+every installed/public receipt verifies its payload. Version agreement and byte
+identity remain mandatory. Release checks must use the newly built original
+`recorda-0.3.2-py_0.tar.bz2`, not a renamed/rebuilt 0.3.1 archive.
+
+Use the unchanged trusted main-branch presence-only readiness and canonical
+organization credential route. After gates pass, create the annotated 0.3.2 tag
+on the qualified source, publish the same retained file, verify independent
+public registry/download and clean Linux/macOS arm64 installations, then create
+the GitHub Release titled exactly **0.3.2** with original file/manifest/checksums.
+Report the verified new release to MolSysSuite #130 and applicable coordinations.
+Closeout records cleanup and explicit custody/review triggers for useful proof.
+
 ## Completed publication — 0.3.1
 
 [release_0_3_1.json](evidence/release_0_3_1.json) records the successful 14-job

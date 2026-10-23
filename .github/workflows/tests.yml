@@ -50,7 +50,7 @@ jobs:
         with:
           environment-file: devtools/conda-envs/test_env.yaml
           create-args: python=${{ matrix.python }} --strict-channel-priority
-      - run: python -m pip install pytest-receptor==1.1.0
+      - run: python -m pip install pytest-receptor==1.2.1
       - run: python devtools/check_dependencies.py
       - run: python devtools/verify_support_environment.py argdigest
       - run: python -m pip install --no-deps --no-build-isolation .
@@ -85,7 +85,7 @@ jobs:
         with:
           environment-file: devtools/conda-envs/recovery_test_env.yaml
           create-args: python=${{ matrix.python }} --strict-channel-priority
-      - run: python -m pip install pytest-receptor==1.1.0
+      - run: python -m pip install pytest-receptor==1.2.1
       - run: python devtools/check_dependencies.py
       - name: Verify the published provider and feature contract
         run: python devtools/verify_support_environment.py smonitor

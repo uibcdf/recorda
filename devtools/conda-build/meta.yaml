@@ -1,7 +1,7 @@
 # Build from the exact checked-out candidate; version must match its planned tag.
 package:
   name: recorda
-  version: 0.3.1
+  version: 0.3.2
 source:
   path: ../..
 build:

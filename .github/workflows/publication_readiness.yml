@@ -18,7 +18,7 @@ jobs:
         run: |
           set +x
           if [[ -z "${MOLI_CONDA_TOKEN:-}" ]]; then
-            echo '::error::ANACONDA_UIBCDF_TOKEN unavailable; request repository access from Diego Prada in Recorda #26.'
+            echo '::error::ANACONDA_UIBCDF_TOKEN unavailable; request repository access from Diego Prada through the owning Recorda release issue.'
             exit 1
           fi
           echo 'Publication credential available (presence only; no upload performed).'

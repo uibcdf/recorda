@@ -1,0 +1,512 @@
+{
+  "conda_records": {
+    "count": 39,
+    "sha256": "9d9896b376228725fade836a3909744be94a7641b7e0c996a55b08d908d61791"
+  },
+  "date": "2026-10-23",
+  "description": {
+    "description_sha256": "958858344b752a4e359b9f53fd505137b5cf5e5011c0efbfcb339f7fc6ebafbe",
+    "description_source": "PACKAGE_README.md",
+    "source_sha256": "b5851a8caf0c1979fd7398fd7747010a08990c2df56a12b46a06151dbb66d1fb",
+    "version": "0.3.2",
+    "volatile_availability_prose": false,
+    "wheel_and_installed_descriptions_match": true,
+    "wheel_sha256": "fd34b5de74d56ba5554cf0a8c7c9a11e7dcc8c630ea88e4965165d2d7dd12a53"
+  },
+  "executable": "/tmp/recorda-032-qualification-t6pz11cz/env/bin/python",
+  "fixes": [
+    "uibcdf/recorda#31",
+    "uibcdf/recorda#32"
+  ],
+  "fresh_process_receiving": [
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser0/events.jsonl",
+      "profile": null,
+      "sha256": "f569309b38d99a6937a1421ba2b6f5d56e1bb1483e2d064f2ef45b82a1a827fb"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser1/events.jsonl",
+      "profile": null,
+      "sha256": "b9165a039245c1c9c4f1b34ad291624e634e141ef1df305b2e3f846ef7d1a05d"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser2/events.jsonl",
+      "profile": null,
+      "sha256": "4cc7348ccce2730efa412c37f7b1238b29c5cbf35118286d48c6e3389a8d03c5"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser3/events.jsonl",
+      "profile": null,
+      "sha256": "8ebe298239ea5859bb307cba6fa5c5dd8841e4310985e6551e81669bb487c18c"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser4/events.jsonl",
+      "profile": null,
+      "sha256": "88015e5d99ce78a4ee6bf1a7eca2cb3f2ffa4834acdb47736bb8995233d2b4d3"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser5/events.jsonl",
+      "profile": null,
+      "sha256": "dae51663e0cd48e03a9cfeba6e8c8cbbd35ce72043a0ff1d8db0bdedadbeae11"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser6/events.jsonl",
+      "profile": null,
+      "sha256": "521721aa1d4ad1b407c94c59d1a5e5e285f83dfefa817ae970013d7dc344dbfa"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "source",
+      "path": "source-tests/test_published_receptor_preser7/events.jsonl",
+      "profile": null,
+      "sha256": "63ec6808d5b2a8c43e511658c79fb94deb0368dda447167fe8fff2ab3a040e6f"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser0/events.jsonl",
+      "profile": null,
+      "sha256": "adce41ee916c08a49518397fd8eefba5af1099bf5f903952e06a93d4ea7ddb4a"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser1/events.jsonl",
+      "profile": null,
+      "sha256": "a5d1ac8ae9d3a1771d1707da69f7d3e60225336853f3c1881c166d4e455b0e6e"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser2/events.jsonl",
+      "profile": null,
+      "sha256": "d432dfd2981d1adf74c81cbf0a241b7d3224d3a2774eae77d98647e4c07106e6"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser3/events.jsonl",
+      "profile": null,
+      "sha256": "2beb01c0ba9807a9bb7678357101b8abdf1872554300d94da61f1ab8b4c6ceb2"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser4/events.jsonl",
+      "profile": null,
+      "sha256": "68cdb7c46d9fd4c4f972847b2c98225125cee5abad080feabb9fd518ccecbe0a"
+    },
+    {
+      "counts": {
+        "collected": 2,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 2,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 0,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser5/events.jsonl",
+      "profile": null,
+      "sha256": "6b3d40da5ccd211addbb3b696d2a4524f516e2c8f19cc352c768282e6bbb9f11"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser6/events.jsonl",
+      "profile": null,
+      "sha256": "885c2ac1bb4a321cf1ee029372357fbf16016f1fb0460d9cf3f51405486e662a"
+    },
+    {
+      "counts": {
+        "collected": 3,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 3,
+        "failed": 1,
+        "not_executed": 0,
+        "passed": 1,
+        "reruns": 0,
+        "skipped": 1,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "exitstatus": 1,
+      "lane": "installed",
+      "path": "installed-tests/test_published_receptor_preser7/events.jsonl",
+      "profile": null,
+      "sha256": "ef387acb0d12fb3bee2520b91b7732ef8057752c2573d08c6c773ba7ad878344"
+    }
+  ],
+  "input_sha256": {
+    ".github/workflows/build_and_upload_conda_packages.yaml": "4c39c9cfe8f673a5eed50e0070ab65676db43b8ca005ff42f4faaa8ff45d45df",
+    ".github/workflows/publication_readiness.yml": "beacc9727620dd661629b9eddb81de2fd27d921ec3d0c6137aaf8b4dd430769e",
+    ".github/workflows/release_candidate.yml": "984971f4fa3aed2b53639027d6367a38df293f0c65edb34201d19f03c72047af",
+    ".github/workflows/tests.yml": "452c15f9a7a2e5c0546a2d2186ec8f04bfb1cbbaf07cc06458d855878f8b46a4",
+    "CHANGELOG.md": "ef3c032c2e82a15ac453b9d42d907183f72ba027b0f4f850b4f5eb07b90f2a86",
+    "PACKAGE_README.md": "b5851a8caf0c1979fd7398fd7747010a08990c2df56a12b46a06151dbb66d1fb",
+    "devguide/CHECKPOINT.md": "51f76b496d74c55debad1659f276f655bc2a89bf4e97db65645dd31a6c84dd23",
+    "devguide/ENGINEERING_REVIEW.md": "a2f56c001b0cd42ac98b78fe3fe122d5069e802082ea5d77d18708523804a399",
+    "devguide/NEXT_STEPS.md": "85620a8218f02e3476b4544e450c8c1a8f3d2ad20c4a601cfbb23e99bd88a260",
+    "devguide/PACKAGED_DESCRIPTION.md": "b5f7b4fbef8c878f3d9f0fff1429bc89a7a4bdd043c3052fe7b97feee9b8a50b",
+    "devguide/PYTHON_SUPPORT.md": "dfd4a595471d8225ca021f5b8edcd2ad544bba4f4d20831fd596788fdebc858a",
+    "devguide/README.md": "3676ab9c0791064e54640a240416744c6410e7a606fab8645713f4ec1b99ade7",
+    "devguide/RELEASING.md": "f1548ee730d9cd5339dedf0ddbfa954350c88a9e6a89159764b61143114855c8",
+    "devguide/TEST_TOOL_RECEIVING.md": "903720118b770cbc3732fe2c58c16852554199d7e316b951ce2f720bbcf5f2db",
+    "devtools/conda-build/meta.yaml": "9b3ef84f9ad7618b24a6f7718f5a0f98649134a1a09519be96923a1f994555c3",
+    "devtools/conda-envs/README.md": "9b6b67a5233630b649987d947f8ce3c52132974665d8334bf8399c2d1bb97d70",
+    "devtools/conda-envs/build_env.yaml": "f0f13da4b6912fb4e9b548fdd73d703e98c4de26c8b4c590a0b02ff2322c8b1d",
+    "devtools/conda-envs/development_env.yaml": "666005bbf413d6559a9f8d6a9fd78406d983bb671289dee7fd2f4cbb062225e0",
+    "devtools/conda-envs/recovery_test_env.yaml": "de209b93fa74855d0461ec774364aac1722ffbd69c737877cbf1b0014a5977a1",
+    "devtools/conda-envs/support_test_env.yaml": "a971f48333f6b66b0c8f777db9628cfac8bce4eb8c271aae39b1e267c8be27bf",
+    "devtools/conda-envs/test_env.yaml": "5b8d8cb7e3c31d3b5dcea5b2ba9f3a52b946d48ed1fe8e3ad977f583d6ed0585",
+    "devtools/release_candidate.py": "432e0c3967c0fffc1a91f483bb2f75ca315e6f99caa2606a30f7d75a888e00fe",
+    "pyproject.toml": "28901606e8577cf74f00d096a618ece47e0a8bcbc6de0208997b63e8b06c5ab7",
+    "src/recorda/__init__.py": "75c2293a8923477f38e3ae8fa8935c5f699b47520dd520e389252fabd64393cf",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "src/recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+    "src/recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+    "src/recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+    "src/recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d",
+    "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+    "tests/test_argdigest_policy.py": "37db952baa71b1e760f6c58ce2cee41ee28e13f078f771d0af145e8acbae531b",
+    "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+    "tests/test_dependency_contract.py": "862576ba7afae71117aa059e6c50d943f1596ee0d5bba27150d04b06c6359d3b",
+    "tests/test_diagnostic_setup.py": "d8e0e6f00e6a71874bc158125b71c1a0fd14653c2c037f919023b77a0df9a4b7",
+    "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+    "tests/test_inspection_view.py": "087a3160c659bbab4e69039291f31f95027033401ce211d953cbba472699f49d",
+    "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+    "tests/test_publication_route.py": "5f33e215ff46bcbaf31fb6087b0895e4dd3b39fc89bfdb809a8ee99333de8430",
+    "tests/test_receptor_receiving.py": "2d49a26db4a2789c2ca5b936be642ad267213a9a467e0b5775681cc664803bc0",
+    "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+    "tests/test_recovery_diagnostics.py": "a4672ed43f1f16453e31f36ce0f43f2fa0e9479ac66cce8065a55d999dd7e072",
+    "tests/test_reference_arguments.py": "b63ca2aa2867e79fb94b836ab729f8586029efa84d7c344d48324621fb434be0",
+    "tests/test_references.py": "3e17e0f17f316200d61a6ef77a5440133921f4eae9bf732019a5d4287ed037fd",
+    "tests/test_release_candidate.py": "ae73084ffbe3d584b77fa24feb64ef446769fa4ae582220e5ed6945c43f0d315",
+    "tests/test_smonitor_recovery.py": "4d9585009b443534e4cde1ee38cd7483a332324d7203a78bb33a4be281780511",
+    "tests/test_support_environment.py": "2b22ce82065a9d98818387ce107c9bf2535a07ae5aa503a8f8b5876b83d42e36"
+  },
+  "limits": [
+    "local source/installed-wheel receiving; not a public Conda release",
+    "no scientific consumer adoption, replay or arbitrary-call capture claim"
+  ],
+  "owner": "uibcdf/recorda#33",
+  "providers": {
+    "feature": "argdigest",
+    "providers": {
+      "argdigest": {
+        "file": "argdigest-0.16.0-py_0.tar.bz2",
+        "python_files": 39,
+        "sha256": "e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d",
+        "version": "0.16.0"
+      },
+      "depdigest": {
+        "file": "depdigest-0.15.1-py_0.tar.bz2",
+        "python_files": 17,
+        "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+        "version": "0.15.1"
+      },
+      "smonitor": {
+        "file": "smonitor-0.21.0-py_2.tar.bz2",
+        "python_files": 40,
+        "sha256": "62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56",
+        "version": "0.21.0"
+      }
+    }
+  },
+  "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:21:21) [GCC 15.3.0]",
+  "quality": {
+    "dependency_routes": "five environments and one recipe pass",
+    "local_governance": "passed",
+    "moli_component_and_canonical_guide": "passed",
+    "pip_check": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed"
+  },
+  "runtime_files_verified": 15,
+  "source_parent": "006b92f4e015872406454a691cef66c9f8eda401",
+  "state": "local-qualified; exact committed source/Conda/publication gates pending",
+  "temporary_resources": {
+    "owner": "Recorda #33 release qualification",
+    "review_trigger": "task/release closeout; retire owned environments/scratch after proof extraction, preserve original candidate and full proof through delivery/audit",
+    "root": "/tmp/recorda-032-qualification-t6pz11cz"
+  },
+  "tests": {
+    "installed": {
+      "artifact_complete": true,
+      "integrity_valid": true,
+      "jsonl_sha256": "147db8d47df52b6bf5fb46932bdfc37aabf61c4c7fce5bfdd6d24d11c72c7f33",
+      "native_exit": 0,
+      "passed": 376,
+      "post_verdict_resource_warning": false,
+      "warnings": 0
+    },
+    "source": {
+      "artifact_complete": true,
+      "integrity_valid": true,
+      "jsonl_sha256": "a4fad98d7838748db6452fe460afdc58dd8ca0086ad51649d90e18c5eb274c2d",
+      "native_exit": 0,
+      "passed": 376,
+      "post_verdict_resource_warning": false,
+      "warnings": 0
+    }
+  },
+  "tools": {
+    "gh_run_receptor": {
+      "source": "official GitHub Release wheel verified in prior receiving and rehashed on copy",
+      "version": "1.2.0",
+      "wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c"
+    },
+    "pytest_receptor": {
+      "installed_python_files_verified": 6,
+      "pypi_source": "https://pypi.org/pypi/pytest-receptor/1.2.1/json",
+      "version": "1.2.1",
+      "wheel_sha256": "683200648785f3894357891b238cdc0780c1e874dcf067882dbba2aaa2c527c3"
+    },
+    "ruff": "0.16.5"
+  },
+  "version": "0.3.2"
+}

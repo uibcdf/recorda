@@ -1,5 +1,36 @@
 # Development checkpoint — 2026-10-23
 
+## Active maintenance and release — 0.3.2
+
+Diego authorizes fixing `uibcdf/recorda#31` and `uibcdf/recorda#32`, then publishing
+0.3.2 if receiving and release gates pass and no release blocker remains. Owner:
+`uibcdf/recorda#33`. Source baseline is
+`006b92f4e015872406454a691cef66c9f8eda401`. Existing public tags/files remain intact.
+
+Published pytest-receptor **1.2.1** is selected consistently across development
+and CI. Its six installed Python files match the verified public wheel. The
+eight fresh-process llm/ci success/failure/statistics cases and description
+fixtures pass 26 targeted tests. Full source and installed-wheel checks each
+pass **376 tests**, with complete, integrity-valid JSONL, matching JUnit/native
+exits and no warnings. Actual wheel and installed METADATA match the stable
+description. [Local receipt](evidence/candidate_0_3_2_local.json) binds these
+inputs. Hosted same-source/same-artifact gates remain pending.
+
+The package now reads stable `PACKAGE_README.md`, independent of live release
+status. Candidate and installed/public verification bind the actual METADATA
+description to its source and manifest digest. Read
+[TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md) and
+[PACKAGED_DESCRIPTION.md](PACKAGED_DESCRIPTION.md).
+
+Next: full source and installed-wheel tests, fresh exact-source and same-file
+Conda qualification across Linux x86_64/macOS arm64 Python 3.11–3.14, then
+authorized exact-file publication and public/Release checks. The existing
+canonical credential route and presence-only readiness apply. Notify the current
+MolSysSuite receiving issue after verified delivery. Do not infer adoption or
+reuse the 0.3.1 gates for new source/artifact inputs.
+
+The completed 0.3.1 state and earlier history below retain their own identities.
+
 ## Current release and receiving handoff — 0.3.1
 
 **0.3.1 is publicly delivered**, with the canonical

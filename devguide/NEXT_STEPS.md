@@ -8,6 +8,19 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-23
 
+1. Complete #31/#32 receiving and the conditional 0.3.2 release in
+   `uibcdf/recorda#33`. Use the active checkpoint and the dedicated tool/description
+   guides; local source/installed checks each pass 376 tests. Exact hosted
+   source/Conda gates remain pending.
+2. Qualify the exact committed source and original Conda bytes before tagging;
+   publish those same bytes only if all gates and final blocker review succeed.
+   Verify actual installed METADATA, public downloads and canonical Release title.
+3. Close fixes with usable receiving evidence and report 0.3.2 to existing
+   MolSysSuite #130 and the owning coordinations. Keep 0.3.1 immutable and its
+   historical warning/description observations visible.
+
+## Historical post-0.3.1 receiving order
+
 1. **0.3.1 is published.** Preserve its exact original file/tag and the
    [release receipt](evidence/release_0_3_1.json). Source/candidate/publication
    workflows pass 14/10/3 jobs; public and Release asset digests match.

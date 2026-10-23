@@ -36,11 +36,15 @@ Linux/macOS installs and Release asset downloads match the original digest.
 See [release_0_3_1.json](evidence/release_0_3_1.json). Earlier evidence below
 retains its original source/tool/closure scope; Windows remains unclaimed.
 
-Use published pytest-receptor 1.1.0, whose metadata admits Python 3.11–3.14, and
+Use published pytest-receptor 1.2.1, whose metadata admits Python 3.11–3.14, and
 Ruff 0.16.5. The shared 3.14 environment contains a development receptor; select the
 published tool separately for evidence. Do not change shared packages merely to run
 the experiment. Preserve source and installed-wheel results with interpreter/tool
 versions and artifact fingerprints in `evidence/`.
+
+The 0.3.2 tool receiving is owned in `uibcdf/recorda#31`; read
+[TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md). Older receipts retain their
+original tool pins. The shared development checkout is never release evidence.
 
 Required CI includes 3.14 without tolerated failures, while preserving older minors.
 Version 0.3.0 qualifies the same Conda file on Linux x86_64 and macOS arm64 for

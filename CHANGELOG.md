@@ -1,5 +1,15 @@
 # Release history
 
+## 0.3.2 — 2026-10-23
+
+- Receive published pytest-receptor 1.2.1 in development/CI, with fresh-process
+  llm/ci success/failure/statistics and complete-artifact regressions (#31).
+- Use an independent stable packaged description. Verify actual archive and
+  installed METADATA against its declared source and description digest, keeping
+  live release-state prose separate (#32).
+- Preserve experimental recording API/schema, native ownership, required-provider
+  ranges and all historical release bytes. Qualification/publication is #33.
+
 ## 0.3.1 — 2026-10-23
 
 - Deliver the accepted provider compatibility ranges: ArgDigest `>=0.15.0,<0.17`

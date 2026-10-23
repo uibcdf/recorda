@@ -1,5 +1,10 @@
 # Recorda environment routes
 
+Current development/test tooling pins published pytest-receptor **1.2.1** under
+`uibcdf/recorda#31`; CI uses the same selection. Its fresh llm/ci receiving checks
+preserve exit/count/artifact integrity without the old discard-stream warning.
+It is not a runtime dependency. Historical receipts retain earlier tool pins.
+
 All Conda routes use `uibcdf` with `conda-forge`. Create the selected environment,
 then install this development checkout with
 `python -m pip install --no-deps --editable .`. Ordinary core requirements are

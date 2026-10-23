@@ -11,6 +11,13 @@ baseline, registration/emission distinction and optional receiving dispositions.
 
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
+
+Current authorized work is 0.3.2 (`uibcdf/recorda#33`), conditional on receiving
+the published receptor fix (#31) and stable packaged description (#32). Read
+[TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md) and
+[PACKAGED_DESCRIPTION.md](PACKAGED_DESCRIPTION.md). Fresh source, actual artifact
+and installed gates must pass before publication; the 0.3.1 receipt below stays
+historical and immutable.
 Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
 completed original standalone acceptance matrix, consumer questions and separately
 scoped scientific qualification.

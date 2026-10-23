@@ -3,6 +3,7 @@
 import io
 import json
 import tarfile
+import tomllib
 import xml.etree.ElementTree as ET
 
 import pytest
@@ -15,8 +16,11 @@ from devtools.release_candidate import coverage_paths, inspect_archive, registry
 def candidate(tmp_path):
     (tmp_path / "src/recorda").mkdir(parents=True)
     (tmp_path / "src/recorda/__init__.py").write_text('__version__ = "0.3.0"\n')
+    description = "# Stable Recorda\n\nNative références remain with their owner.\n"
+    (tmp_path / "PACKAGE_README.md").write_text(description)
     (tmp_path / "pyproject.toml").write_text(
         '[project]\nname="recorda"\nversion="0.3.0"\nrequires-python=">=3.11,<3.15"\n'
+        'readme="PACKAGE_README.md"\n'
         'dependencies=["argdigest>=0.15.0,<0.16", "smonitor>=0.19.0,<0.20"]\n'
     )
     entries = {
@@ -37,6 +41,7 @@ def candidate(tmp_path):
         "site-packages/recorda-0.3.0.dist-info/METADATA": (
             "Name: recorda\nVersion: 0.3.0\nRequires-Python: >=3.11,<3.15\n"
             "Requires-Dist: argdigest<0.16,>=0.15.0\nRequires-Dist: smonitor<0.20,>=0.19.0\n"
+            "Description-Content-Type: text/markdown\n\n" + description
         ).encode(),
     }
 
@@ -59,6 +64,35 @@ def test_exact_candidate_archive_and_digest_are_qualified(candidate):
     verify_file(path, manifest, "a" * 40)
     assert manifest["coordinate"] == "uibcdf/recorda/0.3.0/noarch/recorda-0.3.0-py_0.tar.bz2"
     assert len(manifest["runtime_sha256"]) == 1
+    assert manifest["description"]["source"] == "PACKAGE_README.md"
+
+
+def test_current_package_description_uses_an_independent_stable_source():
+    project = tomllib.loads((release_candidate.ROOT / "pyproject.toml").read_text())["project"]
+    assert project["readme"] == "PACKAGE_README.md"
+    assert (release_candidate.ROOT / project["readme"]).is_file()
+
+
+def test_live_release_status_changes_do_not_change_packaged_description(candidate):
+    root, _, build = candidate
+    live_readme = root / "README.md"
+    live_readme.write_text("0.3.0 candidate is not yet published.\n")
+    before = inspect_archive(build(), root, "a" * 40)
+    live_readme.write_text("0.3.0 is publicly available.\n")
+    after = inspect_archive(build(), root, "a" * 40)
+    assert before["description"] == after["description"]
+
+
+@pytest.mark.parametrize("defect", ["body", "content_type"])
+def test_candidate_rejects_stale_or_misdeclared_description(candidate, defect):
+    root, entries, build = candidate
+    name = "site-packages/recorda-0.3.0.dist-info/METADATA"
+    if defect == "body":
+        entries[name] += b"\nOld candidate is not published.\n"
+    else:
+        entries[name] = entries[name].replace(b"text/markdown", b"text/html")
+    with pytest.raises(AssertionError, match="description"):
+        inspect_archive(build(), root, "a" * 40)
 
 
 @pytest.mark.parametrize("defect", ("missing", "stale", "extra", "version", "dependencies"))
