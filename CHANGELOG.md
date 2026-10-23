@@ -1,5 +1,16 @@
 # Release history
 
+## 0.3.1 — candidate
+
+- Deliver the accepted provider compatibility ranges: ArgDigest `>=0.15.0,<0.17`
+  and SMonitor `>=0.19.0,<0.22`, retaining the existing floors and experimental
+  API/schema. Current receiving pins public ArgDigest 0.16.0, SMonitor 0.21.0
+  build 2 and transitive DepDigest 0.15.1 (`uibcdf/recorda#24`, #26).
+- Retain the qualified safe first-use diagnostic setup, application/project
+  precedence, nonemitting inspection and explicit recovery contracts (#29).
+- Prepare fresh exact-file release gates and a separate canonical-credential
+  presence-only check. Candidate preparation does not publish a package.
+
 ## 0.3.0 — 2026-10-07
 
 The standalone experimental slice is complete. This release prepares adoption

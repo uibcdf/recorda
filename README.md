@@ -47,6 +47,13 @@ installed suite on Linux x86_64 and macOS arm64, Python 3.11–3.14. See
 source checkpoints. Consumer-owned adoption by MOLI components and MolSysMT is the
 next step; the API and schema remain experimental before 1.0.
 
+Development source prepares **0.3.1**, tracked in
+[Recorda #26](https://github.com/uibcdf/recorda/issues/26), to deliver accepted
+compatibility with ArgDigest 0.16 and SMonitor 0.21. This candidate is not yet
+published; the immutable public 0.3.0 package retains its narrower provider
+ceilings. See the [current checkpoint](devguide/CHECKPOINT.md) for preparation
+and receiving scope.
+
 Recorda now has an **experimental first standalone implementation**. Its API and journal
 schema are provisional. The controlled laboratory lives in `uibcdf/recorda-lab`;
 laboratory evidence does not establish real scientific utility or complete workflow capture.

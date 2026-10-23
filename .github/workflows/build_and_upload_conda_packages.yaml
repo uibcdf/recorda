@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       candidate_sha:
-        description: Exact source commit already tagged as 0.3.0
+        description: Exact source commit already tagged as 0.3.1
         required: true
         type: string
       candidate_run_id:
@@ -26,11 +26,23 @@ concurrency:
 
 jobs:
   publish:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash -el {0}
     steps:
+      - name: Check canonical publication credential availability
+        shell: bash
+        env:
+          MOLI_CONDA_TOKEN: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
+        run: |
+          set +x
+          if [[ -z "${MOLI_CONDA_TOKEN:-}" ]]; then
+            echo '::error::ANACONDA_UIBCDF_TOKEN unavailable; request repository access from Diego Prada in Recorda #26.'
+            exit 1
+          fi
+          echo 'Publication credential available (presence only).'
       - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.candidate_sha }}
@@ -49,7 +61,7 @@ jobs:
           run_id = os.environ['CANDIDATE_RUN_ID']
           assert re.fullmatch('[0-9a-f]{40}', source) and re.fullmatch('[0-9]+', run_id)
           assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip() == source
-          assert subprocess.check_output(['git', 'rev-parse', '0.3.0^{}'], text=True).strip() == source
+          assert subprocess.check_output(['git', 'rev-parse', '0.3.1^{}'], text=True).strip() == source
           def api(path):
               return json.loads(subprocess.check_output(['gh', 'api', f'repos/{os.environ["GITHUB_REPOSITORY"]}/{path}'], text=True))
           candidate = api('actions/runs/' + run_id)
@@ -79,7 +91,7 @@ jobs:
           CANDIDATE_SHA: ${{ inputs.candidate_sha }}
           EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
         run: |
-          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.0-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
+          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.1-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
           python - <<'PY'
           import json, os, re
           expected = os.environ['EXPECTED_SHA256']
@@ -91,12 +103,12 @@ jobs:
         id: upload
         uses: uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2 # v2.3.0
         with:
-          artifact: candidate/recorda-0.3.0-py_0.tar.bz2
-          package-spec: uibcdf/recorda/0.3.0/noarch/recorda-0.3.0-py_0.tar.bz2
+          artifact: candidate/recorda-0.3.1-py_0.tar.bz2
+          package-spec: uibcdf/recorda/0.3.1/noarch/recorda-0.3.1-py_0.tar.bz2
           expected-sha256: ${{ inputs.expected_sha256 }}
           candidate-sha: ${{ inputs.candidate_sha }}
           label: main
-          token: ${{ secrets.ANACONDA_UIBCDF_TOKEN || secrets.ANACONDA_TOKEN }}
+          token: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
       - name: Independently observe public poststate
         run: python -m devtools.release_candidate public --manifest candidate/manifest.json --output "$RUNNER_TEMP/public-registry.json"
       - uses: actions/upload-artifact@v4
@@ -134,7 +146,7 @@ jobs:
           github-token: ${{ github.token }}
       - name: Install the independently published channel package
         run: |
-          micromamba install --yes --prefix "$CONDA_PREFIX" --strict-channel-priority -c uibcdf -c conda-forge recorda=0.3.0=py_0
+          micromamba install --yes --prefix "$CONDA_PREFIX" --strict-channel-priority -c uibcdf -c conda-forge recorda=0.3.1=py_0
           python devtools/verify_support_environment.py argdigest
           python -m pip check
           python -m devtools.release_candidate installed --manifest candidate/manifest.json --output "$RUNNER_TEMP/public-installed.json"

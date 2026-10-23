@@ -30,17 +30,15 @@ jobs:
         with:
           environment-file: devtools/conda-envs/build_env.yaml
           create-args: --strict-channel-priority
-      - name: Check source and publication configuration
+      - name: Check candidate source configuration
         env:
           CANDIDATE_SHA: ${{ inputs.candidate_sha }}
-          PUBLISH_TOKEN: ${{ secrets.ANACONDA_UIBCDF_TOKEN || secrets.ANACONDA_TOKEN }}
         run: |
           python - <<'PY'
           import os, re, subprocess
           candidate = os.environ['CANDIDATE_SHA']
           assert re.fullmatch('[0-9a-f]{40}', candidate)
           assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip() == candidate
-          print('Anaconda publication credential available:', bool(os.environ['PUBLISH_TOKEN']))
           PY
           python devtools/check_dependencies.py
           python devtools/verify_support_environment.py argdigest
@@ -64,7 +62,7 @@ jobs:
           assert len(paths) == 1
           shutil.copyfile(paths[0], pathlib.Path(os.environ['RUNNER_TEMP']) / 'candidate' / pathlib.Path(paths[0]).name)
           PY
-          python -m devtools.release_candidate inspect --artifact "$RUNNER_TEMP/candidate/recorda-0.3.0-py_0.tar.bz2" --output "$RUNNER_TEMP/candidate/manifest.json"
+          python -m devtools.release_candidate inspect --artifact "$RUNNER_TEMP/candidate/recorda-0.3.1-py_0.tar.bz2" --output "$RUNNER_TEMP/candidate/manifest.json"
           python -m devtools.release_candidate unoccupied --manifest "$RUNNER_TEMP/candidate/manifest.json" --output "$RUNNER_TEMP/registry-preflight.json"
           python - <<'PY'
           import json, os, pathlib
@@ -116,8 +114,8 @@ jobs:
         env:
           CANDIDATE_SHA: ${{ needs.build.outputs.source }}
         run: |
-          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.0-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
-          micromamba install --yes --no-deps --prefix "$CONDA_PREFIX" "$PWD/candidate/recorda-0.3.0-py_0.tar.bz2"
+          python -m devtools.release_candidate verify --artifact candidate/recorda-0.3.1-py_0.tar.bz2 --manifest candidate/manifest.json --source-sha "$CANDIDATE_SHA" --output "$RUNNER_TEMP/verified.json"
+          micromamba install --yes --no-deps --prefix "$CONDA_PREFIX" "$PWD/candidate/recorda-0.3.1-py_0.tar.bz2"
           python devtools/verify_support_environment.py argdigest
           python -m pip check
           python -m devtools.release_candidate installed --manifest candidate/manifest.json --output "$RUNNER_TEMP/installed.json"

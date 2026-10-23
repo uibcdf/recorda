@@ -1,0 +1,24 @@
+name: Publication credential readiness
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  presence:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check canonical organization credential presence only
+        shell: bash
+        env:
+          MOLI_CONDA_TOKEN: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
+        run: |
+          set +x
+          if [[ -z "${MOLI_CONDA_TOKEN:-}" ]]; then
+            echo '::error::ANACONDA_UIBCDF_TOKEN unavailable; request repository access from Diego Prada in Recorda #26.'
+            exit 1
+          fi
+          echo 'Publication credential available (presence only; no upload performed).'

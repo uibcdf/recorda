@@ -6,7 +6,24 @@ Recorda has an **EXPERIMENTAL STANDALONE PROTOTYPE**. The first implementation e
 
 The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the smallest correct standalone recording substrate, learn from a library outside MOLI, and only then add platform integration.
 
-## Current resumption order — 2026-10-07
+## Current resumption order — 2026-10-23
+
+1. Prepare the **0.3.1 compatibility candidate** in `uibcdf/recorda#26`, with
+   fresh exact-source and exact-Conda installed gates. Preserve the 0.3.0 tag,
+   public archive and original evidence. Source compatibility in #24 and the
+   retained setup decision in #29 are complete; they do not qualify a new file.
+2. Use [CHECKPOINT.md](CHECKPOINT.md) and [RELEASING.md](RELEASING.md) for current
+   source/public distinctions and the candidate/publication decision. The
+   checkpoint correction is `uibcdf/recorda#30`. Verify credential availability
+   separately from grant, validity and successful upload; never expose values.
+3. After authorized exact-file publication and independent public-only checks,
+   return the delivery receipt to MolSysSuite #82, MOLI #40 and Praxis #10.
+   Consumer-owned adoption remains separately qualified.
+4. Original standalone acceptance, #24/#29 receiving and MOLI #62 coordination
+   are complete. Choose another scientific experiment or shared integration
+   only for a concrete receiving question under its own issue and contract.
+
+## Historical experiment and adoption sequence — 2026-10-07
 
 The original standalone acceptance (`uibcdf/recorda#1` / `uibcdf/recorda-lab#1`)
 is resolved with a criterion/evidence matrix and archived coordination reports.

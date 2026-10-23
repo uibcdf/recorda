@@ -1,5 +1,44 @@
 # Stabilization release qualification
 
+## Current preparation — 0.3.1
+
+Owner: `uibcdf/recorda#26`. The selected compatibility patch is **0.3.1**;
+the public 0.3.0 release, tag and original artifact remain immutable. Source,
+recipe and runtime version must agree, and current published-provider identities
+remain pinned in the environment specifications. No schema or public API change
+is selected. Historical 0.3.0 evidence below does not certify this candidate.
+
+Commit the reviewed candidate, pass the 14-job exact-source workflow, then run
+`release_candidate.yml` with its full `candidate_sha`. Its 10 required jobs must
+build once and test the same `recorda-0.3.1-py_0.tar.bz2` on Linux x86_64 and
+macOS arm64 for Python 3.11–3.14, with recovery enabled. Retain the manifest,
+source/run identities, original file and SHA256 before a publication decision.
+
+Credential owner/contract: [MOLI #8](https://github.com/uibcdf/moli/issues/8) and
+MOLI's distribution policy. Diego Prada administers the selected-repository
+organization secret `ANACONDA_UIBCDF_TOKEN`. The publisher explicitly adopts
+that canonical name, removing the reviewed legacy `ANACONDA_TOKEN` fallback.
+Ordinary source/candidate tests receive no publication credential.
+`publication_readiness.yml` is a trusted **manual main-branch** presence-only
+check with no checkout, package input, upload or token output. The selected
+publisher checks presence again before work. Record the actual readiness run
+and administrator disposition in #26; presence alone does not establish a grant,
+validity or a successful upload. Request missing access from Diego in that issue.
+
+Only after authorization, create the new annotated `0.3.1` tag on the qualified
+source and use `build_and_upload_conda_packages.yaml` with the successful
+candidate run and retained digest. Upload the exact original file; never rebuild,
+overwrite an occupied coordinate or retag. Independently verify public registry
+and clean channel installs. A GitHub Release title must be exactly `0.3.1`,
+matching its tag and package version. No tag or upload is part of preparation.
+
+At closeout, retire owned environments/build scratch after final evidence
+extraction. Retain original candidate bytes and proof with an owner and a next
+review trigger through the publication decision. Provider/adoption feedback goes
+to MolSysSuite #82, MOLI #40 and Praxis #10 after actual delivery.
+
+## Historical procedure and evidence — 0.3.0
+
 For any future public GitHub Release, verify before creating or editing it
 that the visible title (`name`) is exactly the canonical `X.Y.Z` version,
 equal to the tag and package version. Use `gh release create X.Y.Z --title X.Y.Z`

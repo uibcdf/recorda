@@ -1,6 +1,52 @@
-# Development checkpoint — 2026-10-07
+# Development checkpoint — 2026-10-23
 
-## Stabilization release and adoption checkpoint
+## Current resumption — compatibility candidate 0.3.1
+
+Owner: [uibcdf/recorda#26](https://github.com/uibcdf/recorda/issues/26).
+Checkpoint reconciliation: [uibcdf/recorda#30](https://github.com/uibcdf/recorda/issues/30).
+
+The active task is to prepare **0.3.1**, carrying the latest-support-provider
+compatibility accepted in #24 and the retained diagnostic setup qualified in
+[#29](DIAGNOSTIC_SETUP.md). Receiving source baseline:
+`ebe95dcc8528cfa4760951a87c818b812c4ebbba`. The new candidate needs its own exact
+committed source, successful source gates, original Conda artifact and full
+installed Linux x86_64/macOS arm64 Python 3.11–3.14 gates. Preparation does not
+tag, publish or qualify that artifact in advance.
+
+Current source admits ArgDigest `>=0.15.0,<0.17` and SMonitor `>=0.19.0,<0.22`.
+The selected public receiving cohort is ArgDigest **0.16.0 py_0**, SMonitor
+**0.21.0 py_2** and transitive DepDigest **0.15.1 py_0**. Read
+[LATEST_SUPPORT_RECEIVING.md](LATEST_SUPPORT_RECEIVING.md) for original file
+identities. Version **0.3.0 remains the latest public release**, with its original
+narrower dependency ceilings and immutable artifact. Source/editable receiving
+does not make the new cohort installable with the historical public package.
+
+Completed work must not be reopened as a blocker:
+
+- Original standalone and Lab acceptance (#1 in both repositories) is complete.
+- Recorda #24 accepted latest-provider compatibility in source. Recorda #29
+  retained the safe first-use baseline, nonemitting inspection and explicit
+  recovery behavior, with scoped receiving evidence; optional capabilities
+  have named reassessment triggers rather than assumed adoption.
+- [MOLI #62](https://github.com/uibcdf/moli/issues/62) is **closed** with archived
+  direct-owner decisions. Future integration needs a separately owned question;
+  MOLI routing is not a pending prerequisite for this compatibility release.
+
+Next: qualify the new candidate under [RELEASING.md](RELEASING.md), preserve its
+original file and digest, and record the actual gate/credential-readiness results
+in #26. Publication is a separate final decision. After public-only receiving,
+return the immutable delivery receipt to MolSysSuite #82, MOLI #40 and Praxis #10.
+Each receiving consumer owns its adoption; publication alone does not establish it.
+
+Nonblocking tool follow-up: [Recorda #31](https://github.com/uibcdf/recorda/issues/31)
+tracks receiving the published pytest-receptor discard-stream fix. The retained
+1.1.0 local tool reports a post-verdict `/dev/null` ResourceWarning; native exits
+and JUnit totals still agree. Preserve that warning rather than suppressing it.
+
+All older sections below retain their original dates, source identities and
+evidence scope. Their historical next-step statements do not override this summary.
+
+## Historical stabilization release and adoption checkpoint — 2026-10-07
 
 The maintainer-authorized **0.3.0** tag identifies qualified source
 `101b8ba82f3b3dba7f434a074b3637d072056a18`. The official public Conda artifact is
@@ -289,7 +335,7 @@ dependency closure or replay. The 0.3.0 release evidence is recorded above.
    before an active report or implementation. Core implementation belongs here,
    laboratory scenarios in Lab, shared platform contracts in MOLI.
 
-## Next work, in order
+## Historical next-work order — 2026-10-07
 
 1. **Wait for receiving adoption** by MOLI components and MolSysMT. Each consumer
    owns its semantic boundary, native records and exact installed receiving gate.

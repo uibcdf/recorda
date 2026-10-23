@@ -1,0 +1,163 @@
+{
+  "checkpoint_issue": "uibcdf/recorda#30",
+  "checks": {
+    "dependency_routes": "passed; five environments, one recipe",
+    "local_documentation_links": 84,
+    "local_governance": "passed",
+    "moli_component": "passed; canonical guide unchanged",
+    "pip_check": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed"
+  },
+  "date": "2026-10-23",
+  "executable": "/tmp/recorda-031-candidate-nkrd225g/env/bin/python",
+  "installed_wheel": {
+    "filename": "recorda-0.3.1-py3-none-any.whl",
+    "import": "/tmp/recorda-031-candidate-nkrd225g/env/lib/python3.14/site-packages/recorda",
+    "runtime_files": 15,
+    "sha256": "3ba5976059e0b7751a5b025ce531c53097ae91f70009144b72a8110d166270ba",
+    "version": "0.3.1"
+  },
+  "owner": "uibcdf/recorda#26",
+  "pending": [
+    "exact committed source CI",
+    "exact Conda artifact and installed eight-cell qualification",
+    "trusted presence-only credential readiness",
+    "separate publication decision"
+  ],
+  "providers": {
+    "argdigest": {
+      "feature": "argdigest",
+      "providers": {
+        "argdigest": {
+          "file": "argdigest-0.16.0-py_0.tar.bz2",
+          "python_files": 39,
+          "sha256": "e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d",
+          "version": "0.16.0"
+        },
+        "depdigest": {
+          "file": "depdigest-0.15.1-py_0.tar.bz2",
+          "python_files": 17,
+          "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+          "version": "0.15.1"
+        },
+        "smonitor": {
+          "file": "smonitor-0.21.0-py_2.tar.bz2",
+          "python_files": 40,
+          "sha256": "62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56",
+          "version": "0.21.0"
+        }
+      }
+    },
+    "smonitor": {
+      "feature": "smonitor",
+      "providers": {
+        "argdigest": {
+          "file": "argdigest-0.16.0-py_0.tar.bz2",
+          "python_files": 39,
+          "sha256": "e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d",
+          "version": "0.16.0"
+        },
+        "depdigest": {
+          "file": "depdigest-0.15.1-py_0.tar.bz2",
+          "python_files": 17,
+          "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+          "version": "0.15.1"
+        },
+        "smonitor": {
+          "file": "smonitor-0.21.0-py_2.tar.bz2",
+          "python_files": 40,
+          "sha256": "62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56",
+          "version": "0.21.0"
+        }
+      }
+    }
+  },
+  "published_gh_run_receptor_wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+  "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:21:21) [GCC 15.3.0]",
+  "source_parent": "ebe95dcc8528cfa4760951a87c818b812c4ebbba",
+  "state": "local candidate preparation; no tag or public package",
+  "temporary_resources": {
+    "owner": "Recorda #26/#30, Codex 2026-10-23",
+    "review_trigger": "task closeout; retire owned scratch/envs after proof extraction, retain original Conda artifact and immutable gate evidence through release decision",
+    "root": "/tmp/recorda-031-candidate-nkrd225g"
+  },
+  "tests": {
+    "installed": {
+      "junit_sha256": "3e3cd9121bb51595ee9c684b57e049ce2f278d7f57e4f143c71918ee6f4d7f5b",
+      "log": "PASS exit=0 | 364 passed | 7.00s\n\n<sys>:0: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='utf-8'>\n",
+      "log_sha256": "dcefc33fc3fa2372ce2e21ef20a1df77e63b47c3fd56d4f1381ba0f67bbf5842",
+      "native_exit": 0,
+      "totals": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 364
+      }
+    },
+    "source": {
+      "junit_sha256": "44e68e9d2989a6579b9ce046688bda59057e6cb9e770730750e6f8fd59d9804e",
+      "log": "PASS exit=0 | 364 passed | 7.63s\n\n<sys>:0: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='utf-8'>\n",
+      "log_sha256": "3fb0c8a2979e8c5c6e74c82bb9ec5ae4303abae40ee75007ebf4efde1348184b",
+      "native_exit": 0,
+      "totals": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 364
+      }
+    }
+  },
+  "tools": {
+    "gh-run-receptor": "1.2.0",
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5"
+  },
+  "version": "0.3.1",
+  "warning_followup": "uibcdf/recorda#31; old published receptor warning retained, no assertion of a new provider defect",
+  "working_tree_sha256": {
+    ".github/workflows/build_and_upload_conda_packages.yaml": "21370a099bf3a9ae454601251829a71f4399099ad6a75caeb161216e19b8849c",
+    ".github/workflows/publication_readiness.yml": "1c148bdcb62b458aeb8e063cbb0eebe4e5013b5489742541f81850d7673e05da",
+    ".github/workflows/release_candidate.yml": "584809fea346ac0c52f564e0bf76d9a7b9ad72e12e704cede8d7aea90a8f454f",
+    ".github/workflows/tests.yml": "f563199003c0afb1d61f94e3ce36f81c3855ff10794e8d291087258376e3bfe5",
+    "CHANGELOG.md": "56514b78174fb5cf8f7c423d77f098233f53bd2800565461ef9fed31c04e5524",
+    "README.md": "7cd0dd518d253b114e6977ca4dab36c55952a865a0b80d4d2eef59fb0ea17827",
+    "devguide/CHECKPOINT.md": "4950f8f32e7e0322a5ff38961b8136730497720bacd0065f232a73f3e708982c",
+    "devguide/NEXT_STEPS.md": "c5aae93ef129e5e32bb48b5de8e6cd2715afdcea1576127e1ad27b356812b50e",
+    "devguide/README.md": "ac0ad19e9a1c580ee90cb1543031354eebaa244f66406c6633868b7fe19b5338",
+    "devguide/RELEASING.md": "f186a3eab42c23538036a3d1e65d3d5738eb91f1cd0ce03416354f42358a7f18",
+    "devtools/conda-build/meta.yaml": "67d5393dbab9a1ff133214bad92dabeff7331e393f659bf94cf3e00ebe719623",
+    "pyproject.toml": "caf3064820719825d85acd68effe06e0f959ecb79fccadb4a75fdb1f965f7fc2",
+    "src/recorda/__init__.py": "949e1780725a6bf807cf842852b04cb631898e9aff079e00c98c73e3f44978a9",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "src/recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+    "src/recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+    "src/recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+    "src/recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d",
+    "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+    "tests/test_argdigest_policy.py": "37db952baa71b1e760f6c58ce2cee41ee28e13f078f771d0af145e8acbae531b",
+    "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+    "tests/test_dependency_contract.py": "862576ba7afae71117aa059e6c50d943f1596ee0d5bba27150d04b06c6359d3b",
+    "tests/test_diagnostic_setup.py": "d8e0e6f00e6a71874bc158125b71c1a0fd14653c2c037f919023b77a0df9a4b7",
+    "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+    "tests/test_inspection_view.py": "087a3160c659bbab4e69039291f31f95027033401ce211d953cbba472699f49d",
+    "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+    "tests/test_publication_route.py": "5f33e215ff46bcbaf31fb6087b0895e4dd3b39fc89bfdb809a8ee99333de8430",
+    "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+    "tests/test_recovery_diagnostics.py": "a4672ed43f1f16453e31f36ce0f43f2fa0e9479ac66cce8065a55d999dd7e072",
+    "tests/test_reference_arguments.py": "b63ca2aa2867e79fb94b836ab729f8586029efa84d7c344d48324621fb434be0",
+    "tests/test_references.py": "3e17e0f17f316200d61a6ef77a5440133921f4eae9bf732019a5d4287ed037fd",
+    "tests/test_release_candidate.py": "eeaf4337afe4860a2c847b3c1ba7876b9661652d8284318289555e5df98617b2",
+    "tests/test_smonitor_recovery.py": "4d9585009b443534e4cde1ee38cd7483a332324d7203a78bb33a4be281780511",
+    "tests/test_support_environment.py": "2b22ce82065a9d98818387ce107c9bf2535a07ae5aa503a8f8b5876b83d42e36"
+  }
+}
