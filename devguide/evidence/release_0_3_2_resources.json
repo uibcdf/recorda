@@ -1,0 +1,204 @@
+{
+  "owner": "Recorda #33 release audit, Codex 2026-10-23; maintainer handoff",
+  "state": "0.3.2 package/Release/public metadata delivered; #31/#32 resolved; suite notice updated",
+  "root": "/tmp/recorda-032-qualification-t6pz11cz",
+  "owned_environment_retired_with": "conda env remove; Conda registration handled before owned residual review",
+  "removed_owned_disposable_paths": [
+    "/tmp/recorda-032-qualification-t6pz11cz/targeted-tests",
+    "/tmp/recorda-032-qualification-t6pz11cz/source-tests",
+    "/tmp/recorda-032-qualification-t6pz11cz/installed-tests",
+    "/tmp/recorda-032-qualification-t6pz11cz/wheels",
+    "/tmp/recorda-032-qualification-t6pz11cz/original-candidate",
+    "/tmp/recorda-032-qualification-t6pz11cz/public",
+    "/tmp/recorda-032-qualification-t6pz11cz/environment-create.log",
+    "/tmp/recorda-032-qualification-t6pz11cz/local_env.yaml",
+    "/tmp/recorda-032-qualification-t6pz11cz/suite-status.log",
+    "/tmp/recorda-032-qualification-t6pz11cz/targeted.log",
+    "/tmp/recorda-032-qualification-t6pz11cz/targeted.jsonl",
+    "/tmp/recorda-032-qualification-t6pz11cz/targeted.xml"
+  ],
+  "cleanup_failures": [],
+  "retained": [
+    "original qualified Conda and manifest",
+    "all candidate/public/build/coverage receipts",
+    "four complete verified GH Run Receptor bundles (24 members)",
+    "final local JSONL/JUnit/logs and 32 copied receiving artifacts with custody map",
+    "compressed public environment records and published tool identities",
+    "small evidence reproduction scripts"
+  ],
+  "next_review": "next audit/consumer handoff or 2026-11-22, whichever comes first; retire useful proof after durable audit handoff",
+  "prior_release_review": {
+    "root": "/tmp/recorda-031-candidate-nkrd225g",
+    "disposition": "reviewed; independent original artifact/full proof retained until 2026-11-22 or audit handoff; no environment remains"
+  },
+  "shared_work_preserved": [
+    "shared molsyssuite@uibcdf_3.14 interpreter/packages",
+    "other task paths and active suite worktrees",
+    "existing repository build/egg-info/pytest caches: ownership not established and shared metadata may be active"
+  ],
+  "receiving_artifact_custody": [
+    {
+      "original": "source-tests/test_published_receptor_preser0/events.jsonl",
+      "retained": "receiving-evidence/source/00-events.jsonl",
+      "sha256": "f569309b38d99a6937a1421ba2b6f5d56e1bb1483e2d064f2ef45b82a1a827fb"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser0/junit.xml",
+      "retained": "receiving-evidence/source/00-junit.xml",
+      "sha256": "4fdc7af6ac7fd5ab734c7ce69019ca4ad29777421b23a4368cb9c55b653aca98"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser1/events.jsonl",
+      "retained": "receiving-evidence/source/01-events.jsonl",
+      "sha256": "b9165a039245c1c9c4f1b34ad291624e634e141ef1df305b2e3f846ef7d1a05d"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser1/junit.xml",
+      "retained": "receiving-evidence/source/01-junit.xml",
+      "sha256": "2017b58f1f464704e2ced29d47e853581f74790619a3ebd0a715caaf8867a1d1"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser2/events.jsonl",
+      "retained": "receiving-evidence/source/02-events.jsonl",
+      "sha256": "4cc7348ccce2730efa412c37f7b1238b29c5cbf35118286d48c6e3389a8d03c5"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser2/junit.xml",
+      "retained": "receiving-evidence/source/02-junit.xml",
+      "sha256": "f28f82f12a645e941962ea4cf61e734a3bb1ea7a672d6287f7dfe880069683c7"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser3/events.jsonl",
+      "retained": "receiving-evidence/source/03-events.jsonl",
+      "sha256": "8ebe298239ea5859bb307cba6fa5c5dd8841e4310985e6551e81669bb487c18c"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser3/junit.xml",
+      "retained": "receiving-evidence/source/03-junit.xml",
+      "sha256": "dca3945fa152b8a958c2c4d46117a58a726440d0c92f7abffa23582eb8f6df05"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser4/events.jsonl",
+      "retained": "receiving-evidence/source/04-events.jsonl",
+      "sha256": "88015e5d99ce78a4ee6bf1a7eca2cb3f2ffa4834acdb47736bb8995233d2b4d3"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser4/junit.xml",
+      "retained": "receiving-evidence/source/04-junit.xml",
+      "sha256": "ca0eb912c2d47b7c2d8ae899f66f53938f27fe56f949758fc055380140501292"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser5/events.jsonl",
+      "retained": "receiving-evidence/source/05-events.jsonl",
+      "sha256": "dae51663e0cd48e03a9cfeba6e8c8cbbd35ce72043a0ff1d8db0bdedadbeae11"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser5/junit.xml",
+      "retained": "receiving-evidence/source/05-junit.xml",
+      "sha256": "e61aa5866d091f0aaad302fcf879c27c8f45e679a62e9eaa9911d13a9ae4cae5"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser6/events.jsonl",
+      "retained": "receiving-evidence/source/06-events.jsonl",
+      "sha256": "521721aa1d4ad1b407c94c59d1a5e5e285f83dfefa817ae970013d7dc344dbfa"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser6/junit.xml",
+      "retained": "receiving-evidence/source/06-junit.xml",
+      "sha256": "669851dfe5de38aaa12a0b32365fef5bb16e16b749efaf9c312bc6925227d3e2"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser7/events.jsonl",
+      "retained": "receiving-evidence/source/07-events.jsonl",
+      "sha256": "63ec6808d5b2a8c43e511658c79fb94deb0368dda447167fe8fff2ab3a040e6f"
+    },
+    {
+      "original": "source-tests/test_published_receptor_preser7/junit.xml",
+      "retained": "receiving-evidence/source/07-junit.xml",
+      "sha256": "6f7d54ebb14b84fb77257ad39e5051217fa18894fe67656dec5fb9c1587d61c0"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser0/events.jsonl",
+      "retained": "receiving-evidence/installed/08-events.jsonl",
+      "sha256": "adce41ee916c08a49518397fd8eefba5af1099bf5f903952e06a93d4ea7ddb4a"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser0/junit.xml",
+      "retained": "receiving-evidence/installed/08-junit.xml",
+      "sha256": "bd5f08c48f5e964cf9b191b9e1f1c1da3043a6c77662333a4713e605a203a87c"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser1/events.jsonl",
+      "retained": "receiving-evidence/installed/09-events.jsonl",
+      "sha256": "a5d1ac8ae9d3a1771d1707da69f7d3e60225336853f3c1881c166d4e455b0e6e"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser1/junit.xml",
+      "retained": "receiving-evidence/installed/09-junit.xml",
+      "sha256": "894d070a43a37648b162a2fd9957f255d2e1474a04ba627f1a5fd9bcc459353c"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser2/events.jsonl",
+      "retained": "receiving-evidence/installed/10-events.jsonl",
+      "sha256": "d432dfd2981d1adf74c81cbf0a241b7d3224d3a2774eae77d98647e4c07106e6"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser2/junit.xml",
+      "retained": "receiving-evidence/installed/10-junit.xml",
+      "sha256": "1d78ea959ad55e7df6e6efd3d8ccd62c2c7efb3d99ddea3eee988d9c223636e7"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser3/events.jsonl",
+      "retained": "receiving-evidence/installed/11-events.jsonl",
+      "sha256": "2beb01c0ba9807a9bb7678357101b8abdf1872554300d94da61f1ab8b4c6ceb2"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser3/junit.xml",
+      "retained": "receiving-evidence/installed/11-junit.xml",
+      "sha256": "8f44701d35b674b1a48334c815d472a3a87dede07c2406cdf744682364b9a1f8"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser4/events.jsonl",
+      "retained": "receiving-evidence/installed/12-events.jsonl",
+      "sha256": "68cdb7c46d9fd4c4f972847b2c98225125cee5abad080feabb9fd518ccecbe0a"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser4/junit.xml",
+      "retained": "receiving-evidence/installed/12-junit.xml",
+      "sha256": "ad29eda54ac5560a71334f2d1f69e198b7c9bdce3d887117b3442ab107436a90"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser5/events.jsonl",
+      "retained": "receiving-evidence/installed/13-events.jsonl",
+      "sha256": "6b3d40da5ccd211addbb3b696d2a4524f516e2c8f19cc352c768282e6bbb9f11"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser5/junit.xml",
+      "retained": "receiving-evidence/installed/13-junit.xml",
+      "sha256": "7651570b2f974c7c766bc5935d8a12c2818485f253c5ec7412f302599cca6baf"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser6/events.jsonl",
+      "retained": "receiving-evidence/installed/14-events.jsonl",
+      "sha256": "885c2ac1bb4a321cf1ee029372357fbf16016f1fb0460d9cf3f51405486e662a"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser6/junit.xml",
+      "retained": "receiving-evidence/installed/14-junit.xml",
+      "sha256": "cdcd4c2523219806f5f983ab22d60adcc73a6a4fc500d47834e348111df5e908"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser7/events.jsonl",
+      "retained": "receiving-evidence/installed/15-events.jsonl",
+      "sha256": "ef387acb0d12fb3bee2520b91b7732ef8057752c2573d08c6c773ba7ad878344"
+    },
+    {
+      "original": "installed-tests/test_published_receptor_preser7/junit.xml",
+      "retained": "receiving-evidence/installed/15-junit.xml",
+      "sha256": "96e40dd84c8c2765c9252567abaa26e91647659b1ede7a514713d88d97451203"
+    }
+  ],
+  "artifact_sha256_verified_after_cleanup": "d6293cfb48110baada88653beaa52250554558e858311fe409245eeac5372ede",
+  "public_release": "https://github.com/uibcdf/recorda/releases/tag/0.3.2",
+  "consumer_notice": "https://github.com/uibcdf/molsyssuite/issues/130"
+}

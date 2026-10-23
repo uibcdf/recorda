@@ -41,8 +41,8 @@ minor override for each matrix cell. All five specifications pin ArgDigest 0.16.
 build 0, SMonitor 0.21.0 build 2 and DepDigest 0.15.1 build 0. The old extra names
 are empty compatibility aliases; package metadata now declares these providers
 as required. Conda supplies the closure before `--no-deps` installation.
-Recorda 0.3.1 is publicly available through `uibcdf` with `conda-forge`;
-[the receipt](../../devguide/evidence/release_0_3_1.json) binds the installed
+Recorda 0.3.2 is publicly available through `uibcdf` with `conda-forge`;
+[the receipt](../../devguide/evidence/release_0_3_2.json) binds the installed
 candidate and publication proof. Development installation still provisions the
 declared closure before `--no-deps`; no complete PyPI dependency route is claimed.
 

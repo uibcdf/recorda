@@ -38,22 +38,24 @@ Existing scientific results and native provenance remain owned by their librarie
 
 ## Status
 
-Version **0.3.1** is the official Conda compatibility release. Its immutable tag,
+Version **0.3.2** is the official Conda maintenance release. Its immutable tag,
 package metadata and runtime version agree. The same Conda file passes the full
 installed suite on Linux x86_64 and macOS arm64, Python 3.11–3.14. See
-[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.1),
-[the qualification/publication receipt](devguide/evidence/release_0_3_1.json) and
+[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.2),
+[the qualification/publication receipt](devguide/evidence/release_0_3_2.json) and
 [the changelog](CHANGELOG.md). The `0.1.0` and `0.2.0` tags retain their historical
 source checkpoints; 0.3.0 retains its original stabilization artifact and evidence.
 Consumer-owned receiving is communicated in
 [MolSysSuite #130](https://github.com/uibcdf/molsyssuite/issues/130).
 The API and schema remain experimental before 1.0.
 
-The new public package delivers accepted compatibility with ArgDigest 0.16 and
-SMonitor 0.21, tracked in [Recorda #26](https://github.com/uibcdf/recorda/issues/26).
-Its tested cohort uses transitive DepDigest 0.15.1. The original public 0.3.0 package
-retains its narrower provider ceilings. See the [current checkpoint](devguide/CHECKPOINT.md)
-for exact source/file identities and receiving scope.
+Version 0.3.2 retains the provider compatibility delivered in 0.3.1: ArgDigest
+0.16, SMonitor 0.21 and transitive DepDigest 0.15.1 at qualification. It receives
+published pytest-receptor 1.2.1 for development/CI and an independent stable
+packaged description, fixing [#31](https://github.com/uibcdf/recorda/issues/31)
+and [#32](https://github.com/uibcdf/recorda/issues/32). Runtime API/schema and
+provider ranges are unchanged; pytest-receptor is not a runtime dependency.
+See the [current checkpoint](devguide/CHECKPOINT.md) for exact identities/scope.
 
 Recorda now has an **experimental first standalone implementation**. Its API and journal
 schema are provisional. The controlled laboratory lives in `uibcdf/recorda-lab`;
@@ -66,7 +68,7 @@ See [`devguide/DESIGN.md`](devguide/DESIGN.md) for the broad design and [`devgui
 Install the public package from the official channels:
 
 ```bash
-micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.1
+micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.2
 micromamba activate recorda
 ```
 

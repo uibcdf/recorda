@@ -21,5 +21,7 @@ All four applicable Conda environments and explicit CI installs use the same
 published pin. Existing source and exact-Conda matrices execute the regression
 on each supported Python minor; qualification belongs to its actual source/run.
 Older receipts retain their original tool versions and warning observations.
-The source/installed full suite and release candidate still need their own
-complete evidence; the targeted probe does not certify publication.
+The [0.3.2 receipt](evidence/release_0_3_2.json) records full source/installed
+376-test runs and actual same-file hosted qualification/publication. The eight
+fresh-process cases execute on every supported minor. The original 1.1.0
+warning observations remain historical; #31 is resolved with delivered receiving.

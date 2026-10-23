@@ -2,6 +2,11 @@
 
 Owner: `uibcdf/recorda#32`. Release: `uibcdf/recorda#33` (0.3.2).
 
+Delivered in [0.3.2](evidence/release_0_3_2.json): actual wheel, original Conda,
+all eight installed candidates and both public OS installations agree on the
+description digest. Public download inspection and all three Release assets
+verify; #32 is resolved without changing the historical 0.3.1 archive.
+
 `pyproject.toml` selects **PACKAGE_README.md** for installed METADATA. It contains
 stable purpose, usage, scope and absolute documentation/release links. The live
 README carries release status independently. A public promotion therefore keeps

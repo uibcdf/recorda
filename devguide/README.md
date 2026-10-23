@@ -12,12 +12,13 @@ baseline, registration/emission distinction and optional receiving dispositions.
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
 
-Current authorized work is 0.3.2 (`uibcdf/recorda#33`), conditional on receiving
-the published receptor fix (#31) and stable packaged description (#32). Read
+Current delivered release is 0.3.2 (`uibcdf/recorda#33`), resolving published
+receptor receiving (#31) and stable packaged description (#32). Read
 [TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md) and
 [PACKAGED_DESCRIPTION.md](PACKAGED_DESCRIPTION.md). Fresh source, actual artifact
-and installed gates must pass before publication; the 0.3.1 receipt below stays
-historical and immutable.
+and installed gates passed; the [release receipt](evidence/release_0_3_2.json)
+records public metadata/assets and the MolSysSuite #130 handoff. Earlier receipts
+remain historical and immutable.
 Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
 completed original standalone acceptance matrix, consumer questions and separately
 scoped scientific qualification.
@@ -25,8 +26,8 @@ scoped scientific qualification.
 [`RELEASING.md`](RELEASING.md) describes the 0.3.0 stabilization qualification
 and exact-file publication route. Its [release receipt](evidence/release_0_3_0.json)
 records executed gates and independently observed publication. Current work is
-the **published 0.3.1 compatibility release** in `uibcdf/recorda#26`.
-Its [release receipt](evidence/release_0_3_1.json) records fresh source, exact-Conda,
+the **published 0.3.2 maintenance release** in `uibcdf/recorda#33`.
+Its [release receipt](evidence/release_0_3_2.json) records fresh source, exact-Conda,
 public installation and GitHub asset checks; the historical 0.3.0 package retains
 its original ceilings. Receiving is communicated in `uibcdf/molsyssuite#130`.
 Read the current checkpoint before following older adoption

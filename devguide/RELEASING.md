@@ -1,6 +1,22 @@
 # Stabilization release qualification
 
-## Active 0.3.2 qualification
+## Completed 0.3.2 publication
+
+[release_0_3_2.json](evidence/release_0_3_2.json) records source 40003836709 (14
+jobs), same-file candidate 40004306942 (10) and publication 40005577937 (3), all
+successful. Source/tag: `e97ec6055e7110b37aac87a7c810c2da3f732c92`. Original file
+SHA256: `d6293cfb48110baada88653beaa52250554558e858311fe409245eeac5372ede`.
+Every installed OS/minor cell passes 376 tests; public archive, both channel
+installations and all three Release assets match the version, bytes and stable
+description. The title/tag/package are exactly 0.3.2. MolSysSuite #130 is updated.
+
+For future versions retain the same source/recipe/version and original-file
+discipline. Check real wheel/Conda/installed metadata against PACKAGE_README.md;
+live release prose belongs in maintained guidance. Published test tooling and
+fresh process/artifact receiving are part of actual candidate evidence. Never
+reuse these results for changed source/closure/artifact inputs.
+
+## Historical 0.3.2 qualification procedure
 
 Owner: `uibcdf/recorda#33`, under Diego's authorization to publish after fixes
 #31/#32 qualify and no release blocker remains. Select source/runtime/recipe

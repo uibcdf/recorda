@@ -8,6 +8,19 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-23
 
+1. **0.3.2 is public and #31/#32 are resolved.** Read the
+   [checkpoint](CHECKPOINT.md) and [release receipt](evidence/release_0_3_2.json).
+   Exact-source/Conda/publication gates pass 14/10/3 jobs, with 376 tests per
+   installed OS/minor cell and independently verified metadata/assets.
+2. Pause here or respond to concrete receiving feedback in MolSysSuite #130 and
+   the owning consumer issues. Publishing a package does not establish adoption.
+   Refresh live issue states before selecting another bounded task.
+3. Keep old/current tags and artifact bytes immutable. Future changes require
+   their own qualification; broader routing/replay or automatic live adapters
+   remain separately scoped decisions, not maintenance leftovers.
+
+## Historical 0.3.2 preparation order
+
 1. Complete #31/#32 receiving and the conditional 0.3.2 release in
    `uibcdf/recorda#33`. Use the active checkpoint and the dedicated tool/description
    guides; local source/installed checks each pass 376 tests. Exact hosted

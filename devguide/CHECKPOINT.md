@@ -1,6 +1,44 @@
 # Development checkpoint — 2026-10-23
 
-## Active maintenance and release — 0.3.2
+## Current release and pause checkpoint — 0.3.2
+
+**0.3.2 is delivered**, with [Release 0.3.2](https://github.com/uibcdf/recorda/releases/tag/0.3.2),
+official `uibcdf` Conda and matching tag/package version. Qualified source:
+`e97ec6055e7110b37aac87a7c810c2da3f732c92`. Original file:
+`recorda-0.3.2-py_0.tar.bz2`, SHA256
+`d6293cfb48110baada88653beaa52250554558e858311fe409245eeac5372ede`.
+
+Source [40003836709](https://github.com/uibcdf/recorda/actions/runs/40003836709)
+passes 14 jobs; candidate [40004306942](https://github.com/uibcdf/recorda/actions/runs/40004306942)
+passes 10, with **376 tests in every Linux x86_64/macOS arm64 Python 3.11–3.14
+cell**. Publication [40005577937](https://github.com/uibcdf/recorda/actions/runs/40005577937)
+passes all three jobs, including public-channel installs on both OSes. The extra
+automatic tag source CI also passes all 14 jobs. Independent public Anaconda and
+GitHub asset downloads match the original file; all 15 runtime files and actual
+installed/public descriptions match the manifest.
+
+Fixes #31/#32 are delivered: published pytest-receptor 1.2.1 has fresh llm/ci
+success/failure/statistics receiving, intact JSONL/JUnit/native agreement and no
+late warning; stable PACKAGE_README.md prevents live release status entering
+installed metadata. The [release receipt](evidence/release_0_3_2.json) binds the
+actual inputs, gates, public state and title/version checks. Resolved analyses:
+[tool receiving](archive/pytest_receptor_1_2_1_receiving.md),
+[description](archive/stable_packaged_description.md) and
+[release](archive/release_0_3_2.md). Older receipts retain their original scope.
+
+The [MolSysSuite #130](https://github.com/uibcdf/molsyssuite/issues/130) notice
+now identifies 0.3.2 and preserves 0.3.1 history. Consumer receiving is separately
+owned. No new runtime/scientific integration, API freeze or replay work is queued.
+At closeout #31/#32 and release #33 are resolved; recheck live issues before
+beginning new work after the pause.
+
+Owned temporary environments/scratch are retired after evidence extraction;
+the original artifact and complete proof have a release-audit owner and review
+trigger in [resource closeout](evidence/release_0_3_2_resources.json). Preserve
+shared active work and all published tags/files. A later documentation commit is
+not a new qualified candidate; the tag remains on the exact source above.
+
+## Historical maintenance preparation — 0.3.2
 
 Diego authorizes fixing `uibcdf/recorda#31` and `uibcdf/recorda#32`, then publishing
 0.3.2 if receiving and release gates pass and no release blocker remains. Owner:
@@ -31,7 +69,7 @@ reuse the 0.3.1 gates for new source/artifact inputs.
 
 The completed 0.3.1 state and earlier history below retain their own identities.
 
-## Current release and receiving handoff — 0.3.1
+## Historical release and receiving handoff — 0.3.1
 
 **0.3.1 is publicly delivered**, with the canonical
 [GitHub Release](https://github.com/uibcdf/recorda/releases/tag/0.3.1) title/tag

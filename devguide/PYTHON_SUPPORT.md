@@ -29,11 +29,11 @@ This baseline alignment does not resolve the distribution or OS-support reviews.
 
 ## Qualification
 
-The current **0.3.1** release qualifies the same original Conda file on Linux
-x86_64 and macOS arm64 for Python 3.11–3.14, with **364 tests per installed cell**.
+The current **0.3.2** release qualifies the same original Conda file on Linux
+x86_64 and macOS arm64 for Python 3.11–3.14, with **376 tests per installed cell**.
 Its source/candidate/publication workflows pass 14/10/3 jobs, and public-channel
 Linux/macOS installs and Release asset downloads match the original digest.
-See [release_0_3_1.json](evidence/release_0_3_1.json). Earlier evidence below
+See [release_0_3_2.json](evidence/release_0_3_2.json). Earlier evidence below
 retains its original source/tool/closure scope; Windows remains unclaimed.
 
 Use published pytest-receptor 1.2.1, whose metadata admits Python 3.11–3.14, and
