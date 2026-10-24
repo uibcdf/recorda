@@ -3,6 +3,10 @@
 Preserve closed reports here with their issue identity, dated outcome and verification.
 Resolved implementation slices retain their owning issues and historical evidence.
 
+- [ArgDigest 0.17 / SMonitor 0.22 receiving](support_cohort_34.md) —
+  `uibcdf/recorda#34`, resolved with fresh public/source/installed/editable
+  receiving, clean dependency closure and 14 exact-source CI jobs.
+
 - [Original standalone laboratory slice](standalone_lab.md) — `uibcdf/recorda#1`,
   resolved against its original criteria, with bounded SciPy/native Sabueso follow-ons.
 - [Explicit recovery diagnostic experiment](recovery_diagnostics_source.md) —

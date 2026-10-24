@@ -29,6 +29,15 @@ This baseline alignment does not resolve the distribution or OS-support reviews.
 
 ## Qualification
 
+The later source-only provider receiving in `uibcdf/recorda#34` passes all 14
+exact-source CI jobs at `28fe4912be30873cfc1bd6400c4a7f2c6783288c`, preserving
+the Linux/macOS arm64 Python 3.11–3.14 installed-wheel matrix. Eight ordinary
+cells pass 360 tests / 18 explicit recovery skips; four Linux recovery cells
+and coverage pass all 378. Local Linux/Python 3.14.9 public-source,
+installed-wheel and actual editable-provider lanes each pass 378 tests.
+[Receiving receipt](evidence/support_cohort_34_hosted.json). This does not
+requalify or change the immutable public 0.3.2 archive below.
+
 The current **0.3.2** release qualifies the same original Conda file on Linux
 x86_64 and macOS arm64 for Python 3.11–3.14, with **376 tests per installed cell**.
 Its source/candidate/publication workflows pass 14/10/3 jobs, and public-channel

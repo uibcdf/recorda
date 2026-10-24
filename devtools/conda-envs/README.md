@@ -46,6 +46,9 @@ Recorda 0.3.2 is publicly available through `uibcdf` with `conda-forge`;
 [the receipt](../../devguide/evidence/release_0_3_2.json) binds the installed
 candidate and publication proof. Development installation still provisions the
 declared closure before `--no-deps`; no complete PyPI dependency route is claimed.
+Public 0.3.2 retains its original ArgDigest `<0.17` / SMonitor `<0.22` bounds
+and cannot use the new pins. The updated environments receive the development
+checkout; a public package admitting this cohort needs its own qualified release.
 
 The static `check_dependencies.py` gate compares required metadata with the local
 noarch recipe, every inventoried environment and CI/source routes. It rejects

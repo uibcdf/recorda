@@ -8,12 +8,15 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-24
 
-1. Complete source receiving in `uibcdf/recorda#34` for public ArgDigest 0.17 /
-   SMonitor 0.22, retaining the existing floors and next-minor bounds. Keep all
-   dependency routes and exact-provider identities aligned.
-2. Verify isolated public provisioning, source/installed behavior, native
-   exceptions, safe diagnostics and exact-source CI; return evidence and the
-   receiving commit to uibcdf/molsyssuite#135 and uibcdf/praxis#14.
+1. Source receiving in `uibcdf/recorda#34` is complete at
+   `28fe4912be30873cfc1bd6400c4a7f2c6783288c`: ArgDigest 0.17 / SMonitor 0.22,
+   existing floors and next-minor bounds, five aligned environment routes and
+   exact public-provider identities. Read [the receipt](evidence/support_cohort_34_hosted.json).
+2. Consumers may refresh from that source for uibcdf/molsyssuite#135;
+   uibcdf/praxis#14 retains its separate receiving scope. Local public-source,
+   installed-wheel and actual editable-provider checks each pass 378 tests;
+   exact-source CI passes all 14 jobs. The shared environment itself was not
+   refreshed by Recorda's task. Pause here or address concrete receiving feedback.
 3. Preserve public 0.3.2 and all prior evidence. No new release or scientific
    integration is selected by this editable-workspace receiving request.
 

@@ -1,11 +1,12 @@
 ---
 summary: Receive ArgDigest 0.17 and SMonitor 0.22 for the editable workspace.
 issue: uibcdf/recorda#34
-status: active
+status: resolved
 opened: 2026-10-24
-closed:
+closed: 2026-10-24
 verification: measured
 area: [engineering, distribution, arguments, diagnostics]
+guard: tests/test_dependency_contract.py::test_reviewed_provider_cohort_is_admitted
 blocked_by: []
 supersedes: []
 ---
@@ -60,4 +61,22 @@ shadowing trap from the opening issue and was rejected by the runtime-origin
 assertion before any test claim. The accepted lane has no inherited site-packages.
 No primary provider tree or shared environment was changed.
 
-Pending exact-source hosted gates and owner handoff. No release is selected.
+Exact-source CI [40130538386](https://github.com/uibcdf/recorda/actions/runs/40130538386)
+passes all 14 jobs at `28fe4912be30873cfc1bd6400c4a7f2c6783288c`: eight
+installed-wheel Linux/macOS arm64 Python 3.11–3.14 cells pass 360 tests with 18
+explicit recovery skips; four Linux recovery cells and coverage pass all 378.
+The [hosted/closure receipt](../evidence/support_cohort_34_hosted.json) verifies
+the full published-receptor capture, native conclusions/steps, public closure
+and agreement of all 45 local tested-input hashes with the source commit.
+
+The guard admits the fixed reviewed provider versions and rejects the next
+unreviewed minors; restoring the old ceilings fails its positive assertions.
+The existing route audit protects recipe/environment agreement; provenance
+tests reject stale coordinates, modified managed bytes and source shadowing.
+This targets the diagnosed metadata conflict without changing runtime behavior.
+
+Receiving is returned to uibcdf/molsyssuite#135 and uibcdf/praxis#14. No shared
+environment refresh or scientific consumer adoption is claimed. Public 0.3.2
+retains its original limits and immutable artifacts; no new release is selected.
+Owned disposable resources are retired after evidence extraction, with retained
+proof custody recorded in [resource closeout](../evidence/support_cohort_34_resources.json).

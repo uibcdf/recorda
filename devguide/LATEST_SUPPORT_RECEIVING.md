@@ -41,7 +41,17 @@ venv attempt reproduced the already reported provider-shadowing trap and was
 rejected before testing. Provider tracked files remain unchanged after builds.
 [Editable receipt](evidence/support_cohort_34_editable.json).
 
-Applicable exact-commit hosted gates remain pending. This source change does not
+[Exact-source CI 40130538386](https://github.com/uibcdf/recorda/actions/runs/40130538386)
+passes **14/14 jobs** at `28fe4912be30873cfc1bd6400c4a7f2c6783288c`. The eight
+installed-wheel Linux/macOS arm64 Python 3.11–3.14 cells each pass 360 tests with
+18 explicitly disabled recovery tests; four Linux recovery cells and the
+coverage cell each pass all 378. Provider checks and `pip check` execute before
+the installed tests. Published gh-run-receptor 1.2.0 captures the complete run;
+six capture members, native conclusions and required executed steps are verified.
+[Hosted/closure receipt](evidence/support_cohort_34_hosted.json) and
+[resolved analysis](archive/support_cohort_34.md) bind the scope and handoff.
+
+This source change does not
 publish a new Recorda version. Public **0.3.2** retains its original metadata
 (`argdigest<0.17`, `smonitor<0.22`), bytes, tag and qualified provider closure.
 The shared workspace must refresh Recorda from the receiving source commit;

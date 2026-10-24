@@ -1,8 +1,8 @@
 # Development checkpoint — 2026-10-24
 
-## Current source receiving — #34
+## Current source receiving completed — #34
 
-Receive ArgDigest 0.17.0 and SMonitor 0.22.0 for the editable refresh requested
+Admit ArgDigest 0.17.0 and SMonitor 0.22.0 for the editable refresh requested
 in uibcdf/molsyssuite#135; related Praxis receiving is uibcdf/praxis#14.
 The recipe and runtime source metadata preserve existing floors and widen only
 the reviewed ceilings to `<0.18` / `<0.23`. Five environment routes and exact
@@ -14,11 +14,29 @@ provider bytes and complete receptor/JUnit/native agreement. A separate clean
 editable-provider venv also passes 378 tests with normal/isolated runtime
 origins asserted. Local [public](evidence/support_cohort_34_local.json) and
 [editable](evidence/support_cohort_34_editable.json) receipts preserve the scope.
-Exact-source hosted gates remain pending in the owning issue.
+Exact-source [CI 40130538386](https://github.com/uibcdf/recorda/actions/runs/40130538386)
+passes **14/14 jobs** at `28fe4912be30873cfc1bd6400c4a7f2c6783288c`:
+eight installed Linux/macOS arm64 Python 3.11–3.14 cells pass 360 tests / 18
+explicit recovery skips; four Linux recovery cells and coverage pass all 378.
+The [hosted receipt](evidence/support_cohort_34_hosted.json) verifies native
+conclusions, executed steps, full receptor capture and 45 local input hashes
+against the commit. All 15 runtime files are unchanged from the starting source.
+
+The [resolved analysis](archive/support_cohort_34.md) and existing dependency
+route/provider-provenance regressions preserve this decision. Return receiving
+to uibcdf/molsyssuite#135 and uibcdf/praxis#14; their shared refresh and Praxis
+work remain independently owned. The named shared environment and primary
+provider checkouts were preserved. A documentation-only closeout is not a new
+tested producer commit; use the source above and its receipts.
 
 No new release is selected. Public 0.3.2 and its immutable evidence below retain
 their original ArgDigest `<0.17` / SMonitor `<0.22` limits; source/editable
 receiving does not make that archive admit newer providers.
+
+Next: consumers may refresh from the receiving source commit. Recheck live
+issues before further work; a public-only cohort needs a separately selected
+release. Owned disposable environments/copies are retired; retained evidence has
+an owner and review trigger in [resource closeout](evidence/support_cohort_34_resources.json).
 
 ## Current public release and historical pause checkpoint — 0.3.2
 

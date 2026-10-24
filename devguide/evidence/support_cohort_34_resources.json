@@ -1,0 +1,44 @@
+{
+  "cleanup_failures": [],
+  "custody": {
+    "conda_records": 39,
+    "map_sha256": "4a341b8065a48c7193a151be78adb9d4539a3e858b1104a3d47d28bad42d4018",
+    "metadata_cache": "Moved only this task\u2019s initial run/attempt/metadata snapshot from default cache to owned root; other cache siblings preserved",
+    "nested_receptor_members": 48,
+    "raw_conda_records_sha256": "2c59861b3001ecad9ba452caa2a2d1514f4c2cde7e1136d1dbf015f03a5d5cc5"
+  },
+  "date": "2026-10-24",
+  "owner": "uibcdf/recorda#34",
+  "preserved": [
+    "Named shared molsyssuite@uibcdf_3.14 environment",
+    "Primary provider and consumer clones, other sessions and registered worktrees",
+    "Immutable public Recorda tags/files and earlier independent release evidence",
+    "Shared package caches that may serve other environments"
+  ],
+  "receipts": [
+    "support_cohort_34_local.json",
+    "support_cohort_34_editable.json",
+    "support_cohort_34_hosted.json"
+  ],
+  "retained": [
+    "Fresh Conda provisioning and environment retirement logs",
+    "Public provider archives and full compressed Conda installation records",
+    "Private receiving wheel with recorded SHA256; never a replacement public 0.3.2 file",
+    "Source/installed/editable parent JSONL, JUnit and logs",
+    "48 child receptor proof members and custody map",
+    "Complete six-member hosted capture and initial queued metadata snapshot",
+    "Published tool wheels, identity checks and reproduction scripts"
+  ],
+  "retired": [
+    "editable-env",
+    "clean-editable-env",
+    "provider-sources",
+    "source-tests",
+    "installed-tests",
+    "editable-tests",
+    "env",
+    "suite-status-private.json"
+  ],
+  "review": "Next receiving audit/follow-up consumer handoff after this closeout, or 2026-11-23, whichever first; retire after durable audit handoff",
+  "root": "/tmp/recorda-34-receiving-2u4kn_g6"
+}

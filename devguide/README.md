@@ -12,9 +12,10 @@ baseline, registration/emission distinction and optional receiving dispositions.
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
 
-Current source receiving is [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34):
-review ArgDigest 0.17 / SMonitor 0.22 for the shared editable refresh, aligning
-metadata, recipe, environment pins and provider provenance. Read
+Latest source receiving, [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34),
+admits ArgDigest 0.17 / SMonitor 0.22 for the shared editable refresh, with
+aligned metadata, recipe, environment pins and provider provenance. Three local
+lanes each pass 378 tests and exact-source CI passes 14/14 jobs. Read
 [LATEST_SUPPORT_RECEIVING.md](LATEST_SUPPORT_RECEIVING.md); this is separate
 from the unchanged public 0.3.2 package below.
 
