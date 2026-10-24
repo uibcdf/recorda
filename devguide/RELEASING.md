@@ -1,5 +1,23 @@
 # Stabilization release qualification
 
+## Authorized 0.3.3 route
+
+Owner: `uibcdf/recorda#37`. Diego authorizes publication of 0.3.3 after #34/#35
+receiving. Align source/runtime/recipe and route coordinates; pass fresh local
+checks, 14 exact-source jobs, two latest-public jobs and ten same-file Conda
+qualification jobs. Retain the original `recorda-0.3.3-py_0.tar.bz2`, source,
+manifest and digest. Verify actual archive metadata has the minimum-only
+ArgDigest/SMonitor requirements, as well as the stable description/runtime bytes.
+
+Run trusted main-branch canonical credential readiness. After blocker review,
+annotate 0.3.3 on that exact source and use the successful original candidate run
+for same-file upload, without rebuilding or overwriting any public coordinate.
+Independently verify registry/download and both public Linux/macOS arm64 installs.
+Create GitHub Release with title/name/tag exactly **0.3.3**, with original file,
+manifest and checksums. Deliver release-specific domain notices and close out
+resources/evidence. Node.js annotations in #36 remain a separate maintenance
+review, not an automatically inferred gate failure.
+
 ## Dependency policy for future candidates
 
 [DEPENDENCY_POLICY.md](DEPENDENCY_POLICY.md), owned by `uibcdf/recorda#35`,

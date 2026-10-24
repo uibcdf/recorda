@@ -1,12 +1,14 @@
 # Release history
 
-## Unreleased
+## 0.3.3 — 2026-10-24
 
 - Receive ArgDigest 0.17 and SMonitor 0.22 in source/editable development (#34).
 - Declare minimum-only ArgDigest/SMonitor runtime requirements, preserving
   required floors and exact qualification pins. Add weekly/manual latest-public
   installed compatibility checks with verified provider identities and retained
-  test artifacts (#35). Public 0.3.2 retains its original metadata and files.
+  test artifacts (#35). Earlier public versions retain their original files.
+- Deliver this compatibility in the official Conda package under #37, preserving
+  experimental API/schema, native ownership and recording behavior.
 
 ## 0.3.2 — 2026-10-23
 

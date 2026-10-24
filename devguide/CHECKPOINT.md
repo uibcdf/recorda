@@ -1,5 +1,21 @@
 # Development checkpoint — 2026-10-24
 
+## Current authorized release preparation — 0.3.3
+
+Owner: `uibcdf/recorda#37`. Diego requests publication of 0.3.3, delivering
+minimum-only provider requirements from #34/#35. Starting source:
+`5f11e250079df26145f160e76763353641ca285b`. Version routes are aligned at 0.3.3;
+the five qualification provider pins and stable packaged description remain
+unchanged. Existing public 0.3.2 and its historical receipts remain immutable.
+
+Next: local Python 3.14 source/installed checks; fresh exact-source 14-job CI,
+two latest-public cells and ten same-Conda-file qualification jobs; trusted
+credential readiness; then annotate the exact candidate and publish its original
+file only after gates and blocker review. Verify public registry/download,
+Linux/macOS arm64 installations and the canonical Release title/tag/version.
+Report actual availability to MolI and MolSysSuite; #76/#137 remain independent
+policy evaluations. No earlier green run qualifies the new source/artifact.
+
 ## Current dependency-policy receiving completed — #35
 
 Diego accepts minimum-only requirements (`argdigest>=0.15.0`,

@@ -12,6 +12,11 @@ baseline, registration/emission distinction and optional receiving dispositions.
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
 
+Current work is authorized **0.3.3 qualification/publication** in
+`uibcdf/recorda#37`, delivering permissive runtime provider requirements in a
+new public artifact. Read the checkpoint and release guide; public 0.3.2 remains
+the latest delivered package until independent publication verification succeeds.
+
 Latest source receiving, [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34),
 admits ArgDigest 0.17 / SMonitor 0.22 for the shared editable refresh, with
 aligned metadata, recipe, environment pins and provider provenance. Three local

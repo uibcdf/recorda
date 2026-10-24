@@ -1,5 +1,8 @@
 # Pending proposals
 
+- [Release 0.3.3](release_0_3_3.md) — `uibcdf/recorda#37`, authorized publication
+  of permissive runtime requirements after fresh candidate/artifact gates.
+
 - [Permissive provider versions](../archive/permissive_provider_versions.md) —
   `uibcdf/recorda#35`, resolved with minimum-only runtime requirements and
   qualified separate latest-public monitoring.
