@@ -32,18 +32,20 @@ def tree(tmp_path):
 
 
 def test_committed_runtime_routes_match_metadata():
-    assert audit(ROOT) == {"recipes": 1, "environments": 5, "sibling_sources": 0}
+    assert audit(ROOT) == {"recipes": 1, "environments": 6, "sibling_sources": 0}
 
 
 @pytest.mark.parametrize(
-    ("provider", "reviewed", "unreviewed"),
-    [("argdigest", "0.17.0", "0.18.0"), ("smonitor", "0.22.0", "0.23.0")],
+    ("provider", "floor", "too_old", "later"),
+    [("argdigest", "0.15.0", "0.14.9", "0.18.0"), ("smonitor", "0.19.0", "0.18.9", "0.23.0")],
 )
-def test_reviewed_provider_cohort_is_admitted(provider, reviewed, unreviewed):
+def test_reviewed_provider_cohort_is_admitted(provider, floor, too_old, later):
     project = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]
     requirements = {item.name: item for item in map(Requirement, project["dependencies"])}
-    assert requirements[provider].specifier.contains(reviewed)
-    assert not requirements[provider].specifier.contains(unreviewed)
+    assert str(requirements[provider].specifier) == f">={floor}"
+    assert not requirements[provider].specifier.contains(too_old)
+    assert requirements[provider].specifier.contains(later)
+    assert requirements[provider].specifier.contains("1.0.0")
 
 
 def test_missing_recipe_dependency_blocks_preflight(tree):
@@ -58,7 +60,7 @@ def test_missing_recipe_dependency_blocks_preflight(tree):
 
 
 @pytest.mark.parametrize(
-    "constraint", ["argdigest>=0.14,<0.16", "argdigest>=0.15", "argdigest=0.14.0=py_0"]
+    "constraint", ["argdigest>=0.14,<0.16", "argdigest", "argdigest=0.14.0=py_0"]
 )
 def test_stale_or_weaker_environment_constraint_blocks_preflight(tree, constraint):
     path = tree / "devtools/conda-envs/test_env.yaml"
@@ -69,6 +71,22 @@ def test_stale_or_weaker_environment_constraint_blocks_preflight(tree, constrain
     path.write_text(yaml.safe_dump(data))
     with pytest.raises(ValueError, match="test_env.yaml: argdigest"):
         audit(tree)
+
+
+@pytest.mark.parametrize("provider", ("argdigest", "smonitor"))
+def test_recipe_cannot_silently_reintroduce_a_provider_ceiling(tree, provider):
+    path = tree / "devtools/conda-build/meta.yaml"
+    data = yaml.safe_load(path.read_text())
+    data["requirements"]["run"] = [
+        text + ",<1" if text.startswith(provider) else text for text in data["requirements"]["run"]
+    ]
+    path.write_text(yaml.safe_dump(data))
+    with pytest.raises(ValueError, match=f"meta.yaml: {provider}"):
+        audit(tree)
+
+
+def test_exact_development_pins_remain_valid_under_minimum_only_requirements(tree):
+    assert audit(tree)["environments"] == 6
 
 
 def test_python_outside_public_bounds_is_rejected(tree):

@@ -8,6 +8,17 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-24
 
+1. Qualify the accepted dependency policy in `uibcdf/recorda#35`: minimum-only
+   runtime requirements, exact qualification pins and separate latest-public
+   monitoring. Read [the policy](DEPENDENCY_POLICY.md) and [checkpoint](CHECKPOINT.md).
+2. Local targeted/source/installed tests pass 68/408/408; execute and inspect
+   exact-source CI plus the new manual latest-provider workflow, then archive
+   evidence and return the result to uibcdf/moli#76 and uibcdf/molsyssuite#137.
+3. A 0.3.3 publication needs a separately selected candidate and exact-artifact
+   gates. Keep public 0.3.2 immutable; broader owner adoption remains independent.
+
+## Completed cohort receiving order — #34
+
 1. Source receiving in `uibcdf/recorda#34` is complete at
    `28fe4912be30873cfc1bd6400c4a7f2c6783288c`: ArgDigest 0.17 / SMonitor 0.22,
    existing floors and next-minor bounds, five aligned environment routes and

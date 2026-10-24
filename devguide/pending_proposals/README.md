@@ -1,5 +1,9 @@
 # Pending proposals
 
+- [Permissive provider versions](permissive_provider_versions.md) —
+  `uibcdf/recorda#35`, accepted local decision; minimum-only runtime requirements
+  and separate latest-public monitoring are being qualified.
+
 - [Support-provider cohort receiving](../archive/support_cohort_34.md) —
   `uibcdf/recorda#34`, resolved with ArgDigest 0.17 / SMonitor 0.22 source/editable
   receiving and exact-source CI; no new release selected.

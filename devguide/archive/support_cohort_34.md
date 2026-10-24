@@ -80,3 +80,12 @@ environment refresh or scientific consumer adoption is claimed. Public 0.3.2
 retains its original limits and immutable artifacts; no new release is selected.
 Owned disposable resources are retired after evidence extraction, with retained
 proof custody recorded in [resource closeout](../evidence/support_cohort_34_resources.json).
+
+## Later policy decision — 2026-10-24
+
+`uibcdf/recorda#35` replaces automatic next-minor ceilings with minimum-only
+requirements and separate latest-public monitoring, accepted by Diego. This
+archive retains #34's original bounds and executed evidence. Its named metadata
+guard now follows the later policy: floors remain required and future versions
+are permitted. Read [the maintained policy](../DEPENDENCY_POLICY.md); the
+historical ceiling claim above is not the current source requirement.

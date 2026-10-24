@@ -8,7 +8,7 @@ It is not a runtime dependency. Historical receipts retain earlier tool pins.
 All Conda routes use `uibcdf` with `conda-forge`. Create the selected environment,
 then install this development checkout with
 `python -m pip install --no-deps --editable .`. Ordinary core requirements are
-ArgDigest `>=0.15,<0.18` and SMonitor `>=0.19,<0.23`; ArgDigest owns its DepDigest
+ArgDigest `>=0.15` and SMonitor `>=0.19`; ArgDigest owns its DepDigest
 dependency. No scientific producer package is required. Pytest-receptor, Ruff,
 PyYAML and packaging are development tools. Plain import/journal reading stay
 free of provider imports; configuration/recording and reference-checking calls
@@ -21,6 +21,7 @@ use the required providers.
 | `recovery_test_env.yaml` | Required closure plus opt-in recovery diagnostic tests |
 | `support_test_env.yaml` | Compatibility specification for the same required published closure |
 | `build_env.yaml` | Python 3.14 Conda build and exact-file publication tooling |
+| `latest_support_env.yaml` | Separate latest-public monitoring on Linux/macOS arm64 Python 3.14 |
 
 For example, create the support environment for local Python 3.14 development:
 
@@ -37,11 +38,16 @@ python -m pytest -p pytest_receptor.plugin --receptor=llm
 
 The shared specifications admit the complete supported range; for routine local
 development select Python 3.14 when creating the environment. CI passes an exact
-minor override for each matrix cell. All five specifications pin ArgDigest 0.17.0
+minor override for each matrix cell. The five qualification specifications pin ArgDigest 0.17.0
 build 0, SMonitor 0.22.0 build 0 and DepDigest 0.15.1 build 0, reviewed under
 `uibcdf/recorda#34`. The old extra names
 are empty compatibility aliases; package metadata now declares these providers
 as required. Conda supplies the closure before `--no-deps` installation.
+The sixth specification declares floors, with stable version/build selections
+supplied by `devtools.latest_support` in the separate scheduled/manual workflow.
+Its public-index snapshot and installed-file checks preserve actual provider
+identities without rewriting the qualified pins. Read
+[the dependency policy](../../devguide/DEPENDENCY_POLICY.md).
 Recorda 0.3.2 is publicly available through `uibcdf` with `conda-forge`;
 [the receipt](../../devguide/evidence/release_0_3_2.json) binds the installed
 candidate and publication proof. Development installation still provisions the
@@ -52,7 +58,7 @@ checkout; a public package admitting this cohort needs its own qualified release
 
 The static `check_dependencies.py` gate compares required metadata with the local
 noarch recipe, every inventoried environment and CI/source routes. It rejects
-missing dependencies, weaker bounds, incompatible Python constraints, unclassified
+missing dependencies, weaker floors, hidden recipe ceilings, incompatible Python constraints, unclassified
 routes and source candidates below the declared floor. The installed provider
 check verifies project bounds, exact Conda coordinates/digests and Python-file
 hashes, and rejects source imports.

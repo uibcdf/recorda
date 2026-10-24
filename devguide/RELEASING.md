@@ -1,5 +1,14 @@
 # Stabilization release qualification
 
+## Dependency policy for future candidates
+
+[DEPENDENCY_POLICY.md](DEPENDENCY_POLICY.md), owned by `uibcdf/recorda#35`,
+defines minimum-only runtime provider requirements and a separate latest-public
+monitoring workflow. Preserve exact provider pins in release qualification.
+Passing the latest lane does not replace the exact-source/same-artifact gates
+or change historical public files. A future 0.3.3 needs its own candidate and
+original Conda file; no existing package is rebuilt in place.
+
 ## Completed 0.3.2 publication
 
 [release_0_3_2.json](evidence/release_0_3_2.json) records source 40003836709 (14

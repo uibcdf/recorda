@@ -1,6 +1,25 @@
 # Development checkpoint — 2026-10-24
 
-## Current source receiving completed — #34
+## Current dependency-policy implementation — #35
+
+Diego accepts minimum-only requirements (`argdigest>=0.15.0`,
+`smonitor>=0.19.0`), retaining the five exact qualification environments and
+adding a sixth, separate latest-public lane. Read [DEPENDENCY_POLICY.md](DEPENDENCY_POLICY.md).
+The recipe expresses the same public intervals; static guards reject weakened
+floors and hidden recipe ceilings. Runtime recording files remain unchanged.
+
+Local Python 3.14.9 checks pass 68 targeted tests and **408 source + 408 installed
+wheel tests**, with recovery enabled, clean `pip check`, complete integrity-valid
+receptor/JUnit/native agreement and no failures/skips/warnings. The actual latest
+selection and 97 installed public provider Python files are verified. Exact-source
+and latest-workflow hosted gates are pending; this is not a public package release.
+
+Requested independent evaluations are uibcdf/moli#76 and
+uibcdf/molsyssuite#137. Their issues do not adopt this decision for other owners.
+Next: finish #35 qualification and handoff, then decide/qualify a 0.3.3 release
+separately. Public 0.3.2 and all historical evidence below remain immutable.
+
+## Completed source cohort receiving — #34 (historical bounds)
 
 Admit ArgDigest 0.17.0 and SMonitor 0.22.0 for the editable refresh requested
 in uibcdf/molsyssuite#135; related Praxis receiving is uibcdf/praxis#14.

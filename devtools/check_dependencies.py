@@ -114,7 +114,14 @@ def audit(root):
             }
             for name, requirement in required.items():
                 candidate = supplied.get(name)
-                if candidate is None or not contained(candidate.specifier, requirement.specifier):
+                if (
+                    candidate is None
+                    or not contained(candidate.specifier, requirement.specifier)
+                    or (
+                        kind == "recipes"
+                        and not contained(requirement.specifier, candidate.specifier)
+                    )
+                ):
                     raise ValueError(f"{path}: {name} has {candidate}, requires {requirement}")
             if kind == "recipes" and (
                 data["package"]["name"] != project["name"]

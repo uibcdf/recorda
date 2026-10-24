@@ -56,7 +56,8 @@ def managed_paths(record, prefix):
     return managed
 
 
-def verify(feature):
+def verify(feature, *, identities=None):
+    """Check the fixed qualified cohort, or an explicitly selected public receipt."""
     root = Path(__file__).resolve().parents[1]
     project = tomllib.loads((root / "pyproject.toml").read_text())["project"]
     assert SpecifierSet(project["requires-python"]).contains(
@@ -67,14 +68,22 @@ def verify(feature):
         assert requirement.specifier.contains(distribution(requirement.name).version), text
 
     prefix = Path(sys.prefix).resolve()
-    names = tuple(ARTIFACTS)
+    if identities is None:
+        identities = {
+            name: {
+                "version": version,
+                "file": f"{name}-{version}-{build}.tar.bz2",
+                "sha256": sha,
+            }
+            for name, (version, build, sha) in ARTIFACTS.items()
+        }
+    assert set(identities) == set(ARTIFACTS), "unexpected provider set"
     evidence = {}
-    for name in names:
-        version, build, sha = ARTIFACTS[name]
+    for name, identity in identities.items():
+        version, filename, sha = (identity[key] for key in ("version", "file", "sha256"))
         records = list((prefix / "conda-meta").glob(f"{name}-*.json"))
         assert len(records) == 1, f"{name}: expected one Conda installation record"
         record = json.loads(records[0].read_text())
-        filename = f"{name}-{version}-{build}.tar.bz2"
         assert record["fn"] == filename and record["sha256"] == sha, name
         assert record["url"] == f"https://conda.anaconda.org/uibcdf/noarch/{filename}", name
         assert distribution(name).version == version, name
@@ -98,6 +107,7 @@ def verify(feature):
             "file": filename,
             "sha256": sha,
             "python_files": checked,
+            "origin": str(module_path),
         }
     for name in ("numpy", "pint", "pyunitwizard", "pandas"):
         assert name not in sys.modules, f"unexpected scientific import: {name}"

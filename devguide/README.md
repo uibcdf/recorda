@@ -19,6 +19,12 @@ lanes each pass 378 tests and exact-source CI passes 14/14 jobs. Read
 [LATEST_SUPPORT_RECEIVING.md](LATEST_SUPPORT_RECEIVING.md); this is separate
 from the unchanged public 0.3.2 package below.
 
+The later accepted [dependency policy](DEPENDENCY_POLICY.md), owned by
+`uibcdf/recorda#35`, permits later provider versions from the required floors,
+retains reproducible qualification pins and adds separate latest-public
+monitoring. Local 68/408/408 checks pass; hosted qualification is in progress.
+Independent domain evaluations are uibcdf/moli#76 and uibcdf/molsyssuite#137.
+
 Current delivered release is 0.3.2 (`uibcdf/recorda#33`), resolving published
 receptor receiving (#31) and stable packaged description (#32). Read
 [TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md) and

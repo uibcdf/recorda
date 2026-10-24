@@ -1,6 +1,15 @@
 # Latest public support-provider receiving
 
-## Current source receiving — 2026-10-24
+## Current permissive source policy — 2026-10-24
+
+[Recorda #35](https://github.com/uibcdf/recorda/issues/35) adopts minimum-only
+ArgDigest/SMonitor requirements and independent latest-public monitoring.
+Read [DEPENDENCY_POLICY.md](DEPENDENCY_POLICY.md). Existing exact cohort pins
+and the completed #34 evidence below remain historical qualification; their
+automatic next-minor ceilings are replaced in current source. Domain evaluations
+are uibcdf/moli#76 and uibcdf/molsyssuite#137, without automatic wider adoption.
+
+## Completed #34 cohort receiving — 2026-10-24
 
 Owner: [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34).
 Coordination: uibcdf/molsyssuite#135 and uibcdf/praxis#14.

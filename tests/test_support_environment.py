@@ -141,3 +141,46 @@ def test_parent_path_traversal_is_rejected(closure):
     )
     with pytest.raises(AssertionError, match="external.py"):
         checker.verify("argdigest")
+
+
+@pytest.fixture
+def selected_closure(closure, monkeypatch):
+    identities = {}
+    for name in checker.ARTIFACTS:
+        path = next(closure.records.glob(f"{name}-*.json"))
+        record = json.loads(path.read_text())
+        filename = f"{name}-1.0.0-py_0.conda"
+        record.update(
+            fn=filename, sha256="f" * 64, url=f"https://conda.anaconda.org/uibcdf/noarch/{filename}"
+        )
+        path.write_text(json.dumps(record))
+        identities[name] = {"version": "1.0.0", "file": filename, "sha256": "f" * 64}
+    monkeypatch.setattr(checker, "distribution", lambda name: SimpleNamespace(version="1.0.0"))
+    return closure, identities
+
+
+def test_selected_new_public_cohort_preserves_installed_byte_checks(selected_closure):
+    closure, identities = selected_closure
+    checker.verify("argdigest", identities=identities)
+    (closure.purelib / "smonitor/implementation.py").write_bytes(b"# changed\n")
+    with pytest.raises(AssertionError, match="implementation.py"):
+        checker.verify("argdigest", identities=identities)
+
+
+def test_fixed_qualification_still_rejects_an_unreviewed_cohort(selected_closure):
+    with pytest.raises(AssertionError, match="smonitor"):
+        checker.verify("argdigest")
+
+
+def test_selected_cohort_does_not_accept_wrong_archive_identity(selected_closure):
+    closure, identities = selected_closure
+    edit_record(closure, lambda record: record.update(sha256="other"))
+    with pytest.raises(AssertionError, match="smonitor"):
+        checker.verify("argdigest", identities=identities)
+
+
+def test_selected_cohort_does_not_accept_a_shadow_import(selected_closure):
+    closure, identities = selected_closure
+    closure.modules["smonitor"].__file__ = str(closure.prefix / "shadow.py")
+    with pytest.raises(AssertionError, match="smonitor"):
+        checker.verify("argdigest", identities=identities)

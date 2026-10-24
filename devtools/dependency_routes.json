@@ -5,7 +5,8 @@
     "devtools/conda-envs/development_env.yaml",
     "devtools/conda-envs/test_env.yaml",
     "devtools/conda-envs/recovery_test_env.yaml",
-    "devtools/conda-envs/support_test_env.yaml"
+    "devtools/conda-envs/support_test_env.yaml",
+    "devtools/conda-envs/latest_support_env.yaml"
   ],
   "sibling_sources": [],
   "non_runtime_checkouts": ["uibcdf/moli"]

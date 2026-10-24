@@ -1,0 +1,17 @@
+name: recorda-latest-support
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python=3.14
+  - argdigest>=0.15.0
+  - smonitor>=0.19.0
+  - depdigest
+  - pip
+  - setuptools>=77
+  - wheel
+  - pytest
+  - pyyaml=6.0.3
+  - packaging
+  - pip:
+      - pytest-receptor==1.2.1

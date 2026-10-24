@@ -10,7 +10,7 @@ readme = "PACKAGE_README.md"
 requires-python = ">=3.11,<3.15"
 license = "MIT"
 license-files = ["LICENSE"]
-dependencies = ["argdigest>=0.15.0,<0.18", "smonitor>=0.19.0,<0.23"]
+dependencies = ["argdigest>=0.15.0", "smonitor>=0.19.0"]
 
 [project.optional-dependencies]
 # Compatibility names from the explicit-integration checkpoint.
