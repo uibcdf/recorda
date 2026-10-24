@@ -1,5 +1,21 @@
 # Latest public support-provider receiving
 
+## Public delivery — 0.3.3, 2026-10-24
+
+[Release 0.3.3](https://github.com/uibcdf/recorda/releases/tag/0.3.3) now delivers
+`argdigest>=0.15.0` / `smonitor>=0.19.0` through the official Conda package.
+[The receipt](evidence/release_0_3_3.json) binds source
+`99f6ca12295ef675abebfe8c42cbd3ad7881bb07` and original file SHA256
+`fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea` to fresh
+14/2/10/3 source/latest/Conda/publication jobs. All eight installed Conda cells
+pass 408 tests; public archive/installations and Release assets match original
+runtime, dependency metadata and description. The qualified cohort is ArgDigest
+0.17.0 py_0, SMonitor 0.22.0 py_0 and DepDigest 0.15.1 py_0.
+
+Actual availability notices are MolI #78 and MolSysSuite #142. Permitted future
+resolution remains distinct from executed compatibility. Earlier source-only
+and pending-release statements below retain their original historical scope.
+
 ## Current permissive source policy — 2026-10-24
 
 [Recorda #35](https://github.com/uibcdf/recorda/issues/35) adopts minimum-only

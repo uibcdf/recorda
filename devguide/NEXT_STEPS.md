@@ -8,6 +8,21 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-24
 
+1. **0.3.3 is public; release #37 is complete.** Read the
+   [checkpoint](CHECKPOINT.md) and [release receipt](evidence/release_0_3_3.json).
+   Fresh source/latest/original-Conda/publication gates pass 14/2/10/3 jobs;
+   every installed Conda OS/minor cell passes 408 tests. Public metadata, clean
+   installs and Release asset bytes match the original file.
+2. Actual availability is handed to uibcdf/moli#78 and uibcdf/molsyssuite#142.
+   Policy evaluation in #76/#137 and receiving/workspace work in their owning
+   repositories remain independent. No automatic adoption is claimed.
+3. `uibcdf/recorda#36` remains nonblocking Actions runtime maintenance. Pause
+   here or select it/concrete consumer feedback as a separate task. Preserve
+   immutable public files/tags and original evidence; refresh live issue states
+   before choosing further work.
+
+## Historical policy qualification order — #35
+
 1. The accepted dependency policy in `uibcdf/recorda#35` is qualified: minimum-only
    runtime requirements, exact qualification pins and separate latest-public
    monitoring. Read [the policy](DEPENDENCY_POLICY.md) and [checkpoint](CHECKPOINT.md).
@@ -23,7 +38,7 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
    release blocker is inferred from those annotations. Pause here or respond
    to concrete receiving feedback.
 
-## Completed cohort receiving order — #34
+## Historical cohort receiving order — #34
 
 1. Source receiving in `uibcdf/recorda#34` is complete at
    `28fe4912be30873cfc1bd6400c4a7f2c6783288c`: ArgDigest 0.17 / SMonitor 0.22,

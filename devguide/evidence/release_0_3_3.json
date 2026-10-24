@@ -1,0 +1,343 @@
+{
+  "additional_tag_ci": {
+    "conclusion": "success",
+    "jobs": 14,
+    "run_id": 40141958129,
+    "scope": "Additional tag push source CI; natively verified, original main source gate separately captured",
+    "url": "https://github.com/uibcdf/recorda/actions/runs/40141958129"
+  },
+  "archive": "devguide/archive/release_0_3_3.md",
+  "artifact": {
+    "conda_dependencies": [
+      "argdigest >=0.15.0",
+      "python >=3.11,<3.15",
+      "smonitor >=0.19.0"
+    ],
+    "coordinate": "uibcdf/recorda/0.3.3/noarch/recorda-0.3.3-py_0.tar.bz2",
+    "description": {
+      "normalization": "UTF-8, CRLF to LF, remove terminal newline characters",
+      "sha256": "958858344b752a4e359b9f53fd505137b5cf5e5011c0efbfcb339f7fc6ebafbe",
+      "source": "PACKAGE_README.md",
+      "source_sha256": "b5851a8caf0c1979fd7398fd7747010a08990c2df56a12b46a06151dbb66d1fb"
+    },
+    "filename": "recorda-0.3.3-py_0.tar.bz2",
+    "python_requires": ">=3.11,<3.15",
+    "required_metadata": [
+      "argdigest>=0.15.0",
+      "smonitor>=0.19.0"
+    ],
+    "resources": "No generated or vendored runtime resources; all Python files checked.",
+    "runtime_sha256": {
+      "recorda/__init__.py": "4a8afb62ca1e8141e3018fd4ca96da3b0f63d2c1e7377562914ef2869db09c8e",
+      "recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+      "recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+      "recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+      "recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+      "recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+      "recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+      "recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+      "recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+      "recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+      "recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+      "recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+      "recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+      "recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d"
+    },
+    "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+    "source_sha": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+    "version": "0.3.3"
+  },
+  "candidate_evidence": "candidate_0_3_3_hosted.json",
+  "candidate_run": 40141291792,
+  "candidate_source": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+  "complete_captured_gate_members_verified": 30,
+  "date": "2026-10-24",
+  "github_release": {
+    "assets": [
+      {
+        "anonymous_download": true,
+        "api_digest": "sha256:cf4cca4c7215e21f9bf7241b3648f896a55076a1e3a027e6bec411253cc80632",
+        "bytes": 2407,
+        "name": "manifest.json",
+        "sha256": "cf4cca4c7215e21f9bf7241b3648f896a55076a1e3a027e6bec411253cc80632",
+        "url": "https://github.com/uibcdf/recorda/releases/download/0.3.3/manifest.json"
+      },
+      {
+        "anonymous_download": true,
+        "api_digest": "sha256:fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+        "bytes": 23642,
+        "name": "recorda-0.3.3-py_0.tar.bz2",
+        "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+        "url": "https://github.com/uibcdf/recorda/releases/download/0.3.3/recorda-0.3.3-py_0.tar.bz2"
+      },
+      {
+        "anonymous_download": true,
+        "api_digest": "sha256:bb88cbf05cb4db662b52fd76f0a61add2658640830058673a6125b0a67c83147",
+        "bytes": 173,
+        "name": "SHA256SUMS",
+        "sha256": "bb88cbf05cb4db662b52fd76f0a61add2658640830058673a6125b0a67c83147",
+        "url": "https://github.com/uibcdf/recorda/releases/download/0.3.3/SHA256SUMS"
+      }
+    ],
+    "created_at": "2026-10-24T23:15:05Z",
+    "draft": false,
+    "name": "0.3.3",
+    "prerelease": false,
+    "published_at": "2026-10-24T23:21:34Z",
+    "tag_name": "0.3.3",
+    "tag_source_evidence": "Verified remote annotated tag, not Release target_commitish metadata",
+    "url": "https://github.com/uibcdf/recorda/releases/tag/0.3.3"
+  },
+  "independent_public_observation": {
+    "actual_archive_metadata_runtime_description_match": true,
+    "anonymous_download": true,
+    "bytes": 23642,
+    "download_url": "https://conda.anaconda.org/uibcdf/noarch/recorda-0.3.3-py_0.tar.bz2",
+    "registry": {
+      "basename": "noarch/recorda-0.3.3-py_0.tar.bz2",
+      "labels": [
+        "main"
+      ],
+      "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea"
+    },
+    "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+    "url": "https://api.anaconda.org/release/uibcdf/recorda/0.3.3"
+  },
+  "independent_user_route_install": {
+    "capture_recording_inspection_cli": "passed",
+    "description_sha256": "958858344b752a4e359b9f53fd505137b5cf5e5011c0efbfcb339f7fc6ebafbe",
+    "executable": "/tmp/recorda-033-release-yij9hooi/public-env/bin/python",
+    "machine": "x86_64",
+    "origin": "/tmp/recorda-033-release-yij9hooi/public-env/lib/python3.14/site-packages/recorda/__init__.py",
+    "platform": "Linux",
+    "providers": {
+      "argdigest": {
+        "file": "argdigest-0.17.0-py_0.tar.bz2",
+        "origin": "/tmp/recorda-033-release-yij9hooi/public-env/lib/python3.14/site-packages/argdigest/__init__.py",
+        "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+        "version": "0.17.0"
+      },
+      "depdigest": {
+        "file": "depdigest-0.15.1-py_0.tar.bz2",
+        "origin": "/tmp/recorda-033-release-yij9hooi/public-env/lib/python3.14/site-packages/depdigest/__init__.py",
+        "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+        "version": "0.15.1"
+      },
+      "smonitor": {
+        "file": "smonitor-0.22.0-py_0.tar.bz2",
+        "origin": "/tmp/recorda-033-release-yij9hooi/public-env/lib/python3.14/site-packages/smonitor/__init__.py",
+        "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+        "version": "0.22.0"
+      }
+    },
+    "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:21:21) [GCC 15.3.0]",
+    "requires_dist": [
+      "argdigest>=0.15.0",
+      "smonitor>=0.19.0"
+    ],
+    "runtime_files": 15,
+    "scope": "Fresh public-only Linux install from the user-facing Conda route; no Recorda/provider source imports",
+    "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+    "source_sha": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+    "version": "0.3.3"
+  },
+  "latest_run": 40141291843,
+  "limits": [
+    "Experimental API/schema; native scientific ownership retained",
+    "Permitted resolution is not future unexecuted compatibility evidence",
+    "No automatic consumer adoption, replay, PyPI or DOI claim"
+  ],
+  "nonblocking_followup": "uibcdf/recorda#36",
+  "notices": {
+    "moli": {
+      "actual_delivery": "Conda and GitHub Release verified",
+      "owner_triage": "open",
+      "url": "https://github.com/uibcdf/moli/issues/78",
+      "version": "0.3.3"
+    },
+    "molsyssuite": {
+      "actual_delivery": "Conda and GitHub Release verified",
+      "owner_triage": "open",
+      "url": "https://github.com/uibcdf/molsyssuite/issues/142",
+      "version": "0.3.3"
+    }
+  },
+  "owner": "uibcdf/recorda#37",
+  "policy_evaluations": [
+    "uibcdf/moli#76",
+    "uibcdf/molsyssuite#137"
+  ],
+  "public_installed": [
+    {
+      "description_sha256": "958858344b752a4e359b9f53fd505137b5cf5e5011c0efbfcb339f7fc6ebafbe",
+      "machine": "arm64",
+      "prefix": "/Users/runner/micromamba/envs/recorda-test",
+      "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:13:20) [Clang 20.1.8 ]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+      "source_sha": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+      "system": "Darwin",
+      "version": "0.3.3"
+    },
+    {
+      "description_sha256": "958858344b752a4e359b9f53fd505137b5cf5e5011c0efbfcb339f7fc6ebafbe",
+      "machine": "x86_64",
+      "prefix": "/home/runner/micromamba/envs/recorda-test",
+      "python": "3.14.9 | packaged by conda-forge | (main, Oct 22 2026, 10:21:21) [GCC 15.3.0]",
+      "recording_and_cli": "passed",
+      "runtime_files": 15,
+      "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+      "source_sha": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+      "system": "Linux",
+      "version": "0.3.3"
+    }
+  ],
+  "publication": {
+    "attempt": 1,
+    "capture": {
+      "captured_at": "2026-10-24T23:18:48.302620+00:00",
+      "manifest_sha256": "43c3642b20a8f5bd9649c2d326a8c3f0944a1de9432aa65f77e5ebe91824d7fb",
+      "members": [
+        {
+          "bytes": 12878,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "f742dabcac3e69185d422c8e8ccbfe5d1d3ace32dafd4b9800518551ae3927e5"
+        },
+        {
+          "bytes": 599,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "a329e86010a05bd071ad685aad21c19f40e387d141f54b3f72a38ce1d321e0fb"
+        },
+        {
+          "bytes": 11520,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "75ee7bc649fe7958d39c35487237948d244a0beac69178b89cb4e5f33fb9ca50"
+        },
+        {
+          "bytes": 2581,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "3bd75ec3108a3b104c9393797bce486713b6a934ca455c561624ad22c0bbbc7c"
+        },
+        {
+          "bytes": 12954,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "6b02d9e4158dd2bfbc4c3ea9d08426869ef806e2f5ccc4576929924b32d2a1fc"
+        },
+        {
+          "bytes": 104429,
+          "complete": true,
+          "kind": "github.logs",
+          "path": "logs.zip",
+          "sha256": "e374d7cf2b5e759fcf46f7fc3a40d4eb176a72ed48340583396a3b343ffabbe1"
+        }
+      ]
+    },
+    "conclusion": "success",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "executed_steps": [
+          "Set up job",
+          "Check canonical publication credential availability",
+          "Run actions/checkout@v4",
+          "Check exact source, tag and successful mandatory runs",
+          "Run mamba-org/setup-micromamba@v2",
+          "Run actions/download-artifact@v4",
+          "Verify retained file and empty immutable coordinate",
+          "Upload the exact qualified file without rebuilding",
+          "Independently observe public poststate",
+          "Run actions/upload-artifact@v4",
+          "Post Run mamba-org/setup-micromamba@v2",
+          "Post Run actions/checkout@v4",
+          "Complete job"
+        ],
+        "name": "publish"
+      },
+      {
+        "conclusion": "success",
+        "executed_steps": [
+          "Set up job",
+          "Run actions/checkout@v4",
+          "Run mamba-org/setup-micromamba@v2",
+          "Run actions/download-artifact@v4",
+          "Install the independently published channel package",
+          "Run actions/upload-artifact@v4",
+          "Post Run mamba-org/setup-micromamba@v2",
+          "Post Run actions/checkout@v4",
+          "Complete job"
+        ],
+        "name": "public-install (ubuntu-latest)"
+      },
+      {
+        "conclusion": "success",
+        "executed_steps": [
+          "Set up job",
+          "Run actions/checkout@v4",
+          "Run mamba-org/setup-micromamba@v2",
+          "Run actions/download-artifact@v4",
+          "Install the independently published channel package",
+          "Run actions/upload-artifact@v4",
+          "Post Run mamba-org/setup-micromamba@v2",
+          "Post Run actions/checkout@v4",
+          "Complete job"
+        ],
+        "name": "public-install (macos-latest)"
+      }
+    ],
+    "run_id": 40142058462,
+    "source_sha": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+    "upload": {
+      "candidate_sha": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+      "checked_at": "2026-10-24T23:17:10.897652+00:00",
+      "coordinate": {
+        "filename": "recorda-0.3.3-py_0.tar.bz2",
+        "owner": "uibcdf",
+        "package": "recorda",
+        "subdir": "noarch",
+        "version": "0.3.3"
+      },
+      "label": "main",
+      "preflight": {
+        "scope": "all-labels",
+        "state": "absent"
+      },
+      "schema": "uibcdf.conda-upload@1",
+      "sha256": "fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea",
+      "state": "verified",
+      "subject": {
+        "repository": "uibcdf/recorda",
+        "run_attempt": "1",
+        "run_id": "40142058462"
+      }
+    },
+    "url": "https://github.com/uibcdf/recorda/actions/runs/40142058462"
+  },
+  "publication_artifacts_sha256": {
+    "conda-publication-receipts/conda-upload-receipt.json": "1f668ae8c564ed31ff50264a188a16c6617d1ce05ad934910e60816a83f90a0e",
+    "conda-publication-receipts/public-registry.json": "deb973f8b01305ceacccccf7823200521cd151f0ddad9e18417a3d0df23f3791",
+    "conda-publication-receipts/registry-before-upload.json": "44db4eb5d4ef658e96a87563154577f725ee6a103bf8805f60f72c56d740d513",
+    "public-installed-macos-latest/public-installed.json": "0a47a9f51e7e29369472e222d94729a85505919057119e01d3e1589f76d4ffb0",
+    "public-installed-ubuntu-latest/public-installed.json": "9618861a3bfa5674366516f655eab9d40799b0c7bfe745a229b7d325312b5515"
+  },
+  "resources": "release_0_3_3_resources.json",
+  "source_run": 40141263674,
+  "state": "Public Conda package and canonical GitHub Release verified",
+  "tag": {
+    "name": "0.3.3",
+    "object": "d84688ce83ff27a5927b8934553b77b953380c27",
+    "peeled_source": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07"
+  },
+  "version": "0.3.3"
+}

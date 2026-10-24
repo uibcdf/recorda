@@ -1,0 +1,58 @@
+{
+  "cleanup_failures": [],
+  "custody": {
+    "child_receiving_members": 32,
+    "full_capture_members": 30,
+    "map_sha256": "c5ed84d69ad17f70562441f114405b348367b864ab0939040510345e088dfbc2",
+    "public_conda_records": 27,
+    "public_records_sha256": "f2ee66791961d5c8a3aa4a8a1497c4f8038ea155e304c7a0caa28264de5af9bd",
+    "qualification_conda_records": 39,
+    "qualification_records_sha256": "da68b07ad8f704321619e8600812dcec5590ef8e53211800d7a37735e464b120"
+  },
+  "date": "2026-10-24",
+  "initial_uncreated_probe_prefix": "No directory/environment was created at the unused trial prefix; no resource remains",
+  "owner": "uibcdf/recorda#37",
+  "preserved": [
+    "Shared molsyssuite@uibcdf_3.14 environment, primary sibling clones, active sessions and registered worktrees",
+    "Shared package/build/pytest caches whose individual ownership is not established",
+    "All historical public tags/files and original independent receipts"
+  ],
+  "prior_consulted_custody_review": [
+    {
+      "disposition": "Retain independent historical scope under its existing owner/review deadline; no active qualification env",
+      "root": "/tmp/recorda-032-qualification-t6pz11cz"
+    },
+    {
+      "disposition": "Retain independent historical scope under its existing owner/review deadline; no active qualification env",
+      "root": "/tmp/recorda-34-receiving-2u4kn_g6"
+    },
+    {
+      "disposition": "Retain independent historical scope under its existing owner/review deadline; no active qualification env",
+      "root": "/tmp/recorda-35-permissive-ujer348t"
+    }
+  ],
+  "retained": [
+    "Original qualified/public Conda file, original manifest and Release checksums/notes",
+    "Five complete gate captures with 30 verified members and extra tag native evidence",
+    "Eight installed candidate receipts, builder receipts/coverage and both latest-provider bundles",
+    "Public upload/registry and Linux/macOS installed receipts, independent user-route installation proof",
+    "Anonymous Anaconda/GitHub verification receipts and canonical tag/Release metadata",
+    "Source/installed parent JSONL/JUnit/logs and 32 child receiving proof members",
+    "Published tool wheels, reproduction/verification scripts and 39 qualification/27 public Conda records"
+  ],
+  "retired": [
+    "env",
+    "public-env",
+    "source-tests",
+    "installed-tests",
+    "wheel",
+    "anonymous-download",
+    "github-downloads",
+    "suite-status-private.json",
+    "gates/github.com/uibcdf/recorda/40141263674/1/metadata",
+    "gates/github.com/uibcdf/recorda/40141291792/1/metadata",
+    "gates/github.com/uibcdf/recorda/40142058462/1/metadata"
+  ],
+  "review": "Next release audit or consumer handoff after this closeout, or 2026-11-23, whichever first; retire after durable audit handoff",
+  "root": "/tmp/recorda-033-release-yij9hooi"
+}

@@ -1,22 +1,48 @@
 # Development checkpoint — 2026-10-24
 
-## Current authorized release preparation — 0.3.3
+## Current public release and pause checkpoint — 0.3.3
 
-Owner: `uibcdf/recorda#37`. Diego requests publication of 0.3.3, delivering
-minimum-only provider requirements from #34/#35. Starting source:
-`5f11e250079df26145f160e76763353641ca285b`. Version routes are aligned at 0.3.3;
-the five qualification provider pins and stable packaged description remain
-unchanged. Existing public 0.3.2 and its historical receipts remain immutable.
+**0.3.3 is delivered**, owned by `uibcdf/recorda#37`:
+[canonical Release](https://github.com/uibcdf/recorda/releases/tag/0.3.3),
+official `uibcdf/main` noarch package and matching tag/package version.
+Source: `99f6ca12295ef675abebfe8c42cbd3ad7881bb07`; annotated tag object:
+`d84688ce83ff27a5927b8934553b77b953380c27`. Original file:
+`recorda-0.3.3-py_0.tar.bz2`, SHA256
+`fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea`.
 
-Next: local Python 3.14 source/installed checks; fresh exact-source 14-job CI,
-two latest-public cells and ten same-Conda-file qualification jobs; trusted
-credential readiness; then annotate the exact candidate and publish its original
-file only after gates and blocker review. Verify public registry/download,
-Linux/macOS arm64 installations and the canonical Release title/tag/version.
-Report actual availability to MolI and MolSysSuite; #76/#137 remain independent
-policy evaluations. No earlier green run qualifies the new source/artifact.
+Fresh [source](https://github.com/uibcdf/recorda/actions/runs/40141263674),
+[latest-public](https://github.com/uibcdf/recorda/actions/runs/40141291843),
+[same-file Conda](https://github.com/uibcdf/recorda/actions/runs/40141291792) and
+[publication](https://github.com/uibcdf/recorda/actions/runs/40142058462) gates
+pass **14/2/10/3 jobs**. All eight Linux x86_64/macOS arm64 Python 3.11–3.14
+Conda cells pass **408 tests each**. Trusted presence-only readiness passes;
+the upload receipt verifies one original-file upload after an all-labels absent
+preflight. The extra tag source CI also passes 14 jobs. Thirty full capture
+members and 53 locally tested input hashes are independently verified.
 
-## Current dependency-policy receiving completed — #35
+Public API/main-label metadata, anonymous Conda download, two hosted public
+installs, an independent fresh public-only Linux install and all three anonymous
+GitHub Release asset downloads match original bytes, actual runtime/dependency
+metadata and stable description. Canonical title/name/tag are exactly 0.3.3.
+The [release receipt](evidence/release_0_3_3.json) and
+[resolved analysis](archive/release_0_3_3.md) preserve the measured scope.
+
+Public 0.3.3 now permits `argdigest>=0.15.0` / `smonitor>=0.19.0`; required floors,
+five exact qualification environments, scientific recording behavior and
+experimental API/schema remain unchanged. A separate weekly/manual latest-public
+lane remains maintained; permitted resolution does not certify future versions.
+Earlier files/tags and receipts remain immutable.
+
+Release-specific notices: [MolI #78](https://github.com/uibcdf/moli/issues/78) and
+[MolSysSuite #142](https://github.com/uibcdf/molsyssuite/issues/142), with actual
+availability and evidence. Policy evaluations #76/#137 and consumer receiving
+remain independently owned. Next: pause or select concrete receiving work;
+Recorda #36 is a nonblocking Actions runtime maintenance review. A later checked
+documentation-only closeout is not a new producer/gate. Owned disposable resources
+are retired; useful proof has an owner/review trigger in
+[resource closeout](evidence/release_0_3_3_resources.json).
+
+## Historical dependency-policy receiving checkpoint — #35
 
 Diego accepts minimum-only requirements (`argdigest>=0.15.0`,
 `smonitor>=0.19.0`), retaining the five exact qualification environments and
@@ -88,7 +114,7 @@ issues before further work; a public-only cohort needs a separately selected
 release. Owned disposable environments/copies are retired; retained evidence has
 an owner and review trigger in [resource closeout](evidence/support_cohort_34_resources.json).
 
-## Current public release and historical pause checkpoint — 0.3.2
+## Historical public release and pause checkpoint — 0.3.2
 
 **0.3.2 is delivered**, with [Release 0.3.2](https://github.com/uibcdf/recorda/releases/tag/0.3.2),
 official `uibcdf` Conda and matching tag/package version. Qualified source:

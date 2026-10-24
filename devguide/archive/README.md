@@ -3,6 +3,9 @@
 Preserve closed reports here with their issue identity, dated outcome and verification.
 Resolved implementation slices retain their owning issues and historical evidence.
 
+- [Release 0.3.3](release_0_3_3.md) — `uibcdf/recorda#37`, resolved with original
+  Conda qualification/publication, public installs and verified Release assets.
+
 - [Permissive provider versions](permissive_provider_versions.md) —
   `uibcdf/recorda#35`, resolved with minimum-only requirements, exact qualification
   pins and independently verified latest-public monitoring.

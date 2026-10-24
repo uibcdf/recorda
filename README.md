@@ -38,30 +38,32 @@ Existing scientific results and native provenance remain owned by their librarie
 
 ## Status
 
-Version **0.3.2** is the official Conda maintenance release. Its immutable tag,
+Version **0.3.3** is the official Conda maintenance release. Its immutable tag,
 package metadata and runtime version agree. The same Conda file passes the full
 installed suite on Linux x86_64 and macOS arm64, Python 3.11–3.14. See
-[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.2),
-[the qualification/publication receipt](devguide/evidence/release_0_3_2.json) and
+[the release](https://github.com/uibcdf/recorda/releases/tag/0.3.3),
+[the qualification/publication receipt](devguide/evidence/release_0_3_3.json) and
 [the changelog](CHANGELOG.md). The `0.1.0` and `0.2.0` tags retain their historical
-source checkpoints; 0.3.0 retains its original stabilization artifact and evidence.
+source checkpoints; earlier public versions retain their original files and evidence.
 Consumer-owned receiving is communicated in
-[MolSysSuite #130](https://github.com/uibcdf/molsyssuite/issues/130).
+[MolI #78](https://github.com/uibcdf/moli/issues/78) and
+[MolSysSuite #142](https://github.com/uibcdf/molsyssuite/issues/142).
 The API and schema remain experimental before 1.0.
 
-Version 0.3.2 retains the provider compatibility delivered in 0.3.1: ArgDigest
-0.16, SMonitor 0.21 and transitive DepDigest 0.15.1 at qualification. It receives
-published pytest-receptor 1.2.1 for development/CI and an independent stable
-packaged description, fixing [#31](https://github.com/uibcdf/recorda/issues/31)
-and [#32](https://github.com/uibcdf/recorda/issues/32). Runtime API/schema and
-provider ranges are unchanged; pytest-receptor is not a runtime dependency.
+Version 0.3.3 delivers the provider compatibility and dependency policy from
+[#34](https://github.com/uibcdf/recorda/issues/34) and
+[#35](https://github.com/uibcdf/recorda/issues/35). The original Conda file passes
+408 tests in each supported OS/Python cell. Qualification uses ArgDigest 0.17,
+SMonitor 0.22 and transitive DepDigest 0.15.1. Runtime recording behavior and
+API/schema remain unchanged apart from the version identifier.
 See the [current checkpoint](devguide/CHECKPOINT.md) for exact identities/scope.
 
-The development checkout requires `argdigest>=0.15.0` and `smonitor>=0.19.0`,
+The public package and development checkout require `argdigest>=0.15.0` and `smonitor>=0.19.0`,
 permitting later versions without automatic next-minor ceilings. Exact provider
 pins remain in reproducible qualification; a separate weekly/manual workflow
 monitors latest-public compatibility. See [the dependency policy](devguide/DEPENDENCY_POLICY.md)
-and [provider receiving](devguide/LATEST_SUPPORT_RECEIVING.md). Public 0.3.2
+and [provider receiving](devguide/LATEST_SUPPORT_RECEIVING.md). Permitting
+resolution does not certify unexecuted future provider versions. Public 0.3.2
 keeps its original dependency limits.
 
 Recorda now has an **experimental first standalone implementation**. Its API and journal
@@ -75,7 +77,7 @@ See [`devguide/DESIGN.md`](devguide/DESIGN.md) for the broad design and [`devgui
 Install the public package from the official channels:
 
 ```bash
-micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.2
+micromamba create -n recorda -c uibcdf -c conda-forge --strict-channel-priority python=3.14 recorda=0.3.3
 micromamba activate recorda
 ```
 

@@ -29,6 +29,15 @@ This baseline alignment does not resolve the distribution or OS-support reviews.
 
 ## Qualification
 
+Public **0.3.3** qualifies the same original Conda file across Linux x86_64 and
+macOS arm64 Python 3.11–3.14, **408 tests per installed cell**. Fresh source,
+latest-public, Conda and publication gates pass 14/2/10/3 jobs. Two hosted public
+installs plus an independent fresh public-only Linux installation verify actual
+runtime/description/dependency bytes and recording/CLI. Anonymous public archive
+and Release asset downloads match the original digest.
+[Release receipt](evidence/release_0_3_3.json). No other OS, architecture or Python
+minor is admitted; permissive provider metadata does not certify future versions.
+
 The dependency-policy receiving in `uibcdf/recorda#35` qualifies source
 `3c2dbc462fda451459e6b8f0af7d5d354ec50cd7` with 14 successful source jobs,
 preserving the fixed-cohort Linux/macOS arm64 Python 3.11–3.14 matrix. Its
@@ -48,7 +57,7 @@ installed-wheel and actual editable-provider lanes each pass 378 tests.
 [Receiving receipt](evidence/support_cohort_34_hosted.json). This does not
 requalify or change the immutable public 0.3.2 archive below.
 
-The current **0.3.2** release qualifies the same original Conda file on Linux
+The historical **0.3.2** release qualifies the same original Conda file on Linux
 x86_64 and macOS arm64 for Python 3.11–3.14, with **376 tests per installed cell**.
 Its source/candidate/publication workflows pass 14/10/3 jobs, and public-channel
 Linux/macOS installs and Release asset downloads match the original digest.

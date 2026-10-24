@@ -67,9 +67,10 @@ Tests against synthetic later-version metadata prove resolution policy only.
 
 ## Publication boundary
 
-Public 0.3.2 and the completed #34 receipt remain immutable with their original
-provider constraints. This policy changes source/editable requirements; its
-public delivery needs a separately qualified release, proposed for 0.3.3.
+Public **0.3.3** delivers this policy after separate exact-source/original-artifact
+qualification and public verification, owned by `uibcdf/recorda#37`. Read the
+[release receipt](evidence/release_0_3_3.json). Public 0.3.2 and the completed #34
+receipt remain immutable with their original provider constraints.
 
 ## Executed receiving
 

@@ -1,6 +1,20 @@
 # Stabilization release qualification
 
-## Authorized 0.3.3 route
+## Completed 0.3.3 publication
+
+Owner: `uibcdf/recorda#37`. [The receipt](evidence/release_0_3_3.json) records
+source `99f6ca12295ef675abebfe8c42cbd3ad7881bb07`, original file
+`recorda-0.3.3-py_0.tar.bz2`, SHA256
+`fcee216130bca444e92e195fc38f8ef24fb501439cd123638bc11fa8e5df76ea`.
+Source/latest/Conda/publication gates pass 14/2/10/3 jobs; all eight installed
+Linux x86_64/macOS arm64 Python 3.11–3.14 Conda cells pass 408 tests. Presence
+readiness, same-file upload, two public installs, independent public API/download,
+fresh public-only user installation and all three Release asset downloads are
+verified. The canonical Release title/tag/package version is exactly 0.3.3.
+Availability is delivered in MolI #78 and MolSysSuite #142. Earlier archives,
+including 0.3.2's original dependency ceilings, remain immutable.
+
+## Historical authorized 0.3.3 route
 
 Owner: `uibcdf/recorda#37`. Diego authorizes publication of 0.3.3 after #34/#35
 receiving. Align source/runtime/recipe and route coordinates; pass fresh local
@@ -24,8 +38,8 @@ review, not an automatically inferred gate failure.
 defines minimum-only runtime provider requirements and a separate latest-public
 monitoring workflow. Preserve exact provider pins in release qualification.
 Passing the latest lane does not replace the exact-source/same-artifact gates
-or change historical public files. A future 0.3.3 needs its own candidate and
-original Conda file; no existing package is rebuilt in place.
+or change historical public files. Every future release needs its own candidate
+and original Conda file; no existing package is rebuilt in place.
 
 ## Completed 0.3.2 publication
 

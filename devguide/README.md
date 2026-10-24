@@ -12,12 +12,15 @@ baseline, registration/emission distinction and optional receiving dispositions.
 Start with [`CHECKPOINT.md`](CHECKPOINT.md) for the published source pair,
 executed evidence, resumption checklist and prioritized remaining work.
 
-Current work is authorized **0.3.3 qualification/publication** in
-`uibcdf/recorda#37`, delivering permissive runtime provider requirements in a
-new public artifact. Read the checkpoint and release guide; public 0.3.2 remains
-the latest delivered package until independent publication verification succeeds.
+Current delivered release is **0.3.3**, owned by `uibcdf/recorda#37`, delivering
+minimum-only runtime provider requirements. Fresh source/latest/original-Conda/
+publication gates pass 14/2/10/3 jobs; each installed Conda OS/minor cell passes
+408 tests. Public archive, clean installations and the canonical Release's three
+assets are independently verified. Read the [receipt](evidence/release_0_3_3.json)
+and checkpoint. Availability is handed to MolI #78 and MolSysSuite #142;
+consumer adoption and wider policy evaluation remain separately owned.
 
-Latest source receiving, [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34),
+Completed source receiving, [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34),
 admits ArgDigest 0.17 / SMonitor 0.22 for the shared editable refresh, with
 aligned metadata, recipe, environment pins and provider provenance. Three local
 lanes each pass 378 tests and exact-source CI passes 14/14 jobs. Read
@@ -33,12 +36,12 @@ jobs and two latest-public cells with 408 tests each. The
 actual installed identities.
 Independent domain evaluations are uibcdf/moli#76 and uibcdf/molsyssuite#137.
 
-Current delivered release is 0.3.2 (`uibcdf/recorda#33`), resolving published
+Historical release 0.3.2 (`uibcdf/recorda#33`) resolved published
 receptor receiving (#31) and stable packaged description (#32). Read
 [TEST_TOOL_RECEIVING.md](TEST_TOOL_RECEIVING.md) and
 [PACKAGED_DESCRIPTION.md](PACKAGED_DESCRIPTION.md). Fresh source, actual artifact
 and installed gates passed; the [release receipt](evidence/release_0_3_2.json)
-records public metadata/assets and the MolSysSuite #130 handoff. Earlier receipts
+records its public metadata/assets and the MolSysSuite #130 handoff. Earlier receipts
 remain historical and immutable.
 Read [`STANDALONE_ACCEPTANCE.md`](STANDALONE_ACCEPTANCE.md) for the current
 completed original standalone acceptance matrix, consumer questions and separately
@@ -46,8 +49,8 @@ scoped scientific qualification.
 
 [`RELEASING.md`](RELEASING.md) describes the 0.3.0 stabilization qualification
 and exact-file publication route. Its [release receipt](evidence/release_0_3_0.json)
-records executed gates and independently observed publication. Current work is
-the **published 0.3.2 maintenance release** in `uibcdf/recorda#33`.
+records executed gates and independently observed publication. The
+**published 0.3.2 maintenance release** in `uibcdf/recorda#33` is historical.
 Its [release receipt](evidence/release_0_3_2.json) records fresh source, exact-Conda,
 public installation and GitHub asset checks; the historical 0.3.0 package retains
 its original ceilings. Receiving is communicated in `uibcdf/molsyssuite#130`.
