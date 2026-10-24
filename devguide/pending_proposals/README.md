@@ -1,5 +1,8 @@
 # Pending proposals
 
+- [Support-provider cohort receiving](support_cohort_34.md) — `uibcdf/recorda#34`,
+  ArgDigest 0.17 / SMonitor 0.22 for the editable workspace; no new release selected.
+
 - The original standalone laboratory slice (`uibcdf/recorda#1`) is resolved in
   [../archive/standalone_lab.md](../archive/standalone_lab.md); current acceptance
   is in `../STANDALONE_ACCEPTANCE.md`.

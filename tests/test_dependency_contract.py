@@ -2,6 +2,7 @@
 
 import json
 import shutil
+import tomllib
 from pathlib import Path
 
 import pytest
@@ -32,6 +33,17 @@ def tree(tmp_path):
 
 def test_committed_runtime_routes_match_metadata():
     assert audit(ROOT) == {"recipes": 1, "environments": 5, "sibling_sources": 0}
+
+
+@pytest.mark.parametrize(
+    ("provider", "reviewed", "unreviewed"),
+    [("argdigest", "0.17.0", "0.18.0"), ("smonitor", "0.22.0", "0.23.0")],
+)
+def test_reviewed_provider_cohort_is_admitted(provider, reviewed, unreviewed):
+    project = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]
+    requirements = {item.name: item for item in map(Requirement, project["dependencies"])}
+    assert requirements[provider].specifier.contains(reviewed)
+    assert not requirements[provider].specifier.contains(unreviewed)
 
 
 def test_missing_recipe_dependency_blocks_preflight(tree):

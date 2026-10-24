@@ -1,5 +1,12 @@
 # Release history
 
+## Unreleased
+
+- Admit reviewed ArgDigest 0.17 and SMonitor 0.22 in source/editable metadata,
+  recipe and exact-provider development/CI routes (#34). Existing runtime floors
+  and bounded next-minor exclusions remain; public 0.3.2 retains its original
+  dependency metadata and artifacts.
+
 ## 0.3.2 — 2026-10-23
 
 - Receive published pytest-receptor 1.2.1 in development/CI, with fresh-process

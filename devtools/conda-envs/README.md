@@ -8,7 +8,7 @@ It is not a runtime dependency. Historical receipts retain earlier tool pins.
 All Conda routes use `uibcdf` with `conda-forge`. Create the selected environment,
 then install this development checkout with
 `python -m pip install --no-deps --editable .`. Ordinary core requirements are
-ArgDigest `>=0.15,<0.17` and SMonitor `>=0.19,<0.22`; ArgDigest owns its DepDigest
+ArgDigest `>=0.15,<0.18` and SMonitor `>=0.19,<0.23`; ArgDigest owns its DepDigest
 dependency. No scientific producer package is required. Pytest-receptor, Ruff,
 PyYAML and packaging are development tools. Plain import/journal reading stay
 free of provider imports; configuration/recording and reference-checking calls
@@ -37,8 +37,9 @@ python -m pytest -p pytest_receptor.plugin --receptor=llm
 
 The shared specifications admit the complete supported range; for routine local
 development select Python 3.14 when creating the environment. CI passes an exact
-minor override for each matrix cell. All five specifications pin ArgDigest 0.16.0
-build 0, SMonitor 0.21.0 build 2 and DepDigest 0.15.1 build 0. The old extra names
+minor override for each matrix cell. All five specifications pin ArgDigest 0.17.0
+build 0, SMonitor 0.22.0 build 0 and DepDigest 0.15.1 build 0, reviewed under
+`uibcdf/recorda#34`. The old extra names
 are empty compatibility aliases; package metadata now declares these providers
 as required. Conda supplies the closure before `--no-deps` installation.
 Recorda 0.3.2 is publicly available through `uibcdf` with `conda-forge`;
@@ -67,5 +68,5 @@ UIBCDF action, tests that same file and uploads it without rebuilding. Public
 publication and OS evidence are recorded in `uibcdf/recorda#3` / #4. No sibling
 source CI installation route is retained.
 
-Current receiving and the unchanged historical 0.3.0 archive are distinguished in
+Current source receiving and immutable public-release closures are distinguished in
 [the receiving note](../../devguide/LATEST_SUPPORT_RECEIVING.md).

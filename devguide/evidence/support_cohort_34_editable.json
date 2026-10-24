@@ -1,0 +1,73 @@
+{
+  "complete": true,
+  "counts": {
+    "collected": 378,
+    "deselected": 0,
+    "errors": 0,
+    "executed": 378,
+    "failed": 0,
+    "not_executed": 0,
+    "passed": 378,
+    "reruns": 0,
+    "skipped": 0,
+    "subtests": {},
+    "warnings": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "date": "2026-10-24",
+  "dependency_closure": "No broken requirements found.",
+  "events_sha256": "69701497b4a82ae3564aace963b941502ebfb8291907950da98c9a7c5ec34f4f",
+  "executable": "/tmp/recorda-34-receiving-2u4kn_g6/clean-editable-env/bin/python",
+  "integrity_valid": true,
+  "issue": "uibcdf/recorda#34",
+  "junit_sha256": "906ffccb9e3b189772d55d48b7885144e096da068c10108f21777b73724cf104",
+  "native_exit": 0,
+  "normal_and_isolated_origins_equal": true,
+  "origins": {
+    "argdigest": {
+      "origin": "/tmp/recorda-34-receiving-2u4kn_g6/provider-sources/argdigest/argdigest/__init__.py",
+      "version": "0.17.0+4.gbbeb012"
+    },
+    "depdigest": {
+      "origin": "/tmp/recorda-34-receiving-2u4kn_g6/provider-sources/depdigest/depdigest/__init__.py",
+      "version": "0.15.1+7.g93b42d7"
+    },
+    "recorda": {
+      "origin": "/home/diego/repos@uibcdf/recorda/src/recorda/__init__.py",
+      "version": "0.3.2"
+    },
+    "smonitor": {
+      "origin": "/tmp/recorda-34-receiving-2u4kn_g6/provider-sources/smonitor/smonitor/__init__.py",
+      "version": "0.22.0+3.gebdd054"
+    }
+  },
+  "passed": 378,
+  "providers": {
+    "argdigest": {
+      "commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+      "post_install_tracked_status": [],
+      "root": "/tmp/recorda-34-receiving-2u4kn_g6/provider-sources/argdigest",
+      "selected_ref": "origin/main fetched by suite audit; primary worktree unchanged"
+    },
+    "depdigest": {
+      "commit": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+      "post_install_tracked_status": [],
+      "root": "/tmp/recorda-34-receiving-2u4kn_g6/provider-sources/depdigest",
+      "selected_ref": "origin/main fetched by suite audit; primary worktree unchanged"
+    },
+    "smonitor": {
+      "commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+      "post_install_tracked_status": [],
+      "root": "/tmp/recorda-34-receiving-2u4kn_g6/provider-sources/smonitor",
+      "selected_ref": "origin/main fetched by suite audit; primary worktree unchanged"
+    }
+  },
+  "pytest_receptor": {
+    "verified_python_files": 6,
+    "version": "1.2.1",
+    "wheel_sha256": "683200648785f3894357891b238cdc0780c1e874dcf067882dbba2aaa2c527c3"
+  },
+  "recorda_root": "/home/diego/repos@uibcdf/recorda/src",
+  "scope": "Editable snapshots of exact provider commits in a clean task-owned venv without inherited site-packages; public PyPI development tools, no shared-environment mutation or scientific integration"
+}

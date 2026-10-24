@@ -15,14 +15,14 @@ from packaging.specifiers import SpecifierSet
 
 ARTIFACTS = {
     "smonitor": (
-        "0.21.0",
-        "py_2",
-        "62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56",
+        "0.22.0",
+        "py_0",
+        "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
     ),
     "argdigest": (
-        "0.16.0",
+        "0.17.0",
         "py_0",
-        "e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d",
+        "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
     ),
     "depdigest": (
         "0.15.1",

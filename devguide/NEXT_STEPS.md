@@ -6,7 +6,18 @@ Recorda has an **EXPERIMENTAL STANDALONE PROTOTYPE**. The first implementation e
 
 The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the smallest correct standalone recording substrate, learn from a library outside MOLI, and only then add platform integration.
 
-## Current resumption order — 2026-10-23
+## Current resumption order — 2026-10-24
+
+1. Complete source receiving in `uibcdf/recorda#34` for public ArgDigest 0.17 /
+   SMonitor 0.22, retaining the existing floors and next-minor bounds. Keep all
+   dependency routes and exact-provider identities aligned.
+2. Verify isolated public provisioning, source/installed behavior, native
+   exceptions, safe diagnostics and exact-source CI; return evidence and the
+   receiving commit to uibcdf/molsyssuite#135 and uibcdf/praxis#14.
+3. Preserve public 0.3.2 and all prior evidence. No new release or scientific
+   integration is selected by this editable-workspace receiving request.
+
+## Historical resumption order — 2026-10-23
 
 1. **0.3.2 is public and #31/#32 are resolved.** Read the
    [checkpoint](CHECKPOINT.md) and [release receipt](evidence/release_0_3_2.json).

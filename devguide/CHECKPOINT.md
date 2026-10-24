@@ -1,6 +1,26 @@
-# Development checkpoint — 2026-10-23
+# Development checkpoint — 2026-10-24
 
-## Current release and pause checkpoint — 0.3.2
+## Current source receiving — #34
+
+Receive ArgDigest 0.17.0 and SMonitor 0.22.0 for the editable refresh requested
+in uibcdf/molsyssuite#135; related Praxis receiving is uibcdf/praxis#14.
+The recipe and runtime source metadata preserve existing floors and widen only
+the reviewed ceilings to `<0.18` / `<0.23`. Five environment routes and exact
+provider verification select the public cohort with DepDigest 0.15.1.
+Read [LATEST_SUPPORT_RECEIVING.md](LATEST_SUPPORT_RECEIVING.md).
+Fresh public Conda source/installed-wheel checks each pass **378 tests** on
+Linux/Python 3.14.9, with recovery enabled, clean `pip check`, verified public
+provider bytes and complete receptor/JUnit/native agreement. A separate clean
+editable-provider venv also passes 378 tests with normal/isolated runtime
+origins asserted. Local [public](evidence/support_cohort_34_local.json) and
+[editable](evidence/support_cohort_34_editable.json) receipts preserve the scope.
+Exact-source hosted gates remain pending in the owning issue.
+
+No new release is selected. Public 0.3.2 and its immutable evidence below retain
+their original ArgDigest `<0.17` / SMonitor `<0.22` limits; source/editable
+receiving does not make that archive admit newer providers.
+
+## Current public release and historical pause checkpoint — 0.3.2
 
 **0.3.2 is delivered**, with [Release 0.3.2](https://github.com/uibcdf/recorda/releases/tag/0.3.2),
 official `uibcdf` Conda and matching tag/package version. Qualified source:

@@ -1,5 +1,56 @@
 # Latest public support-provider receiving
 
+## Current source receiving — 2026-10-24
+
+Owner: [uibcdf/recorda#34](https://github.com/uibcdf/recorda/issues/34).
+Coordination: uibcdf/molsyssuite#135 and uibcdf/praxis#14.
+
+Review ArgDigest **0.17.0 py_0** and SMonitor **0.22.0 py_0**, retaining
+DepDigest **0.15.1 py_0**. Source metadata and the recipe admit
+`argdigest>=0.15.0,<0.18` and `smonitor>=0.19.0,<0.23`; all five build/test/
+development/recovery environments and the exact-provider checker select the
+reviewed public cohort. Existing floors and the next-minor bounds are retained.
+
+ArgDigest 0.17 adds opt-in `contract_owner` and repairs alias presence and
+staticmethod handling. Recorda's free-function pipelines keep the default owner,
+explicit restrictive capture and disabled value digestion; no new owner or
+normalization contract is selected. SMonitor 0.22 adds an opt-in pytest policy
+CLI/module, leaving the consumed scope, registration, resolution and recovery
+APIs unchanged. Recorda does not enable that policy or change diagnostic startup.
+The [diagnostic setup decision](DIAGNOSTIC_SETUP.md) remains applicable.
+
+| Provider | File | SHA-256 |
+| --- | --- | --- |
+| ArgDigest | `argdigest-0.17.0-py_0.tar.bz2` | `9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1` |
+| SMonitor | `smonitor-0.22.0-py_0.tar.bz2` | `bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949` |
+| DepDigest | `depdigest-0.15.1-py_0.tar.bz2` | `2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850` |
+
+Fresh Linux/Python 3.14.9 provisioning from `uibcdf` / `conda-forge` verifies the
+three public archives and **97 managed Python files** (39 ArgDigest, 41 SMonitor,
+17 DepDigest). With published pytest-receptor 1.2.1, **378 source and 378
+installed-wheel tests pass**, recovery enabled, without failures, skips or
+warnings. Native exits, JUnit and complete integrity-valid receptor artifacts
+agree; `pip check` and route/governance/Ruff checks pass.
+[Local receipt](evidence/support_cohort_34_local.json).
+
+A separate clean venv, without inherited site-packages, installs actual editable
+snapshots of the three provider commits from #34's corrected source audit. All
+**378 tests** and `pip check` pass. Runtime roots are checked in normal Python
+and `python -I`; installed metadata alone is not proof. The initial inherited
+venv attempt reproduced the already reported provider-shadowing trap and was
+rejected before testing. Provider tracked files remain unchanged after builds.
+[Editable receipt](evidence/support_cohort_34_editable.json).
+
+Applicable exact-commit hosted gates remain pending. This source change does not
+publish a new Recorda version. Public **0.3.2** retains its original metadata
+(`argdigest<0.17`, `smonitor<0.22`), bytes, tag and qualified provider closure.
+The shared workspace must refresh Recorda from the receiving source commit;
+an all-public install of the new cohort requires a separately qualified release.
+No scientific consumer adoption is implied. Earlier #24 evidence below keeps
+its original cohort and scope.
+
+## Historical owner
+
 Owner: uibcdf/recorda#24. Coordination: uibcdf/molsyssuite#82 and uibcdf/moli#40.
 
 ## Public delivery — 0.3.1, 2026-10-23

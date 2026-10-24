@@ -57,6 +57,11 @@ and [#32](https://github.com/uibcdf/recorda/issues/32). Runtime API/schema and
 provider ranges are unchanged; pytest-receptor is not a runtime dependency.
 See the [current checkpoint](devguide/CHECKPOINT.md) for exact identities/scope.
 
+The development checkout additionally admits ArgDigest 0.17 and SMonitor 0.22
+under [#34](https://github.com/uibcdf/recorda/issues/34). Use the updated source
+and environment specifications for that cohort; public 0.3.2 keeps its original
+dependency limits. See [provider receiving](devguide/LATEST_SUPPORT_RECEIVING.md).
+
 Recorda now has an **experimental first standalone implementation**. Its API and journal
 schema are provisional. The controlled laboratory lives in `uibcdf/recorda-lab`;
 laboratory evidence does not establish real scientific utility or complete workflow capture.
