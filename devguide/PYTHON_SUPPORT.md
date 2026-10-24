@@ -29,6 +29,16 @@ This baseline alignment does not resolve the distribution or OS-support reviews.
 
 ## Qualification
 
+The dependency-policy receiving in `uibcdf/recorda#35` qualifies source
+`3c2dbc462fda451459e6b8f0af7d5d354ec50cd7` with 14 successful source jobs,
+preserving the fixed-cohort Linux/macOS arm64 Python 3.11–3.14 matrix. Its
+separate latest-public monitor passes Linux/macOS arm64 Python 3.14 with 408
+tests each and complete installed-identity/JSONL/JUnit evidence. Local 3.14.9
+targeted/source/installed checks pass 68/408/408.
+[Policy receipt](evidence/dependency_policy_35_hosted.json). Runtime floors
+permit later versions; only executed closures are qualified. No new public
+Conda file or additional OS/architecture/Python support is claimed.
+
 The later source-only provider receiving in `uibcdf/recorda#34` passes all 14
 exact-source CI jobs at `28fe4912be30873cfc1bd6400c4a7f2c6783288c`, preserving
 the Linux/macOS arm64 Python 3.11–3.14 installed-wheel matrix. Eight ordinary

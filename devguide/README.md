@@ -22,7 +22,10 @@ from the unchanged public 0.3.2 package below.
 The later accepted [dependency policy](DEPENDENCY_POLICY.md), owned by
 `uibcdf/recorda#35`, permits later provider versions from the required floors,
 retains reproducible qualification pins and adds separate latest-public
-monitoring. Local 68/408/408 checks pass; hosted qualification is in progress.
+monitoring. Local 68/408/408 checks pass; hosted qualification passes 14 source
+jobs and two latest-public cells with 408 tests each. The
+[receipt](evidence/dependency_policy_35_hosted.json) binds the exact source and
+actual installed identities.
 Independent domain evaluations are uibcdf/moli#76 and uibcdf/molsyssuite#137.
 
 Current delivered release is 0.3.2 (`uibcdf/recorda#33`), resolving published

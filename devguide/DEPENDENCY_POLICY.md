@@ -70,3 +70,29 @@ Tests against synthetic later-version metadata prove resolution policy only.
 Public 0.3.2 and the completed #34 receipt remain immutable with their original
 provider constraints. This policy changes source/editable requirements; its
 public delivery needs a separately qualified release, proposed for 0.3.3.
+
+## Executed receiving
+
+Implementation source: `3c2dbc462fda451459e6b8f0af7d5d354ec50cd7`.
+Local Linux/Python 3.14.9 targeted tests pass 68 cases; source and installed-wheel
+suites each pass 408, recovery enabled, with clean dependency closure and
+complete integrity-valid receptor/JUnit/native agreement.
+
+[Source CI 40133093885](https://github.com/uibcdf/recorda/actions/runs/40133093885)
+passes 14 jobs: eight fixed-cohort installed Linux/macOS arm64 Python 3.11–3.14
+cells pass 390 tests with 18 explicit recovery skips; four Linux recovery cells
+and coverage each pass all 408.
+[Latest-public CI 40133098600](https://github.com/uibcdf/recorda/actions/runs/40133098600)
+passes both Linux/macOS arm64 Python 3.14 cells with all 408 tests and zero
+failures/skips/warnings. Downloaded selection/installation artifacts and complete
+JSONL/JUnit verify the actual public cohort. Native steps, twelve full-capture
+members and all 50 locally tested input hashes are independently checked.
+
+Receipts: [local](evidence/dependency_policy_35_local.json),
+[hosted](evidence/dependency_policy_35_hosted.json),
+[resources](evidence/dependency_policy_35_resources.json).
+The five qualified environment files and 15 runtime files are unchanged.
+GitHub's nonblocking Node.js 20 action annotations are separately owned in
+[Recorda #36](https://github.com/uibcdf/recorda/issues/36); no native gate failure
+is attributed to those warnings. Wider policy evaluation remains open with
+the two governance owners.

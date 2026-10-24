@@ -1,0 +1,1240 @@
+{
+  "date": "2026-10-24",
+  "domain_evaluations": [
+    "uibcdf/moli#76",
+    "uibcdf/molsyssuite#137"
+  ],
+  "five_qualified_environment_pins_unchanged": true,
+  "fresh_local_conda_closure": [
+    {
+      "build": "20_gnu",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgomp >=7.5.0"
+      ],
+      "name": "_openmp_mutex",
+      "sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda",
+      "version": "4.5"
+    },
+    {
+      "build": "py_0",
+      "depends": [
+        "depdigest >=0.11.0",
+        "python >=3.11,<3.15",
+        "smonitor >=0.16.0"
+      ],
+      "name": "argdigest",
+      "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.0-py_0.tar.bz2",
+      "version": "0.17.0"
+    },
+    {
+      "build": "hda65f42_10",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=14"
+      ],
+      "name": "bzip2",
+      "sha256": "1a0d382c515ebf55f8ee1f38c8b81bc95af5c2acc42ad53b66bc5df932032f96",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hda65f42_10.conda",
+      "version": "1.0.8"
+    },
+    {
+      "build": "hbd8a1cb_0",
+      "depends": [
+        "__unix"
+      ],
+      "name": "ca-certificates",
+      "sha256": "95619b9c1184be7175392eeb0ee7eeb5ccf25d280951f4225f2d62e725790be3",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.10.23-hbd8a1cb_0.conda",
+      "version": "2026.10.23"
+    },
+    {
+      "build": "pyhd8ed1ab_1",
+      "depends": [
+        "python >=3.9"
+      ],
+      "name": "colorama",
+      "sha256": "ab29d57dc70786c1269633ba3dff20288b81664d3ff8d21af995742e2bb03287",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/colorama-0.4.6-pyhd8ed1ab_1.conda",
+      "version": "0.4.6"
+    },
+    {
+      "build": "py_0",
+      "depends": [
+        "python >=3.11,<3.15",
+        "smonitor >=0.13.0"
+      ],
+      "name": "depdigest",
+      "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+      "version": "0.15.1"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "depends": [
+        "python >=3.10",
+        "typing_extensions >=4.6.0"
+      ],
+      "name": "exceptiongroup",
+      "sha256": "ee6cf346d017d954255bbcbdb424cddea4d14e4ed7e9813e429db1d795d01144",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda",
+      "version": "1.3.1"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "depends": [
+        "python >=3.11"
+      ],
+      "name": "iniconfig",
+      "sha256": "8f53876d0fb3525235e39635dd55633abe0a4307b1b3ab1415c80a9e0bbdf663",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/iniconfig-2.3.1-pyhd8ed1ab_0.conda",
+      "version": "2.3.1"
+    },
+    {
+      "build": "default_hbd61a6d_103",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "zstd >=1.5.7,<1.6.0a0"
+      ],
+      "name": "ld_impl_linux-64",
+      "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda",
+      "version": "2.46.1"
+    },
+    {
+      "build": "hd2095e1_0",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=15"
+      ],
+      "name": "libexpat",
+      "sha256": "6de73033a7c5f712c9c5a54124e4581e025691029835e5bceaf10a333a7e7bc0",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libexpat-2.8.5-hd2095e1_0.conda",
+      "version": "2.8.5"
+    },
+    {
+      "build": "h81df57d_1",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=15"
+      ],
+      "name": "libffi",
+      "sha256": "c8c7583ef063bc3c430f1d48298e5ad24f796a35c22ed5b14183325825a61106",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libffi-3.7.0-h81df57d_1.conda",
+      "version": "3.7.0"
+    },
+    {
+      "build": "ha9f2e26_7",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "_openmp_mutex >=4.5"
+      ],
+      "name": "libgcc",
+      "sha256": "e031634c3a928f9594eba868bc46ef5230d6571a364a0c63215b06c4563bfcea",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-16.2.0-ha9f2e26_7.conda",
+      "version": "16.2.0"
+    },
+    {
+      "build": "he0feb66_7",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0"
+      ],
+      "name": "libgomp",
+      "sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-16.2.0-he0feb66_7.conda",
+      "version": "16.2.0"
+    },
+    {
+      "build": "hb03c661_1",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=14"
+      ],
+      "name": "liblzma",
+      "sha256": "9787df8c22a59c9a70d3e5a10db9ad663485e75e9ccc3f09bd092cb7b95e0dab",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.3-hb03c661_1.conda",
+      "version": "5.8.3"
+    },
+    {
+      "build": "hb03c661_2",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=14"
+      ],
+      "name": "libmpdec",
+      "sha256": "46820b4a835e175940ae20bec00fdddaff804cda27a1408ab1b95e77a2196437",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_2.conda",
+      "version": "4.0.0"
+    },
+    {
+      "build": "hd51c5da_100_cp314",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=15"
+      ],
+      "name": "libpython",
+      "sha256": "a35534ec7cd9bb4b287954338ac9119c25400eae6c824fc82c2d4e0bd9d3b6ea",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libpython-3.14.9-hd51c5da_100_cp314.conda",
+      "version": "3.14.9"
+    },
+    {
+      "build": "h0737f62_100",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=15",
+        "libzlib >=1.3.2,<2.0a0"
+      ],
+      "name": "libsqlite",
+      "sha256": "107ba2f9134b45a6fdaf8d2485f432e3a643fdfaf711a325d0c9139b580b3523",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.54.1-h0737f62_100.conda",
+      "version": "3.54.1"
+    },
+    {
+      "build": "hcfc3c73_0",
+      "depends": [
+        "libgcc >=15",
+        "__glibc >=2.17,<3.0.a0"
+      ],
+      "name": "libuuid",
+      "sha256": "f34b8d1de9a2bf62476d8608057d9b8a918d97444236dc53a47128f2fae79041",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libuuid-2.42.4-hcfc3c73_0.conda",
+      "version": "2.42.4"
+    },
+    {
+      "build": "h25fd6f3_3",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0"
+      ],
+      "name": "libzlib",
+      "sha256": "eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc736",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_3.conda",
+      "version": "1.3.2"
+    },
+    {
+      "build": "hdb14827_1",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=14"
+      ],
+      "name": "ncurses",
+      "sha256": "5d46557214ed184381dafe835b7c94a474a1c3b307a08a250b1ea4779b44ffb3",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.6-hdb14827_1.conda",
+      "version": "6.6"
+    },
+    {
+      "build": "h781a0a9_0",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "ca-certificates",
+        "libgcc >=15"
+      ],
+      "name": "openssl",
+      "sha256": "9c1533f1cf784f0e250919c0c9762d0b0e6bc727a79290ffb7cea1ceca1d038c",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/openssl-3.6.5-h781a0a9_0.conda",
+      "version": "3.6.5"
+    },
+    {
+      "build": "pyhc364b38_0",
+      "depends": [
+        "python >=3.9",
+        "python"
+      ],
+      "name": "packaging",
+      "sha256": "c432626b16768b8dab228bfb706f7060c2d462a21c516d240f68f2f902b5a044",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/packaging-26.3-pyhc364b38_0.conda",
+      "version": "26.3"
+    },
+    {
+      "build": "pyh145f28c_0",
+      "depends": [
+        "python >=3.13.0a0"
+      ],
+      "name": "pip",
+      "sha256": "5edc68a9d14102ba90d5d41e871163a90c6fa0a60b10fc8b66e44c99b92ae9ae",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/pip-26.2.2-pyh145f28c_0.conda",
+      "version": "26.2.2"
+    },
+    {
+      "build": "pyh5ded981_0",
+      "depends": [
+        "python >=3.11",
+        "python"
+      ],
+      "name": "pluggy",
+      "sha256": "34c40106bc3172b3a47656e84837e13a5d4829d413d65f30fb214e7568a09cea",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/pluggy-1.7.0-pyh5ded981_0.conda",
+      "version": "1.7.0"
+    },
+    {
+      "build": "pyhcf101f3_0",
+      "depends": [
+        "python >=3.10",
+        "python"
+      ],
+      "name": "pygments",
+      "sha256": "f5f015ff1bc3e1b7fc08eee096b1865234189ae0b82bebdb86a5369116e42fa0",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/pygments-2.21.0-pyhcf101f3_0.conda",
+      "version": "2.21.0"
+    },
+    {
+      "build": "pyhc364b38_2",
+      "depends": [
+        "colorama",
+        "pygments >=2.7.2",
+        "python >=3.10",
+        "iniconfig >=1.0.1",
+        "packaging >=22",
+        "pluggy >=1.5,<2",
+        "tomli >=1",
+        "exceptiongroup >=1",
+        "python"
+      ],
+      "name": "pytest",
+      "sha256": "430051d80765207a7d782b2b188230ba1489d35c6e75fd9903f76cb9fda4af16",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/pytest-9.1.1-pyhc364b38_2.conda",
+      "version": "9.1.1"
+    },
+    {
+      "build": "hcd007b5_100_cp314",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "bzip2 >=1.0.8,<2.0a0",
+        "ld_impl_linux-64 >=2.36.1",
+        "libexpat >=2.8.5,<3.0a0",
+        "libffi >=3.7.0,<3.8.0a0",
+        "libgcc >=15",
+        "liblzma >=5.8.3,<6.0a0",
+        "libmpdec >=4.0.0,<5.0a0",
+        "libpython 3.14.9 hd51c5da_100_cp314",
+        "libsqlite >=3.54.1,<4.0a0",
+        "libuuid >=2.42.4,<3.0a0",
+        "libzlib >=1.3.2,<2.0a0",
+        "ncurses >=6.6,<7.0a0",
+        "openssl >=3.5.9,<4.0a0",
+        "python_abi 3.14.* *_cp314",
+        "readline >=8.3,<9.0a0",
+        "tk >=8.6.13,<8.7.0a0",
+        "tzdata",
+        "zstd >=1.5.7,<1.6.0a0",
+        "pip"
+      ],
+      "name": "python",
+      "sha256": "87874d825447bb21759c6378cbbc4ce380b2b639609bfd4cb67dc864641ac759",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/python-3.14.9-hcd007b5_100_cp314.conda",
+      "version": "3.14.9"
+    },
+    {
+      "build": "9_cp314",
+      "depends": [],
+      "name": "python_abi",
+      "sha256": "e7f8e965bbfb98e08feb2365cacdad8bb218fa5b5a0a2752f747287f425f213c",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/python_abi-3.14-9_cp314.conda",
+      "version": "3.14"
+    },
+    {
+      "build": "py314h67df5f8_1",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=14",
+        "python >=3.14,<3.15.0a0",
+        "python_abi 3.14.* *_cp314",
+        "yaml >=0.2.5,<0.3.0a0"
+      ],
+      "name": "pyyaml",
+      "sha256": "b318fb070c7a1f89980ef124b80a0b5ccf3928143708a85e0053cde0169c699d",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/pyyaml-6.0.3-py314h67df5f8_1.conda",
+      "version": "6.0.3"
+    },
+    {
+      "build": "hd6e31c0_1",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=15",
+        "ncurses >=6.6,<7.0a0"
+      ],
+      "name": "readline",
+      "sha256": "01b3fe073a66e321970d09e04b388708f8cbdca5cdfbfcb7c9eeb470ad10383d",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/readline-8.3-hd6e31c0_1.conda",
+      "version": "8.3"
+    },
+    {
+      "build": "pyhe730653_0",
+      "depends": [
+        "python >=3.11"
+      ],
+      "name": "setuptools",
+      "sha256": "17add609d1a31c874e39a03935072be59bcafb06d42383eceabea746d12e6025",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/setuptools-84.2.1-pyhe730653_0.conda",
+      "version": "84.2.1"
+    },
+    {
+      "build": "py_0",
+      "depends": [
+        "python >=3.11,<3.15"
+      ],
+      "name": "smonitor",
+      "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.22.0-py_0.tar.bz2",
+      "version": "0.22.0"
+    },
+    {
+      "build": "noxft_h1df4ec4_4",
+      "depends": [
+        "libgcc >=15",
+        "__glibc >=2.17,<3.0.a0",
+        "libzlib >=1.3.2,<2.0a0"
+      ],
+      "name": "tk",
+      "sha256": "a1a241d172c1ccab067ba245206dd048bc3c2d1b84504b53c9468e99adfc16a1",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.13-noxft_h1df4ec4_4.conda",
+      "version": "8.6.13"
+    },
+    {
+      "build": "pyh5ded981_0",
+      "depends": [
+        "python >=3.11",
+        "python"
+      ],
+      "name": "tomli",
+      "sha256": "93b6f517fb7adff00b62be02b798d384a1b34d0e368fdb576fb248bcb3bb9ec7",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/tomli-2.5.0-pyh5ded981_0.conda",
+      "version": "2.5.0"
+    },
+    {
+      "build": "pyhcf101f3_0",
+      "depends": [
+        "python >=3.10",
+        "python"
+      ],
+      "name": "typing_extensions",
+      "sha256": "2d888f90af0686044882c74193ec80a90ec1943145d94a7b1b048958acda1848",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.16.0-pyhcf101f3_0.conda",
+      "version": "4.16.0"
+    },
+    {
+      "build": "h5d301ff_0",
+      "depends": [],
+      "name": "tzdata",
+      "sha256": "2b7ca858879f183ce2dcc65b300f48a0133d5430550f35b23d80d405a0788dbf",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/tzdata-2026e-h5d301ff_0.conda",
+      "version": "2026e"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "depends": [
+        "packaging >=24.0",
+        "python >=3.10"
+      ],
+      "name": "wheel",
+      "sha256": "ba64b29b6d418024cb565081a1799262cb2780d2534ff4c14f76aa858c4286cd",
+      "subdir": "noarch",
+      "url": "https://conda.anaconda.org/conda-forge/noarch/wheel-0.48.0-pyhd8ed1ab_0.conda",
+      "version": "0.48.0"
+    },
+    {
+      "build": "hebe6cf0_3",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libgcc >=15"
+      ],
+      "name": "yaml",
+      "sha256": "d164dfa75ecd538f6fd68765defcc06aa875bc697b9b215362d79a2a73125dd0",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/yaml-0.2.5-hebe6cf0_3.conda",
+      "version": "0.2.5"
+    },
+    {
+      "build": "hb78ec9c_7",
+      "depends": [
+        "__glibc >=2.17,<3.0.a0",
+        "libzlib >=1.3.2,<2.0a0"
+      ],
+      "name": "zstd",
+      "sha256": "47d682b9f6d6ec9eb1a6e6c3e75ea6273e899e78fb7fc59f81d39745009fbc60",
+      "subdir": "linux-64",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_7.conda",
+      "version": "1.5.7"
+    }
+  ],
+  "gates": {
+    "latest": {
+      "attempt": 1,
+      "capture": {
+        "captured_at": "2026-10-24T21:19:03.939197+00:00",
+        "manifest_sha256": "7fa16743ae875b89a4bccd54936acd6e474d8ac5b20b7ba83124ac6adfc36560",
+        "members": [
+          {
+            "bytes": 12865,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "84d7cc39f5d32e3039d1d60673decf09be1fb3dc991bd04e5f501838b84da980"
+          },
+          {
+            "bytes": 563,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "7b973d28460c7a31870ad947ce08baa69f863ceb707d956acf20762eed0bdc62"
+          },
+          {
+            "bytes": 11457,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "4041f3dac35c7ae6845a254c22b5953e1fad8c3f1deff9109cc9d21f08e6ee33"
+          },
+          {
+            "bytes": 1749,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "acdb8f96d8b45fbd80d0a9b5b49161734fa0a3645b7373e71beaf3536b87cc7a"
+          },
+          {
+            "bytes": 8698,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "baebf21d484eaa1a95cb7a6644ca72b3e6dcf94f50ab3e0dd0dd0df4cfa21a71"
+          },
+          {
+            "bytes": 68445,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "d3cc025a7327ffa9d2f7a844feee17b2a1d262d447efc90e0c132d572b8ca6d0"
+          }
+        ]
+      },
+      "conclusion": "success",
+      "event": "workflow_dispatch",
+      "head_sha": "3c2dbc462fda451459e6b8f0af7d5d354ec50cd7",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Run python -m pip install packaging",
+            "Select stable providers from the public main channel",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python devtools/check_dependencies.py",
+            "Verify selected public provider identities and installed Python bytes",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify installed runtime and architecture",
+            "Test installed Recorda with the selected latest providers",
+            "Retain selection, installed identities and test evidence",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/setup-python@v5",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "Latest providers / macos-latest / Python 3.14"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Run python -m pip install packaging",
+            "Select stable providers from the public main channel",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python devtools/check_dependencies.py",
+            "Verify selected public provider identities and installed Python bytes",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify installed runtime and architecture",
+            "Test installed Recorda with the selected latest providers",
+            "Retain selection, installed identities and test evidence",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/setup-python@v5",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "Latest providers / ubuntu-latest / Python 3.14"
+        }
+      ],
+      "native_verdicts": {
+        "0_Latest providers _ ubuntu-latest _ Python 3.14.txt": [
+          "408 passed | 7.29s"
+        ],
+        "1_Latest providers _ macos-latest _ Python 3.14.txt": [
+          "408 passed | 5.54s"
+        ]
+      },
+      "run_id": 40133098600,
+      "url": "https://github.com/uibcdf/recorda/actions/runs/40133098600",
+      "workflow": ".github/workflows/latest_support.yml"
+    },
+    "source": {
+      "attempt": 1,
+      "capture": {
+        "captured_at": "2026-10-24T21:18:19.019758+00:00",
+        "manifest_sha256": "39a1333544660ee35775eb7a87c5967f8892e7c5814cb6662b6938130409c48d",
+        "members": [
+          {
+            "bytes": 12870,
+            "complete": true,
+            "kind": "github.workflow_run",
+            "path": "run.json",
+            "sha256": "a7ca4841769203c8ef2e278c98b3c76651b4ba3246ac0ddbc5e4165194b21bbc"
+          },
+          {
+            "bytes": 521,
+            "complete": true,
+            "kind": "github.workflow",
+            "path": "workflow.json",
+            "sha256": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+          },
+          {
+            "bytes": 62933,
+            "complete": true,
+            "kind": "github.jobs",
+            "path": "jobs.json",
+            "sha256": "09a60078f742576da67bd7ccdd61697a363029891218624036fe6d724a0b57e8"
+          },
+          {
+            "bytes": 877,
+            "complete": true,
+            "kind": "github.artifacts",
+            "path": "artifacts.json",
+            "sha256": "dda7279793509b0263f3b06b70f0d7905c778251cd94b5b9aec3ac71dfcbae07"
+          },
+          {
+            "bytes": 60331,
+            "complete": true,
+            "kind": "github.check_runs",
+            "path": "checks.json",
+            "sha256": "fad6f718679823afc63cc918a671105577e7613803f54c49dd2a6abe4580728d"
+          },
+          {
+            "bytes": 368178,
+            "complete": true,
+            "kind": "github.logs",
+            "path": "logs.zip",
+            "sha256": "50780e4ba2ccbd48557d79f425febf41c8ecc8694d78962c92e44b498f403af2"
+          }
+        ]
+      },
+      "conclusion": "success",
+      "event": "push",
+      "head_sha": "3c2dbc462fda451459e6b8f0af7d5d354ec50cd7",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.13"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip install pytest-cov==7.0.0 coverage==7.16.2",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Measure required runtime and recovery tests",
+            "Run actions/upload-artifact@v4",
+            "Run codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "coverage"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.11"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.12"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.11)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor",
+            "Post Provision published SMonitor from Conda",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "SMonitor recovery / Python 3.14"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.13)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.12)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.12)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (ubuntu-latest, 3.14)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.11)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.13)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run mamba-org/setup-micromamba@v2",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package",
+            "Post Run mamba-org/setup-micromamba@v2",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "tests (macos-latest, 3.14)"
+        },
+        {
+          "conclusion": "success",
+          "executed_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Run python -m pip install ruff==0.16.5 PyYAML==6.0.3 packaging",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/validate_governance.py",
+            "Run ruff check .",
+            "Run ruff format --check .",
+            "Check out the reviewed MOLI governance core",
+            "Check shared MOLI governance core",
+            "Post Check out the reviewed MOLI governance core",
+            "Post Run actions/setup-python@v5",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ],
+          "name": "quality"
+        }
+      ],
+      "native_verdicts": {
+        "10_SMonitor recovery _ Python 3.14.txt": [
+          "408 passed | 6.84s"
+        ],
+        "11_tests (ubuntu-latest, 3.11).txt": [
+          "390 passed, 18 skipped | 4.75s"
+        ],
+        "12_SMonitor recovery _ Python 3.11.txt": [
+          "408 passed | 6.21s"
+        ],
+        "13_SMonitor recovery _ Python 3.13.txt": [
+          "408 passed | 7.01s"
+        ],
+        "1_tests (macos-latest, 3.12).txt": [
+          "390 passed, 18 skipped | 7.89s"
+        ],
+        "2_tests (ubuntu-latest, 3.14).txt": [
+          "390 passed, 18 skipped | 6.12s"
+        ],
+        "3_SMonitor recovery _ Python 3.12.txt": [
+          "408 passed | 6.45s"
+        ],
+        "4_tests (macos-latest, 3.11).txt": [
+          "390 passed, 18 skipped | 6.43s"
+        ],
+        "5_tests (macos-latest, 3.13).txt": [
+          "390 passed, 18 skipped | 4.76s"
+        ],
+        "6_tests (macos-latest, 3.14).txt": [
+          "390 passed, 18 skipped | 8.65s"
+        ],
+        "7_tests (ubuntu-latest, 3.12).txt": [
+          "390 passed, 18 skipped | 7.22s"
+        ],
+        "8_tests (ubuntu-latest, 3.13).txt": [
+          "390 passed, 18 skipped | 5.68s"
+        ],
+        "9_coverage.txt": [
+          "408 passed | 6.03s"
+        ]
+      },
+      "run_id": 40133093885,
+      "url": "https://github.com/uibcdf/recorda/actions/runs/40133093885",
+      "workflow": ".github/workflows/tests.yml"
+    }
+  },
+  "latest_installed_evidence": [
+    {
+      "artifact": "latest-support-macos-latest-py314",
+      "complete": true,
+      "counts": {
+        "collected": 408,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 408,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 408,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "files_sha256": {
+        "latest-provider-installation.json": "7ec8cd6a791df38640dcb2bd4c3bfb250ae0953bd923d7acfaa82221eefc9a94",
+        "latest-providers.json": "fc18b4c13334cdf14d6d8360ebe60fa05cfbf45145ac0d8014238760e6c399e0",
+        "latest-tests.jsonl": "386dffd75aac1448f6f2f3a602d7872064fcdb54ec014c0892de9a694e75c70f",
+        "latest-tests.xml": "683f35e3e3d05957b43a67a07d8547dd6eaf2cc18f6ef3a2df214c34554b7912"
+      },
+      "installed": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.17.0-py_0.tar.bz2",
+            "origin": "/Users/runner/micromamba/envs/recorda-latest-support/lib/python3.14/site-packages/argdigest/__init__.py",
+            "python_files": 39,
+            "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+            "version": "0.17.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.15.1-py_0.tar.bz2",
+            "origin": "/Users/runner/micromamba/envs/recorda-latest-support/lib/python3.14/site-packages/depdigest/__init__.py",
+            "python_files": 17,
+            "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+            "version": "0.15.1"
+          },
+          "smonitor": {
+            "file": "smonitor-0.22.0-py_0.tar.bz2",
+            "origin": "/Users/runner/micromamba/envs/recorda-latest-support/lib/python3.14/site-packages/smonitor/__init__.py",
+            "python_files": 41,
+            "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+            "version": "0.22.0"
+          }
+        }
+      },
+      "integrity_valid": true,
+      "native_exit": 0,
+      "passed": 408,
+      "selection": {
+        "archives": {
+          "argdigest-0.17.0-py_0.tar.bz2": {
+            "build": "py_0",
+            "file": "argdigest-0.17.0-py_0.tar.bz2",
+            "name": "argdigest",
+            "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.0-py_0.tar.bz2",
+            "version": "0.17.0"
+          },
+          "depdigest-0.15.1-py_0.tar.bz2": {
+            "build": "py_0",
+            "file": "depdigest-0.15.1-py_0.tar.bz2",
+            "name": "depdigest",
+            "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+            "version": "0.15.1"
+          },
+          "smonitor-0.22.0-py_0.tar.bz2": {
+            "build": "py_0",
+            "file": "smonitor-0.22.0-py_0.tar.bz2",
+            "name": "smonitor",
+            "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.22.0-py_0.tar.bz2",
+            "version": "0.22.0"
+          }
+        },
+        "channel": "https://conda.anaconda.org/uibcdf/noarch",
+        "providers": {
+          "argdigest": {
+            "build": "py_0",
+            "file": "argdigest-0.17.0-py_0.tar.bz2",
+            "name": "argdigest",
+            "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.0-py_0.tar.bz2",
+            "version": "0.17.0"
+          },
+          "depdigest": {
+            "build": "py_0",
+            "file": "depdigest-0.15.1-py_0.tar.bz2",
+            "name": "depdigest",
+            "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+            "version": "0.15.1"
+          },
+          "smonitor": {
+            "build": "py_0",
+            "file": "smonitor-0.22.0-py_0.tar.bz2",
+            "name": "smonitor",
+            "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.22.0-py_0.tar.bz2",
+            "version": "0.22.0"
+          }
+        },
+        "repodata_sha256": "b36accd79ab420300fd4bceb47241a127a63e4daa85d9d79d6ff412d94ff25bb",
+        "schema": "recorda.latest-support@1",
+        "selected_at": "2026-10-24T21:17:06.043499+00:00"
+      }
+    },
+    {
+      "artifact": "latest-support-ubuntu-latest-py314",
+      "complete": true,
+      "counts": {
+        "collected": 408,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 408,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 408,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "files_sha256": {
+        "latest-provider-installation.json": "cc9995c3ceede46fbeec094b6835f4f22ce4bbb8418533a64dfc9e6729148131",
+        "latest-providers.json": "6ce19861ce6329e74b1b9828cfe1a80e6ce737ad668cd19bec91e03bd7bef759",
+        "latest-tests.jsonl": "3056a2ebf7b26fcc1d285c9110397f1df98339390928f313c510f6912ee4863b",
+        "latest-tests.xml": "6d0aec3e5303e3837960b4f45a74d4ea1bfd27accc4eaa21924c26bc40d5cda0"
+      },
+      "installed": {
+        "feature": "argdigest",
+        "providers": {
+          "argdigest": {
+            "file": "argdigest-0.17.0-py_0.tar.bz2",
+            "origin": "/home/runner/micromamba/envs/recorda-latest-support/lib/python3.14/site-packages/argdigest/__init__.py",
+            "python_files": 39,
+            "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+            "version": "0.17.0"
+          },
+          "depdigest": {
+            "file": "depdigest-0.15.1-py_0.tar.bz2",
+            "origin": "/home/runner/micromamba/envs/recorda-latest-support/lib/python3.14/site-packages/depdigest/__init__.py",
+            "python_files": 17,
+            "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+            "version": "0.15.1"
+          },
+          "smonitor": {
+            "file": "smonitor-0.22.0-py_0.tar.bz2",
+            "origin": "/home/runner/micromamba/envs/recorda-latest-support/lib/python3.14/site-packages/smonitor/__init__.py",
+            "python_files": 41,
+            "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+            "version": "0.22.0"
+          }
+        }
+      },
+      "integrity_valid": true,
+      "native_exit": 0,
+      "passed": 408,
+      "selection": {
+        "archives": {
+          "argdigest-0.17.0-py_0.tar.bz2": {
+            "build": "py_0",
+            "file": "argdigest-0.17.0-py_0.tar.bz2",
+            "name": "argdigest",
+            "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.0-py_0.tar.bz2",
+            "version": "0.17.0"
+          },
+          "depdigest-0.15.1-py_0.tar.bz2": {
+            "build": "py_0",
+            "file": "depdigest-0.15.1-py_0.tar.bz2",
+            "name": "depdigest",
+            "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+            "version": "0.15.1"
+          },
+          "smonitor-0.22.0-py_0.tar.bz2": {
+            "build": "py_0",
+            "file": "smonitor-0.22.0-py_0.tar.bz2",
+            "name": "smonitor",
+            "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.22.0-py_0.tar.bz2",
+            "version": "0.22.0"
+          }
+        },
+        "channel": "https://conda.anaconda.org/uibcdf/noarch",
+        "providers": {
+          "argdigest": {
+            "build": "py_0",
+            "file": "argdigest-0.17.0-py_0.tar.bz2",
+            "name": "argdigest",
+            "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.0-py_0.tar.bz2",
+            "version": "0.17.0"
+          },
+          "depdigest": {
+            "build": "py_0",
+            "file": "depdigest-0.15.1-py_0.tar.bz2",
+            "name": "depdigest",
+            "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+            "version": "0.15.1"
+          },
+          "smonitor": {
+            "build": "py_0",
+            "file": "smonitor-0.22.0-py_0.tar.bz2",
+            "name": "smonitor",
+            "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.22.0-py_0.tar.bz2",
+            "version": "0.22.0"
+          }
+        },
+        "repodata_sha256": "b36accd79ab420300fd4bceb47241a127a63e4daa85d9d79d6ff412d94ff25bb",
+        "schema": "recorda.latest-support@1",
+        "selected_at": "2026-10-24T21:11:36.882806+00:00"
+      }
+    }
+  ],
+  "limits": [
+    "Permitting resolution does not certify unexecuted future provider versions",
+    "Latest lane executed on Linux/macOS arm64 Python 3.14; fixed cohort source matrix retains Python 3.11-3.14",
+    "No new Conda artifact/release, scientific integration or replay qualification",
+    "Domain notices are independent evaluations, not platform/suite adoption",
+    "Codecov upload success is not an independent service acceptance claim"
+  ],
+  "local_receipt_sha256": "4042d0408e29064d3a49c8e597fd0a402128bb3557df8fe0156f5c2b541d34fa",
+  "nonblocking_followup": {
+    "issue": "uibcdf/recorda#36",
+    "observation": "GitHub annotations warn that selected Actions declare Node.js 20 and are forced onto Node.js 24; no native gate failure is attributed to this"
+  },
+  "owner": "uibcdf/recorda#35",
+  "public_0_3_2": "Unchanged and immutable with original dependency ceilings",
+  "runtime_files_unchanged": 15,
+  "runtime_requirements": [
+    "argdigest>=0.15.0",
+    "smonitor>=0.19.0"
+  ],
+  "source_sha": "3c2dbc462fda451459e6b8f0af7d5d354ec50cd7",
+  "state": "Minimum-only source policy and latest-public monitoring qualified; no new public package",
+  "temporary_owner": {
+    "owner": "uibcdf/recorda#35",
+    "review": "Next audit/consumer handoff after closeout or 2026-11-23",
+    "root": "/tmp/recorda-35-permissive-ujer348t"
+  },
+  "tested_input_hashes_match_commit": 50,
+  "tools": {
+    "gh_run_receptor": {
+      "version": "1.2.0",
+      "wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c"
+    },
+    "pytest_receptor": {
+      "sha256": "683200648785f3894357891b238cdc0780c1e874dcf067882dbba2aaa2c527c3",
+      "verified_python_files": 6,
+      "version": "1.2.1",
+      "wheel": "pytest_receptor-1.2.1-py3-none-any.whl"
+    }
+  }
+}

@@ -8,14 +8,20 @@ The architecture in [`DESIGN.md`](DESIGN.md) is intentionally broader. Build the
 
 ## Current resumption order — 2026-10-24
 
-1. Qualify the accepted dependency policy in `uibcdf/recorda#35`: minimum-only
+1. The accepted dependency policy in `uibcdf/recorda#35` is qualified: minimum-only
    runtime requirements, exact qualification pins and separate latest-public
    monitoring. Read [the policy](DEPENDENCY_POLICY.md) and [checkpoint](CHECKPOINT.md).
-2. Local targeted/source/installed tests pass 68/408/408; execute and inspect
-   exact-source CI plus the new manual latest-provider workflow, then archive
-   evidence and return the result to uibcdf/moli#76 and uibcdf/molsyssuite#137.
+2. Local targeted/source/installed tests pass 68/408/408; exact-source CI passes
+   14/14 jobs and the new latest-public workflow passes 2/2 (408 tests each).
+   [Evidence](evidence/dependency_policy_35_hosted.json) binds source
+   `3c2dbc462fda451459e6b8f0af7d5d354ec50cd7`, installed identities and full
+   captures. MolI #76 and MolSysSuite #137 own independent policy evaluations.
 3. A 0.3.3 publication needs a separately selected candidate and exact-artifact
    gates. Keep public 0.3.2 immutable; broader owner adoption remains independent.
+4. `uibcdf/recorda#36` records nonblocking GitHub Actions runtime deprecation
+   annotations for a separate maintenance review. No test failure or automatic
+   release blocker is inferred from those annotations. Pause here or respond
+   to concrete receiving feedback.
 
 ## Completed cohort receiving order — #34
 

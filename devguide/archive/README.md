@@ -3,6 +3,10 @@
 Preserve closed reports here with their issue identity, dated outcome and verification.
 Resolved implementation slices retain their owning issues and historical evidence.
 
+- [Permissive provider versions](permissive_provider_versions.md) —
+  `uibcdf/recorda#35`, resolved with minimum-only requirements, exact qualification
+  pins and independently verified latest-public monitoring.
+
 - [ArgDigest 0.17 / SMonitor 0.22 receiving](support_cohort_34.md) —
   `uibcdf/recorda#34`, resolved with fresh public/source/installed/editable
   receiving, clean dependency closure and 14 exact-source CI jobs.

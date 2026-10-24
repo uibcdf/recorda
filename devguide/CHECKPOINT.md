@@ -1,6 +1,6 @@
 # Development checkpoint — 2026-10-24
 
-## Current dependency-policy implementation — #35
+## Current dependency-policy receiving completed — #35
 
 Diego accepts minimum-only requirements (`argdigest>=0.15.0`,
 `smonitor>=0.19.0`), retaining the five exact qualification environments and
@@ -11,13 +11,28 @@ floors and hidden recipe ceilings. Runtime recording files remain unchanged.
 Local Python 3.14.9 checks pass 68 targeted tests and **408 source + 408 installed
 wheel tests**, with recovery enabled, clean `pip check`, complete integrity-valid
 receptor/JUnit/native agreement and no failures/skips/warnings. The actual latest
-selection and 97 installed public provider Python files are verified. Exact-source
-and latest-workflow hosted gates are pending; this is not a public package release.
+selection and 97 installed public provider Python files are verified.
+[Source CI 40133093885](https://github.com/uibcdf/recorda/actions/runs/40133093885)
+passes all **14 jobs**, preserving the eight installed Linux/macOS arm64 Python
+3.11–3.14 cells (390 passes / 18 explicit recovery skips) and four recovery plus
+coverage cells (408 passes each).
+[Latest-public CI 40133098600](https://github.com/uibcdf/recorda/actions/runs/40133098600)
+passes both Linux/macOS arm64 Python 3.14 cells, **408 tests each**. Their actual
+selection/installation identities and complete JSONL/JUnit agree with native
+conclusions; twelve full-capture members and 50 locally tested input hashes are
+verified. Source: `3c2dbc462fda451459e6b8f0af7d5d354ec50cd7`.
+Read the [hosted receipt](evidence/dependency_policy_35_hosted.json) and
+[resolved analysis](archive/permissive_provider_versions.md).
 
 Requested independent evaluations are uibcdf/moli#76 and
 uibcdf/molsyssuite#137. Their issues do not adopt this decision for other owners.
-Next: finish #35 qualification and handoff, then decide/qualify a 0.3.3 release
-separately. Public 0.3.2 and all historical evidence below remain immutable.
+The domain issues remain evaluation requests, with no automatic wider adoption.
+Next: select/qualify a 0.3.3 release separately if requested. Nonblocking
+Actions runtime maintenance is tracked in `uibcdf/recorda#36`. Public 0.3.2 and
+all historical evidence below remain immutable. Owned disposable resources are
+retired; retained proof has an owner/review trigger in
+[resource closeout](evidence/dependency_policy_35_resources.json). A later checked
+documentation-only closeout is not a new producer or a new hosted gate.
 
 ## Completed source cohort receiving — #34 (historical bounds)
 

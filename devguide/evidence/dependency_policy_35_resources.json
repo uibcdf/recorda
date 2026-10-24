@@ -1,0 +1,39 @@
+{
+  "cleanup_failures": [],
+  "custody": {
+    "conda_records": 39,
+    "conda_records_sha256": "3f91c731f233eb26f21521979c90362ed3efaf6221bc17578943be68935bf269",
+    "full_hosted_capture_members": 12,
+    "latest_artifact_bundles": 2,
+    "map_sha256": "01f2bb7b868e66f3742e94c6809e985a805ab454528876b5889f77c6621fa609",
+    "nested_receptor_members": 32,
+    "retained_public_index_sha256": "b36accd79ab420300fd4bceb47241a127a63e4daa85d9d79d6ff412d94ff25bb"
+  },
+  "date": "2026-10-24",
+  "owner": "uibcdf/recorda#35",
+  "preserved": [
+    "Named shared environment and primary/sibling clones",
+    "Other active sessions, registered worktrees and shared package caches",
+    "Repository build/egg-info caches and earlier shared pytest temporary trees whose individual ownership was not uniquely established",
+    "Immutable public release files/tags and independent earlier release evidence"
+  ],
+  "retained": [
+    "Original public provider archives and raw index snapshot",
+    "Private receiving wheel, parent source/installed/targeted JSONL/JUnit/logs",
+    "32 child receiving proof members and custody map",
+    "Two complete full gate captures and both latest-provider artifact bundles",
+    "Published tool wheels and reproduction/verification scripts",
+    "Complete compressed Conda records and environment provisioning/retirement logs"
+  ],
+  "retired": [
+    "/tmp/recorda-35-permissive-ujer348t/env",
+    "/tmp/recorda-35-permissive-ujer348t/source-tests",
+    "/tmp/recorda-35-permissive-ujer348t/installed-tests",
+    "/tmp/recorda-35-permissive-ujer348t/url-probe.log",
+    "/tmp/recorda-35-permissive-ujer348t/suite-status-private.json",
+    "/tmp/recorda-35-permissive-ujer348t/gates/github.com/uibcdf/recorda/40133093885/1/metadata",
+    "/tmp/pytest-of-diego/pytest-646"
+  ],
+  "review": "Next receiving/policy audit after this closeout or 2026-11-23, whichever first; retire after durable audit handoff",
+  "root": "/tmp/recorda-35-permissive-ujer348t"
+}
